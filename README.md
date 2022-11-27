@@ -27,7 +27,9 @@ Integrante número 1: Leandro Torres: Soy Lean! Mis hobbies son deportes como el
 Tengo dos mascotas y cada vez estoy más cerca de la tercera.
 Mencione que me gusta jugar videogames? Mientras estudio programación, resuelvo ejercicios o trabajo en el proyecto integrador hay veces que me trabo con algo que no puedo resolver. Lo que hago es ponerme una alarma de 30 minutos donde me salgo de la compu por unos 10 minutos y luego utilizo los siguientes 20 para jugar y refrescar la mente de lo que esté haciendo. Casi siempre resulta en que luego de los 30 minutos de descanso, recupero la capacidad de concentración y con ella mis habilidades para resolver el conflicto que tengo en mi pantalla!
 
-Integrante número 2:
+Integrante número 2: Daniel Patto: Hola soy dani! Estudio programación en DiHs para ser parte del futuro. Disfruto mucho los deportes, de cualquier tipo. Juego videojuegos, disfruto las noches y hago freestyle! algún día voy a sacar un tema jajaj. 
+Disfruto de la programación porque me interesa saber como funciona la tecnologia en profundidad, es muy llamativo. 
+En lo que queda de cursada me gustaría que disfrutemos y sigamos aprendiendo, porque sólo sé que no sé nada. Tenemos un buen grupo y buena conexión (a todos nos gusta el deporte jajaj), así que espero nos llevemos bien en el resto del proyecto. 
 
 Integrante número 3:
 
@@ -35,13 +37,13 @@ Integrante número 4:
 
 --
 
+¡Nuestra selección de sitios web de inspiración!
+
 Sitios web:
 https://www.store99.com.ar/
 https://www.sprintersports.com/
 https://drops-ba.com/
 https://carbon38.com/
 https://kingofthekongo.com.ar/
-
-¡Nuestra selección de sitios web de inspiración!
 
 --
