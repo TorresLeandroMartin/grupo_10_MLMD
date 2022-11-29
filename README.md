@@ -23,7 +23,7 @@ Integrante número 1: Leandro Torres: Soy Lean! Mis hobbies son deportes como el
 
 Integrante número 2: Daniel Patto: Hola soy dani! Estudio programación en DiHs para ser parte del futuro. Disfruto mucho los deportes, de cualquier tipo. Juego videojuegos, disfruto las noches y hago freestyle! algún día voy a sacar un tema jajaj. Disfruto de la programación porque me interesa saber como funciona la tecnologia en profundidad, es muy llamativo. En lo que queda de cursada me gustaría que disfrutemos y sigamos aprendiendo, porque sólo sé que no sé nada. Tenemos un buen grupo y buena conexión (a todos nos gusta el deporte jajaj), así que espero nos llevemos bien en el resto del proyecto.
 
-Integrante número 3:
+Integrante Matias Kruse: Hola!! Soy Mati, para que me vayan conociendo un poco les quería contar que me gustan mucho los deportes, juego una vez por semana al futbol con amigos, aunque no soy muuuuy bueno lo importante es disfrutar de la compañía y las risas. Otra de las cosas que me gustan hacer es jugar videojuegos más en específico algún que otro shooter. Estoy con el curso de DH que me viene gustando y con las ideas del grupo que estoy creo que va a ser mucho mas llevadero. Gracias por su atención, saludos!!.
 
 Integrante número 4:
 
