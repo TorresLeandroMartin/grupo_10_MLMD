@@ -1,6 +1,7 @@
 # Grupo 10 Nombre: A definir
 
 Este es el README file del grupo 10
+
 Nombre del e-commerce: HouseClothing 
 
 ¿Qué productos o servicios brindará nuestro sitio?
