@@ -1,8 +1,7 @@
 # Grupo 10 Nombre: HouseClothing 
 
-Este es el README file del grupo 10
+Este es el README file de HouseClothing
  
-
 ¿Qué productos o servicios brindará nuestro sitio?
 
 Nuestro cliente es un diseñador de ropa deportiva que desea brindarle la facilidad de compra de ropa de calidad, estilo, a la moda, unisex, innovadora todo al alcance de un click. Te invitamos a sorprenderte!
@@ -19,9 +18,9 @@ A través de un estilo joven, explosivo, versátil y a la vanguardia en moda. Co
 
 --
 
-Integrante número 1: Leandro Torres: Soy Lean! Mis hobbies son deportes como el futbol, tenis, pádel, karting y el gimnasio. También disfruto de probar nuevos lugares de comidas de diferentes nacionalidades. Mi trago favorito es el Old fashion, pero durante la semana cuando llego al final del día mi go to es un vaso de fernet con coca bien frío. Tengo dos mascotas y cada vez estoy más cerca de la tercera. Mencione que me gusta jugar videogames? Mientras estudio programación, resuelvo ejercicios o trabajo en el proyecto integrador hay veces que me trabo con algo que no puedo resolver. Lo que hago es ponerme una alarma de 30 minutos donde me salgo de la compu por unos 10 minutos y luego utilizo los siguientes 20 para jugar y refrescar la mente de lo que esté haciendo. Casi siempre resulta en que luego de los 30 minutos de descanso, recupero la capacidad de concentración y con ella mis habilidades para resolver el conflicto que tengo en mi pantalla!
+Integrante Leandro Torres: Soy Lean! Mis hobbies son deportes como el futbol, tenis, pádel, karting y el gimnasio. También disfruto de probar nuevos lugares de comidas de diferentes nacionalidades. Mi trago favorito es el Old fashion, pero durante la semana cuando llego al final del día mi go to es un vaso de fernet con coca bien frío. Tengo dos mascotas y cada vez estoy más cerca de la tercera. Mencione que me gusta jugar videogames? Mientras estudio programación, resuelvo ejercicios o trabajo en el proyecto integrador hay veces que me trabo con algo que no puedo resolver. Lo que hago es ponerme una alarma de 30 minutos donde me salgo de la compu por unos 10 minutos y luego utilizo los siguientes 20 para jugar y refrescar la mente de lo que esté haciendo. Casi siempre resulta en que luego de los 30 minutos de descanso, recupero la capacidad de concentración y con ella mis habilidades para resolver el conflicto que tengo en mi pantalla!
 
-Integrante número 2: Daniel Patto: Hola soy dani! Estudio programación en DiHs para ser parte del futuro. Disfruto mucho los deportes, de cualquier tipo. Juego videojuegos, disfruto las noches y hago freestyle! algún día voy a sacar un tema jajaj. Disfruto de la programación porque me interesa saber como funciona la tecnologia en profundidad, es muy llamativo. En lo que queda de cursada me gustaría que disfrutemos y sigamos aprendiendo, porque sólo sé que no sé nada. Tenemos un buen grupo y buena conexión (a todos nos gusta el deporte jajaj), así que espero nos llevemos bien en el resto del proyecto.
+Integrante Daniel Patto: Hola soy dani! Estudio programación en DiHs para ser parte del futuro. Disfruto mucho los deportes, de cualquier tipo. Juego videojuegos, disfruto las noches y hago freestyle! algún día voy a sacar un tema jajaj. Disfruto de la programación porque me interesa saber como funciona la tecnologia en profundidad, es muy llamativo. En lo que queda de cursada me gustaría que disfrutemos y sigamos aprendiendo, porque sólo sé que no sé nada. Tenemos un buen grupo y buena conexión (a todos nos gusta el deporte jajaj), así que espero nos llevemos bien en el resto del proyecto.
 
 Integrante Matias Kruse: Hola!! Soy Mati, para que me vayan conociendo un poco les quería contar que me gustan mucho los deportes, juego una vez por semana al futbol con amigos, aunque no soy muuuuy bueno lo importante es disfrutar de la compañía y las risas. Otra de las cosas que me gustan hacer es jugar videojuegos más en específico algún que otro shooter. Estoy con el curso de DH que me viene gustando y con las ideas del grupo que estoy creo que va a ser mucho mas llevadero. Gracias por su atención, saludos!!.
 
@@ -38,5 +37,7 @@ Sitios web: https://www.store99.com.ar/ - https://www.sprintersports.com/ - http
 WireFrames: 
 
 -Formulario de Login: https://marvelapp.com/prototype/18f2ei9j 
+
+-Description Page / Create Account: https://marvelapp.com/prototype/j2h582e
 
 -Carrito de compras: https://marvelapp.com/prototype/18f3a124
