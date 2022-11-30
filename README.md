@@ -36,7 +36,7 @@ Sitios web: https://www.store99.com.ar/ - https://www.sprintersports.com/ - http
 
 WireFrames: 
 
-- Home : https://www.figma.com/file/SfRbi1vpS5vWotJkDgFbaZ/Sprint-1-I-Home-de-housecloathing?node-id=0%3A1&t=KYhOHFYsnXbCwPkP-1
+-Home : https://www.figma.com/file/SfRbi1vpS5vWotJkDgFbaZ/Sprint-1-I-Home-de-housecloathing?node-id=0%3A1&t=KYhOHFYsnXbCwPkP-1
 
 -Formulario de Login: https://marvelapp.com/prototype/18f2ei9j 
 
