@@ -24,7 +24,7 @@ Integrante Daniel Patto: Hola soy dani! Estudio programación en DiHs para ser p
 
 Integrante Matias Kruse: Hola!! Soy Mati, para que me vayan conociendo un poco les quería contar que me gustan mucho los deportes, juego una vez por semana al futbol con amigos, aunque no soy muuuuy bueno lo importante es disfrutar de la compañía y las risas. Otra de las cosas que me gustan hacer es jugar videojuegos más en específico algún que otro shooter. Estoy con el curso de DH que me viene gustando y con las ideas del grupo que estoy creo que va a ser mucho mas llevadero. Gracias por su atención, saludos!!.
 
-Integrante número 4:
+Integrante Matías S. Jacobowicz: ¡Hola, soy Jaco! Viajo seguido, practico diversos deportes, como: rugby (próximo club Olivos), y fútbol amateur en torneos con amigos. El año que viene empiezo una nueva carrera, se llama "Negocios Digitales", la misma en la UCEMA, y busco con dicho curso, lograr que sea un complemento para los mencionados estudios (admin. de empresas + tecnología digital / programación). Desde ya, muchas gracias por su atención, ¡Hasta luego!
 
 --
 
@@ -35,6 +35,8 @@ Sitios web: https://www.store99.com.ar/ - https://www.sprintersports.com/ - http
 --                                                                                                                                                 
 
 WireFrames: 
+
+- Home : https://www.figma.com/file/SfRbi1vpS5vWotJkDgFbaZ/Sprint-1-I-Home-de-housecloathing?node-id=0%3A1&t=KYhOHFYsnXbCwPkP-1
 
 -Formulario de Login: https://marvelapp.com/prototype/18f2ei9j 
 
