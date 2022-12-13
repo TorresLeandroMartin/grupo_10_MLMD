@@ -1,6 +1,8 @@
 # Grupo 10 Nombre: HouseClothing 
 
 Este es el README file de HouseClothing
+
+Enlace de tablero: https://trello.com/b/O9LEQvLY/sprint-2
  
 ¿Qué productos o servicios brindará nuestro sitio?
 
