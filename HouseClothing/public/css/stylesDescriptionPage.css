@@ -1,0 +1,345 @@
+* {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0px;
+}
+
+header {
+
+    border: solid 1px gray;
+    width: 100%;
+    padding: 25px;
+    position: fixed;
+    background-color: rgb(255, 0, 0);
+
+
+}
+
+header .botones-navbar {
+
+    display: none;
+
+
+}
+
+header .botones-navbar ul {
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+}
+
+header .botones-navbar a {
+
+    text-decoration: none;
+    color: #222222;
+    display: inline-block;
+    padding: 5px;
+    font-size: 17px;
+
+}
+
+header .main-navbar {
+
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+/* estilos del main */
+
+main {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+}
+
+main .seccion1 {
+
+    padding: 20px;
+
+}
+
+
+main .imagen {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main img {
+
+    width: 400px;
+
+}
+
+.fa-bars {
+
+    font-size: 2em;
+
+}
+
+.fa-shopping-cart {
+
+    font-size: 2em;
+
+}
+
+/* Estilos del seccion 1 */
+
+.ruta {
+
+
+    text-align: left;
+    margin: 1em;
+
+
+}
+
+.home-descriptionPage {
+
+    text-decoration: none;
+    color: gray;
+
+
+}
+
+h1 {
+
+    text-align: left;
+    margin: 1em 0em 1em 0em;
+
+}
+
+.precio-cuotas {
+
+    margin: 2em 0em 2em 0em; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+
+}
+
+.myButton {
+
+    margin: 2em 0em 2em 0em;
+	background-color:#000000;
+	border-radius:42px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:19px;
+	padding:10px 13px;
+	text-decoration:none;
+}
+.myButton:hover {
+	background-color:#476e9e;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.contador {
+
+    border: solid 5px rgb(0, 0, 0);
+    width: 200px;
+    height: 50px;
+    font-size: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.accionables-bajo-foto {
+
+    margin: 2em 3em 2em 0em;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+
+}
+
+.agregar-al-carrito {
+    
+	background:linear-gradient(to bottom, #000000 5%, #030405 100%);
+	background-color:#000000;
+	border:1px solid #000105;
+    width: 200px;
+    height: 50px;
+	display:flex;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:12px;
+	padding:10px 35px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #000000;
+    align-items: center;
+}
+.agregar-al-carrito:hover {
+	background:linear-gradient(to bottom, #265988 5%, #043b72 100%);
+	background-color:#030405;
+}
+.agregar-al-carrito:active {
+	position:relative;
+	top:1px;
+}
+
+/* Estilos informacion relevante - parte dos del main */
+.informacion-relevante {
+
+    padding: 5%;
+    background-color: #C0C0C0;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.descripcion-cuidados {
+
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    inline-size: 200px;
+
+}
+
+.tabla {
+    border:1px solid #000000;
+    border-collapse:collapse;
+    padding:5px;
+}
+.tabla th {
+    border:1px solid #000000;
+    padding:5px;
+    background:#F0F0F0;
+}
+.tabla td {
+    border:1px solid #000000;
+    padding:5px;
+}
+
+.search input[type=text]{
+    width:80%;
+    height:25px;
+    border: none;
+    border-radius: 5px;
+}
+        
+.search{
+    float:right;
+    margin:7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 5px;
+
+}
+        
+.search button{
+    background-color: #000000;
+    color: #f2f2f2;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* breakpoints */
+
+@media (min-width: 769px){
+
+    /* estilos header */
+
+    header {
+
+        position: static;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0px;
+    }
+
+    header .botones-navbar {
+
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    header .botones-navbar ul {
+
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+
+    }
+
+    header .botones-navbar li {
+        margin: 0px 20px 0px 20px
+    }
+
+    /* estilos main parte 1*/
+
+    main .seccion1 {
+
+ 
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .precio-cuotas {
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+    .accionables-bajo-foto {
+
+        display: flex;
+        text-align: center;
+        align-items: center;
+
+
+    }
+
+    .contador {
+
+        margin: 10px;
+
+    }
+
+    /* estilos main parte 2 */
+
+    .descripcion-cuidados {
+
+        inline-size: 300px;
+
+    }
+
+
+
+}
+
+@media (min-width: 1200px){}
