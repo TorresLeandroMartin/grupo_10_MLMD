@@ -36,8 +36,21 @@ Sitios web: https://www.store99.com.ar/ - https://www.sprintersports.com/ - http
 
 WireFrames: 
 
+-Home: https://www.figma.com/file/SfRbi1vpS5vWotJkDgFbaZ/Sprint-1-I-Home-de-housecloathing?node-id=0%3A1&t=2VdTxVR3uko6pnM8-1
+
 -Formulario de Login: https://marvelapp.com/prototype/18f2ei9j 
 
 -Description Page / Create Account: https://marvelapp.com/prototype/j2h582e
 
 -Carrito de compras: https://marvelapp.com/prototype/18f3a124
+
+--
+Link a nuestro repositorio de GitHub!
+
+https://github.com/TorresLeandroMartin/grupo_10_MLMD.git
+
+--
+
+Nuestro trablero colaborativo en Trello!
+
+https://trello.com/invite/b/O9LEQvLY/ATTI9493511c4944872b07ce5071fd1435612A9CE9DB/sprint-2
