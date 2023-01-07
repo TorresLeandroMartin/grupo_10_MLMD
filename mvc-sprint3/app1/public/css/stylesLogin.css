@@ -1,0 +1,276 @@
+* {
+
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+
+    font-family: "Kodchasan";
+    background-color: gray;
+    font-size: 16px;
+}
+
+/* mobile first */
+/* escondemos lo que no se vea en mobile */
+
+img{
+
+
+    width: 0px;
+    height: 0px;
+
+}
+
+.main-nav-bottom {
+
+    display: none;
+}
+
+a{
+
+    text-decoration: none;
+}
+
+/* remuevo estilos de ul */
+
+ul{
+
+    list-style: none;
+}
+
+/* comienzo estilos header */
+
+
+/* tamano fuente del bars */
+
+.main-nav-top .logo i {
+
+    font-size: 20px;
+}
+
+/* posicionamiento de los items de la nav main */
+.nav-main .main-nav-top {
+
+    border: 2px dotted black;
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* posicionamiento de los iconos user y cart */
+.nav-icons ul {
+
+    display: flex;
+}
+
+.nav-icons ul li {
+
+    margin: 0px 10px;
+}
+
+/* search bar */
+
+.search-bar input {
+
+    height: 30px;
+    padding-left: 10px;
+    border: 1px gray solid;
+    border-radius: 20px;
+
+    position: relative;
+    left: 30px;
+
+
+}
+
+.search-bar input:focus {
+    border: 1px solid black;
+
+}
+
+.search-bar i {
+
+    position: relative;
+}
+
+/* finalizan los estilos de la top nav bar */
+
+/* inician los estilos del footer */
+
+.contenedor-footer {
+
+    border: 2px dotted black;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* top nav primera nav del footer */
+
+.footer-nav .top-nav ul {
+
+    border: 2px yellow dotted;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-nav .top-nav ul li {
+
+    border: 1px solid black;
+}
+
+/* segunda nav bar donde esta el introduce tu email */
+
+.footer-nav .bottom-nav {
+
+    display: flex;
+
+}
+
+.footer-nav .bottom-nav input {
+
+    width: 50%;
+
+    position: absolute;
+    right: 0px;
+}
+
+.footer-nav .bottom-nav button {
+
+    position: absolute;
+    right: 0;
+
+}
+
+/* posicionamiento de los iconos */
+
+.social-network ul {
+
+    display: flex;
+    justify-content: center;
+}
+
+.social-network ul li {
+
+    margin: 0px 30px;
+}
+
+/* comienzo estilos del main */
+
+/* estilos del main top */
+
+.top {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin: 20px;
+}
+
+.top p {
+
+    text-align: center;
+
+    margin-top: 20px;
+}
+
+/* estilos del main bottom */
+
+.bottom {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.bottom .campos-de-relleno {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 15px 0px;
+
+}
+
+@media (min-width: 768px) {
+
+    /* comienzo por ocultar los items que no se muestran en desktop */
+
+    body {
+
+        background-color: bisque;
+    }
+
+    .main-nav-top .logo i {
+
+        display: none;
+    }
+
+    a {
+
+        text-decoration: none;
+    }
+
+    /* aca muestro los items que estaban escondidos en mobile */
+
+    img {
+
+        width: 50px;
+        height: 50px;
+
+    }
+
+    /* estilos de la nav top */
+
+    .logo {
+
+        display: flex;
+        align-items: center;
+    }
+
+    /* estilos de la nav bottom */
+    .main-nav-bottom {
+
+        display: contents;
+    }
+
+    .main-nav-bottom ul {
+
+        border: 2px dotted blue;
+        height: 45px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-nav-bottom ul li {
+
+        margin: 0px 20px;
+    }
+
+    /* estilos footer */
+
+    /* estilos del suscribite al newsletter */
+
+}
+
+@media (min-width: 1024px) {
+
+    /* comienzo por ocultar los items que no se muestran en desktop */
+
+    body {
+
+        background-color: lightpink;
+    }
+
+}
