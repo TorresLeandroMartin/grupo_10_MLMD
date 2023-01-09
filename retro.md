@@ -1,6 +1,6 @@
 Archivo retrospectiva Sprint 2
 
-Durante el sprint 2 nos encontramos con puntos positivos de nuestra forma de trabajo como negativos, este archivo tiene como objetivo ordenar los altibajos del proceso en categorias como: "Hacer más", "Hacer menos", etc
+Durante el sprint 2 nos encontramos con puntos positivos de nuestra forma de trabajo como negativos, este archivo tiene como objetivo ordenar los altibajos del proceso en categorias como: "Hacer más", "Hacer menos", etc.
 
 1. Comenzar a hacer.
 
@@ -28,3 +28,33 @@ Malas practicas
 5. Dejar de hacer.
 
 Procrastinar
+
+Archivo retrospectiva Sprint 3
+
+En este sprint 3 nos encontramos con una subida general del grupo, este archivo tiene como objetivo ordenar los altibajos del proceso en categorias como: "Hacer más", "Hacer menos", etc.
+
+Sprint 3:
+
+1) Comenzar a hacer:
+
+Asignar a cada integrante una tarea. Organizar tiempos para reuniones.  
+
+Videollamadas (vuelve más personal y social al grupo).
+
+2) Hacer más:
+
+Daily meetings (discord) o weekly meetings (zoom o google meets).
+
+3) Continuar haciendo:
+
+Reunion pre o post cursada.
+
+4) Hacer menos:
+
+Estar detrás de un compañero, y hacer lo acordado.
+
+5) Dejar de hacer:
+
+Baches temporales en la comunicación grupal.
+
+
