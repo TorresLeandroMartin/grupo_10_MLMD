@@ -1,21 +1,24 @@
-Sprint 3:
+**Archivo retrospectiva Sprint 3:
 
-1) Comenzar a hacer:
+Durante el sprint 3, hubo más comunicación, y nuevos cambios a nivel grupal, esperemos hacia un buen rumbo, y con estas expectativas, ordenamos, en una lista, que hay para mejorar y que hay que dejar de hacer, esta es:
+
+
+**Comenzar a hacer:
 
 1. Videollamadas (vuelve más personal y social al grupo).
 
-2) Hacer más:
+**Hacer más:
 
 2. Daily meetings (discord) o weekly meetings (zoom o google meets).
 
-3) Continuar haciendo:
+**Continuar haciendo:
 
 3. Reunion pre o post cursada.
 
-4) Hacer menos:
+**Hacer menos:
 
 4. Estar detrás de un compañero, y hacer lo acordado.
 
-5) Dejar de hacer:
+**Dejar de hacer:
 
 5. Baches temporales en la comunicación grupal.
