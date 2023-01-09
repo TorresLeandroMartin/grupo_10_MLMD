@@ -1,4 +1,4 @@
-**Archivo retrospectiva Sprint 3:
+#Archivo retrospectiva Sprint 3:
 
 Durante el sprint 3, hubo más comunicación, y nuevos cambios a nivel grupal, esperemos hacia un buen rumbo, y con estas expectativas, ordenamos, en una lista, que hay para mejorar y que hay que dejar de hacer, esta es:
 
