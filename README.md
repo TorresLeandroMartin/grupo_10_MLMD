@@ -9,7 +9,7 @@ Nuestro cliente es un diseñador de ropa deportiva que desea brindarle la facili
 
 ¿Quién será nuestra audiencia objetivo?
 
-Personas con estilo propio para marcar la diferencia con las prendas que usa.
+**Personas con estilo propio para marcar la diferencia con las prendas que usa.
 Tenemos la categoría de ropa urbana que se caracteriza por diseños cómodos, holgados, frescos y con mucho estilo. Elegimos hacer la diferencia del resto de las marcas combinando los múltiples estilos urbanos de hoy, la comodidad de la ropa deportiva, y derribando las barreras del género en la ropa creando prendas unisex.
 
 Por otro lado, en nuestra categoría de ropa deportiva:
