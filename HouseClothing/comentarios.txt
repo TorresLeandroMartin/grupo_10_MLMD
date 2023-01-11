@@ -1,5 +1,0 @@
-Archivo de comentarios sobre el proyecto
-
-Comentario para profes:
-
-Hasta el momento solo posicione los elementos pero no les di los estilos, esto quiere decir que por ejemplo los input o los button no tienen mas estilos que los predeterminados pero estan posicionados correctamente (de seguro debo hacer correcciones en algunos elementos pero todavia queda un monton de camino por recorrer).
