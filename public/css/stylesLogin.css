@@ -1118,9 +1118,13 @@ a {
         color: white;
     }
 
+    /* Body */
+
     .contenedor-main {
         margin-top: 35px;
     }
+
+    /* Fin de body */
     
     footer {
         background-color: #242F62;

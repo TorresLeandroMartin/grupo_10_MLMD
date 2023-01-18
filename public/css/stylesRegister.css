@@ -7,7 +7,6 @@
     --white: #FFFFFF;
 }
 
-
 body {
     margin: 0px;
     background-color: #FFFFFF;
@@ -411,7 +410,7 @@ a {
     }
 
     nav ul {
-        margin-bottom: 20px;
+        margin-bottom: 5px;
         padding: 10px 0px;
     }
 
@@ -1128,10 +1127,16 @@ a {
         color: white;
     }
 
+    
+     /* Body */
+
     .contenedor-main {
         margin-top: 70px;
     }
+
+    /* Fin de body */
     
+
     footer {
         background-color: #242F62;
     }

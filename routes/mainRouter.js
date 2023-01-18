@@ -7,17 +7,17 @@ const mainController = require('../controllers/mainController')
 
 router.get('/', mainController.home);
 
-router.get('descriptionPage', mainController.descriptionPage);
+router.get('/descriptionPage', mainController.descriptionPage);
 
-router.get('cart', mainController.cart);
+router.get('/cart', mainController.cart);
 
-router.get('edicion', mainController.edicion);
+router.get('/edicion', mainController.edicion);
 
-router.get('nuevoProducto', mainController.nuevoProducto);
+router.get('/nuevoProducto', mainController.nuevoProducto);
 
-router.get('register', mainController.register);
+router.get('/register', mainController.register);
 
-router.get('login', mainController.login);
+router.get('/login', mainController.login);
 
 
 

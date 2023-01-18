@@ -27,6 +27,8 @@ app.set('views',[
 
 app.set('view engine', 'ejs');
 
+
+
 // indicamos que carpetas vamos a usar
 
 app.use(logger('dev'));
@@ -59,8 +61,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen (port, () => {
-  console.log("Servidor corriendo en el puerto " + port);
-});
+//app.listen (port, () => {
+//  console.log("Servidor corriendo en el puerto " + port);
+//});
 
 module.exports = app;

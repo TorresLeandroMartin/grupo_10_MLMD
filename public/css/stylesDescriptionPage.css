@@ -1323,11 +1323,15 @@ h1 {
         color: white;
     }
 
+    /* Body */
+
     .contenedor-main {
         margin-top: 24px;
         border: 2px dotted violet;
     }
 
+    /* Fin de body */
+    
     footer {
         background-color: #242F62;
     }
