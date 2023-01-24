@@ -62,9 +62,87 @@ a {
 
 /* Body */ 
 
+.foto-producto{
+    border: none;
+    width: 90%;
+    border-radius: 5px;
+}
+
+.boton-editar{
+    width: 30vw;
+    font-family: 'Lilita One';
+    font-size: 16px;
+    color: var(--light-gray);
+    background-color: var(--salmon);
+    border: none;
+    border-radius: 5px;
+}
+
+div .edita-archivo{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+main h2{
+    font-family: "Lilita One";
+    font-size: 18px;
+    color: var(--salmon);
+    margin: 10px 20px;
+}
+
+div .left-options{
+    display: block;
+    text-align: center;
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+}
+
 .img-prueba {
-    width: 32vw;
-    height: 32vw;
+    border: none;
+    width: 100%;
+}
+
+div .right-options{
+    display: block;
+    text-align: center;
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-family: "Monserrat";
+    font-weight: bold;
+    font-size: 15px;
+    color: var(--gray-violet);
+    margin: auto;
+}
+
+.right-options input{
+    width: 90%;
+    font-family: "Monserrat";
+    border-color: var(--light-violet);
+    border-radius: 7px;
+}
+
+.right-options select{
+    width: 90%;
+    font-family: "Monserrat";
+    border-color: var(--light-violet);
+    border-width: 2px;
+    border-radius: 7px;
+}
+
+.right-options textarea{
+    color: gray;
+    font-family: "Monserrat";
+    width: 90%;
+    border-width: 2px;
+    border-color: var(--light-violet);
+    border-radius: 7px;
+}
+
+form select {
+    color: gray;
+    width: 90%;
 }
 
 /* Fin de Body */
@@ -146,6 +224,7 @@ a {
     }
 
     /* Body */
+
 
 
     /* Fin de body */
@@ -377,6 +456,35 @@ a {
 
     /* Body */
 
+    .edita-archivo{
+        margin-top: 20px;
+        align-items: center;
+    }
+
+    main h2{
+        margin-top: 20px;
+        padding: 20px;
+        font-size: 20px;
+    }
+
+    .left-options {
+        margin-top: 20px;
+    }
+
+    .foto-producto{
+        width: 60%;
+    }
+
+
+    div .right-options{
+        width: 60%;
+        margin: auto;
+    }
+
+    .boton-editar{
+        width: 80px;
+        height: 30px;
+    }
 
     /* Fin de body */
 
@@ -484,6 +592,13 @@ a {
     }
 
 
+}
+
+@media(min-width: 712px){
+    .right-options{
+        width: 45%;
+        padding: 20px;
+    }
 }
 
 
@@ -609,21 +724,45 @@ a {
 
     /* Body */
 
+    main h2{
+        margin-top: 10px;
+        padding: 5px;
+    }
+   
     .edita-archivo {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .left-options{
+        display: flex;
+        width: 100%;
+        font-size: 18px;
+        padding: 7px;
+    };
+
+    
+    .foto-producto{
+        width: 100px;
     }
 
     .right-options {
-        margin: auto;
-        font-size: 18px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-size: 22px;
+        padding: 20px;
+        margin-top: 10px;
+        text-align: left;
     }
 
     .boton-editar {
         margin-top: 10px;
     }
 
-    /* Fin de body */
+    /*Fin de body*/
 
     footer {
         background-color: #242F62;
@@ -853,13 +992,16 @@ a {
 
     /* Body */
 
-    .right-options {
-        font-size: 24px;
+    .edita-archivo{
+        width: 70%;
+        align-items: center;
+        justify-content: space-between;
         margin: auto;
     }
 
-    .boton-crear {
-        margin-top: 20px;
+    .right-options{
+        max-width: 530px;
+        text-align: left;
     }
 
     /* Fin de body */
@@ -1093,6 +1235,10 @@ a {
 
     /* Body */
 
+    .foto-producto:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
 
     /* Fin de body */
     
@@ -1199,3 +1345,4 @@ a {
         color: #FF715B;
     }
 }
+
