@@ -338,6 +338,10 @@ a {
         margin-left: 25px;
     }
 
+    div .buscador-bar{
+        width: 50%;
+    }
+
     .buscador-bar {
         display: flex;
         position: relative;
@@ -373,13 +377,13 @@ a {
     .categoria-pais {
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
-        font-size: 10px;
+        font-size: 13px;
     }
 
     .carrito i {
         color: #FF715B;
         display: inline-flex;
-        font-size: 23.8px;
+        font-size: 22px;
         text-align: center;
         align-items: center;
     }
@@ -396,8 +400,8 @@ a {
         display: inline-flex;
         text-align: center;
         align-items: center;
+        padding: 5px;
     }
-
     nav {
         background-color: #394476;
         height: 60px;
@@ -417,7 +421,7 @@ a {
     nav ul li {
         display: inline-flex;
         justify-content: space-around;
-        margin: 0px 30px;
+        margin: 0px 15px;
         padding-right: 20px;
         font-size: 12px;
     }
@@ -534,6 +538,12 @@ a {
         color: #FF715B;
     }
 
+}
+
+@media(min-width: 511px){
+    nav ul li{
+        font-size: 14px;
+    }
 }
 
 @media (min-width: 769px) {
@@ -1117,8 +1127,7 @@ a {
 
     nav ul li {
         justify-content: space-around;
-        padding-right: 22px;
-        font-size: 11px;
+        padding-right: 18px;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
     }

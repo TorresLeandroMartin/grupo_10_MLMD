@@ -402,6 +402,10 @@ main h5{
         margin-left: 25px;
     }
 
+    div .buscador-bar{
+        width: 50%;
+    }
+
     .buscador-bar {
         display: flex;
         position: relative;
@@ -412,7 +416,6 @@ main h5{
         font-family: 'Montserrat', sans-serif;
         margin-right: 10px;
         padding-left: 5px;
-        width: 250px;
         height: 33px;
         border-radius: 1ch;
     }
@@ -437,13 +440,13 @@ main h5{
     .categoria-pais {
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
-        font-size: 10px;
+        font-size: 13px;
     }
 
     .carrito i {
         color: #FF715B;
         display: inline-flex;
-        font-size: 23.8px;
+        font-size: 22px;
         text-align: center;
         align-items: center;
     }
@@ -460,6 +463,7 @@ main h5{
         display: inline-flex;
         text-align: center;
         align-items: center;
+        padding: 5px;
     }
 
     nav {
@@ -481,7 +485,7 @@ main h5{
     nav ul li {
         display: inline-flex;
         justify-content: space-around;
-        margin: 0px 30px;
+        margin: 0px 15px;
         padding-right: 20px;
         font-size: 12px;
     }
@@ -604,6 +608,11 @@ main h5{
     }
 
 }
+@media(min-width: 511px){
+    nav ul li{
+        font-size: 14px;
+    }
+}
 
 @media (min-width: 769px) {
 
@@ -666,6 +675,10 @@ main h5{
         align-items: center;
     }
 
+    .categoria-pais{
+        width: 15%;
+    }
+
     .categoria-pais {
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
@@ -679,6 +692,12 @@ main h5{
         margin-left: 12px;
         text-align: center;
         align-items: center;
+    }
+
+    .categoria-pais select{
+        border: none;
+        border-radius: 5px;
+        padding: 2px;
     }
 
     .carrito {
@@ -715,8 +734,8 @@ main h5{
         display: inline-flex;
         justify-content: space-around;
         margin: 13px 30px 0px 30px;
-        padding-right: 20px;
-        font-size: 12px;
+        padding-right: 30px;
+        font-size: 16px;
         font-family: 'Montserrat', sans-serif;
     }
 
@@ -985,7 +1004,6 @@ main h5{
     nav ul li {
         justify-content: space-around;
         padding-right: 22px;
-        font-size: 11px;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
     }
@@ -1265,8 +1283,7 @@ main h5{
 
     nav ul li {
         justify-content: space-around;
-        padding-right: 22px;
-        font-size: 11px;
+        padding-right: 18px;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
     }

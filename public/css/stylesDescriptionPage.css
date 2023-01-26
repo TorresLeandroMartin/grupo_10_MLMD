@@ -477,6 +477,10 @@ h1 {
         margin-left: 25px;
     }
 
+    div .buscador-bar{
+        width: 50%;
+    }
+
     .buscador-bar {
         display: flex;
         position: relative;
@@ -487,7 +491,6 @@ h1 {
         font-family: 'Montserrat', sans-serif;
         margin-right: 10px;
         padding-left: 5px;
-        width: 250px;
         height: 33px;
         border-radius: 1ch;
     }
@@ -512,13 +515,13 @@ h1 {
     .categoria-pais {
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
-        font-size: 10px;
+        font-size: 13px;
     }
 
     .carrito i {
         color: #FF715B;
         display: inline-flex;
-        font-size: 23.8px;
+        font-size: 22px;
         text-align: center;
         align-items: center;
     }
@@ -535,6 +538,7 @@ h1 {
         display: inline-flex;
         text-align: center;
         align-items: center;
+        padding: 5px;
     }
 
     nav {
@@ -549,14 +553,14 @@ h1 {
     }
 
     nav ul {
-        margin-bottom: 20px;
+        margin-bottom: 0px;
         padding: 10px 0px;
     }
 
     nav ul li {
         display: inline-flex;
         justify-content: space-around;
-        margin: 0px 30px;
+        margin: 0px 15px;
         padding-right: 20px;
         font-size: 12px;
     }
@@ -682,6 +686,12 @@ h1 {
 
 }
 
+@media(min-width: 511px){
+    nav ul li{
+        font-size: 14px;
+    }
+}
+
 @media (min-width: 769px) {
 
 
@@ -744,6 +754,16 @@ h1 {
         align-items: center;
     }
 
+    .categoria-pais{
+        width: 15%;
+    }
+ 
+    .categoria-pais select{
+        border: none;
+        border-radius: 5px;
+        padding: 2px;
+    }
+    
     .categoria-pais {
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
@@ -793,8 +813,8 @@ h1 {
         display: inline-flex;
         justify-content: space-around;
         margin: 13px 30px 0px 30px;
-        padding-right: 20px;
-        font-size: 12px;
+        padding-right: 30px;
+        font-size: 16px;
         font-family: 'Montserrat', sans-serif;
     }
 
@@ -1088,7 +1108,6 @@ h1 {
     nav ul li {
         justify-content: space-around;
         padding-right: 22px;
-        font-size: 11px;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
     }

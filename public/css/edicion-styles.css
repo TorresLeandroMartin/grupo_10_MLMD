@@ -63,7 +63,8 @@ a {
 /* Body */ 
 
 .foto-producto{
-    border: none;
+    border: 3px;
+    border-color: var(--light-violet);
     width: 90%;
     border-radius: 5px;
 }
@@ -71,9 +72,18 @@ a {
 .boton-editar{
     width: 30vw;
     font-family: 'Lilita One';
-    font-size: 16px;
+    font-size: 15px;
     color: var(--light-gray);
     background-color: var(--salmon);
+    border: none;
+    border-radius: 5px;
+}
+.boton-borrar{
+    width: 30vw;
+    font-family: 'Lilita One';
+    font-size: 15px;
+    color: var(--light-gray);
+    background-color: var(--gray-violet);
     border: none;
     border-radius: 5px;
 }
@@ -204,7 +214,6 @@ form select {
     .buscador {
         display: inline;
         font-family: 'Montserrat', sans-serif;
-        ;
         font-size: 10px;
         border: solid 1px #ebebeb;
         align-items: center;
@@ -363,6 +372,10 @@ form select {
         margin-left: 25px;
     }
 
+    div .buscador-bar{
+        width: 50%;
+    }
+
     .buscador-bar {
         display: flex;
         position: relative;
@@ -373,7 +386,6 @@ form select {
         font-family: 'Montserrat', sans-serif;
         margin-right: 10px;
         padding-left: 5px;
-        width: 250px;
         height: 33px;
         border-radius: 1ch;
     }
@@ -397,14 +409,15 @@ form select {
 
     .categoria-pais {
         font-family: 'Montserrat', sans-serif;
+        width: 22px;
         font-weight: bold;
-        font-size: 10px;
+        font-size: 13px;
     }
 
     .carrito i {
         color: #FF715B;
         display: inline-flex;
-        font-size: 23.8px;
+        font-size: 22px;
         text-align: center;
         align-items: center;
     }
@@ -421,6 +434,7 @@ form select {
         display: inline-flex;
         text-align: center;
         align-items: center;
+        padding: 5px;
     }
 
     nav {
@@ -442,7 +456,7 @@ form select {
     nav ul li {
         display: inline-flex;
         justify-content: space-around;
-        margin: 0px 30px;
+        margin: 0px 15px;
         padding-right: 20px;
         font-size: 12px;
     }
@@ -482,6 +496,11 @@ form select {
     }
 
     .boton-editar{
+        width: 80px;
+        height: 30px;
+    }
+
+    .boton-borrar{
         width: 80px;
         height: 30px;
     }
@@ -594,10 +613,19 @@ form select {
 
 }
 
+@media(min-width: 511px){
+    nav ul li{
+        font-size: 14px;
+    }
+}
+
+
+
 @media(min-width: 712px){
-    .right-options{
-        width: 45%;
+    div .right-options{
+        width: 50%;
         padding: 20px;
+        text-align: left;
     }
 }
 
@@ -625,6 +653,16 @@ form select {
         align-items: center;
     }
 
+    .categoria-pais{
+        width: 15%;
+    }
+ 
+    .categoria-pais select{
+        border: none;
+        border-radius: 5px;
+        padding: 2px;
+    }
+    
     .logo {
         display: inline-flex;
         width: 18%;
@@ -712,8 +750,8 @@ form select {
         display: inline-flex;
         justify-content: space-around;
         margin: 13px 30px 0px 30px;
-        padding-right: 20px;
-        font-size: 12px;
+        font-size: 16px;
+        padding-right: 30px;
         font-family: 'Montserrat', sans-serif;
     }
 
@@ -761,6 +799,11 @@ form select {
     .boton-editar {
         margin-top: 10px;
     }
+
+    .boton-borrar {
+        margin-top: 10px;
+    }
+
 
     /*Fin de body*/
 
@@ -980,8 +1023,7 @@ form select {
 
     nav ul li {
         justify-content: space-around;
-        padding-right: 22px;
-        font-size: 11px;
+        padding-right: 14px;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
     }
@@ -1223,8 +1265,7 @@ form select {
 
     nav ul li {
         justify-content: space-around;
-        padding-right: 22px;
-        font-size: 11px;
+        padding-right: 18px;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
     }
