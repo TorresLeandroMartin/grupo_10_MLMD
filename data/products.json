@@ -1,0 +1,222 @@
+[
+    {
+        "id": 1,
+        "pais": "EEUU",
+        "name": "Nike Air Luka 1",
+        "price": 43.000,
+        "discount": 10,
+        "category": "in-sale",
+        "description": "Diseñadas para el 77 y para todos los atletas que buscan la máxima velocidad y eficiencia, el debut de Luka te ofrece todo el rendimiento que necesitas. Estas zapatillas, las primeras con espuma Formula 23 en toda la suela, ofrecen un ajuste ceñido diseñado para ayudarte cuando das un paso atrás. Además, los cables Flywire ligeros y resistentes mantienen la sujeción tanto si juegas en interiores como al aire libre. Son justo lo que buscabas. ¿A qué esperas? ¡Crea espacio y tira!",
+        "image": "Luka-1.jpg",
+        "color": "Blanco/Neo Turquoise/Carmesí brillante/Plata metalizado." 
+    },
+    {
+        "id": 1,  
+        "pais": "EEUU",
+        "name": "Nike Air Luka 1",
+        "price": 43.000,
+        "discount": 10,
+        "category": "in-sale",
+        "description": "Diseñadas para el 77 y para todos los atletas que buscan la máxima velocidad y eficiencia, el debut de Luka te ofrece todo el rendimiento que necesitas. Estas zapatillas, las primeras con espuma Formula 23 en toda la suela, ofrecen un ajuste ceñido diseñado para ayudarte cuando das un paso atrás. Además, los cables Flywire ligeros y resistentes mantienen la sujeción tanto si juegas en interiores como al aire libre. Son justo lo que buscabas. ¿A qué esperas? ¡Crea espacio y tira!",
+        "image": "Luka-1.jpg",
+        "color": "Blanco/Neo Turquoise/Carmesí brillante/Plata metalizado." 
+    },
+    {
+        "id": 1,
+        "pais": "EEUU",
+        "name": "Nike Air Luka 1",
+        "price": 43.000,
+        "discount": 10,
+        "category": "in-sale",
+        "description": "Diseñadas para el 77 y para todos los atletas que buscan la máxima velocidad y eficiencia, el debut de Luka te ofrece todo el rendimiento que necesitas. Estas zapatillas, las primeras con espuma Formula 23 en toda la suela, ofrecen un ajuste ceñido diseñado para ayudarte cuando das un paso atrás. Además, los cables Flywire ligeros y resistentes mantienen la sujeción tanto si juegas en interiores como al aire libre. Son justo lo que buscabas. ¿A qué esperas? ¡Crea espacio y tira!",
+        "image": "Luka-1.jpg",
+        "color": "Blanco/Neo Turquoise/Carmesí brillante/Plata metalizado." 
+    },
+    {
+        "id": 1,
+        "pais": "EEUU",
+        "name": "Nike Air Luka 1",
+        "price": 43.000,
+        "discount": 10,
+        "category": "in-sale",
+        "description": "Diseñadas para el 77 y para todos los atletas que buscan la máxima velocidad y eficiencia, el debut de Luka te ofrece todo el rendimiento que necesitas. Estas zapatillas, las primeras con espuma Formula 23 en toda la suela, ofrecen un ajuste ceñido diseñado para ayudarte cuando das un paso atrás. Además, los cables Flywire ligeros y resistentes mantienen la sujeción tanto si juegas en interiores como al aire libre. Son justo lo que buscabas. ¿A qué esperas? ¡Crea espacio y tira!",
+        "image": "Luka-1.jpg",
+        "color": "Blanco/Neo Turquoise/Carmesí brillante/Plata metalizado." 
+    },
+    {
+        "id": 1,
+        "pais": "EEUU",
+        "name": "Nike Air Luka 1 ",
+        "price": 43.000,
+        "discount": 10,
+        "category": "in-sale",
+        "description": "Diseñadas para el 77 y para todos los atletas que buscan la máxima velocidad y eficiencia, el debut de Luka te ofrece todo el rendimiento que necesitas. Estas zapatillas, las primeras con espuma Formula 23 en toda la suela, ofrecen un ajuste ceñido diseñado para ayudarte cuando das un paso atrás. Además, los cables Flywire ligeros y resistentes mantienen la sujeción tanto si juegas en interiores como al aire libre. Son justo lo que buscabas. ¿A qué esperas? ¡Crea espacio y tira!",
+        "image": "Luka-1.jpg",
+        "color": "Blanco/Neo Turquoise/Carmesí brillante/Plata metalizado." 
+    },
+    {
+        "id": 2,
+        "pais": "Argentina",
+        "name": "Camiseta titular Argentina 2022",
+        "price": 43.000,
+        "discount": 10,
+        "category": "in-sale",
+        "description": "Diseñadas para el 77 y para todos los atletas que buscan la máxima velocidad y eficiencia, el debut de Luka te ofrece todo el rendimiento que necesitas. Estas zapatillas, las primeras con espuma Formula 23 en toda la suela, ofrecen un ajuste ceñido diseñado para ayudarte cuando das un paso atrás. Además, los cables Flywire ligeros y resistentes mantienen la sujeción tanto si juegas en interiores como al aire libre. Son justo lo que buscabas. ¿A qué esperas? ¡Crea espacio y tira!",
+        "image": "camisetaDeCampeones.jpeg",
+        "color": "Blanco/Neo Turquoise/Carmesí brillante/Plata metalizado." 
+    },
+    {
+        "id": 2,
+        "pais": "Argentina",
+        "name": "Camiseta titular Argentina 2022",
+        "description": "100% Argentina. Diseñada para los hinchas, ofrece comodidad en todo momento gracias a su tejido suave con tecnología de absorción AEROREADY. Los detalles en la parte interior trasera del cuello están inspirados en la bandera nacional que los jugadores representan con tanto orgullo. Un producto hecho parcialmente con contenido reciclado generado a partir de desechos de producción, tales como recortes de tela, y desechos domésticos postconsumo, para evitar un mayor impacto ambiental al producir contenido virgen.",
+        "price": 17.000,
+        "discount": 5,
+        "image": "camisetaDeCampeones.jpeg",
+        "category": "in-sale",
+        "color": "Celeste y Blanca con detalles en Negro."
+    },
+    {
+        "id": 2,
+        "pais": "Argentina",
+        "name": "Camiseta titular Argentina 2022",
+        "description": "100% Argentina. Diseñada para los hinchas, ofrece comodidad en todo momento gracias a su tejido suave con tecnología de absorción AEROREADY. Los detalles en la parte interior trasera del cuello están inspirados en la bandera nacional que los jugadores representan con tanto orgullo. Un producto hecho parcialmente con contenido reciclado generado a partir de desechos de producción, tales como recortes de tela, y desechos domésticos postconsumo, para evitar un mayor impacto ambiental al producir contenido virgen.",
+        "price": 17.000,
+        "discount": 5,
+        "image": "camisetaDeCampeones.jpeg",
+        "category": "in-sale",
+        "color": "Celeste y Blanca con detalles en Negro."
+    },
+    {
+        "id": 2,
+        "pais": "Argentina",
+        "name": "Camiseta titular Argentina 2022",
+        "description": "100% Argentina. Diseñada para los hinchas, ofrece comodidad en todo momento gracias a su tejido suave con tecnología de absorción AEROREADY. Los detalles en la parte interior trasera del cuello están inspirados en la bandera nacional que los jugadores representan con tanto orgullo. Un producto hecho parcialmente con contenido reciclado generado a partir de desechos de producción, tales como recortes de tela, y desechos domésticos postconsumo, para evitar un mayor impacto ambiental al producir contenido virgen.",
+        "price": 17.000,
+        "discount": 5,
+        "image": "camisetaDeCampeones.jpeg",
+        "category": "in-sale",
+        "color": "Celeste y Blanca con detalles en Negro."
+    },
+    {
+        "id": 2,
+        "pais": "Argentina",
+        "name": "Camiseta titular Argentina 2022",
+        "description": "100% Argentina. Diseñada para los hinchas, ofrece comodidad en todo momento gracias a su tejido suave con tecnología de absorción AEROREADY. Los detalles en la parte interior trasera del cuello están inspirados en la bandera nacional que los jugadores representan con tanto orgullo. Un producto hecho parcialmente con contenido reciclado generado a partir de desechos de producción, tales como recortes de tela, y desechos domésticos postconsumo, para evitar un mayor impacto ambiental al producir contenido virgen.",
+        "price": 17.000,
+        "discount": 5,
+        "image": "camisetaDeCampeones.jpeg",
+        "category": "in-sale",
+        "color": "Celeste y Blanca con detalles en Negro."
+    },
+    {
+        "id": 3,
+        "pais": "Canadá",
+        "name": "Nike Dri-FIT Run Division Flex Stride",
+        "description": "Cuando estás en el momento más intenso de tu carrera diaria, moverte libremente es la clave. El pantalón corto 2 en 1 Nike Dri-FIT Run Division Flex Stride ofrece ligereza y suavidad con un diseño pensado para seguir moviéndote sin restricciones. Que nada te detenga, tienes que cumplir tus objetivos.",
+        "price": 10.000,
+        "discount": 5,
+        "image": "pantalonRunning.jpg",
+        "category": "in-sale",
+        "color": "Negro/Negro"
+    },
+    {
+        "id": 3,
+        "pais": "Canadá",
+        "name": "Nike Dri-FIT Run Division Flex Stride",
+        "description": "Cuando estás en el momento más intenso de tu carrera diaria, moverte libremente es la clave. El pantalón corto 2 en 1 Nike Dri-FIT Run Division Flex Stride ofrece ligereza y suavidad con un diseño pensado para seguir moviéndote sin restricciones. Que nada te detenga, tienes que cumplir tus objetivos.",
+        "price": 10.000,
+        "discount": 5,
+        "image": "pantalonRunning.jpg",
+        "category": "in-sale",
+        "color": "Negro/Negro"
+    },
+    {
+        "id": 3,
+        "pais": "Canadá",
+        "name": "Nike Dri-FIT Run Division Flex Stride",
+        "description": "Cuando estás en el momento más intenso de tu carrera diaria, moverte libremente es la clave. El pantalón corto 2 en 1 Nike Dri-FIT Run Division Flex Stride ofrece ligereza y suavidad con un diseño pensado para seguir moviéndote sin restricciones. Que nada te detenga, tienes que cumplir tus objetivos.",
+        "price": 10.000,
+        "discount": 5,
+        "image": "pantalonRunning.jpg",
+        "category": "in-sale",
+        "color": "Negro/Negro"
+    },
+    {
+        "id": 3,
+        "pais": "Canadá",
+        "name": "Nike Dri-FIT Run Division Flex Stride",
+        "description": "Cuando estás en el momento más intenso de tu carrera diaria, moverte libremente es la clave. El pantalón corto 2 en 1 Nike Dri-FIT Run Division Flex Stride ofrece ligereza y suavidad con un diseño pensado para seguir moviéndote sin restricciones. Que nada te detenga, tienes que cumplir tus objetivos.",
+        "price": 10.000,
+        "discount": 5,
+        "image": "pantalonRunning.jpg",
+        "category": "in-sale",
+        "color": "Negro/Negro"
+    },
+    {
+        "id": 3,
+        "pais": "Canadá",
+        "name": "Nike Dri-FIT Run Division Flex Stride",
+        "description": "Cuando estás en el momento más intenso de tu carrera diaria, moverte libremente es la clave. El pantalón corto 2 en 1 Nike Dri-FIT Run Division Flex Stride ofrece ligereza y suavidad con un diseño pensado para seguir moviéndote sin restricciones. Que nada te detenga, tienes que cumplir tus objetivos.",
+        "price": 10.000,
+        "discount": 5,
+        "image": "pantalonRunning.jpg",
+        "category": "in-sale",
+        "color": "Negro/Negro"
+    },
+    {
+        "id": 4,
+        "pais": "EU",
+        "name": "Nike Air Force 1  ’07 ",
+        "description": "El fulgor sigue vivo con un diseño de baloncesto original. Con un diseño que combina la comodidad para la cancha con un estilo urbano, estas zapatillas dan un nuevo giro a su ya característico estilo, su confección inspirada en los 80, sus detalles llamativos y su estilo impecable.",
+        "price": 40.000,
+        "discount": 5,
+        "category": "in-sale",
+        "image": "nikeAir1.jpg",
+        "color": "Blanco/Gris Lobo"
+    },
+    {
+        "id": 4,
+        "pais": "EU",
+        "name": "Nike Air Force 1  ’07 ",
+        "description": "El fulgor sigue vivo con un diseño de baloncesto original. Con un diseño que combina la comodidad para la cancha con un estilo urbano, estas zapatillas dan un nuevo giro a su ya característico estilo, su confección inspirada en los 80, sus detalles llamativos y su estilo impecable.",
+        "price": 40.000,
+        "discount": 5,
+        "category": "in-sale",
+        "image": "nikeAir1.jpg",
+        "color": "Blanco/Gris Lobo"
+    },
+    {
+        "id": 4,
+        "pais": "EU",
+        "name": "Nike Air Force 1  ’07 ",
+        "description": "El fulgor sigue vivo con un diseño de baloncesto original. Con un diseño que combina la comodidad para la cancha con un estilo urbano, estas zapatillas dan un nuevo giro a su ya característico estilo, su confección inspirada en los 80, sus detalles llamativos y su estilo impecable.",
+        "price": 40.000,
+        "discount": 5,
+        "category": "in-sale",
+        "image": "nikeAir1.jpg",
+        "color": "Blanco/Gris Lobo"
+    },
+    {
+        "id": 4,
+        "pais": "EU",
+        "name": "Nike Air Force 1  ’07 ",
+        "description": "El fulgor sigue vivo con un diseño de baloncesto original. Con un diseño que combina la comodidad para la cancha con un estilo urbano, estas zapatillas dan un nuevo giro a su ya característico estilo, su confección inspirada en los 80, sus detalles llamativos y su estilo impecable.",
+        "price": 40.000,
+        "discount": 5,
+        "category": "in-sale",
+        "image": "nikeAir1.jpg",
+        "color": "Blanco/Gris Lobo"
+    },
+    {
+        "id": 4,
+        "pais": "EU",
+        "name": "Nike Air Force 1  ’07 ",
+        "description": "El fulgor sigue vivo con un diseño de baloncesto original. Con un diseño que combina la comodidad para la cancha con un estilo urbano, estas zapatillas dan un nuevo giro a su ya característico estilo, su confección inspirada en los 80, sus detalles llamativos y su estilo impecable.",
+        "price": 40.000,
+        "discount": 5,
+        "category": "in-sale",
+        "image": "nikeAir1.jpg",
+        "color": "Blanco/Gris Lobo"
+    }
+]

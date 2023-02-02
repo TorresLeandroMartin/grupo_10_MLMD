@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- head -->
+
+<%- include("./partials/head") %>
+
+    <!-- hoja de estilos -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="/css/edicion-styles.css" rel="stylesheet">
+
+    <body>
+        <!-- header -->
+
+        <%- include("./partials/header") %>
+
+            <main>
+                <div class="edita-archivo">
+
+                    <div class="left-options">
+                        <h2> Edición de Productos </h2>
+                        <div class="form-group">
+                            <label for="file-input">
+                                <img class="img-prueba" src="/img/pantalonRunning.jpg" alt="buttonjpg">
+                            </label>
+                            <input id="file-input" type="file" accept="image/*"/>
+                          </div>
+                    </div>
+
+                    <div class="right-options">
+                        <form action="/ID" method="POST">
+                            <label for="nombre">ID de producto a editar</label>
+                            <input type="Descrpción" name="nombre" id="ID" minlength="8" required>
+                        </form>
+                        <form action="/ID" method="POST">
+                            <label for="nombre">Nuevo nombre</label>
+                            <input type="Descrpción" name="nombre" id="ID" minlength="8" required>
+                        </form>
+                        <form action="/ID" method="POST">
+                            <label for="nombre">Precio</label>
+                            <input type="Descrpción" name="nombre" id="ID" required>
+                        </form>
+                        <form action="/ID" method="POST">
+                            <label for="categoria">Categorías</label>
+                            <select name="categorias" id="Categoría" required>
+                                <option value="buzo">Buzos</option>
+                                <option value="calzado">Calzado</option>
+                                <option value="pantalon">Pantalón</option>
+                                <option value="remeras">Remeras</option>
+                            </select>
+                        </form>
+                        <form action="/ID" method="POST">
+                            <label for="Talles">Talles</label>
+                            <select name="Talles" id="Talles" required>
+                                <option value="Small">S</option>
+                                <option value="Medium">M</option>
+                                <option value="Large">L</option>
+                                <option value="ExtraLarge">XL</option>
+                            </select>
+                        </form>
+                        <form class="descripcion" action="/ID" method="POST">
+                            <label for="Descripción">Descripción</label>
+                            <textarea name="comentario" id="comentario" placeholder="Inserte la descripción del producto..."></textarea required>
+                      </form>
+                      <button class="boton-editar" type="button">Editar</button>
+                      <button class="boton-borrar" type="button">Borrar</button>
+                  </div>
+              </div>
+          </main>
+
+            <!-- footer -->
+
+            <%- include("./partials/footer") %>
+
+    </body>
+
+</html>

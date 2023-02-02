@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "nombre": "First name",
+        "apellido": "Last name",
+        "email": "email",
+        "contraseña": "contraseña",
+        "category": "vendedor",
+        "imagen": "avatar1.png"
+    },
+    {
+        "id": 2,
+        "nombre": "First name",
+        "apellido": "Last name",
+        "email": "email",
+        "contraseña": "contraseña",
+        "category": "cliente",
+        "imagen": "avatar2.png"
+    },
+    {
+        "id": 3,
+        "nombre": "First name",
+        "apellido": "Last name",
+        "email": "email",
+        "contraseña": "contraseña",
+        "category": "vendedor",
+        "imagen": "avatar3.png"
+    },
+    {
+        "id": 4 ,
+        "nombre": "First name",
+        "apellido": "Last name",
+        "email": "email",
+        "contraseña": "contraseña",
+        "category": "cliente",
+        "imagen": "avatar4.png"
+    },
+    {
+        "id": 5 ,
+        "nombre": "First name",
+        "apellido": "Last name",
+        "email": "email",
+        "contraseña": "cliente",
+        "category": "in-sale",
+        "imagen": "avatar5.png"
+    }, 
+    {
+        "id": 6 ,
+        "nombre": "First name",
+        "apellido": "Last name",
+        "email": "email",
+        "contraseña": "contraseña",
+        "category": "vendedor",
+        "imagen": "avatar1.png"
+    },
+    {
+        "id": 7 ,
+        "nombre": "First name",
+        "apellido": "Last name",
+        "email": "email",
+        "contraseña": "contraseña",
+        "category": "vendedor",
+        "imagen": "avatar2.png"
+    },
+    {
+        "id": 8 ,
+        "nombre": "First namen",
+        "apellido": "Last name",
+        "email": "email",
+        "contraseña": "contraseña",
+        "category": "cliente",
+        "imagen": "avatar4.png"
+    }
+]
