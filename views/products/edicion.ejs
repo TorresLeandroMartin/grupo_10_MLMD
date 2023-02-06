@@ -28,9 +28,9 @@
                     </div>
 
                     <div class="right-options">
-                        <h2>Estas editando el producto con ID: <%=producto.id%> </h2>
-
-                        <form method="POST" action="/productos/edicion/<%=producto.id%>?_method=PUT ">
+                        <h2>Estas editando el producto con ID:  </h2>
+                        <!-- productos.id -->
+                        <form method="POST" action="/productos/edicion/">
                             <label for="nombre">Nuevo nombre</label>
                             <input type="text" name="nombre" id="nombre" minlength="3" required>
                             <label for="nombre">Precio</label>
