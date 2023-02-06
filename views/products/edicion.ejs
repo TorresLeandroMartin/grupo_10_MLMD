@@ -28,22 +28,22 @@
                     </div>
 
                     <div class="right-options">
-                        <form action="">
-                            <label for="nombre">ID de producto a editar</label>
-                            <input type="Descrpción" name="nombre" id="ID" minlength="8" required>
+                        <h2>Estas editando el producto con ID: <%=producto.id%> </h2>
+
+                        <form method="POST" action="/productos/edicion/<%=producto.id%>?_method=PUT ">
                             <label for="nombre">Nuevo nombre</label>
-                            <input type="Descrpción" name="nombre" id="ID" minlength="8" required>
+                            <input type="text" name="nombre" id="nombre" minlength="3" required>
                             <label for="nombre">Precio</label>
-                            <input type="Descrpción" name="nombre" id="ID" required>
+                            <input type="number" name="precio" id="precio" required>
                             <label for="categoria">Categorías</label>
-                            <select name="categorias" id="Categoría" required>
+                            <select name="categorias" id="categoria" required>
                                 <option value="buzo">Buzos</option>
                                 <option value="calzado">Calzado</option>
                                 <option value="pantalon">Pantalón</option>
                                 <option value="remeras">Remeras</option>
                             </select>
-                            <label for="Talles">Talles</label>
-                            <select name="Talles" id="Talles" required>
+                            <label for="talles">Talles</label>
+                            <select name="talles" id="talles" required>
                                 <option value="Small">S</option>
                                 <option value="Medium">M</option>
                                 <option value="Large">L</option>
@@ -51,10 +51,10 @@
                             </select>
                             <label for="Descripción">Descripción</label>
                             <textarea name="comentario" id="comentario" placeholder="Inserte la descripción del producto..."></textarea required>
-                      <button class="boton-editar" type="button">Editar</button>
+                      <button class="boton-editar" type="submit">Editar</button>
                     </form>
                     <form action="">
-                        <button class="boton-borrar" type="button">Borrar</button>
+                        <button class="boton-borrar" type="submit">Borrar</button>
                     </form>
                 </div>
               </div>
