@@ -42,21 +42,22 @@ const productController = {
   },
 
   editarProducto: (req, res) => {
-    const productoBuscado = productos.find(
-      (producto) => producto.id === req.params.id
-    );
+    // const productoBuscado = productos.find(
+    //   (producto) => producto.id === req.params.id
+    // );
 
-    // Si productFound = false devuelvo mensaje de error
-    if (!productoBuscado)
-      return res.status(404).json({
-        message: "Product not found",
-      });
+    // // Si productFound = false devuelvo mensaje de error
+    // if (!productoBuscado)
+    //   return res.status(404).json({
+    //     message: "Product not found",
+    //   });
 
-    let idProducto = req.params.id;
+    // let idProducto = req.params.id;
 
-    let productoAEditar = productos.find((producto) => producto.id == idProducto);
+    // let productoAEditar = productos.find((producto) => producto.id == idProducto);
 
-    res.render("edicion", { producto: productoAEditar });
+    // res.render("edicion", { producto: productoAEditar });
+    res.send('Editado')
   },
   eliminarProducto: (req, res) => {
     res.send("eliminado");
