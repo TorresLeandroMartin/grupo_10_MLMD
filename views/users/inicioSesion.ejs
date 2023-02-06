@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- head -->
+
+<%- include("./partials/head") %>
+
+    <!-- hoja de estilos -->
+
+    <link rel="stylesheet" href="/css/stylesLogin.css">
+
+
+    <body>
+
+        <!-- header -->
+    
+ <%- include("./partials/header") %>
+ 
+
+            <main>
+                <div class="contenedor-main">
+
+                    <div class="top-main">
+                        <p>Bienvenid@ a HouseClothing!</p>
+
+                        <p>LOG IN</p>
+                    </div>
+
+                    <form action="/iniciarsesion" method="POST" class="bottom-main">
+                        <div class="campos-de-texto">
+                            <input type="text" placeholder="Nombre de Usuario o mail" required>
+                            <input type="text" placeholder="Contrasena" required>
+                        </div>
+                        <div class="botonera">
+                            <label><input type="checkbox">  Recuerdame</label>
+                            <div class="botones">
+                                <a href='/homeOficial'><button class="boton1">Log in</button></a>
+                                <a href="/crearcuenta"><button class="boton2">Sign up</button></a>
+                            </div>
+                            <a href="#">Olvidaste la contrasena?</a>
+                        </div>
+                    </form>
+
+                </div>
+            </main>
+
+            <!-- footer -->
+
+            <%- include("./partials/footer") %>
+
+    </body>
+
+</html>

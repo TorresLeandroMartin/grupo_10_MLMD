@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- head -->
+
+<%- include("./partials/head") %>
+
+<!-- hoja de estilos -->
+<link rel="stylesheet" href="css/normalize.css">
+<link href="/css/catalogo-logueado.css" rel="stylesheet">
+
+<body>
+    <!-- header -->
+
+    <%- include("./partials/headerLogin") %>
+
+    <main>
+
+      <h4>Productos</h4>
+
+      <hr>
+
+      <div class="productos">
+        <section class="global">
+          <h2>Global</h2>
+          <div>
+            <article class="espacio-producto">
+
+            </article>
+            <article class="espacio-producto">
+
+            </article>
+            <article class="espacio-producto">
+
+            </article>
+          </div>
+          
+        </section>
+
+        <section class="inventario">
+          <h2>Inventario</h2>
+          <a class = "upload" href="/productos/crear"><div class= crear>
+          <i class="fa-solid fa-arrow-up-from-bracket"></i>
+          <label class="frase"> Crea tu producto </label>
+        </a>
+        </div>
+      </section>
+      </div>
+
+    </main>
+    
+     <!-- footer -->
+
+     <%- include("./partials/footerLogueado") %>
+
+</body>
+</html>
