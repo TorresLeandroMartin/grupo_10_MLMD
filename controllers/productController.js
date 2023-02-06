@@ -32,12 +32,15 @@ const productController = {
 
     res.redirect('catalogoLogueado')
   },
+
   detalle: (req, res) => {
     res.render("descripcion");
   },
+
   editar: (req, res) => {
-    res.render("edicion");
+    res.render('edicion');
   },
+
   editarProducto: (req, res) => {
     const productoBuscado = productos.find(
       (producto) => producto.id === req.params.id

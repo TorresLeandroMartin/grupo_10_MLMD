@@ -486,18 +486,6 @@ h1 {
         align-items: center;
     }
 
-    .categoria-pais {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
-        font-size: 12px;
-    }
-
-    .categoria-pais select{
-        border: none;
-        border-radius: 5px;
-        padding: 2px;
-    }
-
     .carrito i {
         color: #FF715B;
         display: inline-flex;

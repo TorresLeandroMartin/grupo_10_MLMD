@@ -194,10 +194,6 @@ main h5{
 
 @media (max-width: 425px) {
 
-    .categoria-pais {
-        display: none;
-    }
-
     main section article h4,
     nav ul {
         display: none;
@@ -434,18 +430,6 @@ main h5{
         font-size: 13px;
         border: solid 1px #ebebeb;
         align-items: center;
-    }
-
-    .categoria-pais {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
-        font-size: 12px;
-    }
-
-    .categoria-pais select{
-        border: none;
-        border-radius: 5px;
-        padding: 2px;
     }
 
     .carrito i {
