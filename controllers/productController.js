@@ -1,13 +1,10 @@
 const fs = require("fs");
 const path = require("path");
 
-let productosJson = fs.readFileSync(
-  path.join(__dirname, "../data/products.json")
-);
+let productosJson = (path.join(__dirname, "../data/products.json"));
 
-let productos = JSON.parse(productosJson, 'utf-8');
+let productos = JSON.parse(fs.readFileSync(productosJson, 'utf-8'));
 
-let login = true;
 
 const productController = {
 
@@ -65,26 +62,30 @@ const productController = {
     let productoAEditar = productos.find(producto => producto.id == id);
 
     productoAEditar = {
-      id : id,
+      id : productoAEditar.id,
+      estilo : req.body.estilo,
       nombre : req.body.nombre,
       precio : req.body.precio,
+      descuento: req.body.descuento,
       categoria : req.body.categoria,
-      talle : req.body.talle,
       descripcion : req.body.descripcion,
-      imagen : productoAEditar.imagen
+      imagen : productoAEditar.imagen,
+      color : req.body.color,
     };
 
-  
-    let productoEditado = productos.map(producto =>{
-      if(producto.id == productoAEditar.id){
+    console.log(productoAEditar)
+
+    let productoNuevo = productos.map(producto =>{
+      if(producto.id == id){
         return producto(...productoAEditar)
       }
       return producto;
     });
 
-    fs.writeFileSync(productosJson, JSON.stringify(productoEditado));
+    fs.writeFileSync(productosJson, JSON.stringify(productoNuevo));
 
-    res.redirect("/")
+    res.redirect('/');
+
   },
 
   eliminarProducto: (req, res) => {
