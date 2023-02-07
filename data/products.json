@@ -1,2 +1,12 @@
-[{"name":"Leandro"}, {"name":"Lucas"}]
-
+[
+  { "name": "Leandro" },
+  { "name": "Lucas" },
+  {
+    "id": "1",
+    "nombre": "NombreProducto",
+    "precio": "1000",
+    "categorias": "buzo",
+    "talles": "Small",
+    "descripcion": "Descripcion del producto"
+  }
+]

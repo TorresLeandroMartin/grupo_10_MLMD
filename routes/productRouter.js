@@ -12,7 +12,7 @@ router.get('/catalogoLogueado', productController.logueado)
 router.get("/crear", productController.crear);
 
 // URL /productos/crear
-router.post("/crearlo", productController.accionCrear);
+router.post("/crear", productController.accionCrear);
 
 // URL /productos/descripcion/:id
 router.get("/descripcion/:id", productController.detalle);
