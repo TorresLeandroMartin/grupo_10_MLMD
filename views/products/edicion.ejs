@@ -28,15 +28,15 @@
                     </div>
 
                     <div class="right-options">
-                        <h2>Estas editando el producto con ID:  </h2>
+                        <h2>Estas editando el producto: <i> <%=producto.nombre%> </i> </h2>
                         <!-- productos.id -->
-                        <form method="POST" action="/productos/edicion/">
+                        <form method="POST" action="productos/edicion/<%=producto.id%>?method=PUT">
                             <label for="nombre">Nuevo nombre</label>
-                            <input type="text" name="nombre" id="nombre" minlength="3" required>
+                            <input type="text" name="nombre" id="nombre" value ="<%=producto.nombre%>" minlength="3" required>
                             <label for="nombre">Precio</label>
-                            <input type="number" name="precio" id="precio" required>
+                            <input type="number" name="precio" id="precio"  value ="<%=producto.precio%>" required>
                             <label for="categoria">Categorías</label>
-                            <select name="categorias" id="categoria" required>
+                            <select name="categoria" id="categoria"  value ="<%=producto.categoria%>" required>
                                 <option value="buzo">Buzos</option>
                                 <option value="calzado">Calzado</option>
                                 <option value="pantalon">Pantalón</option>
@@ -49,11 +49,12 @@
                                 <option value="Large">L</option>
                                 <option value="ExtraLarge">XL</option>
                             </select>
-                            <label for="Descripción">Descripción</label>
-                            <textarea name="comentario" id="comentario" placeholder="Inserte la descripción del producto..."></textarea required>
-                      <button class="boton-editar" type="submit">Editar</button>
+                            <label for="descripcion">Descripción</label>
+                            <textarea name="descripcion" id="descripcion"><%= producto.descripcion %> </textarea required>
+
+                      <a href="/productos/edicion/<%=producto.id%>" class="boton-editar edit">Editar</a>
                     </form>
-                    <form action="">
+                    <form action="/edicion/<%=producto.id%>?method=DELETE" method="POST">
                         <button class="boton-borrar" type="submit">Borrar</button>
                     </form>
                 </div>
