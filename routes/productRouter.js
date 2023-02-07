@@ -3,8 +3,8 @@ const router = express.Router();
 
 const productController = require("../controllers/productController");
 
-// URL /productos
-router.get("/catalogo", productController.index);
+// URL /productos/catalogo
+router.get("/", productController.index);
 
 router.get('/catalogoLogueado', productController.logueado)
 
