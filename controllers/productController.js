@@ -73,19 +73,17 @@ const productController = {
       color : req.body.color,
     };
 
-    console.log(productoAEditar)
+    let productoNuevo = productos.map(producto => {
 
-    let productoNuevo = productos.map(producto =>{
-      if(producto.id == id){
-        return producto(...productoAEditar)
+      if(producto.id == productoAEditar.id){
+         return producto = {...productoAEditar}
       }
       return producto;
     });
 
-    fs.writeFileSync(productosJson, JSON.stringify(productoNuevo));
+    fs.writeFileSync(productosJson, JSON.stringify(productoAEditar));
 
     res.redirect('/');
-
   },
 
   eliminarProducto: (req, res) => {

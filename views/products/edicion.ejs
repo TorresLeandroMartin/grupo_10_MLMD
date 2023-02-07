@@ -24,7 +24,7 @@
                                 <img class="img-prueba" src="/img/pantalonRunning.jpg" alt="buttonjpg">
                             </label>
                             <input id="file-input" type="file" accept="image/*"/>
-                          </div>
+                        </div>
                     </div>
 
                     <div class="right-options">
@@ -66,15 +66,15 @@
                                 <option value="Verde">Verde</option>
                                 <option value="Negro">Negro</option>
                             </select>
-                      <div>
-                          <button type="submit" class="boton-editar">Editar</button>
-                      </div>
-                    </form>
+                            <div>
+                                <button type="submit" class="boton-editar">Editar</button>
+                            </div>
+                        </form>
 
-                    <form action="productos/edicion/<%=producto.id%>?method=DELETE" method="POST">
-                        <button class="boton-borrar" type="submit">Borrar</button>
-                    </form>
-                </div>
+                        <form action="productos/edicion/<%=producto.id%>?method=DELETE" method="POST">
+                            <button class="boton-borrar" type="delete">Borrar</button>
+                        </form>
+                    </div>
               </div>
           </main>
 
