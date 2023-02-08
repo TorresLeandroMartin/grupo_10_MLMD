@@ -38,53 +38,55 @@ const productController = {
 
   editar: (req, res) => {
 
-    let id = req.params.id;
+    const productoEncontrado = productos.find(
+      (producto) => producto.id === req.params.id
+    );
 
-    let producto = productos.find(producto => producto.id == id);
+    // Si productFound = false devuelvo mensaje de error
+    if (!productoEncontrado)
+      return res.status(404).json({
+        message: "Product not found",
+      });
 
-    res.render('edicion', {producto});
+    let idProducto = req.params.id;
+
+    let productoAEditar = productos.find((producto) => producto.id == idProducto);
+
+    res.render("edicion", { producto: productoAEditar });
   },
 
   editarProducto: (req, res) => {
-    let idProduct = req.params.id;
+   let idProducto = req.params.id;
 
-    let productToUpdate = products.find((product) => product.id == idProduct);
+  //  let productoAEditar = productos.find((producto) => producto.id == idProducto);
 
-    let updatesToProduct = {
-      id : productToUpdate.id,
-      estilo : req.body.estilo,
-      nombre : req.body.nombre,
-      precio : req.body.precio,
-      descuento: req.body.descuento,
-      categoria : req.body.categoria,
-      descripcion : req.body.descripcion,
-      imagen : productToUpdate.imagen,
-      color : req.body.color,
+    let actualizacionesAlProducto = {
+      estilo:req.body.estilo,
+      nombre: req.body.nombre,
+      precio: req.body.precio,
+      categoria: req.body.categoria,
+      talle: req.body.talle,
+      descripcion: req.body.descripcion,
+      color: req.body.color
     };
-    // Devuelve nuevo array de productos 
-    let newProducts = products.map((product) => {
-      if (product.id == idProduct) {
-         product = { ...updatesToProduct }
-      }
+// 
+// Devuelve nuevo array de productos 
+let productoEditado = productos.map((producto) => {
+  if (producto.id == idProducto) {
+     producto = { ...actualizacionesAlProducto }
+  }
 
-      return product
-    });
+  return producto
+});
 
-    console.log(newProducts);
-    const newProductJson = JSON.stringify(newProducts);
+const productoEditadoJson = JSON.stringify(productoEditado);
 
-    fs.writeFileSync(
-      path.join(__dirname, "../data/products.json"),
-      newProductJson
-    );
+fs.writeFileSync(
+  path.join(__dirname, "../data/products.json"),
+  productoEditadoJson
+);
 
-    //console.log(productToUpdate);
-    //console.log('Separador');
-    //console.log(updatesToProduct);
-    //console.log('Separador');
-    //console.log(newProducts);
-
-    res.redirect('/')
+res.redirect('/productos')
   },
 
   eliminarProducto: (req, res) => {
