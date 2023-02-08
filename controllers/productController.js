@@ -51,14 +51,14 @@ const productController = {
     let productToUpdate = products.find((product) => product.id == idProduct);
 
     let updatesToProduct = {
-      id : productoAEditar.id,
+      id : productToUpdate.id,
       estilo : req.body.estilo,
       nombre : req.body.nombre,
       precio : req.body.precio,
       descuento: req.body.descuento,
       categoria : req.body.categoria,
       descripcion : req.body.descripcion,
-      imagen : productoAEditar.imagen,
+      imagen : productToUpdate.imagen,
       color : req.body.color,
     };
     // Devuelve nuevo array de productos 
