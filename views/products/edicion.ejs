@@ -31,7 +31,7 @@
                         <h2>Estas editando el producto: <i> <%=producto.nombre%> </i> </h2>
                         <!-- productos.id -->
 
-                        <form action="productos/edicion/<%=producto.id%>?_method=PUT" method="POST">
+                        <form action="/productos/edicion/<%=producto.id%>?_method=PUT" method="POST">
 
                             <label for="estilo">Estilo</label>
                             <input type="text" name="estilo" id="estilo"  value ="<%=producto.estilo%>" required>
@@ -57,7 +57,7 @@
                                 <option value="ExtraLarge">XL</option>
                             </select>
                             <label for="descripcion">Descripción</label>
-                            <textarea name="descripcion" id="descripcion"><%= producto.descripcion %> </textarea required>
+                            <textarea name="descripcion" id="descripcion"><%=producto.descripcion%> </textarea required>
  
 
                             <select name="color" id="color" value ="<%=producto.color%>" required>
