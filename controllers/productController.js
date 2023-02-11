@@ -52,16 +52,17 @@ const productController = {
 
     let productoAEditar = productos.find((producto) => producto.id == idProducto);
 
-    res.render("edicion", { producto: productoAEditar });
+    res.render("edicion", { producto : productoAEditar });
   },
 
   editarProducto: (req, res) => {
    let idProducto = req.params.id;
 
-  //  let productoAEditar = productos.find((producto) => producto.id == idProducto);
+   let productoAEditar = productos.find((producto) => producto.id == idProducto);
 
     let actualizacionesAlProducto = {
-      estilo:req.body.estilo,
+      id : productoAEditar.id,
+      estilo: req.body.estilo,
       nombre: req.body.nombre,
       precio: req.body.precio,
       categoria: req.body.categoria,
@@ -93,5 +94,7 @@ res.redirect('/productos')
     res.send("eliminado");
   },
 };
+
+
 
 module.exports = productController;
