@@ -70,28 +70,38 @@ const productController = {
       descripcion: req.body.descripcion,
       color: req.body.color
     };
-// 
-// Devuelve nuevo array de productos 
-let productoEditado = productos.map((producto) => {
-  if (producto.id == idProducto) {
-     producto = { ...actualizacionesAlProducto }
-  }
+    // 
+    // Devuelve nuevo array de productos 
+    let productoEditado = productos.map((producto) => {
+      if (producto.id == idProducto) {
+         producto = { ...actualizacionesAlProducto }
+      }
 
-  return producto
-});
+      return producto
+    });
 
-const productoEditadoJson = JSON.stringify(productoEditado);
+    const productoEditadoJson = JSON.stringify(productoEditado);
 
-fs.writeFileSync(
-  path.join(__dirname, "../data/products.json"),
-  productoEditadoJson
-);
+    fs.writeFileSync(
+      path.join(__dirname, "../data/products.json"),
+      productoEditadoJson
+    );
 
-res.redirect('/productos')
-  },
+    res.redirect('/productos')
+    },
 
   eliminarProducto: (req, res) => {
-    res.send("eliminado");
+
+    let idProducto = req.params.id;
+
+     let productoAEliminar = productos.filter((producto) => producto.id != idProducto);
+
+     const productoEliminadoJSON = JSON.stringify(productoAEliminar);
+
+     fs.writeFileSync(path.join(__dirname, "../data/products.json"),
+     productoEliminadoJSON);
+
+    res.redirect('/productos');
   },
 };
 

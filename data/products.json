@@ -1,42 +1,22 @@
 [
-  {
-    "id": "1",
-    "estilo": "elegante",
-    "nombre": "short",
-    "precio": "10",
-    "categoria": "buzo",
-    "talle": "Small",
-    "descripcion": " hiohjbj",
-    "color": "Rosado"
-  },
-  {
-    "id": "2",
-    "estilo": "ELEGANTE",
-    "nombre": "A",
-    "precio": "80",
-    "categoria": "buzo",
-    "talle": "Small",
-    "descripcion": "sfsafasf ",
-    "color": "Rosado"
-  },
-  {
-    "id": "3",
-    "estilo": "deportivo",
-    "nombre": "Remera ",
-    "precio": "5000",
-    "categoria": "remeras",
-    "talle": "Medium",
-    "descripcion": " ñasmdlasnkja",
-    "color": "Rosado"
-  },
-  {
-    "id": "4",
-    "estilo": "dep",
-    "nombre": "bolso ",
-    "precio": "200",
-    "categoria": "remeras",
-    "talle": "Medium",
-    "descripcion": " ñasmfds",
-    "color": "blanco"
-  }
+    {
+        "id": "3",
+        "estilo": "deportivo",
+        "nombre": "Remera ",
+        "precio": "5000",
+        "categoria": "remeras",
+        "talle": "Medium",
+        "descripcion": " ñasmdlasnkja",
+        "color": "Rosado"
+    },
+    {
+        "id": "4",
+        "estilo": "dep",
+        "nombre": "bolso ",
+        "precio": "200",
+        "categoria": "remeras",
+        "talle": "Medium",
+        "descripcion": " ñasmfds",
+        "color": "blanco"
+    }
 ]
