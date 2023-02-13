@@ -49,8 +49,8 @@
                                 <option value="pantalon">Pantalón</option>
                                 <option value="remeras">Remeras</option>
                             </select>
-                            <label for="talles">Talles</label>
-                            <select name="talle" id="talle" required>
+                            <label for="talle">Talle</label>
+                            <select name="talle" id="talle" value ="<%=producto.talle%>" required>
                                 <option value="Small">S</option>
                                 <option value="Medium">M</option>
                                 <option value="Large">L</option>
@@ -58,8 +58,8 @@
                             </select>
                             <label for="descripcion">Descripción</label>
                             <textarea name="descripcion" id="descripcion"><%=producto.descripcion%> </textarea required>
- 
 
+                            <label for="talle">Color</label>
                             <select name="color" id="color" value ="<%=producto.color%>" required>
                                 <option value="Rosado">Rosa</option>
                                 <option value="Blanco">Blanco</option>

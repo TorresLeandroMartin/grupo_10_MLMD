@@ -18,5 +18,15 @@
         "talle": "Medium",
         "descripcion": " ñasmfds",
         "color": "blanco"
+    },
+    {
+        "id": "1",
+        "estilo": "deportivo",
+        "nombre": "sdasdvvr",
+        "precio": "56577",
+        "categoria": "remeras",
+        "talle": "Medium",
+        "descripcion": "bvkvyky",
+        "color": "Blanco"
     }
 ]
