@@ -17,7 +17,6 @@
         <%- include("./partials/headerLogin") %>
 
             <main>
-
                 <div class="crea-archivo">
                     <div class="left-options">
                         <h2> Creación de Productos </h2>
@@ -27,7 +26,7 @@
                     </div>
 
                     <div class="right-options">
-                        <form action="/productos/crear" method="POST">
+                        <form action="/productos/crearlo" method="POST">
                             <label for="nombre">ID del producto</label>
                             <input type="text" name="id" id="id" required>
                         
@@ -38,25 +37,34 @@
                             <input type="number" name="precio" id="precio" required>
                             
                             <label for="categoria">Categorías</label>
-                            <select name="categorias" id="Categoría" required>
-                                <option value="buzo">Buzos</option>
-                                <option value="calzado">Calzado</option>
-                                <option value="pantalon">Pantalón</option>
-                                <option value="remeras">Remeras</option>
+                            <select name="categoria" id="Categoría" required>
+                                <option value="Buzo">Buzos</option>
+                                <option value="Calzado">Calzado</option>
+                                <option value="Pantalón">Pantalón</option>
+                                <option value="Remera">Remeras</option>
                             </select>
 
                             <label for="Talles">Talles</label>
-                            <select name="Talles" id="Talles" required>
+                            <select name="talle" id="Talles" required>
                                 <option value="Small">S</option>
                                 <option value="Medium">M</option>
                                 <option value="Large">L</option>
                                 <option value="ExtraLarge">XL</option>
                             </select>
 
+                            <label for="color">Color</label>
+                            <select name="color" id="color" required>
+                                <option value="Rosado">Rosa</option>
+                                <option value="Blanco">Blanco</option>
+                                <option value="Verde">Verde</option>
+                                <option value="Negro">Negro</option>
+                            </select>
+
                         <div class="descripcion">
                             <label for="Descripción">Descripción</label>
-                            <textarea name="comentario" id="descripcion" placeholder="Inserte la descripción del producto..."></textarea>
+                            <textarea name="descripcion" id="descripcion" placeholder="Inserte la descripción del producto..."></textarea>
                             </div>
+
                             <button class="boton-crear" type="submit">Publicar</button>
                         </form>
                         </div>

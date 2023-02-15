@@ -77,64 +77,469 @@ main {
     align-items: center;
     background-color: #f1f1f1;
     border: 1px solid #000000;
-    margin-top: 20%;
+    margin: 15% 5% 0% 5%;
 }
 
 h4 {
     text-align: center;
     font-family: 'Lilita One';
     font-size: 30px;
-    margin-top: 40%;
+    margin-top: 10%;
 }
 
 h2 {
+    visibility: hidden;
     text-align: center;
     font-family: 'Lilita One';
     font-size: 120%;
+    margin-top: 20%;
     border-bottom: 2px solid #65069c;
-    margin-top: 40%;
+}
+
+/* Sin activar desplazar*/
+
+/* Global */
+
+#enrollado-global{ /* input checkbox */
+    display: none;
+}
+
+#cerrar-global{
+    display: none;
 }
 
 .global {
-    padding: 8% 15% 120% 17%;
+    display: block;
+    position: relative;
+    padding: 8% 19% 120% 17%;
     border: 1px solid #65069c;
+    background-color: #FF715B;
+    transition: padding 450ms ease;
+}
+
+
+.enrollado-global .btn-global{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+}
+
+.btn-cerrar-global{
+    cursor: pointer;
+    position: absolute;
+    bottom: 4%;
+    left: 10%;
+}
+
+.btn-global{
+    visibility: hidden;
+}
+
+.global:hover h2 {
+    visibility: visible;
+    border-bottom: 2px solid #f1f1f1;
+    color: #f1f1f1;
+}
+
+.global:hover .btn-global {
+    visibility: visible;
+}
+
+.global .enrollado-global .btn-global {
+    font-family: "Montserrat", sans-serif;
+    font-size: 80%;
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+
+.principal-global .btn-cerrar-global {
+    font-family: "Montserrat", sans-serif;
+    font-size: 88%;
+    font-weight: bold;
     color: #FF715B;
+    text-align: center;
+    margin: auto;
 }
 
-.inventario {
-    padding: 3.5% 12% 120% 12%;
+.principal-global {
+    display: none;
+    position: relative;
+    padding: 8% 19% 120% 17%;
     border: 1px solid #65069c;
-    color: #5528de;
+    background-color: #f1f1f1;
+    transition: padding 450ms ease;
+}
+ 
+#enrollado-global:checked ~ .principal-global{ /* input checkbox */
+   display: block;
+   padding: 2% 3% 292% 2%;
 }
 
-.upload {
+#enrollado-global:checked ~ .inventario{ /* input checkbox */
+    display: block;
+    padding: 375% 5% 373% 0%;
+ }
+
+ #enrollado-global:checked ~ .inventario h2{ /* input checkbox */
+    display: none;
+ }
+
+ #enrollado-global:checked ~ .inventario .enrollado-inventario .btn-inventario{ /* input checkbox */
+    visibility: hidden;
+    font-size: 120%;
+    right: 0%;
+    left: 13%;
+ }
+
+ #enrollado-global:checked ~ .inventario .enrollado-inventario .btn-inventario i{ /* input checkbox */
+    visibility: visible;
+ }
+
+#enrollado-global:checked ~ .global{ /* input checkbox */
+    display: none;
+ }
+
+#cerrar-global:checked ~ .global{
+    display:block;
+}
+
+#cerrar-global:checked ~ .principal-global{
+    display:none;
+}
+ 
+.principal-global h2 {
+    border-bottom: 1px solid #65069c;
+    color: #FF715B;
+    visibility: visible;
+    margin-bottom: 20%;
+}
+
+.desenrollar-global{
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    transition: all 450ms ease;
+}
+
+.desenrollar-global article {
+    display: block;
+    background-color:rgb(250, 89, 30);
+    margin-bottom: 10px;
+    padding: 10px 5px 50px 5px;
+    border-left: 5px solid transparent;
+    border-bottom-right-radius: 1ch;
+    border-top-left-radius: 1ch;
+    transition: all 400ms ease;
     position: relative;
 }
 
-.fa-arrow-up-from-bracket {
+.desenrollar-global article:hover {
+    border-left: 5px solid black;
+    background-color: hsl(8, 100%, 72%);
+}
+
+.desenrollar-global article h3{
+    font-family: "Lilita One";
+    color: white;
+    font-size: 120%;
+    text-align: center;
+}
+
+.desenrollar-global article .fa-chevron-right{
+    color: white;
+    font-size: 105%;
+    transform: rotateZ(-90deg);
+    position: absolute;
+    right: 48.5%;
+    bottom: 3%;
+    opacity: 100%;
+    transition: all 200ms;
+}
+
+.desenrollar-global article .fa-chevron-right:hover{
+    color: var(--light-violet);
+    font-size: 200%;
+}
+
+.desenrollar-global article .fa-chevron-right:active{
+    color: var(--light-violet);
+    bottom: 200%;
+    opacity: 50%;
+    font-size: 400%;
+}
+
+/* Inventario */
+
+#enrollado-inventario{ /* input checkbox */
+    display: none;
+}
+
+#cerrar-inventario{
+    display: none;
+}
+
+.inventario {
+    display: block;
+    position: relative;
+    padding: 4.5% 14% 121.5% 14%;
+    background-color: #65069c;
+    border: 1px solid #65069c;
+    transition: padding 450ms ease;
+}
+
+.enrollado-inventario .btn-inventario{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 31%;
+}
+
+.btn-cerrar-inventario{
+    cursor: pointer;
+    position: absolute;
+    bottom: 4%;
+    right: 10%;
+}
+
+.btn-inventario{
+    visibility: hidden;
+}
+
+.inventario:hover h2 {
+    visibility: visible;
+    border-bottom: 2px solid #f1f1f1;
+    color: #f1f1f1;
+}
+
+.inventario:hover .btn-inventario {
+    visibility: visible;
+}
+
+.inventario .enrollado-inventario .btn-inventario {
+    font-family: "Montserrat", sans-serif;
+    font-size: 80%;
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+
+.principal-inventario .btn-cerrar-inventario {
+    font-family: "Montserrat", sans-serif;
+    font-size: 88%;
+    font-weight: bold;
+    color: #8000FF;
+    text-align: center;
+    margin: auto;
+}
+
+.principal-inventario {
+    display: none;
+    position: relative;
+    padding: 4.5% 14% 120% 14%;
+    border: 1px solid #65069c;
+    background-color: #f1f1f1;
+    transition: padding 450ms ease;
+}
+ 
+#enrollado-inventario:checked ~ .principal-inventario{ /* input checkbox */
+   display: block;
+   padding: 2% 3% 182.5% 2%;
+}
+
+#enrollado-inventario:checked ~ .global{ /* input checkbox */
+    display: block;
+    padding: 420% 5% 369% 0%;
+ }
+
+ #enrollado-inventario:checked ~ .global .enrollado-global h2{ /* input checkbox */
+    display: none;
+ }
+
+ #enrollado-inventario:checked ~ .global .enrollado-global .btn-global{ /* input checkbox */
+    visibility: hidden;
+    font-size: 120%;
+    right: 13%;
+    left: 0%;
+ }
+
+ #enrollado-inventario:checked ~ .global .enrollado-global .btn-global i{ /* input checkbox */
+    visibility: visible;
+ }
+
+#enrollado-inventario:checked ~ .inventario{ /* input checkbox */
+    display: none;
+ }
+
+#cerrar-inventario:checked ~ .inventario{
+    display:block;
+}
+
+#cerrar-inventario:checked ~ .principal-inventario{
+    display:none;
+}
+ 
+.principal-inventario h2 {
+    border-bottom: 1px solid #65069c;
+    color: #8000FF;
+    visibility: visible;
+    margin-bottom: 40%;
+}
+
+.desenrollar-inventario{
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 450ms ease;
+}
+
+.desenrollar-inventario article {
+    display: block;
+    background-color: #65069c;
+    margin-bottom: 10px;
+    padding: 10px 5px;
+    border-right: 5px solid transparent;
+    border-bottom-left-radius: 1ch;
+    border-top-right-radius: 1ch;
+    transition: all 400ms ease;
+}
+
+.desenrollar-inventario article:hover {
+    border-right: 5px solid black;
+    background-color: #8c25f2;
+}
+
+.linea-verde{
+    border-bottom: 2px solid  rgb(20, 183, 20);
+    margin: 20% 20%;
+}
+
+.fa-plus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    top: 100px;
-    font-size: 130%;
-    color: #8000FF;
+    top: 6%;
+    right: 47%;
+    font-size: 140%;
+    padding: 0.5px 2px;
+    color: white;
+    background-color: rgb(20, 183, 20);
+    border-radius: 1.5ch;
 }
 
-.fa-arrow-up-from-bracket:hover {
-    color: #242F62;
+.fa-plus:hover{
+    background-color: rgb(25, 151, 25);
 }
 
-.frase {
+/* Contenido article */
+
+.archivo-img img{
+    display: block;
+    border: 2px solid #8000FF;
+    outline: 1px solid #FF715B;
+    border-radius: 1.8ch;;
+    width: 50%;
+    height: 52%;
+    margin: 18px 0px 18px 83px;
+}
+
+.desenrollar-inventario article h3{
+    font-family: "Lilita One";
+    color: white;
+    font-size: 120%;
+    text-align: center;
+}
+
+.detalles{
     display: inline-flex;
-    position: absolute;
-    width: 150px;
-    top: 120px;
-    left: -20px;
-    color: #8000FF;
-    font-size: 95%;
-    padding: 10%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 5px 30px;
+}
+
+.detalle{
+    font-family: "Montserrat", sans-serif;
+    text-decoration: underline;
+    color: rgb(247, 247, 247);
+    margin: 0% 2%;
+    font-size: 80%;
+}
+
+.sub-detalle{
+    font-family: "Montserrat", sans-serif;
+    font-size: 80%;
+    font-weight: bold;
+    color: #fafafa;
+    text-decoration: none;
+}
+
+.producto-descripcion{
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    margin: 20px 35px;
+    text-align:justify;
+}
+
+.producto-precio{
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    margin-left: 10%;
+    margin-top: 20%;
+    font-size: 105%;
+}
+
+.producto-precio:hover{
+    text-decoration: 2px underline;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.botones-inventario{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    margin: 10%;
+}
+
+.boton-edita{
+    color: #FF715B;
+    background-color: white;
+    border: 2px solid #e6533d;
+    border-radius: 1ch;
+    font-size: 100%;
+    margin-right: 18px;
+}
+
+.boton-edita:hover{
+    color: white;
+    background-color: #FF715B;
+}
+
+.boton-edita:focus{
+    background-color: #e85842;
+}
+
+.boton-borra{
+    color: #65069c;
+    background-color: white;
+    border: 2px solid rgb(72, 10, 219);
+    border-radius: 1ch;
+    font-size: 100%;
+    margin-right: 10px;
+}
+
+.boton-borra:hover{
+    color: white;
+    background-color: #5528de;
+}
+
+.boton-borra:focus{
+    background-color: #65069c;
 }
 
 /* Fin de Body */
@@ -213,7 +618,20 @@ h2 {
 
     main {
         width: 100%;
-        margin: 0% 0% 40% 0%;
+        margin: 0% 0% 50% 0%;
+    }
+
+    .categoria-estilo {
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        border: var(--light-violet);
+    }
+
+    .categoria-estilo select {
+        border-radius: 5px;
+        padding: 2px;
     }
 
     .productos {
@@ -223,7 +641,7 @@ h2 {
         align-items: center;
         background-color: #f1f1f1;
         border: 1px solid #000000;
-        margin: 20% 2%;
+        margin: 15% 3% 0% 3%;
     }
 
     h4 {
@@ -231,46 +649,6 @@ h2 {
         font-family: 'Lilita One';
         font-size: 30px;
         margin-top: 20%;
-    }
-
-    .global {
-        margin-left: 2px;
-        padding: 8% 19% 120% 18%;
-        border: 1px solid #65069c;
-        color: #FF715B;
-    }
-
-    .inventario {
-        margin-right: 2px;
-        padding: 4.5% 14% 120% 14%;
-        border: 1px solid #65069c;
-        color: #5528de;
-    }
-
-    .upload {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-    }
-
-    .fa-arrow-up-from-bracket {
-        display: flex;
-        position: absolute;
-        top: 170px;
-        font-size: 130%;
-        color: #8000FF;
-    }
-
-    .frase {
-        display: inline-flex;
-        position: absolute;
-        width: 150px;
-        top: 190px;
-        left: -20px;
-        color: #8000FF;
-        font-size: 95%;
-        padding: 10%;
     }
 
     /* Fin de Body */
@@ -455,7 +833,7 @@ h2 {
         border: var(--light-violet);
     }
 
-    .categoria-estilo select{
+    .categoria-estilo select {
         border-radius: 5px;
         padding: 2px;
     }
@@ -523,52 +901,15 @@ h2 {
         font-weight: bold;
     }
 
-
     nav ul li a:hover {
         color: #FF715B;
     }
-
-    .sub-menu {
-        position: absolute;
-        display: none;
-        list-style: none;
-        width: 140px;
-        top: 21%;
-        padding: 0px;
-        background-color: #394476;
-        z-index: 1;
-    }
-
-    nav ul li:hover .sub-menu {
-        display: block;
-    }
-
-    .sub-menu li a {
-        display: block;
-        font-family: 'Montserrat', sans-serif;
-        color: white;
-        padding: 15px 20px 15px 0px;
-        font-weight: normal;
-        text-decoration: none;
-    }
-
-    .sub-menu li:hover {
-        background-color: #242F62;
-        width: inherit;
-        margin: auto;
-    }
-
-    .sub-menu li:hover a {
-        color: #FF715B;
-        margin: 10px;
-    }
-
 
     /* Body */
 
     main {
         width: 100%;
-        margin: 0% 0% 40% 0%;
+        margin: 0% 0% 35% 0%;
     }
 
     .productos {
@@ -578,34 +919,38 @@ h2 {
         align-items: center;
         background-color: #f1f1f1;
         border: 1px solid #000000;
-        margin: 20% 2%;
+        margin: 15% 2% 0% 2%;
     }
 
     h4 {
         text-align: center;
         font-family: 'Lilita One';
         font-size: 30px;
-        margin-top: 20%;
+        margin-top: 10%;
     }
 
     h2 {
         text-align: center;
         font-family: 'Lilita One';
-        font-size: 150%;
+        font-size: 160%;
         border-bottom: 2px solid #65069c;
         margin-top: 40%;
     }
 
+    .global h2 {
+        border-bottom: 2px solid #FF715B;
+    }
+
     .global {
         margin-left: 5px;
-        padding: 8.8% 19% 120% 20%;
+        padding: 8.8% 22% 120% 18%;
         border: 1px solid #65069c;
         color: #FF715B;
     }
 
     .inventario {
         margin-right: 5px;
-        padding: 6.2% 20% 120% 17%;
+        padding: 6.2% 17% 120% 17%;
         border: 1px solid #65069c;
         color: #5528de;
     }
@@ -875,46 +1220,12 @@ h2 {
         color: #FF715B;
     }
 
-    .sub-menu {
-        position: absolute;
-        display: none;
-        list-style: none;
-        width: 140px;
-        top: 22%;
-        padding: 0px;
-        background-color: #394476;
-        z-index: 1;
-    }
-
-    nav ul li:hover .sub-menu {
-        display: block;
-    }
-
-    .sub-menu li a {
-        display: block;
-        font-family: 'Montserrat', sans-serif;
-        color: white;
-        padding: 15px 20px 15px 0px;
-        font-weight: normal;
-        text-decoration: none;
-    }
-
-    .sub-menu li:hover {
-        background-color: #242F62;
-        width: inherit;
-        margin: auto;
-    }
-
-    .sub-menu li:hover a {
-        color: #FF715B;
-        margin: 10px;
-    }
 
     /* Body */
 
     main {
         width: 100%;
-        margin: 0% 0% 40% 0%;
+        margin: 0% 0% 35% 0%;
     }
 
     .productos {
@@ -931,7 +1242,7 @@ h2 {
         text-align: center;
         font-family: 'Lilita One';
         font-size: 30px;
-        margin-top: 20%;
+        margin-top: 10%;
     }
 
     h2 {
@@ -942,9 +1253,13 @@ h2 {
         margin-top: 40%;
     }
 
+    .global h2 {
+        border-bottom: 2px solid #FF715B;
+    }
+
     .global {
         margin-left: 5px;
-        padding: 8.8% 22% 120% 20.5%;
+        padding: 8.9% 22% 120% 20.5%;
         border: 1px solid #65069c;
         color: #FF715B;
     }
@@ -1208,46 +1523,11 @@ h2 {
         color: #FF715B;
     }
 
-    .sub-menu {
-        position: absolute;
-        display: none;
-        list-style: none;
-        width: 140px;
-        top: 29.8%;
-        padding: 0px;
-        background-color: #394476;
-        z-index: 1;
-    }
-
-    nav ul li:hover .sub-menu {
-        display: block;
-    }
-
-    .sub-menu li a {
-        display: block;
-        font-family: 'Montserrat', sans-serif;
-        color: white;
-        padding: 15px 20px 15px 0px;
-        font-weight: normal;
-        text-decoration: none;
-    }
-
-    .sub-menu li:hover {
-        background-color: #242F62;
-        width: inherit;
-        margin: auto;
-    }
-
-    .sub-menu li:hover a {
-        color: #FF715B;
-        margin: 10px;
-    }
-
     /* Body */
 
     main {
         width: 100%;
-        margin: 0% 0% 40% 0%;
+        margin: 0% 0% 35% 0%;
     }
 
     .productos {
@@ -1264,20 +1544,20 @@ h2 {
         text-align: center;
         font-family: 'Lilita One';
         font-size: 30px;
-        margin-top: 20%;
+        margin-top: 10%;
+        margin-bottom: 3%;
     }
-
 
     .global {
         margin-left: 5px;
-        padding: 10% 20% 120% 22%;
+        padding: 10% 22.5% 120% 21%;
         border: 1px solid #65069c;
         color: #FF715B;
     }
 
     .inventario {
         margin-right: 5px;
-        padding: 8.1% 22.5% 120% 18%;
+        padding: 8.1% 21% 120% 18%;
         border: 1px solid #65069c;
         color: #5528de;
     }
@@ -1535,46 +1815,11 @@ h2 {
         color: #FF715B;
     }
 
-    .sub-menu {
-        position: absolute;
-        display: none;
-        list-style: none;
-        width: 140px;
-        top: 33%;
-        padding: 0px;
-        background-color: #394476;
-        z-index: 1;
-    }
-
-    nav ul li:hover .sub-menu {
-        display: block;
-    }
-
-    .sub-menu li a {
-        display: block;
-        font-family: 'Montserrat', sans-serif;
-        color: white;
-        padding: 15px 20px 15px 0px;
-        font-weight: normal;
-        text-decoration: none;
-    }
-
-    .sub-menu li:hover {
-        background-color: #242F62;
-        width: inherit;
-        margin: auto;
-    }
-
-    .sub-menu li:hover a {
-        color: #FF715B;
-        margin: 10px;
-    }
-
     /* Body */
 
     main {
         width: 100%;
-        margin: 0% 0% 40% 0%;
+        margin: 0% 0% 35% 0%;
     }
 
     .productos {
@@ -1591,7 +1836,8 @@ h2 {
         text-align: center;
         font-family: 'Lilita One';
         font-size: 40px;
-        margin-top: 20%;
+        margin-top: 10%;
+        margin-bottom: 3%;
     }
 
     h2 {
@@ -1602,16 +1848,20 @@ h2 {
         margin-top: 40%;
     }
 
+    .global h2 {
+        border-bottom: 2px solid #FF715B;
+    }
+
     .global {
         margin-left: 5px;
-        padding: 10% 20% 120% 22%;
+        padding: 10% 21.5% 120% 22%;
         border: 1px solid #65069c;
         color: #FF715B;
     }
 
     .inventario {
         margin-right: 5px;
-        padding: 8.1% 22.5% 120% 18%;
+        padding: 8.2% 21% 120% 18%;
         border: 1px solid #65069c;
         color: #5528de;
     }
@@ -1642,7 +1892,6 @@ h2 {
         font-size: 140%;
         padding: 15%;
     }
-
 
     /* Fin de body */
 
@@ -1677,7 +1926,6 @@ h2 {
         border-bottom: solid 2px #8000FF;
         border-radius: 1.5ch;
     }
-
 
     .bottom-nav {
         display: flex;
@@ -1728,7 +1976,6 @@ h2 {
         box-shadow: inset 0 12px 12px -12px #EDF2F4;
     }
 
-
     .social-network ul {
         display: flex;
         justify-content: center;
@@ -1755,14 +2002,15 @@ h2 {
 
     main {
         width: 100%;
-        margin: 0% 0% 40% 0%;
+        margin: 0% 0% 35% 0%;
     }
 
     h4 {
         text-align: center;
         font-family: 'Lilita One';
         font-size: 40px;
-        margin-top: 20%;
+        margin-top: 10%;
+        margin-bottom: 3%;
     }
 
     h2 {
@@ -1772,6 +2020,7 @@ h2 {
         border-bottom: 2px solid #65069c;
         margin-top: 40%;
     }
+
 
     .productos {
         display: flex;
@@ -1784,16 +2033,20 @@ h2 {
         margin: 20% 2%;
     }
 
+    .global h2 {
+        border-bottom: 2px solid #FF715B;
+    }
+
     .global {
         margin-left: 5px;
-        padding: 10% 20% 120% 22%;
+        padding: 11% 20.5% 120% 23.5%;
         border: 1px solid #65069c;
         color: #FF715B;
     }
 
     .inventario {
         margin-right: 5px;
-        padding: 8.1% 22.5% 120% 18%;
+        padding: 9.5% 22.5% 120% 18%;
         border: 1px solid #65069c;
         color: #5528de;
     }
