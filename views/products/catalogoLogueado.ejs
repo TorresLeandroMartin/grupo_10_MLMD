@@ -74,16 +74,34 @@
                   <div class="archivo-img">
                     <img src="/img/jordan-luka-1-neo-turquoise-dn1772-104-9.jpeg" alt="imagen-producto">
                   </div>
+
+                
+                    <img  class="img2"src="/img/jordan-luka-1-neo-turquoise-dn1772-104-9.jpeg" alt="imagen-producto">
+                    <div class="right-options-inventario">
                   <h3>
                     <%= productoLista.nombre %>
                   </h3>
                   <div class="detalles">
-                  <label class="detalle"> ID</label><p class="sub-detalle">: #<%= productoLista.id%></p>
-                  <label class="detalle"> Estilo</label><p class="sub-detalle">: <%= productoLista.estilo%></p>
-                  <label class="detalle"> Color</label><p class="sub-detalle">: <%= productoLista.color%></p>
-                  <label class="detalle"> Categoría </label><p class="sub-detalle">: <%= productoLista.categoria%></p>
-                  <label class="detalle"> Talle </label><p class="sub-detalle">: <%= productoLista.talle%></p>
-                 </div>
+                    <label class="detalle"> ID : </label>
+                    <p class="sub-detalle"> #<%= productoLista.id%>
+                    </p>
+                    <label class="detalle"> Estilo :</label>
+                    <p class="sub-detalle">
+                      <%= productoLista.estilo%>
+                    </p>
+                    <label class="detalle"> Color :</label>
+                    <p class="sub-detalle">
+                      <%= productoLista.color%>
+                    </p>
+                    <label class="detalle"> Categoría : </label>
+                    <p class="sub-detalle">
+                      <%= productoLista.categoria%>
+                    </p>
+                    <label class="detalle"> Talle : </label>
+                    <p class="sub-detalle">
+                      <%= productoLista.talle%>
+                    </p>
+                  </div>
                   <p class="producto-descripcion">
                     <%= productoLista.descripcion %>
                   </p>
@@ -91,6 +109,8 @@
                   <a href="/productos/descripcion/<%= productoLista.id %>">
                     <i class="fas fa-chevron-right"></i>
                   </a>
+
+                  </div>
                 </article>
 
                 <br />
@@ -136,38 +156,58 @@
               <% productos.forEach((productoInventario)=> { %>
 
                 <article>
+
                   <div class="archivo-img">
                     <img src="/img/jordan-luka-1-neo-turquoise-dn1772-104-9.jpeg" alt="imagen-producto">
                   </div>
-                  <h3>
-                    <%= productoInventario.nombre %>
-                  </h3>
-                  <div class="detalles">
-                    <label class="detalle"> ID </label> <p class="sub-detalle">: #<%= productoInventario.id%></p>
-                      <label class="detalle"> Estilo </label> <p class="sub-detalle">: <%= productoInventario.estilo%></p>
-                        <label class="detalle"> Color </label> <p class="sub-detalle">: <%= productoInventario.color%></p>
-                          <label class="detalle"> Categoría </label> <p class="sub-detalle">: <%= productoInventario.categoria%></p>
-                            <label class="detalle"> Talle </label> <p class="sub-detalle">: <%= productoInventario.talle%></p>
-                  </div>
+                  
+                    <img class= "img2" src="/img/jordan-luka-1-neo-turquoise-dn1772-104-9.jpeg" alt="imagen-producto">
+                 
+                  
+                  <div class="right-options-inventario">
+                    <h3>
+                      <%= productoInventario.nombre %>
+                    </h3>
+                    <div class="detalles">
+                      <label class="detalle"> ID : </label>
+                      <p class="sub-detalle">#<%= productoInventario.id%>
+                      </p>
+                      <label class="detalle"> Estilo : </label>
+                      <p class="sub-detalle">
+                        <%= productoInventario.estilo%>
+                      </p>
+                      <label class="detalle"> Color : </label>
+                      <p class="sub-detalle">
+                        <%= productoInventario.color%>
+                      </p>
+                      <label class="detalle"> Categoría : </label>
+                      <p class="sub-detalle">
+                        <%= productoInventario.categoria%>
+                      </p>
+                      <label class="detalle"> Talle : </label>
+                      <p class="sub-detalle">
+                        <%= productoInventario.talle%>
+                      </p>
+                    </div>
 
-                  <p class="producto-descripcion">
-                    <%= productoInventario.descripcion %>
-                  </p>
+                    <p class="producto-descripcion">
+                      <%= productoInventario.descripcion %>
+                    </p>
 
                     <label class="producto-precio"> $ <%= productoInventario.precio %> </label>
 
-                  <div class="botones-inventario">
+                    <div class="botones-inventario">
 
-                    <a href="/productos/edicion/<%= productoInventario.id %>">
-                      <button class="boton-edita">Editar</button>
-                    </a>
+                      <a href="/productos/edicion/<%= productoInventario.id %>">
+                        <button class="boton-edita">Editar</button>
+                      </a>
 
-                    <form action='/productos/edicion/<%= productoInventario.id %>?_method=DELETE' method="POST">
-                      <button class="boton-borra" type="submit">Borrar</button>
-                    </form>
+                      <form action='/productos/edicion/<%= productoInventario.id %>?_method=DELETE' method="POST">
+                        <button class="boton-borra" type="submit">Borrar</button>
+                      </form>
 
+                    </div>
                   </div>
-
                 </article>
 
                 <br />
