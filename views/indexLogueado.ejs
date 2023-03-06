@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- head -->
+
+<%- include("./partials/head") %>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles1Home.css">
+
+  <body>
+
+    <!-- header -->
+
+        <%- include("./partials/headerLogin") %>
+
+      <main>
+        <h3 class="titulares"> Productos Destacados</h3>
+
+        <section class="separador1">
+          <hr class="linea-divisoria1">
+          <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <a href="/productos/descripcion/:id">
+                  <img src="/img/textura-negra1.jpg" class="d-block w-100" alt="fondo1">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Producto 1</h5>
+                    <p>Lorem ipsum del lorem impsum, pero lorem ipsum, ojo con lorem del impsum, pero lorem.</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="carousel-item">
+                <a href="/productos/descripcion/:id"><img src="/img/textura-negra1.jpg"
+                    class="d-block w-100" alt="fondo2">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Producto 2</h5>
+                    <p>Lorem ipsum del lorem impsum, pero lorem ipsum, ojo con lorem del impsum, pero lorem.</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="carousel-item">
+                <a href="/productos/descripcion/:id"><img src="/img/textura-negra1.jpg"
+                    class="d-block w-100" alt="fondo3">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Producto 3</h5>
+                    <p>Lorem ipsum del lorem impsum, pero lorem ipsum, ojo con lorem del impsum, pero lorem.</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <hr class="linea-divisoria2">
+        </section>
+
+
+        <section class="separador2">
+          <article class="cuadrado-gris"> <a href="/productos/catalogoLogueado"><i class="fa-solid fa-arrow-left"></i> <label>Productos</label></a>
+          </article>
+          <article class="cuadrado-gris"> <a href="#"><label>Indumentaria</label> <i
+                class="fa-solid fa-arrow-right"></i></a></article>
+          <article class="cuadrado-gris"> <a href="#"><i class="fa-solid fa-arrow-left"></i> <label>Calzado</label></a>
+          </article>
+          <article class="cuadrado-gris"> <a href="#"><label>Accesorios</label> <i
+                class="fa-solid fa-arrow-right"></i></a></article>
+          <div class="todos"><a href="">Ver todos</a></div>
+        </section>
+
+        <section class="separador3">
+          <article class="cuadrado1"> <a class="izq1" href="/productos/catalogoLogueado"><i class="fa-solid fa-arrow-left"></i>
+              <label>Productos</label></a></article>
+          <article class="cuadrado2"> <a class="der1" href="#"><label>Indumentaria</label> <i
+                class="fa-solid fa-arrow-right"></i></a></article>
+          <article class="cuadrado3"> <a class="izq2" href="#"><i class="fa-solid fa-arrow-left"></i>
+              <label>Calzado</label></a></article>
+          <article class="cuadrado4"> <a class="der2" href="#"><label>Accesorios</label> <i
+                class="fa-solid fa-arrow-right"></i></a></article>
+          <div class="todos"><a href="#">Ver todos</a></div>
+        </section>
+        <hr>
+
+        <div class="conocenos-mas" id="nosotros">
+          <div class="cuerpo-de-texto">
+            <i class="fa-solid fa-quote-left"></i>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique soluta, assumenda
+              deleniti blanditiis dignissimos natus eaque modi ipsa cupiditate nam expedita eum nostrum
+              illo non! Magnam consequatur quis quibusdam animi!</p>
+            <h6>Fulanito</h6>
+            <h6>Ceo de House Clothing</h6>
+          </div>
+        </div>
+
+      </main>
+      <hr>
+
+      <!-- footer -->
+
+      <%- include("./partials/footerLogueado") %>
+
+  </body>
+
+</html>

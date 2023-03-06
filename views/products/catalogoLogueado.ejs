@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- head -->
+
+<%- include("./partials/head") %>
+
+  <!-- hoja de estilos -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link href="/css/catalogo-logueado.css" rel="stylesheet">
+
+  <body>
+    <!-- header -->
+
+    <%- include("./partials/headerLogin") %>
+
+      <main>
+
+        <h4>Productos</h4>
+
+        <hr>
+
+        <form class="categoria-estilo" action="" method="get">
+          <select name="styles">
+            <option value="all"> Todos </option>
+            <option value="sport"> Deportivo </option>
+            <option value="elegant"> Elegante</option>
+            <option value="accessory"> Accesorios </option>
+            <option value="handbags"> Bolsos </option>
+          </select>
+        </form>
+
+        <hr>
+
+
+        <div class="productos"> <!--   -->
+
+
+          <input type="radio" id="enrollado-global" name="acceso" value="abrir">
+
+          <input type="radio" id="cerrar-global" name="acceso" value="cerrar">
+
+
+          <input type="radio" id="enrollado-inventario" name="acceso" value="abrir2">
+
+          <input type="radio" id="cerrar-inventario" name="acceso" value="cerrar2">
+
+
+          <section class="global"> <!-- container  -->
+
+            <div class="enrollado-global"> <!-- btn-menu -->
+
+              <h2>Global</h2>
+
+              <label for="enrollado-global" class="btn-global">
+                ¡Click Aquí!
+                <i class="fas fa-chevron-right"></i>
+              </label> <!-- container > btn-menu > label -->
+
+            </div>
+
+          </section>
+
+
+          <div class="principal-global"> <!-- container-menu -->
+
+            <h2>Global</h2>
+
+            <div class="desenrollar-global"> <!-- cont-menu -->
+
+              <% productos.forEach(productoLista=> { %>
+
+                <article>
+                  <div class="archivo-img">
+                    <img src="/img/jordan-luka-1-neo-turquoise-dn1772-104-9.jpeg" alt="imagen-producto">
+                  </div>
+
+                
+                    <img  class="img2"src="/img/jordan-luka-1-neo-turquoise-dn1772-104-9.jpeg" alt="imagen-producto">
+                    <div class="right-options-inventario">
+                  <h3>
+                    <%= productoLista.nombre %>
+                  </h3>
+                  <div class="detalles">
+                    <label class="detalle"> ID : </label>
+                    <p class="sub-detalle"> #<%= productoLista.id%>
+                    </p>
+                    <label class="detalle"> Estilo :</label>
+                    <p class="sub-detalle">
+                      <%= productoLista.estilo%>
+                    </p>
+                    <label class="detalle"> Color :</label>
+                    <p class="sub-detalle">
+                      <%= productoLista.color%>
+                    </p>
+                    <label class="detalle"> Categoría : </label>
+                    <p class="sub-detalle">
+                      <%= productoLista.categoria%>
+                    </p>
+                    <label class="detalle"> Talle : </label>
+                    <p class="sub-detalle">
+                      <%= productoLista.talle%>
+                    </p>
+                  </div>
+                  <p class="producto-descripcion">
+                    <%= productoLista.descripcion %>
+                  </p>
+
+                  <a href="/productos/descripcion/<%= productoLista.id %>">
+                    <i class="fas fa-chevron-right"></i>
+                  </a>
+
+                  </div>
+                </article>
+
+                <br />
+                <% }) %>
+            </div>
+
+            <label for="cerrar-global" class="btn-cerrar-global">
+              <i class="fas fa-chevron-left"></i>
+              Cerrar
+            </label> <!-- container > btn-menu > label -->
+
+          </div>
+
+
+          <section class="inventario"> <!-- container  -->
+
+            <div class="enrollado-inventario"> <!-- btn-menu -->
+
+              <h2>Inventario</h2>
+
+              <label for="enrollado-inventario" class="btn-inventario">
+                <i class="fas fa-chevron-left"></i>
+                ¡Click Aquí!
+              </label> <!-- container > btn-menu > label -->
+
+            </div>
+
+          </section>
+
+          <div class="principal-inventario"> <!-- container-menu -->
+
+            <h2>Inventario</h2>
+
+            <hr class="linea-verde">
+
+            <div class="crear">
+              <a class="upload" href="/productos/crear">
+                <i class="fa-solid fa-plus"></i>
+              </a>
+            </div>
+
+            <div class="desenrollar-inventario"> <!-- cont-menu -->
+              <% productos.forEach((productoInventario)=> { %>
+
+                <article>
+
+                  <div class="archivo-img">
+                    <img src="/img/jordan-luka-1-neo-turquoise-dn1772-104-9.jpeg" alt="imagen-producto">
+                  </div>
+                  
+                    <img class= "img2" src="/img/jordan-luka-1-neo-turquoise-dn1772-104-9.jpeg" alt="imagen-producto">
+                 
+                  
+                  <div class="right-options-inventario">
+                    <h3>
+                      <%= productoInventario.nombre %>
+                    </h3>
+                    <div class="detalles">
+                      <label class="detalle"> ID : </label>
+                      <p class="sub-detalle">#<%= productoInventario.id%>
+                      </p>
+                      <label class="detalle"> Estilo : </label>
+                      <p class="sub-detalle">
+                        <%= productoInventario.estilo%>
+                      </p>
+                      <label class="detalle"> Color : </label>
+                      <p class="sub-detalle">
+                        <%= productoInventario.color%>
+                      </p>
+                      <label class="detalle"> Categoría : </label>
+                      <p class="sub-detalle">
+                        <%= productoInventario.categoria%>
+                      </p>
+                      <label class="detalle"> Talle : </label>
+                      <p class="sub-detalle">
+                        <%= productoInventario.talle%>
+                      </p>
+                    </div>
+
+                    <p class="producto-descripcion">
+                      <%= productoInventario.descripcion %>
+                    </p>
+
+                    <label class="producto-precio"> $ <%= productoInventario.precio %> </label>
+
+                    <div class="botones-inventario">
+
+                      <a href="/productos/edicion/<%= productoInventario.id %>">
+                        <button class="boton-edita">Editar</button>
+                      </a>
+
+                      <form action='/productos/edicion/<%= productoInventario.id %>?_method=DELETE' method="POST">
+                        <button class="boton-borra" type="submit">Borrar</button>
+                      </form>
+
+                    </div>
+                  </div>
+                </article>
+
+                <br />
+                <% }) %>
+            </div>
+
+            <label for="cerrar-inventario" class="btn-cerrar-inventario">
+              Cerrar
+              <i class="fas fa-chevron-right"></i>
+            </label> <!-- container > btn-menu > label -->
+          </div>
+
+        </div>
+
+      </main>
+
+      <!-- footer -->
+
+      <%- include("./partials/footerLogueado") %>
+
+  </body>
+
+</html>

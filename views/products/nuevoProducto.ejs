@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- head -->
+
+<%- include("./partials/head") %>
+
+    <!-- hoja de estilos -->
+
+    <link href="/css/creacion-styles.css" rel="stylesheet">
+
+
+    <body>
+
+        <!-- header -->
+
+        <%- include("./partials/headerLogin") %>
+
+            <main>
+                <div class="crea-archivo">
+                    <div class="left-options">
+                        <h2> Creación de Productos </h2>
+                        <button class="foto-producto" type="submit">
+                            <input class="subir" type="file" name="imagenDelProducto" accept="image/*">
+                        </button>
+                    </div>
+
+                    <div class="right-options">
+                        <form action="/productos/crearlo" method="POST">
+                            <label for="nombre">ID del producto</label>
+                            <input type="text" name="id" id="id" required>
+                        
+                            <label for="nombre">Nombre del producto</label>
+                            <input type="text" name="nombre" id="nombre" minlength="5" required>
+                            
+                            <label for="nombre">Precio</label>
+                            <input type="number" name="precio" id="precio" required>
+                            
+                            <label for="categoria">Categorías</label>
+                            <select name="categoria" id="Categoría" required>
+                                <option value="Buzo">Buzos</option>
+                                <option value="Calzado">Calzado</option>
+                                <option value="Pantalón">Pantalón</option>
+                                <option value="Remera">Remeras</option>
+                            </select>
+
+                            <label for="Talles">Talles</label>
+                            <select name="talle" id="Talles" required>
+                                <option value="Small">S</option>
+                                <option value="Medium">M</option>
+                                <option value="Large">L</option>
+                                <option value="ExtraLarge">XL</option>
+                            </select>
+
+                            <label for="color">Color</label>
+                            <select name="color" id="color" required>
+                                <option value="Rosado">Rosa</option>
+                                <option value="Blanco">Blanco</option>
+                                <option value="Verde">Verde</option>
+                                <option value="Negro">Negro</option>
+                            </select>
+
+                        <div class="descripcion">
+                            <label for="Descripción">Descripción</label>
+                            <textarea name="descripcion" id="descripcion" placeholder="Inserte la descripción del producto..."></textarea>
+                            </div>
+
+                            <button class="boton-crear" type="submit">Publicar</button>
+                        </form>
+                        </div>
+
+                </div>
+            </main>
+
+            <!-- footer -->
+
+            <%- include("./partials/footerLogueado") %>
+
+    </body>
+
+</html>

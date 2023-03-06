@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- head -->
+
+<%- include("./partials/head") %>
+
+    <!-- hoja de estilos -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="/css/edicion-styles.css" rel="stylesheet">
+
+    <body>
+        <!-- header -->
+
+        <%- include("./partials/headerLogin") %>
+
+            <main>
+                <div class="left-options">
+                        <h2> Edición de Productos </h2>
+                        <div class="form-group">
+                            <label for="file-input">
+                                <img class="img-prueba" src="/img/pantalonRunning.jpg" alt="buttonjpg">
+                            </label>
+                            <input id="file-input" type="file" accept="image/*" />
+                        </div>
+                    </div><div class="edita-archivo">
+
+                    <div class="right-options">
+
+                        <h2>Estas editando el producto: <i>
+                            <%=producto.nombre%>
+                        </i> </h2>
+                        <!-- productos.id -->
+
+                        <form action="/productos/edicion/<%=producto.id%>?_method=PUT" method="POST">
+
+                            <label for="estilo">Estilo</label>
+                            <input type="text" name="estilo" id="estilo" value="<%=producto.estilo%>" required>
+
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre" id="nombre" value="<%=producto.nombre%>" minlength="3"
+                                required>
+
+                            <label for="nombre">Precio</label>
+                            <input type="number" name="precio" id="precio" value="<%=producto.precio%>">
+
+                            <label for="categoria">Categorías</label>
+                            <select name="categoria" id="categoria" value="<%=producto.categoria%>" required>
+                                <option value="Buzo">Buzos</option>
+                                <option value="Calzado">Calzado</option>
+                                <option value="Pantalón">Pantalón</option>
+                                <option value="Remeras">Remeras</option>
+                            </select>
+                            <label for="talle">Talle</label>
+                            <select name="talle" id="talle" value="<%=producto.talle%>" required>
+                                <option value="Small">S</option>
+                                <option value="Medium">M</option>
+                                <option value="Large">L</option>
+                                <option value="ExtraLarge">XL</option>
+                            </select>
+
+                            <label for="color">Color</label>
+                            <select name="color" id="color" value ="<%=producto.color%>" required>
+                                <option value="Rosado">Rosa</option>
+                                <option value="Blanco">Blanco</option>
+                                <option value="Verde">Verde</option>
+                                <option value="Negro">Negro</option>
+                            </select>
+
+                            <label for="descripcion">Descripción</label>
+                            <textarea name="descripcion" id="descripcion"><%=producto.descripcion%> </textarea required>
+                            <div>
+                    
+                                <button type="submit" class="boton-editar">Editar</button>
+                     
+                        </div>
+                        </form>
+
+                        <form action='/productos/edicion/<%=producto.id%>?_method=DELETE' method="POST">
+                        <div>
+                         
+                            <button class="boton-borrar" type="submit">Borrar</button>
+
+                        </div>
+                        </form>
+
+                    </div>
+              </div>
+          </main>
+
+            <!-- footer -->
+
+            <%- include("./partials/footerLogueado") %>
+
+    </body>
+
+</html>
