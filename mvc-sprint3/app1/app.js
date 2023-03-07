@@ -1,51 +1,38 @@
 var createError = require('http-errors');
 
-// Llamcleaado a express
+// Llamado a express
 var express = require('express'); 
 
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-//Cambio Ayma
-var methodOverride = require('method-override');
-//
+// Llamamos a MainRouter
+var MainRouter = require('./routes/mainRouter');
 
-// Llamamos a Router
-var mainRouter = require('./routes/mainRouter');
-var userRouter = require('./routes/userRouter');
-var productRouter = require('./routes/productRouter');
+// var indexRouter = require('./routes/index');
+// var usersRouter = require('./routes/users');
 
 // Guardamos la funcion en una variable app
 var app = express();
 
 // view engine setup
-app.set('views',[
-  path.join(__dirname, 'views'),
-  path.join(__dirname, '/views/products'),
-  path.join(__dirname, '/views/users'),
-]);
-
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
-// indicamos que carpetas vamos a usar
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-//Ayma
-app.use(methodOverride('_method'))
-//
-
 // Hacemos publica la carpeta 'public'
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Indicamos que vamos a usar el MainRouter
-app.use('/', mainRouter);
-app.use('/usuarios', userRouter);
-app.use('/productos', productRouter);
+app.use('/', MainRouter);
+
+// app.use('/', indexRouter);
+// app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

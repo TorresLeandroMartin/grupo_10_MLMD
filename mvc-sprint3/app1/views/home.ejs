@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD -->
+
+    <!-- hoja de estilos - no lo incluyo en el archivo partials porque tengo 1 hoja de estilos por vista en vez de todo en una -->
+    <!-- CONSULTAR - PORQUE EL LINK A LA HOJA DE ESTILOS ME QUEDA POR FUERA DEL HEAD QUE ES DONDE DEBE IR -->
+
+    <link rel="stylesheet" href="/css/styles1Home.css">
+    
+    <%- include ('./partials/head') %> 
+
+<!-- /HEAD -->
+<body>
+
+<!-- HEADER -->
+
+<%- include ('./partials/header') %> 
+
+<!-- /HEADER -->
+
+    <main>
+
+        <!-- inicio main - contenedor principal del main -->
+        <div class="contenedor-main">
+            <!-- contenedor de productos destacados -->
+            <h2>Productos Destacados</h4>
+            <div class="productos-destacados">
+                        <!-- carta de producto - son 3 y se muestran en mobile 1 , tablet 1 , desktop 3 -->
+                    <div class="product-card">
+                        <a href="/description-page">
+                            <div class="card">
+                            <h3>Producto X</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, consectetur?</p>
+                        </div>
+                        </a>
+                    </div>
+
+                    <a href="/description-page">
+                        <div class="product-card2">
+                            <div class="card">
+                                <h3>Producto X</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, consectetur?</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="/description-page">
+                        <div class="product-card3">
+                            <div class="card">
+                                <h3>Producto X</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, consectetur?</p>
+                            </div>
+                        </div>
+                    </a>
+            </div>
+
+            <!-- categorias de productos posicionados despues de productos destacados -->
+            <!-- div contenedor de la seccion, una layer de mas para trabajar mejor? -->
+
+            <div class="categoria-producto">
+                <div class="categorias">
+
+                    <div class="categoria-card background-img1">
+                        <!-- <i class="fa-solid fa-arrow-left"></i> -->
+                        <a href="#">Categoria</a>
+                    </div>
+                    <div class="categoria-card background-img2">
+                        <a href="#">Categoria</a>
+                        <!-- <i class="fa-solid fa-arrow-right"></i> -->
+                    </div>
+                    <div class="categoria-card background-img3">
+                        <!-- <i class="fa-solid fa-arrow-left"></i> -->
+                        <a href="#">Categoria</a>
+                    </div>
+                    <div class="categoria-card background-img4">
+                        <a href="#">Categoria</a>
+                        <!-- <i class="fa-solid fa-arrow-right"></i> -->
+                    </div>
+
+                    <div class="ver-todos-div">
+                        <button class="ver-todos">Ver Todos <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conocenos-mas">
+                <div class="cuerpo-de-texto">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique soluta, assumenda deleniti blanditiis dignissimos natus eaque modi ipsa cupiditate nam expedita eum nostrum illo non! Magnam consequatur quis quibusdam animi!</p>
+                    <h6>Fulanito</h6>
+                    <h6>Ceo de HouseClothing</h6>
+                </div>
+            </div>
+        </div>
+    </main>
+    <hr>
+
+<!-- FOOTER -->
+
+<%- include ('./partials/footer') %> 
+
+<!-- /FOOTER -->
+
+</body>
+</html>

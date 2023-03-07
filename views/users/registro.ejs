@@ -26,31 +26,40 @@
 
                     <hr class="linea-divisoria2">
 
-                    <form action="/crearcuenta" method="POST" class="bottom">
+                    <form action="/usuarios/crearcuenta" name="file" method="POST" class="bottom" enctype="multipart/form-data">
 
                         <div class="campos-de-relleno">
-                            <p>Nombre y Apellido</p>
-                            <input type="text" placeholder="Nombre y Apellido" required>
+                            <p>Nombre</p>
+                            <input type="text" placeholder="Nombre" name="firstname">
+                        </div>
+
+                        <div class="campos-de-relleno">
+                            <p>Apellido</p>
+                            <input type="text" placeholder="Apellido" name="lastname">
                         </div>
 
                         <div class="campos-de-relleno">
                             <p>Email</p>
-                            <input type="email" placeholder="direccion@demail.com" required>
+                            <input name="email" type="email" placeholder="direccion@demail.com" >
                         </div>
 
                         <div class="campos-de-relleno">
                             <p>Telefono</p>
-                            <input type="tel" placeholder="num. de teléfono" required>
+                            <input name="phone" type="tel" placeholder="num. de teléfono" >
                         </div>
 
                         <div class="campos-de-relleno">
                             <p>Contrasena</p>
-                            <input type="password" placeholder="**********" minlength="8" required>
+                            <input name="password" type="password" placeholder="**********" minlength="8" >
 
+                            <div>
+                                <input type="file" name="profile-picture">
+                            </div>
 
-                        <div class="botones">
-                            <a href="/iniciarsesion"><button type="submit" class="boton2">Creá tu cuenta</button></a>
-                        </div>
+                            <div class="botones">
+                                <button type="submit" class="boton2">Creá tu cuenta</button>
+                            </div>
+
                     </form>
 
                 </div>
