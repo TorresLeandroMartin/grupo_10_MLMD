@@ -26,11 +26,17 @@
                         <p>LOG IN</p>
                     </div>
 
-                    <form action="/iniciarsesion" method="POST" class="bottom-main">
+                    <form action="/usuarios/iniciarsesion" method="POST" class="bottom-main">
                         <div class="campos-de-texto">
-                            <input type="text" placeholder="Nombre de Usuario o mail" required>
-                            <input type="text" placeholder="Contrasena" required>
+                            <input type="email" name="email" placeholder="email" required>
+                            <% if (locals.errors && errors.email) { %>
+                                <div> <%= errors.email.msg %> </div>
+                            <% } %>
+
+                            <input type="text" name="password" placeholder="Contrasena" required>
+                            <input type="submit" value="Iniciar Sesion">
                         </div>
+
                         <div class="botonera">
                             <label><input type="checkbox">  Recuerdame</label>
                             <div class="botones">

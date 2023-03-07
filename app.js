@@ -6,9 +6,11 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var session = require('express-session');
 
 //Cambio Ayma
 var methodOverride = require('method-override');
+
 //
 
 // Llamamos a Router
@@ -37,6 +39,7 @@ app.use(cookieParser());
 
 //Ayma
 app.use(methodOverride('_method'))
+app.use(session({secret: "shh"}))
 //
 
 // Hacemos publica la carpeta 'public'

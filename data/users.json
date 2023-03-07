@@ -15,11 +15,12 @@
     "id": 2
   },
   {
-    "username": "prueba1",
-    "email": "email1@email.com",
-    "phone": "123123123",
-    "password": "123123123",
-    "image": "avatar-1678131562176.jpg",
+    "firstname": "Aymara",
+    "lastname": "Flaschka",
+    "email": "aymaraflaschka@gmail.com",
+    "phone": "03718576477",
+    "password": "$2b$10$ileXdO96KWONBSeR6L.JfOaLKY4g/oovIl5W17Kr6oaOcNaKMBQYG",
+    "image": "avatar-1678223767649.png",
     "id": 3
   }
 ]
