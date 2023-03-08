@@ -8,13 +8,26 @@
         </div>
 
         <div class="carrito">
-            <a href="/usuarios/iniciarsesion"><i class="fas fa-shopping-cart"></i></a>
+            <a href="/usuarios/carrito"><i class="fas fa-shopping-cart"></i></a>
         </div>
+        
+        <% if (locals.isLogged) { %>
+        
+        <div>
+            <a href="/usuarios/profile"> Hola <%= user.firstname %> </a>
+        </div>
+
+        <div class="user">
+            <a href="#"><i class="fa-solid fa-user"></i></a>
+        </div>
+
+        <% } else { %>
 
         <div class="user">
             <a href="/usuarios/iniciarsesion"><i class="fas fa-user-circle"></i></a>
         </div>
 
+        <% } %>
     </article>
 
     <nav>

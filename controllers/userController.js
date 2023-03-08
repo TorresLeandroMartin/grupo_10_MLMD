@@ -58,7 +58,9 @@ const userController = {
     if (usuarioALoguearse){
       let passwordCorrecto = bcrypt.compareSync(req.body.password, usuarioALoguearse.password)
       if(passwordCorrecto){
-        return res.send("Ok puedes ingresar")
+        delete usuarioALoguearse.password; //Por seguridad
+        req.session.userLogged = usuarioALoguearse; 
+        return res.redirect('/usuarios/profile'); //acá agregar las vista de perfil de usuario
       }
     } 
 
@@ -71,6 +73,15 @@ const userController = {
     })
   },
 
+  profile:(req, res)=>{
+    return res.render('perfilUsuario', {
+      user: req.session.userLogged
+    })
+  },
+  logout:(req, res)=>{
+    req.session.destroy();
+    return res.redirect('/');
+  },
   carrito: (req, res) => {
     res.render("carrito");
   },

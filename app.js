@@ -10,8 +10,9 @@ var session = require('express-session');
 
 //Cambio Ayma
 var methodOverride = require('method-override');
-
+var userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
 //
+
 
 // Llamamos a Router
 var mainRouter = require('./routes/mainRouter');
@@ -39,7 +40,12 @@ app.use(cookieParser());
 
 //Ayma
 app.use(methodOverride('_method'))
-app.use(session({secret: "shh"}))
+app.use(session({
+  secret: "shh",
+  resave: false,
+  saveUninitialized: false
+}))
+app.use(userLoggedMiddleware)
 //
 
 // Hacemos publica la carpeta 'public'
