@@ -2,33 +2,35 @@
 <html lang="en">
 
 
-<%- include("./partials/head") %>
+  <%- include("./partials/head") %>
 
-<!-- head -->
+  <!-- head -->
 
-<link rel="stylesheet" href="/css/stylesPerfil.css">
+   <link rel="stylesheet" href="/css/stylesPerfil.css">
 
 
-<body>
-    <!-- header -->
+    <body>
+      <!-- header -->
    
-    <%- include("./partials/header") %>
-    <main>
+     <%- include("./partials/header") %>
+
+              
+                <main class="perfil-usuario"> 
         
-        <div class="perfil-usuario">
+                    <article class="seccion-usuario">
+                        <h3>Perfil de Usuario</h3> 
+                        <p>Hola <%= user.firstname %> </p> 
+                        <p> <%= user.email %> </p> 
+                        <div>
+                           <img class="foto-perfil" src="/img/users-avatar/<%= user.image %>">
+                        </div>
+                    </article>
+                
+                </main>
 
-            <h2>Perfil de Usuario</h2>
-            <h4>Hola <%= user.firstname %> </h4>
-            <img src="/img/users-avatar/<%= user.image %>">
-            <div> <%= user.email %> </div>
-        </div>
+             <!-- footer -->
 
-
-    </main>
-
-    <!-- footer -->
-
-    <%- include("./partials/footer") %>
+             <%- include("./partials/footer") %>
     
-</body>
+    </body>
 </html>

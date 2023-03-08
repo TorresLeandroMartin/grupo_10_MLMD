@@ -12,19 +12,19 @@
         </div>
         
         <% if (locals.isLogged) { %>
-        
-        <div>
-            <a href="/usuarios/profile"> Hola <%= user.firstname %> </a>
-        </div>
 
-        <div class="user">
-            <a href="#"><i class="fa-solid fa-user"></i></a>
-        </div>
+        <article>
+            <a href="/usuarios/profile">
+                Hola <%= user.firstname %> 
+                <img src="/img/users-avatar/<%= user.image %>" width="80" style="border-radius: 100%">
+            </a>
+            <a href="logout"> <i class="fas fa-sign-in-alt"> </i>  Salir </a>
+        </article>
 
         <% } else { %>
 
         <div class="user">
-            <a href="/usuarios/iniciarsesion"><i class="fas fa-user-circle"></i></a>
+            <a href="/usuarios/iniciarsesion" class="login"> Iniciar Sesion <i class="fas fa-user-circle"></i></a>
         </div>
 
         <% } %>
