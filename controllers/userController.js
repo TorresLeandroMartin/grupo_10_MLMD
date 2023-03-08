@@ -60,28 +60,33 @@ const userController = {
       if(passwordCorrecto){
         delete usuarioALoguearse.password; //Por seguridad
         req.session.userLogged = usuarioALoguearse; 
-        return res.redirect('/usuarios/profile'); //acá agregar las vista de perfil de usuario
+        //if(req.body.recordar_email){
+         // res.cookie('usuarioEmail', req.body.email, { maxAge: (1000 * 30) * 2})
+        //}
+        return res.redirect('/homeOficial'); //acá agregar las vista de perfil de usuario
       }
     } 
 
     return res.render('inicioSesion',{
       errors:{
         email:{
-          msg: "email inválido"
+          msg: "*Credenciales inválidas"
         }
       }
     })
   },
 
-  profile:(req, res)=>{
+  profile:(req, res)=> {
     return res.render('perfilUsuario', {
       user: req.session.userLogged
     })
   },
-  logout:(req, res)=>{
+
+  logout:(req, res)=> {
     req.session.destroy();
     return res.redirect('/');
   },
+  
   carrito: (req, res) => {
     res.render("carrito");
   },

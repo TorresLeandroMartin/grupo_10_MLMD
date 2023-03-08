@@ -6,6 +6,7 @@ let productosJson = (path.join(__dirname, "../data/products.json"));
 let productos = JSON.parse(fs.readFileSync(productosJson, 'utf-8'));
 
 
+
 const productController = {
 
   index: (req, res) => {
@@ -13,7 +14,7 @@ const productController = {
   },
 
   logueado: (req, res) => {
-    res.render("catalogoLogueado", { productos });
+    res.render("catalogoLogueado", { productos, user: req.session.userLogged });
   },
 
   crear: (req, res) => {

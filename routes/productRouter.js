@@ -2,14 +2,17 @@ const express = require("express");
 const router = express.Router();
 
 const productController = require("../controllers/productController");
+const authMiddleware = require('../middlewares/authMiddleware');
+const guestMiddleware = require('../middlewares/guestMiddleware');
+
 
 // URL /productos
-router.get("/catalogo", productController.index);
+router.get("/catalogo",guestMiddleware, productController.index);
 
-router.get('/catalogoLogueado', productController.logueado)
+router.get('/catalogoLogueado', authMiddleware, productController.logueado)
 
 // URL /productos/crear
-router.get("/crear", productController.crear);
+router.get("/crear", authMiddleware, productController.crear);
 
 // URL /productos/crear
 router.post("/crearlo", productController.accionCrear);

@@ -16,7 +16,7 @@
         <article>
             <a href="/usuarios/profile">
                 Hola <%= user.firstname %> 
-                <img src="/img/users-avatar/<%= user.image %>" width="80" style="border-radius: 100%">
+                <img src="/img/users-avatar/<%= user.image %>" width="50" style="border-radius: 100%">
             </a>
             <a href="logout"> <i class="fas fa-sign-in-alt"> </i>  Salir </a>
         </article>
@@ -32,10 +32,17 @@
 
     <nav>
         <ul>
-            <li type="none"> <a href="/"> Inicio </a> </li>
-            <li type="none"> <a href="/#nosotros"> Nosotros </a> </li>
-            <li type="none"> <a href="/productos/catalogo"> Productos </a> </li>
+            <% if (locals.isLogged) { %>
+            <li type="none"> <a href="/homeOficial"> Inicio </a> </li>
+            <li type="none"> <a href="/productos/catalogoLogueado"> Productos </a> </li>
+            <li type="none"> <a href="#nosotros"> Nosotros </a> </li>
             <li type="none"> <a href="#contacto"> Contacto </a> </li>
+            <% } else { %>
+            <li type="none"> <a href="/"> Inicio </a> </li>
+            <li type="none"> <a href="/productos/catalogo"> Productos </a> </li>
+            <li type="none"> <a href="#nosotros"> Nosotros </a> </li>
+            <li type="none"> <a href="#contacto"> Contacto </a> </li>
+            <% } %>
         </ul>
     </nav>
 

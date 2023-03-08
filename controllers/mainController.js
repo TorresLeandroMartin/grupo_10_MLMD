@@ -5,9 +5,10 @@ const mainController = {
     },
 
     homeLogin: (req, res) => {
-        let login = true;
-       res.render('indexLogueado');
-    }
+       res.render('indexLogueado',{
+        user: req.session.userLogged
+      });
+    },
 }
 
 module.exports = mainController;

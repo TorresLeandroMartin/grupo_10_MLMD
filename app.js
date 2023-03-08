@@ -7,6 +7,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
+var cookies = require('cookie-parser')
 
 //Cambio Ayma
 var methodOverride = require('method-override');
@@ -46,6 +47,7 @@ app.use(session({
   saveUninitialized: false
 }))
 app.use(userLoggedMiddleware)
+app.use(cookies())
 //
 
 // Hacemos publica la carpeta 'public'
