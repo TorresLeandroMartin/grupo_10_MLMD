@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- head -->
+
+<%- include("./partials/head") %>
+
+<!-- hoja de estilos -->
+<link rel="stylesheet" href="css/normalize.css">
+<link href="/css/catalogo-style.css" rel="stylesheet">
+
+<body>
+    <!-- header -->
+
+    <%- include("./partials/header") %>
+
+    <main>
+      <div>
+        <h4>Productos</h4>
+
+        <hr>
+        
+        <form class="categoria-estilo" action="" method="get">
+          <select name="styles">
+             <option value="all"> Todos </option>
+             <option value="sport"> Deportivo </option>
+             <option value= "elegant"> Elegante</option>
+             <option value="accessory"> Accesorios  </option>
+             <option value="handbags"> Bolsos </option>
+          </select>
+        </form>
+      </div>
+
+      <hr>
+
+      <div class="productos">
+
+        <section class="global">
+          
+          <h2>Global</h2>
+          <div>
+            <article class="espacio-producto">
+
+            </article>
+            <article class="espacio-producto">
+
+            </article>
+            <article class="espacio-producto">
+
+            </article>
+          </div>
+
+          <a href="/usuarios/iniciarsesion">
+          <label class="acceder">Acceder</label>
+          </a>
+          
+        </section>
+        
+      </div>
+
+    </main>
+    
+     <!-- footer -->
+
+     <%- include("./partials/footer") %>
+
+</body>
+</html>
