@@ -15,6 +15,7 @@ var methodOverride = require('method-override');
 var mainRouter = require('./routes/mainRouter');
 var userRouter = require('./routes/userRouter');
 var productRouter = require('./routes/productRouter');
+var logMiddleware = require('./middlewares/logMiddleware');
 
 // Guardamos la funcion en una variable app
 var app = express();
@@ -29,6 +30,8 @@ app.set('views',[
 app.set('view engine', 'ejs');
 
 // indicamos que carpetas vamos a usar
+
+app.use(logMiddleware)
 
 app.use(logger('dev'));
 app.use(express.json());
