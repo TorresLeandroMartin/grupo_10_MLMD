@@ -13,9 +13,9 @@
     <body>
 
         <!-- header -->
-    
- <%- include("./partials/header") %>
- 
+
+        <%- include("./partials/header") %>
+
 
             <main>
                 <div class="contenedor-main">
@@ -27,27 +27,41 @@
                     </div>
 
                     <form action="/usuarios/iniciarsesion" method="POST" class="bottom-main">
+
                         <div class="campos-de-texto">
                             <input name="email" type="text" placeholder="Nombre de Usuario o mail">
                             <% if (locals.errors && errors.email) { %>
                                 <div class="text-danger">
                                     <%= errors.email.msg %>
                                 </div>
+                                <% } %>
+                        </div>
+
+                        <div class="campos-de-texto">
                             <input name="contrasena" type="text" placeholder="Contraseña">
                             <% if (locals.errors && errors.contrasena) { %>
                                 <div class="text-danger">
                                     <%= errors.contrasena.msg %>
                                 </div>
+                                <% } %>
                         </div>
+
                         <div class="botonera">
-                            <label><input type="checkbox">  Recuerdame</label>
+                            <label>
+                                <input type="checkbox" name="rememberuser"> Recuerdame
+                            </label>
                             <div class="botones">
-                                <a href='/homeOficial'><button class="boton1">Log in</button></a>
+                                <a href='/homeOficial'><button type="submit" class="boton1">Log in</button></a>
                             </div>
-                            <a href="#">Olvidaste la contraseña?</a>
                         </div>
                     </form>
-                    <a href="/usuarios/crearcuenta"><button class="boton2">Sign up</button></a>
+
+                    <div class="botonera">
+                        <div class="botones">
+                            <a href="/usuarios/crearcuenta"><button class="boton2">Sign up</button></a>
+                            <a href="#">Olvidaste la contraseña?</a>
+                        </div>
+                    </div>
                 </div>
             </main>
 

@@ -9,6 +9,7 @@ const uploadFile = require("../middlewares/multerMiddleware");
 const validations = require("../middlewares/validateRegisterMiddleware");
 const guestMiddleware = require("../middlewares/guestMiddleware");
 const authMiddleware = require("../middlewares/authMiddleware");
+const userLoggedMiddleware = require("../middlewares/userLoggedMiddleware");
 
 // URL /usuarios/crearcuenta
 router.get("/crearcuenta", guestMiddleware, userController.crearCuenta);
@@ -20,10 +21,10 @@ router.post("/crearcuenta", uploadFile.single("imagen"), validations, userContro
 router.get("/iniciarsesion", guestMiddleware, userController.iniciarSesion);
 
 // Procesar login
-router.get("/iniciarsesion", userController.iniciarSesionProceso);
+router.post("/iniciarsesion", userController.iniciarSesionProceso);
 
 // URL /usuarios/perfil
-router.get("/perfil/", authMiddleware, userController.profile);
+router.get("/perfil/:id", authMiddleware, userController.profile);
 
 // URL /usuarios/cerrarsesion
 router.get("/cerrarsesion/", userController.cerrarsesion);

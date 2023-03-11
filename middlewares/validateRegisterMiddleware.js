@@ -1,6 +1,6 @@
-
-const {body} = require("express-validator");
 const path = require("path");
+const {body} = require("express-validator");
+
 
 const validations = [
     body("id").isInt().withMessage("Escribi el id de tu usuario"),

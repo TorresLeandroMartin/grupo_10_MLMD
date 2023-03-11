@@ -1,7 +1,7 @@
 var createError = require('http-errors');
 
 // Llamcleaado a express
-var express = require('express'); 
+const express = require('express'); 
 const session = require("express-session");
 
 var path = require('path');
@@ -18,19 +18,26 @@ var userRouter = require('./routes/userRouter');
 var productRouter = require('./routes/productRouter');
 
 // Guardamos la funcion en una variable app
-var app = express();
+const app = express();
 
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 
 app.use(session({
-  secret: "House Cloathing",
+  secret: "HouseCloathing",
   resave: false,
-  saveUninitialized: true,
+  saveUninitialized: false,
 }));
 
-app.use(cookies());
+//app.use(cookies());
 
 app.use(userLoggedMiddleware);
+
+// indicamos que carpetas vamos a usar
+
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 
 // view engine setup
 app.set('views',[
@@ -40,13 +47,6 @@ app.set('views',[
 ]);
 
 app.set('view engine', 'ejs');
-
-// indicamos que carpetas vamos a usar
-
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
 
 //methodOverride
 app.use(methodOverride('_method'))

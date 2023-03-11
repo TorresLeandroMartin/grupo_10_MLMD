@@ -27,15 +27,16 @@
 
                     <hr class="linea-divisoria2">
 
-                    <form action="/usuarios/crearcuenta" method="POST" class="bottom" enctype="multipart/form-data">
+                    <form method="POST" action="/usuarios/crearcuenta" class="bottom" enctype="multipart/form-data">
 
                         <div class="campos-de-relleno">
                             <p>Imagen de perfil</p>
                             <input 
                             type="file" 
                             name="imagen"
+                            class="letrasTipoArchivo <% locals.errors && errors.imagen ? 'is-invalid' : null %>"
                             value="<%= locals.oldData ? oldData.imagen : null %>"
-                            class="letrasTipoArchivo <%=locals.errors && errors.imagen ? 'is-invalid' : null %>">
+                            >
                             <% if (locals.errors && errors.imagen) { %>
                                 <div class="texto-error">
                                     <%= errors.imagen.msg %>
@@ -44,56 +45,70 @@
                         </div>
 
                         <div class="campos-de-relleno">
+                            <div>
                             <p>Nombre y Apellido</p>
                             <input 
-                            class="campo-individual <%=locals.errors && errors.nombre ? 'is-invalid' : null %>"
                             type="text" 
                             name="nombre" 
+                            class="campo-individual <%=locals.errors && errors.nombre ? 'is-invalid' : null %>"
                             value="<%= locals.oldData ? oldData.nombre : null %>"
-                            placeholder="Nombre y Apellido">
+                            placeholder="Nombre y Apellido"
+                            >
                             <% if (locals.errors && errors.nombre) { %>
                                 <div class="texto-error">
                                     <%= errors.nombre.msg %>
                                 </div>
                                 <% } %>
                         </div>
+                    </div>
 
+                    
                         <div class="campos-de-relleno">
+                            <div>
                             <p>Email</p>
                             <input   
-                            class="campo-individual <%=locals.errors && errors.email ? 'is-invalid' : null %>"
                             type="email" 
                             name="email" 
+                            class="campo-individual <%=locals.errors && errors.email ? 'is-invalid' : null %>"
                             value="<%= locals.oldData ? oldData.email : null %>"
-                            placeholder="email@dirección.com">
+                            placeholder="email@dirección.com"
+                            >
                             <% if (locals.errors && errors.email) { %>
                                 <div class="texto-error">
                                     <%= errors.email.msg %>
                                 </div>
                                 <% } %>
                         </div>
+                    </div>
 
+                    
                         <div class="campos-de-relleno">
+                            <div>
                             <p>Teléfono</p>
                             <input
-                            class="campo-individual <%=locals.errors && errors.nombre ? 'is-invalid' : null %>"
                             type="tel" 
                             name="telefono" 
+                            class="campo-individual <%=locals.errors && errors.telefono ? 'is-invalid' : null %>"
                             value="<%= locals.oldData ? oldData.telefono : null %>"
-                            placeholder="num. de teléfono">
+                            placeholder="num. de teléfono"
+                            >
                             <% if (locals.errors && errors.telefono) { %>
                                 <div class="texto-error">
                                     <%= errors.telefono.msg %>
                                 </div>
                                 <% } %>
                         </div>
+                    </div>
 
+                    
                         <div class="campos-de-relleno">
+                            <div>
                             <p>Categoría</p>
                             <select   
-                            class="campo-individual <%=locals.errors && errors.categoria ? 'is-invalid' : null %>"
                             name="categoria" 
-                            value="<%= locals.oldData ? oldData.categoria : null %>">
+                            class="campo-individual <%=locals.errors && errors.categoria ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.categoria : null %>"
+                            >
                                 <option value=""> </option>
                                 <% let categorias=['Cliente', 'Vendedor' ]; %>
                                     <% for(const unaCategoria of categorias) { %>
@@ -110,26 +125,29 @@
                                 </div>
                                 <% } %>
                         </div>
+                    </div>
 
+                    
                         <div class="campos-de-relleno">
+                            <div>
                             <p>Contraseña</p>
                             <input   
-                            class="campo-individual <%=locals.errors && errors.nombre ? 'is-invalid' : null %>"
                             type="password" 
                             name="contrasena" 
                             placeholder="**********"
-                            value="<%= locals.oldData ? oldData.contrasena : null %>">
+                            class="campo-individual <%=locals.errors && errors.nombre ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.contrasena : null %>"
+                            >
                             <% if (locals.errors && errors.contrasena) { %>
                                 <div class="texto-error">
                                     <%= errors.contrasena.msg %>
                                 </div>
                                 <% } %>
                         </div>
+                    </div>
 
                         <div class="campos-de-relleno">
-                            <div class="botones">
                                 <button type="submit" class="boton2">Creá tu cuenta</button>
-                            </div>
                         </div>
 
                     </form>

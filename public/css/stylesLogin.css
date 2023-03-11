@@ -135,19 +135,9 @@ nav {
     border-radius: 1.2ch;
     font-size: 14px;
     padding: 5px 10px;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 640px;
-    right: 475px;
 }
 
 .boton2 {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 640px;
-    left: 460px;
     background-color: #FF715B;
     color: white;
     border: solid 1px #FF715B;

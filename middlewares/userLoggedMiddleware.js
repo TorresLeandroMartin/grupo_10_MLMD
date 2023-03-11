@@ -1,27 +1,27 @@
 
 
-const usuarioNuevo = require("../models/usuarioNuevo");
 
+const usuarioNuevo = require("../models/usuarioNuevo");
 
 function userLoggedMiddleware(req, res, next){
     res.locals.isLogged = false;
 
+    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 
-let emailInCookie = req.cookies.userEmail;
-let userFromCookie = usuarioNuevo.findByField("email", emailInCookie);
+   let emailInCookie = req.cookie.userEmail;
+   
+   let userFromCookie = usuarioNuevo.findByField("email", emailInCookie);
 
-    if (userFromCookie) {
-        req.session.userLogged = userFromCookie;
+   if (userFromCookie) {
+       req.session.userLogged = userFromCookie;
     }
 
-    if (req.session && req.session.userLogged){
+    if (req.session.userLogged){
         res.locals.isLogged = true;
         res.locals.userLogged = req.session.userLogged;
     }
 
-
-
     next();
     }
     
-    module.exports = userLoggedMiddleware;
+   module.exports = userLoggedMiddleware;

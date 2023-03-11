@@ -1,93 +1,83 @@
 
 
-const bcryptjs = require("bcryptjs"); 
+const bcryptjs = require("bcryptjs");
 const { validationResult } = require("express-validator");
 
-const usuarioNuevo = require("../models/usuario");
+const usuarioNuevo = require("../models/usuarioNuevo");
 
 
 const userController = {
 
   crearCuenta: (req, res) => {
-    res.render("registro");
+    return res.render("registro");
   },
 
   procesoRegistro: (req, res) => {
 
     const resultValidation = validationResult(req);
-    if (resultValidation.errors.length > 0) {
-      return res.render("registro", {
-        errors: resultValidation.mapped(),
-        oldData: req.body
-      });
-    }
 
-    let userInDB = usuarioNuevo.findByField("email", req.body.email);
-    
-    if (userInDB) {
-      return res.render("registro", {
-        errors: {
-          email:{
-            msg: "Dicho email ya existe"
-          }
-        },
-        oldData: req.body
-      });
-    }
+		if (resultValidation.errors.length > 0) {
+			return res.render('registro', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
 
-      let userToCreate = {
-       ...req.body,
-       contrasena: bcryptjs.hashSync(req.body.contrasena, 10),
-       imagen: req.file.filename
-     }
+		let userInDB = usuarioNuevo.findByField('email', req.body.email);
 
+		if (userInDB) {
+			return res.render('userRegisterForm', {
+				errors: {
+					email: {
+						msg: 'Este email ya está registrado'
+					}
+				},
+				oldData: req.body
+			});
+		}
 
-    let userCreated = usuarioNuevo.create(userToCreate);
+		let userToCreate = {
+			...req.body,
+			contrasena: bcryptjs.hashSync(req.body.contrasena, 10),
+			imagen: req.file.filename
+		}
 
-   return res.redirect("./usuarios/iniciarsesion");
-  },
+		let userCreated = usuarioNuevo.create(userToCreate);
+
+		return res.redirect('/usuarios/iniciarsesion');
+	},
 
   iniciarSesion: (req, res) => {
 
-    res.render("inicioSesion");
+   return res.render("inicioSesion");
   },
 
   iniciarSesionProceso: (req, res) => {
     let userToLogin = usuarioNuevo.findByField("email", req.body.email);
-    
+
     if(userToLogin) {
-      let isOkThePassword = bcryptjs.compareSync(req.body.contrasena, userToLogin.contrasena);
-      if(isOkThePassword){
-        delete userToLogin.contrasena;
-        req.session.userLogged = userToLogin;
+			let isOkThePassword = bcryptjs.compareSync(req.body.contrasena, userToLogin.contrasena);
+			if (isOkThePassword) {
+				delete userToLogin.contrasena;
+				req.session.userLogged = userToLogin;
 
-        if (req.body.remember_user){
-          res.cookie("userEmail", req.body.email, {maxAge: (1000 * 60) * 60})
-        }
+				if(req.body.rememberuser) {
+					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+				}
 
-      return res.redirect("/usuario/perfil");
-    }
-  }
-  return res.render ("iniciarsesion", {
-    errors: {
-      email: {
-        msg: "Las credenciales son inválidas"
-      }
-    }
-  });
-
-
-    return res.render ("iniciarsesion", {
-      errors: {
-        email:{
-          msg: "No se encuentra este email en nuestros registros"
-        }
-      }
-    })
+				return res.redirect('/usuario/perfil/');
+			} 
+			return res.render('userLoginForm', {
+				errors: {
+					email: {
+						msg: 'Las credenciales son inválidas'
+					}
+				}
+			});
+		}
 
   },
-
-  profile: (req, res) => {
+    profile: (req, res) => {
     return res.render("perfilUsuario", {
       user: req.session.userLogged
     });
