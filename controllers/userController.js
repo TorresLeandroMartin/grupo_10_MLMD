@@ -34,7 +34,7 @@ const userController = {
         "utf-8"
       );
 
-      res.send('Usuario creado!')
+      res.redirect('IniciarSesion')
 
     } else {
       let file = req.file;

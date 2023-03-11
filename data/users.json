@@ -19,8 +19,43 @@
     "lastname": "Flaschka",
     "email": "aymaraflaschka@gmail.com",
     "phone": "03718576477",
-    "password": "$2b$10$ileXdO96KWONBSeR6L.JfOaLKY4g/oovIl5W17Kr6oaOcNaKMBQYG",
     "image": "avatar-1678223767649.png",
     "id": 3
+  },
+  {
+    "firstname": "Maria",
+    "lastname": "Fernandez",
+    "email": "eliorbe30@yahoo.com",
+    "phone": "03718576477",
+    "password": "$2b$10$rtDiOzawTsZyo2Q5LUWtaea6PuJu1MtMyi8lwYQMBFgM94M6o1mqm",
+    "image": "avatar-1678543193245.png",
+    "id": 4
+  },
+  {
+    "firstname": "aaaf",
+    "lastname": "fsafsafsa",
+    "email": "orbegozo87@gmail.com",
+    "phone": "03718576477",
+    "password": "$2b$10$rzp1U3tXGrlHy8I4q/7ciOjrDhiUA4TnzLiH.Y9x.VOUpibBo78Rm",
+    "image": "avatar-1678543403160.png",
+    "id": 5
+  },
+  {
+    "firstname": "aaaf",
+    "lastname": "Murbach",
+    "email": "juanfraflaschka3@gmail.com",
+    "phone": "03718576477",
+    "password": "$2b$10$zueYe.C/k0TrM881ZrMNa.2dSNwNW97g9mmN8241dPffoRCUCv0um",
+    "image": "avatar-1678543711610.png",
+    "id": 6
+  },
+  {
+    "firstname": "Maria",
+    "lastname": "Fernandez",
+    "email": "eliorbe30@yahoo.com",
+    "phone": "03718576477",
+    "password": "$2b$10$oOxUWPcA0dNhDsTwCzZW0evxiMvF25DV8BocWT0gZnu2wbBEaUwwi",
+    "image": "avatar-1678543961197.png",
+    "id": 7
   }
 ]
