@@ -57,5 +57,44 @@
     "password": "$2b$10$oOxUWPcA0dNhDsTwCzZW0evxiMvF25DV8BocWT0gZnu2wbBEaUwwi",
     "image": "avatar-1678543961197.png",
     "id": 7
+  },
+  {
+    "firstname": "aaaf",
+    "lastname": "fsafsafsa",
+    "email": "rosanadiaz77@hotmail.com",
+    "phone": "37189647",
+    "password": "$2b$10$fJZKRKOk6jR5uTVbwuwhDueSILLw0ZGj.lXEN/laB25WhEnI5Jd7C",
+    "image": "avatar-1678544538854.png",
+    "id": 8
+  },
+  {
+    "firstname": "aaaf",
+    "lastname": "Murbach",
+    "email": "autoserviciodiaz2013@gmail.com",
+    "phone": "03718576477",
+    "categoria": "Vendedor",
+    "password": "$2b$10$OJkTwFTzb/aK2XMIgIVj9eJGokckDfHzR/mrayYCuY/lSG8KU0JR.",
+    "image": "avatar-1678545625558.png",
+    "id": 9
+  },
+  {
+    "firstname": "aym",
+    "lastname": "lop",
+    "email": "asdsfhriufhru@dh.com",
+    "phone": "1545",
+    "categoria": "",
+    "password": "$2b$10$hdxJR5TaTjkZn13I/BPAnOCTZhfM.I2dghTysUyM0dSPxm9k3iNkm",
+    "image": "avatar-1678545745397.png",
+    "id": 10
+  },
+  {
+    "firstname": "aym",
+    "lastname": "lop",
+    "email": "autoserviciodiaz2013@gmail.com",
+    "phone": "03",
+    "categoria": "Cliente",
+    "password": "$2b$10$mLqkNKfPG9b3Ddykh2A3d.1d3AgTDKsWYRT561pA2IjkdyBiHeBOC",
+    "image": "avatar-1678545864390.png",
+    "id": 11
   }
 ]

@@ -25,43 +25,115 @@
                     </div>
 
                     <hr class="linea-divisoria2">
-                    <!-- CUANDO FUNCIONEN LAS VALIDACIONES-->
-                    <!--<% if (typeof errors != 'undefined') { %>
-                        <p style = "color: red">Error</p>
-                        <ul>
-                            <% for (let i = 0; i < errors.length; i++) { %>
-                                <li>
-                                    <%=errors[i].msg %>
-                                </li>
-                            <% } %>
-                        </ul>
-                    <% } %> -->
+                    
 
                     <form action="/usuarios/crearcuenta" name="file" method="POST" class="bottom" enctype="multipart/form-data">
 
                         <div class="campos-de-relleno">
                             <p>Nombre</p>
-                            <input type="text" placeholder="Nombre" name="firstname">
+                            <input   
+                            type="text" 
+                            name="firstname" 
+                            class="campo-individual <%=locals.errors && errors.firstname ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.firstname : null %>"
+                            placeholder="Nombre"
+                            >
+                            <% if (locals.errors && errors.firstname) { %>
+                                <div class="texto-error">
+                                    <%= errors.firstname.msg %>
+                                </div>
+                                <% } %>
                         </div>
 
                         <div class="campos-de-relleno">
                             <p>Apellido</p>
-                            <input type="text" placeholder="Apellido" name="lastname">
+                            <input input   
+                            type="text" 
+                            name="lastname" 
+                            class="campo-individual <%=locals.errors && errors.lastname ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.lastname : null %>"
+                            placeholder="Apellido"
+                            >
+                            <% if (locals.errors && errors.lastname) { %>
+                                <div class="texto-error">
+                                    <%= errors.lastname.msg %>
+                                </div>
+                                <% } %>
                         </div>
 
                         <div class="campos-de-relleno">
                             <p>Email</p>
-                            <input name="email" type="email" placeholder="direccion@demail.com" >
+                            <input  
+                            input   
+                            type="email" 
+                            name="email" 
+                            class="campo-individual <%=locals.errors && errors.email ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.email : null %>"
+                            placeholder="email@dirección.com"
+                            >
+                            <% if (locals.errors && errors.email) { %>
+                                <div class="texto-error">
+                                    <%= errors.email.msg %>
+                                </div>
+                                <% } %>
                         </div>
 
                         <div class="campos-de-relleno">
                             <p>Telefono</p>
-                            <input name="phone" type="tel" placeholder="num. de teléfono" >
+                            <input 
+                            type="tel" 
+                            name="phone" 
+                            class="campo-individual <%=locals.errors && errors.phone ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.phone : null %>"
+                            placeholder="num. de teléfono"
+                            >
+                            <% if (locals.errors && errors.phone) { %>
+                                <div class="texto-error">
+                                    <%= errors.phone.msg %>
+                                </div>
+                                <% } %>
+                        </div>
+
+                        <div class="campos-de-relleno">
+                            <div>
+                            <p>Categoría</p>
+                            <select   
+                            name="categoria" 
+                            class="campo-individual <%=locals.errors && errors.categoria ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.categoria : null %>"
+                            >
+                                <option value=""> </option>
+                                <% let categorias=['Cliente', 'Vendedor' ]; %>
+                                    <% for(const unaCategoria of categorias) { %>
+                                        <option value="<%= unaCategoria %>">
+                                            <%= locals.oldData && (unaCategoria==oldData.categoria) ? oldData.categoria
+                                                : null%>>
+                                                <%= unaCategoria %>
+                                        </option>
+                                        <% } %>
+                            </select>
+                            <% if (locals.errors && errors.categoria) { %>
+                                <div class="texto-error">
+                                    <%= errors.categoria.msg %>
+                                </div>
+                                <% } %>
+                           </div>
                         </div>
 
                         <div class="campos-de-relleno">
                             <p>Contrasena</p>
-                            <input name="password" type="password" placeholder="**********" minlength="8" >
+                            <input 
+                            type="password" 
+                            name="password" 
+                            placeholder="**********"
+                            class="campo-individual <%=locals.errors && errors.password ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.password : null %>"
+                            >
+                            <% if (locals.errors && errors.password) { %>
+                                <div class="texto-error">
+                                    <%= errors.password.msg %>
+                                </div>
+                                <% } %>
                             <br><br>
                             <input type="file" name="profile-picture">
 
