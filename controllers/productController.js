@@ -13,7 +13,15 @@ const productController = {
   },
 
   logueado: (req, res) => {
-    res.render("catalogoLogueado", { productos });
+
+     const emailSession = req.session.userLogged;
+
+		if(emailSession){
+			res.render("catalogoLogueado", {user: emailSession, productos : productos})
+		} else {
+			res.redirect ("/usuarios/iniciarsesion", {user: " "})
+		}
+
   },
 
   crear: (req, res) => {

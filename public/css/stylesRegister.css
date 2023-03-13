@@ -92,11 +92,22 @@ nav {
 }
 
 .letrasTipoArchivo{
+    display: flex;
     color: white;
     align-items: center;
     justify-content: center;
     font-family: "Montserrat", sans-serif;
     font-size: 80%;
+}
+
+.campo-individual{
+    display: flex;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 80%;
+    text-align: center;
 }
 
 .texto-error{
@@ -113,22 +124,20 @@ nav {
 
 }
 
-.bottom p {
-    color: white;
-
-    font-family: "Lilita One";
-
-    font-size: 13px;
-}
-
 .bottom .campos-de-relleno {
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
     margin: 15px 0px;
+}
 
+.bottom .campos-de-relleno p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: "Lilita One";
+    font-size: 100%;
 }
 
 .boton2 {
@@ -1399,7 +1408,7 @@ nav {
 }
 
 
-@media (min-width: 1700px) {
+/*@media (min-width: 1700px) {
 
     .sub-menu {
         position: absolute;
@@ -1411,4 +1420,4 @@ nav {
         background-color: #394476;
         z-index: 1;
     }
-}
+}*/

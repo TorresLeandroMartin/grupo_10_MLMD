@@ -12,7 +12,7 @@
   <body>
     <!-- header -->
 
-    <%- include("./partials/headerLogin") %>
+    <%- include("./partials/header") %>
 
       <main>
 
@@ -75,40 +75,40 @@
                     <img src="/img/ropa/jordan-luka-1-neo-turquoise-dn1772-104-9.jpeg" alt="imagen-producto">
                   </div>
 
-                
-                    <img  class="img2" src="/img/ropa/jordan-luka-1-neo-turquoise-dn1772-104-9.jpeg" alt="imagen-producto">
-                    <div class="right-options-inventario">
-                  <h3>
-                    <%= productoLista.nombre %>
-                  </h3>
-                  <div class="detalles">
-                    <label class="detalle"> ID : </label>
-                    <p class="sub-detalle"> #<%= productoLista.id%>
-                    </p>
-                    <label class="detalle"> Estilo :</label>
-                    <p class="sub-detalle">
-                      <%= productoLista.estilo%>
-                    </p>
-                    <label class="detalle"> Color :</label>
-                    <p class="sub-detalle">
-                      <%= productoLista.color%>
-                    </p>
-                    <label class="detalle"> Categoría : </label>
-                    <p class="sub-detalle">
-                      <%= productoLista.categoria%>
-                    </p>
-                    <label class="detalle"> Talle : </label>
-                    <p class="sub-detalle">
-                      <%= productoLista.talle%>
-                    </p>
-                  </div>
-                  <p class="producto-descripcion">
-                    <%= productoLista.descripcion %>
-                  </p>
 
-                  <a href="/productos/descripcion/<%= productoLista.id %>">
-                    <i class="fas fa-chevron-right"></i>
-                  </a>
+                  <img class="img2" src="/img/ropa/jordan-luka-1-neo-turquoise-dn1772-104-9.jpeg" alt="imagen-producto">
+                  <div class="right-options-inventario">
+                    <h3>
+                      <%= productoLista.nombre %>
+                    </h3>
+                    <div class="detalles">
+                      <label class="detalle"> ID : </label>
+                      <p class="sub-detalle"> #<%= productoLista.id%>
+                      </p>
+                      <label class="detalle"> Estilo :</label>
+                      <p class="sub-detalle">
+                        <%= productoLista.estilo%>
+                      </p>
+                      <label class="detalle"> Color :</label>
+                      <p class="sub-detalle">
+                        <%= productoLista.color%>
+                      </p>
+                      <label class="detalle"> Categoría : </label>
+                      <p class="sub-detalle">
+                        <%= productoLista.categoria%>
+                      </p>
+                      <label class="detalle"> Talle : </label>
+                      <p class="sub-detalle">
+                        <%= productoLista.talle%>
+                      </p>
+                    </div>
+                    <p class="producto-descripcion">
+                      <%= productoLista.descripcion %>
+                    </p>
+
+                    <a href="/productos/descripcion/<%= productoLista.id %>">
+                      <i class="fas fa-chevron-right"></i>
+                    </a>
 
                   </div>
                 </article>
@@ -160,10 +160,10 @@
                   <div class="archivo-img">
                     <img src="/img/ropa/jordan-luka-1-neo-turquoise-dn1772-104-9.jpeg" alt="imagen-producto">
                   </div>
-                  
-                    <img class= "img2" src="/img/ropa/jordan-luka-1-neo-turquoise-dn1772-104-9.jpeg" alt="imagen-producto">
-                 
-                  
+
+                  <img class="img2" src="/img/ropa/jordan-luka-1-neo-turquoise-dn1772-104-9.jpeg" alt="imagen-producto">
+
+
                   <div class="right-options-inventario">
                     <h3>
                       <%= productoInventario.nombre %>

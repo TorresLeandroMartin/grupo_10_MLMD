@@ -7,15 +7,16 @@
 
     <!-- hoja de estilos -->
 
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="/css/stylesLogin.css">
 
 
     <body>
 
         <!-- header -->
-    
- <%- include("./partials/header") %>
- 
+
+        <%- include("./partials/header") %>
+
 
             <main>
                 <div class="contenedor-main">
@@ -27,27 +28,37 @@
                     </div>
 
                     <form action="/usuarios/iniciarsesion" method="POST" class="bottom-main">
+
                         <div class="campos-de-texto">
                             <input name="email" type="text" placeholder="Nombre de Usuario o mail">
                             <% if (locals.errors && errors.email) { %>
                                 <div class="text-danger">
                                     <%= errors.email.msg %>
                                 </div>
-                            <input name="contrasena" type="text" placeholder="Contraseña">
+                                <% } %>
+                        </div>
+
+                        <div class="campos-de-texto">
+                            <input name="contrasena" type="password" placeholder="Contraseña">
                             <% if (locals.errors && errors.contrasena) { %>
                                 <div class="text-danger">
                                     <%= errors.contrasena.msg %>
                                 </div>
+                                <% } %>
                         </div>
+
                         <div class="botonera">
-                            <label><input type="checkbox">  Recuerdame</label>
-                            <div class="botones">
-                                <a href='/homeOficial'><button class="boton1">Log in</button></a>
-                            </div>
-                            <a href="#">Olvidaste la contraseña?</a>
+                            <label>
+                                <input type="checkbox" name="recordar_email"> Recordar mi usuario
+                            </label>
+
+                        <div class="botonera">
+                            <button type="submit" class="boton1" value="Iniciar Sesion" >Log in</button>
+                        <a href="#">Olvidaste la contraseña?</a><a href="/usuarios/crearcuenta">No tenes cuenta?</a>
+                    </div>
                         </div>
                     </form>
-                    <a href="/usuarios/crearcuenta"><button class="boton2">Sign up</button></a>
+
                 </div>
             </main>
 

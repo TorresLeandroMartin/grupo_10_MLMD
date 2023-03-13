@@ -12,24 +12,25 @@
     <body>
         <!-- header -->
 
-        <%- include("./partials/headerLogin") %>
+        <%- include("./partials/header") %>
 
             <main>
                 <div class="left-options">
-                        <h2> Edición de Productos </h2>
-                        <div class="form-group">
-                            <label for="file-input">
-                                <img class="img-prueba" src="/img/ropa/pantalonRunning.jpg" alt="buttonjpg">
-                            </label>
-                            <input id="file-input" type="file" accept="image/*" />
-                        </div>
-                    </div><div class="edita-archivo">
+                    <h2> Edición de Productos </h2>
+                    <div class="form-group">
+                        <label for="file-input">
+                            <img class="img-prueba" src="/img/ropa/pantalonRunning.jpg" alt="buttonjpg">
+                        </label>
+                        <input id="file-input" type="file" accept="image/*" />
+                    </div>
+                </div>
+                <div class="edita-archivo">
 
                     <div class="right-options">
 
                         <h2>Estas editando el producto: <i>
-                            <%=producto.nombre%>
-                        </i> </h2>
+                                <%=producto.nombre%>
+                            </i> </h2>
                         <!-- productos.id -->
 
                         <form action="/productos/edicion/<%=producto.id%>?_method=PUT" method="POST">
@@ -60,7 +61,7 @@
                             </select>
 
                             <label for="color">Color</label>
-                            <select name="color" id="color" value ="<%=producto.color%>" required>
+                            <select name="color" id="color" value="<%=producto.color%>" required>
                                 <option value="Rosado">Rosa</option>
                                 <option value="Blanco">Blanco</option>
                                 <option value="Verde">Verde</option>

@@ -1,11 +1,11 @@
 var createError = require('http-errors');
 
 // Llamcleaado a express
-var express = require('express'); 
+const express = require('express'); 
 const session = require("express-session");
 
 var path = require('path');
-const cookieParser = require('cookie-parser');
+const cookies = require('cookie-parser');
 var logger = require('morgan');
 
 //methodOverride
@@ -17,20 +17,28 @@ var mainRouter = require('./routes/mainRouter');
 var userRouter = require('./routes/userRouter');
 var productRouter = require('./routes/productRouter');
 
-// Guardamos la funcion en una variable app
-var app = express();
 
-const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
+// Guardamos la funcion en una variable app
+const app = express();
+
+//const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 
 app.use(session({
-  secret: "House Cloathing",
+  secret: "HouseCloathing",
   resave: false,
   saveUninitialized: true,
 }));
 
+//app.use(userLoggedMiddleware);
 app.use(cookies());
 
-app.use(userLoggedMiddleware);
+
+// indicamos que carpetas vamos a usar
+
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 
 // view engine setup
 app.set('views',[
@@ -40,13 +48,6 @@ app.set('views',[
 ]);
 
 app.set('view engine', 'ejs');
-
-// indicamos que carpetas vamos a usar
-
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
 
 //methodOverride
 app.use(methodOverride('_method'))

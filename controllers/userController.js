@@ -1,102 +1,104 @@
 
-
-const bcryptjs = require("bcryptjs"); 
 const { validationResult } = require("express-validator");
+const path = require("path");
+const fs = require("fs");
+const bcryptjs = require("bcryptjs");
 
-const usuarioNuevo = require("../models/usuario");
-
+const usuarioNuevo = require("../models/usuarioNuevo");
 
 const userController = {
 
   crearCuenta: (req, res) => {
-    res.render("registro");
+    return res.render("registro");
   },
 
   procesoRegistro: (req, res) => {
 
     const resultValidation = validationResult(req);
-    if (resultValidation.errors.length > 0) {
-      return res.render("registro", {
-        errors: resultValidation.mapped(),
-        oldData: req.body
-      });
-    }
 
-    let userInDB = usuarioNuevo.findByField("email", req.body.email);
-    
-    if (userInDB) {
-      return res.render("registro", {
-        errors: {
-          email:{
-            msg: "Dicho email ya existe"
-          }
-        },
-        oldData: req.body
-      });
-    }
+		if (resultValidation.errors.length > 0) {
+			return res.render('registro', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
 
-      let userToCreate = {
-       ...req.body,
-       contrasena: bcryptjs.hashSync(req.body.contrasena, 10),
-       imagen: req.file.filename
-     }
+		let userInDB = usuarioNuevo.findByField('email', req.body.email);
 
+		if (userInDB) {
+			return res.render('registro', {
+				errors: {
+					email: {
+						msg: 'Este email ya está registrado'
+					}
+				},
+				oldData: req.body
+			});
+		}
 
-    let userCreated = usuarioNuevo.create(userToCreate);
+		let userData = {
+			id: usuarioNuevo.generateId(),
+			imagen: req.file.filename,
+			...req.body,
+			contrasena: bcryptjs.hashSync(req.body.contrasena, 10),
+			
+		}
 
-   return res.redirect("./usuarios/iniciarsesion");
-  },
+		let allUsers = usuarioNuevo.findAll();
+        let newUser = userData;
+        allUsers.push(newUser);
+        fs.writeFileSync(usuarioNuevo.fileName, JSON.stringify(allUsers, null, ' '));
+	
+		res.redirect('iniciarsesion');
+	},
 
   iniciarSesion: (req, res) => {
 
-    res.render("inicioSesion");
+   return res.render("inicioSesion");
   },
 
   iniciarSesionProceso: (req, res) => {
     let userToLogin = usuarioNuevo.findByField("email", req.body.email);
-    
+
     if(userToLogin) {
-      let isOkThePassword = bcryptjs.compareSync(req.body.contrasena, userToLogin.contrasena);
-      if(isOkThePassword){
-        delete userToLogin.contrasena;
-        req.session.userLogged = userToLogin;
+			let isOkThePassword = bcryptjs.compareSync(req.body.contrasena, userToLogin.contrasena);
+			if (isOkThePassword) {
+				delete userToLogin.contrasena;
+				req.session.userLogged = userToLogin;
 
-        if (req.body.remember_user){
-          res.cookie("userEmail", req.body.email, {maxAge: (1000 * 60) * 60})
-        }
+				if(req.body.recordar_email) {
+					res.cookie('email', userToLogin.email, { maxAge: 60 * 60 * 24 * 31 })
+				}
 
-      return res.redirect("/usuario/perfil");
-    }
-  }
-  return res.render ("iniciarsesion", {
-    errors: {
-      email: {
-        msg: "Las credenciales son inválidas"
-      }
-    }
-  });
+				return res.redirect('/usuarios/perfil/' + usuarioNuevo.getData.id);
+			} 
+			return res.render('inicioSesion', {
+				errors: {
+					email: {
+						msg: 'Las credenciales son inválidas'
+					} 
+				}
+			});
 
-
-    return res.render ("iniciarsesion", {
-      errors: {
-        email:{
-          msg: "No se encuentra este email en nuestros registros"
-        }
-      }
-    })
+		}
 
   },
+    profile: (req, res) => {
+  
+	const emailSession = req.session.userLogged;
 
-  profile: (req, res) => {
-    return res.render("perfilUsuario", {
-      user: req.session.userLogged
-    });
+	if(emailSession){
+		res.render("perfilUsuario", {user: emailSession})
+	} else {
+		res.redirect ("/usuarios/iniciarsesion", {user: " "})
+	}
+
   },
 
   cerrarsesion: (req, res) => {
-    res.clearCookie("userEmail");
+    res.clearCookie("email");
     req.session.destroy();
-    return res.redirect("/homeOficial");
+    return res.redirect("/");
   },
 
   carrito: (req, res) => {

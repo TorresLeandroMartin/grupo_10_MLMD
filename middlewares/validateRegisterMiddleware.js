@@ -1,9 +1,8 @@
-
-const {body} = require("express-validator");
 const path = require("path");
+const {body} = require("express-validator");
+
 
 const validations = [
-    body("id").isInt().withMessage("Escribi el id de tu usuario"),
     body("nombre").isLength({ min: 5, max: 30 }).withMessage("Tenés que escribir tu nombre y apellido"),
     body("email").notEmpty().withMessage("Tenés que escribir tu correo electrónico").bail()
         .isEmail().withMessage("Escribi un formato válido de correo electrónico"),
