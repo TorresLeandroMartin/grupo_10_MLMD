@@ -7,22 +7,14 @@ module.exports = function (sequelize, dataTypes){
             primaryKey: true,
             autoincrement: true
         },
+
         fecha: {
             dataTypes: dataTypes.DATE,
         },
+
         precio_total: {
-            type: dataTypes.DOUBLE//COMPLETAR,
-        },
-        /////////////////////////////////
-        product_id: { //¿está bien?
-            dataTypes: dataTypes.INT,
-            foreignhKey: true,
-        },
-        user_id: { //¿está bien?
-            dataTypes: dataTypes.INT,
-            foreignhKey: true,
-        },
-    
+            type: dataTypes.DOUBLE
+        }
     }
 
     let config = {
@@ -31,6 +23,17 @@ module.exports = function (sequelize, dataTypes){
     }
 
     let Carrito = sequelize.define(alias, cols, config);
+
+    Carrito.associate = function(models){
+        Carrito.belongsToMany(models.Producto, {
+            as: "productos", ////////????????
+            foreignKey: "product_id",
+        })
+        Carrito.hasMany(models.User, {
+            as: "usuarios", ////????
+            foreignKey: "user_id", ////////????????
+        })
+    }
 
     return Carrito
 }

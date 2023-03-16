@@ -39,5 +39,12 @@
 
     let Usuario = sequelize.define(alias, cols, config);
 
+    Usuario.associate = function(models){
+        Usuario.hasMany(models.Producto, {
+            as: "productos",
+            foreignKey: "product_id",
+        })
+    }
+
     return Usuario
 }

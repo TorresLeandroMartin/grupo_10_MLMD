@@ -8,29 +8,30 @@ module.exports = function (sequelize, dataTypes){
             autoincrement: true
         },
         estilo: {
-            type: dataTypes.STRING//COMPLETAR,
+            type: dataTypes.STRING
         },
+
         nombre: {
             type: dataTypes.STRING
 
         },
         precio: {
-            type: dataTypes.INTEGER//COMPLETAR,
+            type: dataTypes.INTEGER
 
         },
         talle: {
-            type: dataTypes.STRING//COMPLETAR,
+            type: dataTypes.STRING
 
         },
         categoria: {
-            type: dataTypes.STRING//COMPLETAR,
+            type: dataTypes.STRING
 
         },
         descripcion: {
-            type: dataTypes.STRING//COMPLETAR,
+            type: dataTypes.STRING
         },
         color: {
-            type: dataTypes.STRING//COMPLETAR,
+            type: dataTypes.STRING
         }
     }
 
