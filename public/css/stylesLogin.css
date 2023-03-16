@@ -79,11 +79,12 @@ nav {
     border-radius: 1ch;
 }
 
-.top-main h3 {
+.top-main p {
     font-family: "Monserrat", sans-serif;
     margin-top: 10px;
     text-align: center;
     color: #FF715B;
+    font-size: 18px;
     font-weight: bolder;
 }
 
@@ -1174,14 +1175,6 @@ nav {
         align-items: center;
     }
 
-    .carrito i {
-        color: #FF715B;
-        display: inline-flex;
-        font-size: 28px;
-        margin-left: 10px;
-        text-align: center;
-        align-items: center;
-    }
 
     .user i {
         display: inline-flex;
