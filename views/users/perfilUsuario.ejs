@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include("./partials/head") %>
+
+  <!-- head -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="/css/stylesPerfil.css">
+
+
+    <body>
+      <!-- header -->
+   
+     <%- include("./partials/header") %>
+
+              
+                <main class="perfil-usuario"> 
+                    
+                    <%# usuario.forEach(usuarioLista => { %>
+                    <article class="seccion-usuario">
+                       
+                        <h3>Perfil de Usuario</h3> 
+                        <p>Hola <%=  user.nombre%> </p> 
+                        <p> <%=  user.email %> </p> 
+                        <div>
+                           <img class="foto-perfil" src="/img/avatars/<%= user.imagen %>">
+                        </div>
+                        
+                    </article>
+                    <%# }) %>
+                </main>
+
+             <!-- footer -->
+
+             <%- include("./partials/footerLogueado") %>
+    
+    </body>
+</html>

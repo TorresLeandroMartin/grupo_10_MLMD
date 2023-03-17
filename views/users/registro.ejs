@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- head -->
+
+<%- include("./partials/head") %>
+
+    <!-- hoja de estilos -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="/css/stylesRegister.css">
+
+    <body>
+
+        <!-- header -->
+
+        <%- include("./partials/header") %>
+
+
+            <main>
+
+                <div class="contenedor-main">
+
+
+                    <div class="top">
+                        <p>CREA TU CUENTA</p>
+                    </div>
+
+                    <hr class="linea-divisoria2">
+
+                    <form method="POST" name="file" action="/usuarios/crearcuenta" class="bottom" enctype="multipart/form-data">
+
+                        <div class="campos-de-relleno">
+                            <p>Imagen de perfil</p>
+                            <input 
+                            type="file" 
+                            name="imagen"
+                            class="letrasTipoArchivo <% locals.errors && errors.imagen ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.imagen : null %>"
+                            >
+                            <% if (locals.errors && errors.imagen) { %>
+                                <div class="texto-error">
+                                    <%= errors.imagen.msg %>
+                                </div>
+                                <% } %>
+                        </div>
+
+                        <div class="campos-de-relleno">
+                            <div>
+                            <p>Nombre y Apellido</p>
+                            <input 
+                            type="text" 
+                            name="nombre" 
+                            class="campo-individual <%=locals.errors && errors.nombre ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.nombre : null %>"
+                            placeholder="Nombre y Apellido"
+                            >
+                            <% if (locals.errors && errors.nombre) { %>
+                                <div class="texto-error">
+                                    <%= errors.nombre.msg %>
+                                </div>
+                                <% } %>
+                        </div>
+                    </div>
+
+                    
+                        <div class="campos-de-relleno">
+                            <div>
+                            <p>Email</p>
+                            <input   
+                            type="email" 
+                            name="email" 
+                            class="campo-individual <%=locals.errors && errors.email ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.email : null %>"
+                            placeholder="email@dirección.com"
+                            >
+                            <% if (locals.errors && errors.email) { %>
+                                <div class="texto-error">
+                                    <%= errors.email.msg %>
+                                </div>
+                                <% } %>
+                        </div>
+                    </div>
+
+                    
+                        <div class="campos-de-relleno">
+                            <div>
+                            <p>Teléfono</p>
+                            <input
+                            type="tel" 
+                            name="telefono" 
+                            class="campo-individual <%=locals.errors && errors.telefono ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.telefono : null %>"
+                            placeholder="num. de teléfono"
+                            >
+                            <% if (locals.errors && errors.telefono) { %>
+                                <div class="texto-error">
+                                    <%= errors.telefono.msg %>
+                                </div>
+                                <% } %>
+                        </div>
+                    </div>
+
+                    
+                        <div class="campos-de-relleno">
+                            <div>
+                            <p>Categoría</p>
+                            <select   
+                            name="categoria" 
+                            class="campo-individual <%=locals.errors && errors.categoria ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.categoria : null %>"
+                            >
+                                <option value=""> </option>
+                                <% let categorias=['Cliente', 'Vendedor' ]; %>
+                                    <% for(const unaCategoria of categorias) { %>
+                                        <option value="<%= unaCategoria %>">
+                                            <%= locals.oldData && (unaCategoria==oldData.categoria) ? oldData.categoria
+                                                : null%>>
+                                                <%= unaCategoria %>
+                                        </option>
+                                        <% } %>
+                            </select>
+                            <% if (locals.errors && errors.categoria) { %>
+                                <div class="texto-error">
+                                    <%= errors.categoria.msg %>
+                                </div>
+                                <% } %>
+                        </div>
+                    </div>
+
+                    
+                        <div class="campos-de-relleno">
+                            <div>
+                            <p>Contraseña</p>
+                            <input   
+                            type="password" 
+                            name="contrasena" 
+                            placeholder="**********"
+                            class="campo-individual <%=locals.errors && errors.contrasena ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.contrasena : null %>"
+                            >
+                            <% if (locals.errors && errors.contrasena) { %>
+                                <div class="texto-error">
+                                    <%= errors.contrasena.msg %>
+                                </div>
+                                <% } %>
+                        </div>
+                    </div>
+
+                        <div class="campos-de-relleno">
+                                <button type="submit" class="boton2">Creá tu cuenta</button>
+                        </div>
+
+                    </form>
+
+                </div>
+
+
+
+
+            </main>
+
+            <!-- footer -->
+
+            <%- include("./partials/footer") %>
+
+    </body>
+
+</html>
