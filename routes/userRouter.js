@@ -30,7 +30,4 @@ router.get("/perfil/:id", authMiddleware, userController.profile);
 // URL /usuarios/cerrarsesion
 router.get("/cerrarsesion", authMiddleware, userController.cerrarsesion);
 
-// URL /usuarios/carrito
-router.get("/carrito", userController.carrito);
-
 module.exports = router;

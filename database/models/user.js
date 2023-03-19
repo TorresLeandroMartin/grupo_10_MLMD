@@ -4,37 +4,54 @@
     let cols = {
         id: {
             type: dataTypes.INTEGER,
-            primaryKey: true,
-            autoincrement: true
         },
+
         imagen: {
-            type: dataTypes.FILE//???COMPLETAR,
+            type: dataTypes.VARBINARY(8000),
         },
+
         nombre: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
 
         },
+
         email: {
-            type: dataTypes.STRING//COMPLETAR,
+            type: dataTypes.VARCHAR(30),
 
         },
+
         telefono: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
 
         },
+
         categoria: {
-            type: dataTypes.STRING//COMPLETAR,
+            type: dataTypes.STRING,
 
         },
-        contrasena: {
-            type: dataTypes.STRING//COMPLETAR,
 
-        }
+        contrasena: {
+            type: dataTypes.VARCHAR(30),
+
+        },
+
+        Carrito_id: {
+            type: dataTypes.INTEGER,
+        },
+
+        createdAt: {
+            dataTypes: dataTypes.DATE,
+         },
+
+        updatedAt: {
+            dataTypes: dataTypes.DATE,
+         }
+
     }
 
     let config = {
-        tableName: "users",
-        timestamps: false
+        tableName: "Usuario",
+        timestamps: true,
     }
 
     let Usuario = sequelize.define(alias, cols, config);
@@ -43,9 +60,9 @@
         Usuario.belongsTo(models.Carrito, {
             as: "usuarioCarrito",
             through: "usuario_carrito",
-            foreignKey: "carrito_id",
+            foreignKey: "Carrito_id",
             otherKey: null,
-            timestamps: false,
+            timestamps: true,
         })
     }
 

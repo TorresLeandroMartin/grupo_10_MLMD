@@ -23,21 +23,19 @@
                     <div class="top-main">
                         <img src="/img/ropa/jordan-luka-1-neo-turquoise-dn1772-104-9.jpeg" alt="imagen-producto">
 
+                        <% productos.forEach((prodeuctosLista) => { %>
 
-
-                        <div class="descripcion-producto">
+                        <div name="subtotal" class="descripcion-producto">
                             <h4>Subtotal</h4>
-                            <p>$XXXX,XX</p>
+                            <p> $ <%= productosLista.precio%> </p>
                             <button>Delete</button>
                         </div>
-                        <div class="contador">
-                            <p>-</p>
-                            <p>1</p>
-                            <p>+</p>
-                        </div>
+                        <% }) %>
+                        <input type="number" name = "cantidad" class="contador">
+                        
                     </div>
 
-                    <div class="middle-main">
+                    <div name="cupon" class="middle-main">
                         <h4>Cupon</h4>
                         <div class="campo-de-texto">
                             <input type="text" placeholder="Codigo de descuento">
@@ -46,16 +44,11 @@
                         <button type="submit">Actualizar carrito</button>
                     </div>
 
-                    <div class="bottom-main">
-                        <h4>Total carrito</h4>
-                        <div class="subtotales">
-                            <h5>Total</h5>
-                            <p>$XXXX,XX</p>
-                        </div>
                         <div class="envio">
                             <h5>Envio</h5>
                             <input type="text" placeholder="Direccion">
                         </div>
+
                         <div class="finalizar">
                             <h5>Total</h5>
                             <P>$XXXX,XX</P>
@@ -63,7 +56,8 @@
                         </div>
                     </div>
                 </div>
-
+                <br />
+          
             </main>
 
             <!-- footer -->

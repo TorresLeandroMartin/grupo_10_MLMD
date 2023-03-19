@@ -26,4 +26,7 @@ router.put("/edicion/:id", productController.editarProducto);
 // URL /productos/edicion/:id
 router.delete("/edicion/:id", productController.eliminarProducto);
 
+// URL /usuarios/carrito
+router.get("/carrito", productController.carrito);
+
 module.exports = router;

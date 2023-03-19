@@ -100,10 +100,6 @@ const userController = {
     req.session.destroy();
     return res.redirect("/");
   },
-
-  carrito: (req, res) => {
-    res.render("carrito");
-  },
 };
 
 module.exports = userController;

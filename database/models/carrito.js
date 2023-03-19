@@ -4,41 +4,50 @@ module.exports = function (sequelize, dataTypes){
     let cols = {
         id: {
             type: dataTypes.INTEGER,
-            primaryKey: true,
-            autoincrement: true
         },
-        fecha: {
+        cantidad: {
+            type: dataTypes.INTEGER,
+        },
+
+        cupon: { // resta
+            type: dataTypes.INTEGER,
+        },
+
+        producto_precio: { // multiplica
+            type: dataTypes.INTEGER,
+        },
+
+        precio_total: { // promedio total
+            type: dataTypes.BIGINTEGER,
+        },
+
+        Producto_id: { 
+            dataTypes: dataTypes.INTEGER,
+        },
+
+        createdAt: {
             dataTypes: dataTypes.DATE,
-        },
-        precio_total: {
-            type: dataTypes.DOUBLE//COMPLETAR,
-        },
-        /////////////////////////////////
-        product_id: { //¿está bien?
-            dataTypes: dataTypes.INT,
-            foreignhKey: true,
-        },
-        user_id: { //¿está bien?
-            dataTypes: dataTypes.INT,
-            foreignhKey: true,
-        },
-    
+         },
+
+        updatedAt: {
+            dataTypes: dataTypes.DATE,
+         }
     }
 
     let config = {
-        tableName: "carrito",
-        timestamps: false
+        tableName: "Carrito",
+        timestamps: true,
     }
 
     let Carrito = sequelize.define(alias, cols, config);
 
     Carrito.associate = function(models) {
-        Carrito.belongsToMany(models.Producto, {
-            as: "carrito",
+        Carrito.hasMany(models.Producto, {
+            as: "productos",
             through: "carrito_productos",
-            foreignKey: "producto_id",
-            otherKey: "producto_precio",
-            timestamps: false,
+            foreignKey: "Producto_id",
+            otherKey: null,
+            timestamps: true,
         })
 
     }

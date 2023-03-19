@@ -1,12 +1,19 @@
 const fs = require("fs");
 const path = require("path");
 
+const db = require("../database/models")
+
 let productosJson = (path.join(__dirname, "../data/products.json"));
 
 let productos = JSON.parse(fs.readFileSync(productosJson, 'utf-8'));
 
 
 const productController = {
+
+  
+  carrito: (req, res) => {
+    res.render("carrito", {productos:productos});
+  },
 
   index: (req, res) => {
     res.render("catalogo");
@@ -16,16 +23,20 @@ const productController = {
 
      const emailSession = req.session.userLogged;
 
-		if(emailSession){
-			res.render("catalogoLogueado", {user: emailSession, productos : productos})
-		} else {
-			res.redirect ("/usuarios/iniciarsesion", {user: " "})
-		}
-
+    db.Producto.findAll()
+    .then(function(productos){
+        if(emailSession){
+          res.render("catalogoLogueado", {user: emailSession, productos : productos})
+        } else {
+          res.redirect ("/usuarios/iniciarsesion", {user: " "})
+        }
+    })
   },
 
   crear: (req, res) => {
+    
     res.render("nuevoProducto");
+    
   },
   
   accionCrear: (req, res) => {
