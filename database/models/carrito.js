@@ -2,27 +2,32 @@ module.exports = function (sequelize, dataTypes){
     let alias = "Carrito";
 
     let cols = {
+        
+
         id: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER(10).UNSIGNED,
+            primaryKey: true,
+            autoIncrement: true,
         },
+
         cantidad: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER(11),
         },
 
         cupon: { // resta
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER(11),
         },
 
         producto_precio: { // multiplica
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER(11),
         },
 
         precio_total: { // promedio total
-            type: dataTypes.BIGINTEGER,
+            type: dataTypes.BIGINTEGER(20),
         },
 
         Producto_id: { 
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER(10).UNSIGNED,
         },
 
         created_at: {

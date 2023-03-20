@@ -3,7 +3,9 @@
 
     let cols = {
         id: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER(10).UNSIGNED,
+            primaryKey: true,
+            autoIncrement: true,
         },
 
         imagen: {
@@ -21,7 +23,7 @@
         },
 
         telefono: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER(11),
 
         },
 
@@ -36,7 +38,7 @@
         },
 
         Carrito_id: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER(10).UNSIGNED,
         },
 
         created_at: {

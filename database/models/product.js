@@ -2,8 +2,12 @@ module.exports = function (sequelize, dataTypes){
     let alias = "Producto";
 
     let cols = {
+
+
         id: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER(10).UNSIGNED,
+            primaryKey: true,
+            autoIncrement: true,
         },
 
         estilo: {
@@ -12,11 +16,10 @@ module.exports = function (sequelize, dataTypes){
 
         nombre: {
             type: dataTypes.STRING,
-
         },
 
         precio: {
-            type: dataTypes.BIGINTEGER,
+            type: dataTypes.BIGINTEGER(20),
         },
 
         talle: {
@@ -37,9 +40,9 @@ module.exports = function (sequelize, dataTypes){
         },
 
         Carrito_id: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER(10).UNSIGNED,
         },
-        
+
         created_at: {
             type: dataTypes.DATE,
          },
