@@ -39,12 +39,12 @@ module.exports = function (sequelize, dataTypes){
         Carrito_id: {
             type: dataTypes.INTEGER,
         },
-
-        createdAt: {
+        
+        created_at: {
             type: dataTypes.DATE,
          },
 
-        updatedAt: {
+        updated_at: {
             type: dataTypes.DATE
          }
 

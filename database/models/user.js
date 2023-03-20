@@ -39,11 +39,11 @@
             type: dataTypes.INTEGER,
         },
 
-        createdAt: {
+        created_at: {
             type: dataTypes.DATE,
          },
 
-        updatedAt: {
+        updated_at: {
             type: dataTypes.DATE
          }
 
