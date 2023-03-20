@@ -4,27 +4,22 @@ module.exports = function (sequelize, dataTypes){
     let cols = {
         id: {
             type: dataTypes.INTEGER,
-            primaryKey: true,
-            autoincrement: true
         },
         precio: {
-            type: dataTypes.DOUBLE//COMPLETAR,
+            type: dataTypes.DOUBLE,
         },
         cantidad: {
-            type: dataTypes.INTEGER//COMPLETAR,
+            type: dataTypes.INTEGER,
         },
-        /////////////////////////////////
-        
-        id_Pedido: { //¿está bien?
-            dataTypes: dataTypes.INT,
-            foreignhKey: true,
-        },
+     
+        id_Pedido: { 
+            type: dataTypes.INT,
+        }
     
     }
 
     let config = {
-        tableName: "detallePedidos",
-        timestamps: false
+        tableName: "detallePedidos"
     }
 
     let detallePedido = sequelize.define(alias, cols, config);

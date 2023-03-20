@@ -41,18 +41,17 @@ module.exports = function (sequelize, dataTypes){
         },
 
         createdAt: {
-            dataTypes: dataTypes.DATE,
+            type: dataTypes.DATE,
          },
 
         updatedAt: {
-            dataTypes: dataTypes.DATE,
+            type: dataTypes.DATE
          }
 
     }
 
     let config = {
-        tableName: "Producto",
-        timestamps: true,
+        tableName: "Producto"
     }
 
     let Producto = sequelize.define(alias, cols, config);
@@ -62,8 +61,7 @@ module.exports = function (sequelize, dataTypes){
             as: "productos",
             through: "producto_carrito",
             foreignKey: "Carrito_id",
-            otherKey: null,
-            timestamps: true,
+            otherKey: null
         })
 
     }

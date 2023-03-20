@@ -40,18 +40,17 @@
         },
 
         createdAt: {
-            dataTypes: dataTypes.DATE,
+            type: dataTypes.DATE,
          },
 
         updatedAt: {
-            dataTypes: dataTypes.DATE,
+            type: dataTypes.DATE
          }
 
     }
 
     let config = {
-        tableName: "Usuario",
-        timestamps: true,
+        tableName: "Usuario"
     }
 
     let Usuario = sequelize.define(alias, cols, config);
@@ -61,8 +60,7 @@
             as: "usuarioCarrito",
             through: "usuario_carrito",
             foreignKey: "Carrito_id",
-            otherKey: null,
-            timestamps: true,
+            otherKey: null
         })
     }
 
