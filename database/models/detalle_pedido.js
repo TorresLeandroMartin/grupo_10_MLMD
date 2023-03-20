@@ -8,18 +8,22 @@ module.exports = function (sequelize, dataTypes){
             type: dataTypes.INTEGER(10).UNSIGNED,
             primaryKey: true,
             autoIncrement: true,
+            allowNull: false
         },
 
         precio: {
-            type: dataTypes.BIGINTEGER(20),
+            type: dataTypes.DECIMAL,
+            allowNull: false
         },
 
         cantidad: {
             type: dataTypes.INTEGER(11),
+            allowNull: false
         },
      
         id_Pedido: { 
             type: dataTypes.INTEGER(10).UNSIGNED,
+            allowNull: false
         },
 
         created_at: {

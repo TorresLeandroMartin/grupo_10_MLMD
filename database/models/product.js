@@ -8,39 +8,48 @@ module.exports = function (sequelize, dataTypes){
             type: dataTypes.INTEGER(10).UNSIGNED,
             primaryKey: true,
             autoIncrement: true,
+            allowNull: false
         },
 
         estilo: {
-            type: dataTypes.STRING,
+            type: dataTypes.TEXT,
+            allowNull: false
         },
 
         nombre: {
-            type: dataTypes.STRING,
+            type: dataTypes.VARCHAR(200),
+            allowNull: false
         },
 
         precio: {
-            type: dataTypes.BIGINTEGER(20),
+            type: dataTypes.DECIMAL,
+            allowNull: false
         },
 
         talle: {
             type: dataTypes.STRING,
+            allowNull: false
 
         },
 
         categoria: {
             type: dataTypes.STRING,
+            allowNull: false
         },
 
         descripcion: {
-            type: dataTypes.STRING,
+            type: dataTypes.TEXT,
+            allowNull: false
         },
 
         color: {
             type: dataTypes.STRING,
+            allowNull: false
         },
 
         Carrito_id: {
             type: dataTypes.INTEGER(10).UNSIGNED,
+            allowNull: false
         },
 
         created_at: {

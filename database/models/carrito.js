@@ -8,26 +8,32 @@ module.exports = function (sequelize, dataTypes){
             type: dataTypes.INTEGER(10).UNSIGNED,
             primaryKey: true,
             autoIncrement: true,
+            allowNull: false
         },
 
         cantidad: {
             type: dataTypes.INTEGER(11),
+            allowNull: false
         },
 
         cupon: { // resta
-            type: dataTypes.INTEGER(11),
+            type: dataTypes.DECIMAL,
+            allowNull: false
         },
 
         producto_precio: { // multiplica
-            type: dataTypes.INTEGER(11),
+            type: dataTypes.DECIMAL,
+            allowNull: false
         },
 
         precio_total: { // promedio total
-            type: dataTypes.BIGINTEGER(20),
+            type: dataTypes.DECIMAL,
+            allowNull: false
         },
 
         Producto_id: { 
             type: dataTypes.INTEGER(10).UNSIGNED,
+            allowNull: false
         },
 
         created_at: {
