@@ -3,6 +3,8 @@ const path = require("path");
 
 const db = require("../database/models")
 
+const Producto = db.Producto;
+
 let productosJson = (path.join(__dirname, "../data/products.json"));
 
 let productos = JSON.parse(fs.readFileSync(productosJson, 'utf-8'));
@@ -23,14 +25,16 @@ const productController = {
 
      const emailSession = req.session.userLogged;
 
-    db.Producto.findAll()
-    .then(function(productos){
-        if(emailSession){
-          res.render("catalogoLogueado", {user: emailSession, productos : productos})
+    Producto.findAll()
+    .then((productos) => { 
+      if(emailSession){
+          res.render("catalogoLogueado", {user: emailSession, productos})
         } else {
           res.redirect ("/usuarios/iniciarsesion", {user: " "})
         }
-    })
+      })
+  
+    .catch(error => console.log(error));
   },
 
   crear: (req, res) => {

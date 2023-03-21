@@ -31,8 +31,8 @@ CREATE TABLE `Carrito` (
   `producto_precio` DECIMAL NOT NULL,
   `precio_total` DECIMAL NOT NULL,
   `Producto_id` int(10) unsigned NOT NULL,
-  `createdAt` date DEFAULT NULL,
-  `updatedAt` date DEFAULT NULL,
+  `created_at` date DEFAULT NULL,
+  `updated_at` date DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `Producto_id` (`Producto_id`),
   CONSTRAINT `carrito_ibfk_1` FOREIGN KEY (`Producto_id`) REFERENCES `Producto` (`id`)
@@ -65,8 +65,8 @@ CREATE TABLE `Producto` (
   `descripcion` text NOT NULL,
   `color` varchar(255) NOT NULL,
   `Carrito_id` int(10) unsigned NOT NULL,
-  `createdAt` date DEFAULT NULL,
-  `updatedAt` date DEFAULT NULL,
+  `created_at` date DEFAULT NULL,
+  `updated_at` date DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `Carrito_id` (`Carrito_id`),
   CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`Carrito_id`) REFERENCES `Carrito` (`id`)
@@ -91,15 +91,15 @@ DROP TABLE IF EXISTS `Usuario`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Usuario` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `imagen` varchar binary (8000) NOT NULL,
+  `imagen` varchar(8000) NOT NULL,
   `nombre` varchar(200) NOT NULL,
   `email` varchar(200) NOT NULL,
   `telefono` int(11) NOT NULL,
   `categoria` varchar(255) NOT NULL,
   `contrasena` varchar(200) NOT NULL,
   `Carrito_id` int(10) unsigned NOT NULL,
-  `createdAt` date DEFAULT NULL,
-  `updatedAt` date DEFAULT NULL,
+  `created_at` date DEFAULT NULL,
+  `updated_at` date DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `Carrito_id` (`Carrito_id`),
   CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`Carrito_id`) REFERENCES `Carrito` (`id`)

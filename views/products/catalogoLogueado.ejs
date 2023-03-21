@@ -68,7 +68,7 @@
 
             <div class="desenrollar-global"> <!-- cont-menu -->
 
-              <% productos.forEach(productoLista=> { %>
+              <% for (let i = 0; i < productos.length; i++ ) { %>
 
                 <article>
                   <div class="archivo-img">
@@ -79,34 +79,31 @@
                   <img class="img2" src="/img/ropa/jordan-luka-1-neo-turquoise-dn1772-104-9.jpeg" alt="imagen-producto">
                   <div class="right-options-inventario">
                     <h3>
-                      <%= productoLista.nombre %>
+                      <%- productos[i].nombre %>
                     </h3>
                     <div class="detalles">
-                      <label class="detalle"> ID : </label>
-                      <p class="sub-detalle"> #<%= productoLista.id%>
-                      </p>
                       <label class="detalle"> Estilo :</label>
                       <p class="sub-detalle">
-                        <%= productoLista.estilo%>
+                        <%- productos[i].estilo%>
                       </p>
                       <label class="detalle"> Color :</label>
                       <p class="sub-detalle">
-                        <%= productoLista.color%>
+                        <%- productos[i].color%>
                       </p>
                       <label class="detalle"> Categoría : </label>
                       <p class="sub-detalle">
-                        <%= productoLista.categoria%>
+                        <%- productos[i].categoria%>
                       </p>
                       <label class="detalle"> Talle : </label>
                       <p class="sub-detalle">
-                        <%= productoLista.talle%>
+                        <%- productos[i].talle%>
                       </p>
                     </div>
                     <p class="producto-descripcion">
-                      <%= productoLista.descripcion %>
+                      <%- productos[i].descripcion %>
                     </p>
 
-                    <a href="/productos/descripcion/<%= productoLista.id %>">
+                    <a href="/productos/descripcion/<%- productos[i].id %>">
                       <i class="fas fa-chevron-right"></i>
                     </a>
 

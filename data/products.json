@@ -1,6 +1,6 @@
 [
     {
-        "id": "1",
+        "id": 1,
         "estilo": "Deportivo",
         "nombre": "Camiseta Títular Argentina 2022",
         "precio": "45.000",
@@ -10,7 +10,7 @@
         "color": "Blanco"
     },
     {
-        "id": "2",
+        "id": 2,
         "estilo": "Deportivo",
         "nombre": "Camiseta de River Plate",
         "precio": "50.000",
@@ -20,7 +20,7 @@
         "color": "Blanco"
     },
     {
-        "id": "3",
+        "id": 3,
         "estilo": "Deportivo",
         "nombre": "Remera",
         "precio": "6000",
