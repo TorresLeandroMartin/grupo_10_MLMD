@@ -57,4 +57,4 @@ const usuarioNuevo = {
 }
 
 module.exports = usuarioNuevo;
-//console.log(usuarioNuevo.create({nombre: "Javier", email: "javier@dh.com"}))
+

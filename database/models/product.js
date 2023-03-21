@@ -17,7 +17,7 @@ module.exports = function (sequelize, dataTypes){
         },
 
         nombre: {
-            type: dataTypes.VARCHAR(200),
+            type: dataTypes.STRING(200),
             allowNull: false
         },
 

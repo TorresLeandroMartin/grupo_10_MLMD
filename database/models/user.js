@@ -10,17 +10,17 @@
         },
 
         imagen: {
-            type: dataTypes.STRING.BINARY(8000),
+            type: dataTypes.BLOB(8000),
             allowNull: false,
         },
 
         nombre: {
-            type: dataTypes.VARCHAR(200),
+            type: dataTypes.STRING(200),
             allowNull: false,
         },
 
         email: {
-            type: dataTypes.VARCHAR(200),
+            type: dataTypes.STRING(200),
             allowNull: false,
         },
 
@@ -35,7 +35,7 @@
         },
 
         contrasena: {
-            type: dataTypes.VARCHAR(200),
+            type: dataTypes.STRING(200),
             allowNull: false,
         },
 
