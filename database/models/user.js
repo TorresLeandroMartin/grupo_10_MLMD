@@ -47,8 +47,8 @@
         created_at: {
             type: dataTypes.DATE,
          },
-
-        updated_at: {
+      
+       updated_at: {
             type: dataTypes.DATE,
          }
 
@@ -56,6 +56,7 @@
 
     let config = {
         tableName: "Usuario",
+        timestamps: false
     };
 
     let Usuario = sequelize.define(alias, cols, config);

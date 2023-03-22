@@ -6,6 +6,10 @@ const bcryptjs = require("bcryptjs");
 
 const usuarioNuevo = require("../models/usuarioNuevo");
 
+const db = require("../database/models")
+
+const Usuario = db.Usuario;
+
 const userController = {
 
   crearCuenta: (req, res) => {
@@ -35,20 +39,15 @@ const userController = {
 				oldData: req.body
 			});
 		}
-
-		let userData = {
-			id: usuarioNuevo.generateId(),
+//
+		Usuario.create ({
+			id: req.params.id,
 			imagen: req.file.filename,
 			...req.body,
 			contrasena: bcryptjs.hashSync(req.body.contrasena, 10),
 			
-		}
+		})
 
-		let allUsers = usuarioNuevo.findAll();
-        let newUser = userData;
-        allUsers.push(newUser);
-        fs.writeFileSync(usuarioNuevo.fileName, JSON.stringify(allUsers, null, ' '));
-	
 		res.redirect('iniciarsesion');
 	},
 
@@ -83,6 +82,32 @@ const userController = {
 		}
 
   },
+
+  edicion: (req, res) => {
+	
+    let pedidoUsuario = Usuario.findByPk(req.params.id);
+    Promise.all ([pedidoUsuario])
+    .then(function(){
+     res.render("editarUsuario");
+    });
+
+  },
+
+  editarUsuario: (req, res) => {
+
+	Usuario.update({
+		imagen: req.file.filename,
+		...req.body,
+		contrasena: bcryptjs.hashSync(req.body.contrasena, 10),
+	 }, {
+	  where: {
+		id: req.params.id,
+	  }
+	 });
+	 res.redirect("/usuarios/perfil");
+  
+	},
+
     profile: (req, res) => {
   
 	const emailSession = req.session.userLogged;
@@ -92,7 +117,6 @@ const userController = {
 	} else {
 		res.redirect ("/usuarios/iniciarsesion", {user: " "})
 	}
-
   },
 
   cerrarsesion: (req, res) => {

@@ -18,6 +18,12 @@ router.get("/crearcuenta", guestMiddleware, userController.crearCuenta);
 // URL /usuarios/crearcuenta/registrar
 router.post("/crearcuenta", uploadFile.single("imagen"), validations, userController.procesoRegistro);
 
+// URL /usuarios/edicion/:id
+router.get("/edicionUsuario/:id", userController.edicion);
+
+// URL /usuarios/edicion/:id
+router.put("/edicionUsuario/:id", userController.editarUsuario);
+
 // Formulario de login
 router.get("/iniciarsesion", guestMiddleware, userController.iniciarSesion);
 
