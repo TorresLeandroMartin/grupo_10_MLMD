@@ -64,12 +64,9 @@ CREATE TABLE `Producto` (
   `categoria` varchar(255) NOT NULL,
   `descripcion` text NOT NULL,
   `color` varchar(255) NOT NULL,
-  `Carrito_id` int(10) unsigned NOT NULL,
-  `created_at` date DEFAULT NULL,
-  `updated_at` date DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `Carrito_id` (`Carrito_id`),
-  CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`Carrito_id`) REFERENCES `Carrito` (`id`)
+  INDEX `usuario_id` (`usuario_id`) USING BTREE,
+	CONSTRAINT `usuario_id` FOREIGN KEY (`usuario_id`) REFERENCES `usuario` (`id`) ON UPDATE NO ACTION ON DELETE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -97,12 +94,8 @@ CREATE TABLE `Usuario` (
   `telefono` int(11) NOT NULL,
   `categoria` varchar(255) NOT NULL,
   `contrasena` varchar(200) NOT NULL,
-  `Carrito_id` int(10) unsigned NOT NULL,
-  `created_at` date DEFAULT NULL,
-  `updated_at` date DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `Carrito_id` (`Carrito_id`),
-  CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`Carrito_id`) REFERENCES `Carrito` (`id`)
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

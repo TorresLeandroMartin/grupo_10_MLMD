@@ -39,34 +39,19 @@
             allowNull: false,
         },
 
-        Carrito_id: {
-            type: dataTypes.INTEGER(10).UNSIGNED,
-            allowNull: false,
-        },
-
-        created_at: {
-            type: dataTypes.DATE,
-         },
-      
-       updated_at: {
-            type: dataTypes.DATE,
-         }
-
     };
 
     let config = {
-        tableName: "Usuario",
+        tableName: "usuarios",
         timestamps: false
     };
 
     let Usuario = sequelize.define(alias, cols, config);
 
     Usuario.associate = function(models) {
-        Usuario.belongsTo(models.Carrito, {
-            as: "usuarioCarrito",
-            through: "usuario_carrito",
-            foreignKey: "Carrito_id",
-            otherKey: null,
+        Usuario.hasMany(models.Producto, {
+            as: "productos",
+            foreignKey: "usuario_id",
         })
     };
 

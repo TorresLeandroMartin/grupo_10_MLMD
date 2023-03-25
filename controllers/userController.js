@@ -3,8 +3,7 @@ const { validationResult } = require("express-validator");
 const path = require("path");
 const fs = require("fs");
 const bcryptjs = require("bcryptjs");
-
-const usuarioNuevo = require("../models/usuarioNuevo");
+const bcrypt = require('bcrypt')
 
 const db = require("../database/models")
 
@@ -27,8 +26,8 @@ const userController = {
 			});
 		}
 
-		let userInDB = usuarioNuevo.findByField('email', req.body.email);
-
+		let userInDB = Usuario.findOne('email', req.body.email);
+		
 		if (userInDB) {
 			return res.render('registro', {
 				errors: {
@@ -39,9 +38,9 @@ const userController = {
 				oldData: req.body
 			});
 		}
-//
+
 		Usuario.create ({
-			id: req.params.id,
+		    id: req.params.id,
 			imagen: req.file.filename,
 			...req.body,
 			contrasena: bcryptjs.hashSync(req.body.contrasena, 10),
@@ -51,39 +50,60 @@ const userController = {
 		res.redirect('iniciarsesion');
 	},
 
-  iniciarSesion: (req, res) => {
+    iniciarSesion: (req, res) => {
 
-   return res.render("inicioSesion");
-  },
+    return res.render("inicioSesion");
+    },
 
-  iniciarSesionProceso: (req, res) => {
-    let userToLogin = usuarioNuevo.findByField("email", req.body.email);
-
-    if(userToLogin) {
-			let isOkThePassword = bcryptjs.compareSync(req.body.contrasena, userToLogin.contrasena);
-			if (isOkThePassword) {
-				delete userToLogin.contrasena;
-				req.session.userLogged = userToLogin;
-
-				if(req.body.recordar_email) {
-					res.cookie('email', userToLogin.email, { maxAge: 60 * 60 * 24 * 31 })
-				}
-
-				return res.redirect('/usuarios/perfil/' + usuarioNuevo.getData.id);
-			} 
+    iniciarSesionProceso: async (req, res) => {
+	
+		try {
+		  const userToLogin = await Usuario.findOne({
+			where: { email: req.body.email },
+		  });
+	
+		  if (!userToLogin) {
 			return res.render('inicioSesion', {
-				errors: {
-					email: {
-						msg: 'Las credenciales son inválidas'
-					} 
-				}
+			  errors: {
+				email: {
+				  msg: 'No se encuentra este email',
+				},
+			  },
+			  oldData: req.body,
 			});
-
+		  }
+	
+		  const isPasswordCorrect = await bcryptjs.compareSync(req.body.contrasena, userToLogin.contrasena);;
+	
+		  if (!isPasswordCorrect) {
+			return res.render('inicioSesion', {
+			  errors: {
+				email: {
+				  msg: 'Credenciales incorrectas',
+				},
+			  },
+			  oldData: req.body,
+			});
+		  }
+	
+		  delete userToLogin.contrasena
+		  req.session.userLogged = userToLogin;
+	
+		  if (req.body.recordar_email) {
+			res.cookie('userEmail', req.body.email, { maxAge: 1000 * 60 * 60 * 24 });
+		  }
+	
+		  return res.redirect('/usuarios/perfil/' + Usuario.findByPk(req.params.id));
+		} catch (error) {
+		  console.error(error);
+		  return res.render('error', {
+			message: 'Error en el proceso de login',
+			error,
+		  });
 		}
+	},
 
-  },
-
-  edicion: (req, res) => {
+    edicion: (req, res) => {
 	
     let pedidoUsuario = Usuario.findByPk(req.params.id);
     Promise.all ([pedidoUsuario])

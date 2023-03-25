@@ -5,20 +5,17 @@ const db = require("../database/models")
 
 const Producto = db.Producto;
 
-let productosJson = (path.join(__dirname, "../data/products.json"));
-
-let productos = JSON.parse(fs.readFileSync(productosJson, 'utf-8'));
-
-
 const productController = {
 
-  
-  carrito: (req, res) => {
-    res.render("carrito", {productos:productos});
-  },
+  //carrito: (req, res) => {
+    //res.render("carrito", {productos:productos})
+  //},
 
   index: (req, res) => {
-    res.render("catalogo");
+    Producto.findAll()
+    .then((productos) => {
+    res.render("catalogo", {productos:productos});
+    })
   },
 
   logueado: (req, res) => {
@@ -52,7 +49,8 @@ const productController = {
     "talle": req.body.talle,
     "categoria": req.body.categoria,
     "descripcion": req.body.descripcion,
-    "color": req.body.color
+    "color": req.body.color,
+    "usuario_id": req.body.usuario_id
    })
     res.redirect ('catalogoLogueado');
   },
@@ -79,7 +77,8 @@ const productController = {
     "talle": req.body.talle,
     "categoria": req.body.categoria,
     "descripcion": req.body.descripcion,
-    "color": req.body.color
+    "color": req.body.color,
+    "usuario_id": req.body.usuario_id
    }, {
     where: {
       id: req.params.id,
@@ -92,7 +91,7 @@ const productController = {
 
   eliminarProducto: (req, res) => {
 
-    Pelicula.destroy({
+    Producto.destroy({
       where:{
         id: req.params.id,
       }

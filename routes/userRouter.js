@@ -28,7 +28,7 @@ router.put("/edicionUsuario/:id", userController.editarUsuario);
 router.get("/iniciarsesion", guestMiddleware, userController.iniciarSesion);
 
 // Procesar login
-router.post("/iniciarsesion", validacionesLogin, userController.iniciarSesionProceso);
+router.post("/iniciarsesion", userController.iniciarSesionProceso);
 
 // URL /usuarios/perfil
 router.get("/perfil/:id", authMiddleware, userController.profile);
