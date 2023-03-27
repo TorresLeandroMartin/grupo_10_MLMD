@@ -7,7 +7,6 @@ const userController = require("../controllers/userController");
 //Middlewares
 const uploadFile = require("../middlewares/multerMiddleware");
 const validations = require("../middlewares/validateRegisterMiddleware");
-const validacionesLogin = require('../middlewares/validacionesLogin');
 const guestMiddleware = require("../middlewares/guestMiddleware");
 const authMiddleware = require("../middlewares/authMiddleware");
 
@@ -19,10 +18,10 @@ router.get("/crearcuenta", guestMiddleware, userController.crearCuenta);
 router.post("/crearcuenta", uploadFile.single("imagen"), validations, userController.procesoRegistro);
 
 // URL /usuarios/edicion/:id
-router.get("/edicionUsuario/:id", userController.edicion);
+router.get("/edicionUsuario/:id/", userController.edicion);
 
 // URL /usuarios/edicion/:id
-router.put("/edicionUsuario/:id", userController.editarUsuario);
+router.put("/edicionUsuario/:id/", userController.editarUsuario);
 
 // Formulario de login
 router.get("/iniciarsesion", guestMiddleware, userController.iniciarSesion);
@@ -31,9 +30,9 @@ router.get("/iniciarsesion", guestMiddleware, userController.iniciarSesion);
 router.post("/iniciarsesion", userController.iniciarSesionProceso);
 
 // URL /usuarios/perfil
-router.get("/perfil/:id", authMiddleware, userController.profile);
+router.get("/perfil/:id/", authMiddleware, userController.profile);
 
 // URL /usuarios/cerrarsesion
-router.get("/cerrarsesion", authMiddleware, userController.cerrarsesion);
+router.get("/cerrarsesion", userController.cerrarsesion);
 
 module.exports = router;

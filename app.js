@@ -10,7 +10,9 @@ var logger = require('morgan');
 
 //methodOverride
 var methodOverride = require('method-override');
-//
+
+//Middleware particular
+const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 
 // Llamamos a Router
 var mainRouter = require('./routes/mainRouter');
@@ -21,15 +23,13 @@ var productRouter = require('./routes/productRouter');
 // Guardamos la funcion en una variable app
 const app = express();
 
-//const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
-
 app.use(session({
   secret: "HouseCloathing",
   resave: false,
   saveUninitialized: true,
 }));
 
-//app.use(userLoggedMiddleware);
+app.use(userLoggedMiddleware);
 app.use(cookies());
 
 

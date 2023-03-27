@@ -6,43 +6,42 @@
             type: dataTypes.INTEGER(10).UNSIGNED,
             primaryKey: true,
             allowNull: false,
-            autoIncrement: true,
+            autoIncrement: true
         },
 
         imagen: {
-            type: dataTypes.BLOB(8000),
-            allowNull: false,
+            type: dataTypes.STRING(8000),
+            allowNull: false
         },
 
         nombre: {
             type: dataTypes.STRING(200),
-            allowNull: false,
+            allowNull: false
         },
 
         email: {
             type: dataTypes.STRING(200),
-            allowNull: false,
+            allowNull: false
         },
 
         telefono: {
             type: dataTypes.INTEGER(11),
-            allowNull: false,
+            allowNull: false
         },
 
         categoria: {
-            type: dataTypes.STRING,
-            allowNull: false,
+            type: dataTypes.STRING(255),
+            allowNull: false
         },
 
         contrasena: {
             type: dataTypes.STRING(200),
-            allowNull: false,
-        },
-
+            allowNull: false
+        }
     };
 
     let config = {
-        tableName: "usuarios",
+        tableName: "Usuario",
         timestamps: false
     };
 
@@ -51,7 +50,7 @@
     Usuario.associate = function(models) {
         Usuario.hasMany(models.Producto, {
             as: "productos",
-            foreignKey: "usuario_id",
+            foreignKey: "usuario_id"
         })
     };
 

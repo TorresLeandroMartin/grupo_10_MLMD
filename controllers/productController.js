@@ -1,105 +1,162 @@
+// Librerías Principales
+
 const fs = require("fs");
 const path = require("path");
 
+// Operadores de sequelize
+
+const { Association } = require('sequelize');
+const { Op } = require('sequelize');
+
+// Uso de los métodos de modelos
 const db = require("../database/models")
 
 const Producto = db.Producto;
 
+
 const productController = {
 
-  //carrito: (req, res) => {
-    //res.render("carrito", {productos:productos})
-  //},
+
+  // Detalle de producto 
+
+  detalle: (req, res) => {
+
+
+    Producto.findByPk(req.params.id)
+      .then(function (busqueda) {
+        if (!busqueda) {
+          res.status(404).send('Producto no encontrado')
+        } else {
+          res.redirect("/productos/descripcion/" + Producto.findByPk(req.params.id), { producto: busqueda })
+        }
+      })
+  },
+
+  // Carrito 
+
+  carrito: (req, res) => {
+    const emailSession = req.session.userLogged;
+
+    if (emailSession) {
+      res.render("carrito", { user: emailSession })
+    };
+
+  },
+
+  // Catálogo 
 
   index: (req, res) => {
     Producto.findAll()
-    .then((productos) => {
-    res.render("catalogo", {productos:productos});
-    })
+      .then((productos) => {
+        res.render("catalogo", { productos: productos });
+      })
   },
 
   logueado: (req, res) => {
-
-     const emailSession = req.session.userLogged;
+    const emailSession = req.session.userLogged;
 
     Producto.findAll()
-    .then((productos) => { 
-      if(emailSession){
-          res.render("catalogoLogueado", {user: emailSession, productos})
-        } else {
-          res.redirect ("/usuarios/iniciarsesion", {user: " "})
-        }
+      .then((productos) => {
+        if (emailSession) {
+          res.render("catalogoLogueado", { productos: productos, user: emailSession })
+        };
       })
-  
-    .catch(error => console.log(error));
+      .catch(error => console.log(error));
   },
 
-  crear: (req, res) => {
+  // Crear producto / GET
+
+  crear:  (req, res) => {
+    const emailSession = req.session.userLogged;
+      Producto.findAll()
+      .then (() => {
+      if (emailSession) {
+        res.render("products/nuevoProducto", {user: emailSession })
+      };
     
-    res.render("nuevoProducto");
-    
+    }) .catch (error => console.log(error));
+   
   },
   
-  accionCrear: (req, res) => {
+  // Crear producto / POST
 
-   Producto.create({
-    "estilo": req.body.estilo,
-    "nombre": req.body.nombre,
-    "precio": req.body.precio,
-    "talle": req.body.talle,
-    "categoria": req.body.categoria,
-    "descripcion": req.body.descripcion,
-    "color": req.body.color,
-    "usuario_id": req.body.usuario_id
-   })
-    res.redirect ('catalogoLogueado');
+  accionCrear: async (req, res) => {
+   // try {
+      const producto = await Producto.create({
+        estilo: req.body.estilo,
+        nombre: req.body.nombre,
+        precio: req.body.precio,
+        talle: req.body.talle,
+        categoria: req.body.categoria,
+        descripcion: req.body.descripcion,
+        color: req.body.color,
+        usuario_id: req.body.usuario_id
+      })
+      res.redirect('/productos/catalogoLogueado');
+    //}// catch (error) {
+      //res.send(error);
+    //}
   },
 
-  detalle: (req, res) => {
-    res.render("descripcion");
-  },
+  // Editar producto / GET
 
   editar: (req, res) => {
-
+    const emailSession = req.session.userLogged;
     let pedidoProducto = Producto.findByPk(req.params.id);
-    Promise.all ([pedidoProducto])
-    .then(function(){
-     res.render("edicion", {producto:pedidoProducto});
-    });
+
+    pedidoProducto()
+      .then(function (producto) {
+        if (emailSession) {
+          res.render("edicion", { productos: producto, user: emailSession })
+        };
+      });
+
   },
+
+  // Editar producto / POST
 
   editarProducto: (req, res) => {
 
-  Producto.update({
-    "estilo": req.body.estilo,
-    "nombre": req.body.nombre,
-    "precio": req.body.precio,
-    "talle": req.body.talle,
-    "categoria": req.body.categoria,
-    "descripcion": req.body.descripcion,
-    "color": req.body.color,
-    "usuario_id": req.body.usuario_id
-   }, {
-    where: {
-      id: req.params.id,
-    }
-   });
-   res.redirect("/productos/catalogoLogueado");
-
-  },
-    
-
-  eliminarProducto: (req, res) => {
-
-    Producto.destroy({
-      where:{
+    Producto.update({
+      "estilo": req.body.estilo,
+      "nombre": req.body.nombre,
+      "precio": req.body.precio,
+      "talle": req.body.talle,
+      "categoria": req.body.categoria,
+      "descripcion": req.body.descripcion,
+      "color": req.body.color
+    }, {
+      where: {
         id: req.params.id,
       }
-    })
-   res.redirect("/productos/catalogoLogueado");
-  },
-};
+    }).then(() => {
+      res.redirect("/productos/catalogoLogueado");
+    }).catch(error => res.send(error))
 
+  },
+
+  // Eliminar producto
+
+  eliminarProducto: (req, res) => {
+    const emailSession = req.session.userLogged;
+
+    Producto.destroy({
+      where: {
+        id: req.params.id,
+      }
+    }).then(() => {
+
+      if (emailSession) {
+        res.render("catalogoLogueado", { user: emailSession })
+      }
+
+
+    }).catch((error) => {
+      res.send(error);
+    })
+  },
+
+};
 
 
 module.exports = productController;

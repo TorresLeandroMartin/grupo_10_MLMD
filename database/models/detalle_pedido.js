@@ -24,23 +24,13 @@ module.exports = function (sequelize, dataTypes){
         id_Pedido: { 
             type: dataTypes.INTEGER(10).UNSIGNED,
             allowNull: false
-        },
-
-        created_at: {
-            type: dataTypes.DATE,
-        },
-
-        updated_at: {
-            type: dataTypes.DATE
-         }
-
         }
-    
+        
+        }
     
 
     let config = {
-        tableName: "detallePedidos",
-        timestamps: false
+        tableName: "detallePedidos"
     }
 
     let detallePedido = sequelize.define(alias, cols, config);

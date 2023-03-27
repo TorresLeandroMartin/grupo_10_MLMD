@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `estructura` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `estructura`;
 -- MariaDB dump 10.19  Distrib 10.4.27-MariaDB, for osx10.10 (x86_64)
 --
 -- Host: localhost    Database: estructura
@@ -18,37 +16,6 @@ USE `estructura`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `Carrito`
---
-
-DROP TABLE IF EXISTS `Carrito`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `Carrito` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `cantidad` int(11) NOT NULL,
-  `cupon` DECIMAL NOT NULL,
-  `producto_precio` DECIMAL NOT NULL,
-  `precio_total` DECIMAL NOT NULL,
-  `Producto_id` int(10) unsigned NOT NULL,
-  `created_at` date DEFAULT NULL,
-  `updated_at` date DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `Producto_id` (`Producto_id`),
-  CONSTRAINT `carrito_ibfk_1` FOREIGN KEY (`Producto_id`) REFERENCES `Producto` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `Carrito`
---
-
-LOCK TABLES `Carrito` WRITE;
-/*!40000 ALTER TABLE `Carrito` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Carrito` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `Producto`
 --
 
@@ -59,14 +26,15 @@ CREATE TABLE `Producto` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `estilo` text NOT NULL,
   `nombre` varchar(200) NOT NULL,
-  `precio` DECIMAL NOT NULL,
+  `precio` decimal(10,0) NOT NULL,
   `talle` varchar(255) NOT NULL,
   `categoria` varchar(255) NOT NULL,
   `descripcion` text NOT NULL,
   `color` varchar(255) NOT NULL,
+  `usuario_id` int(10) unsigned,
   PRIMARY KEY (`id`),
-  INDEX `usuario_id` (`usuario_id`) USING BTREE,
-	CONSTRAINT `usuario_id` FOREIGN KEY (`usuario_id`) REFERENCES `usuario` (`id`) ON UPDATE NO ACTION ON DELETE NO ACTION
+  KEY `usuario_id` (`usuario_id`),
+  CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `Usuario` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -94,8 +62,7 @@ CREATE TABLE `Usuario` (
   `telefono` int(11) NOT NULL,
   `categoria` varchar(255) NOT NULL,
   `contrasena` varchar(200) NOT NULL,
-  PRIMARY KEY (`id`),
-
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -117,4 +84,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-03-19 16:10:49
+-- Dump completed on 2023-03-26 20:13:27

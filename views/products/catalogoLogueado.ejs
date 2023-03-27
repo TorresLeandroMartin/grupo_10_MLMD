@@ -68,7 +68,7 @@
 
             <div class="desenrollar-global"> <!-- cont-menu -->
 
-              <% for (let i = 0; i < productos.length; i++ ) { %>
+              <% productos.forEach(producto=> { %>
 
                 <article>
                   <div class="archivo-img">
@@ -78,40 +78,41 @@
 
                   <img class="img2" src="/img/ropa/jordan-luka-1-neo-turquoise-dn1772-104-9.jpeg" alt="imagen-producto">
                   <div class="right-options-inventario">
+                   
                     <h3>
-                      <%- productos[i].nombre %>
+                      <%- producto.nombre %>
                     </h3>
                     <div class="detalles">
                       <label class="detalle"> Estilo :</label>
                       <p class="sub-detalle">
-                        <%- productos[i].estilo%>
+                        <%- producto.estilo%>
                       </p>
                       <label class="detalle"> Color :</label>
                       <p class="sub-detalle">
-                        <%- productos[i].color%>
+                        <%- producto.color%>
                       </p>
                       <label class="detalle"> Categoría : </label>
                       <p class="sub-detalle">
-                        <%- productos[i].categoria%>
+                        <%- producto.categoria%>
                       </p>
                       <label class="detalle"> Talle : </label>
                       <p class="sub-detalle">
-                        <%- productos[i].talle%>
+                        <%- producto.talle%>
                       </p>
                     </div>
                     <p class="producto-descripcion">
-                      <%- productos[i].descripcion %>
+                      <%- producto.descripcion %>
                     </p>
 
-                    <a href="/productos/descripcion/<%- productos[i].id %>">
+                    <a href="/productos/descripcion/<%- producto.id %>">
                       <i class="fas fa-chevron-right"></i>
                     </a>
 
                   </div>
                 </article>
+                <% }) %>
+                  <br />
 
-                <br />
-                <% } %>
             </div>
 
             <label for="cerrar-global" class="btn-cerrar-global">
@@ -144,15 +145,13 @@
             <hr class="linea-verde">
 
             <div class="crear">
-              <a class="upload" href="/productos/crear">
+              <a class="upload" href="/productos/crearProducto">
                 <i class="fa-solid fa-plus"></i>
               </a>
             </div>
 
             <div class="desenrollar-inventario"> <!-- cont-menu -->
-            
-              <% for (let i = 0; i < productos.length; i++ ) { %>
-
+              <% productos.forEach(producto=> { %>
                 <article>
 
                   <div class="archivo-img">
@@ -164,49 +163,49 @@
 
                   <div class="right-options-inventario">
                     <h3>
-                      <%- productos[i].nombre %>
+                      <%- producto.nombre %>
                     </h3>
                     <div class="detalles">
                       <label class="detalle"> Estilo : </label>
                       <p class="sub-detalle">
-                        <%- productos[i].estilo%>
+                        <%- producto.estilo%>
                       </p>
                       <label class="detalle"> Color : </label>
                       <p class="sub-detalle">
-                        <%- productos[i].color%>
+                        <%- producto.color%>
                       </p>
                       <label class="detalle"> Categoría : </label>
                       <p class="sub-detalle">
-                        <%- productos[i].categoria%>
+                        <%- producto.categoria%>
                       </p>
                       <label class="detalle"> Talle : </label>
                       <p class="sub-detalle">
-                        <%- productos[i].talle%>
+                        <%- producto.talle%>
                       </p>
                     </div>
 
                     <p class="producto-descripcion">
-                      <%- productos[i].descripcion %>
+                      <%- producto.descripcion %>
                     </p>
 
-                    <label class="producto-precio"> $ <%- productos[i].precio %> </label>
+                    <label class="producto-precio"> $ <%- producto.precio %> </label>
 
                     <div class="botones-inventario">
 
-                      <a href="/productos/edicion/<%- productos[i].id %>">
+                      <a href="/productos/edicion/<%- producto.id %>">
                         <button class="boton-edita">Editar</button>
                       </a>
 
-                      <form action='/productos/edicion/<%- productos[i].id %>?_method=DELETE' method="POST">
+                      <form action='/productos/borrar/<%- producto.id %>?_method=DELETE' method="POST">
                         <button class="boton-borra" type="submit">Borrar</button>
                       </form>
 
                     </div>
                   </div>
                 </article>
+                <% }) %>
+                  <br />
 
-                <br />
-                <% } %>
             </div>
 
             <label for="cerrar-inventario" class="btn-cerrar-inventario">

@@ -18,17 +18,22 @@
         <%- include("./partials/header") %>
 
             <main>
+
+
                 <div class="crea-archivo">
-                    <div class="left-options">
-                        <h2> Creación de Productos </h2>
-                        <button class="foto-producto" type="submit">
-                            <input class="subir" type="file" name="imagenDelProducto" accept="image/*">
-                        </button>
-                    </div>
+                    <form action="/productos/crear" method="POST">
+                        <div class="left-options">
+                            <h2> Creación de Productos </h2>
+                            <button class="foto-producto" type="submit">
+                                <input class="subir" type="file" name="imagenDelProducto" accept="image/*">
+                            </button>
+                        </div>
 
-                    <div class="right-options">
-                        <form action="/productos/crearlo" method="POST">
+                        <div class="right-options">
 
+                            <label for="estilo">Estilo</label>
+                            <input type="text" name="estilo" id="estilo" required>
+                           
                             <label for="nombre">Nombre del producto</label>
                             <input type="text" name="nombre" id="nombre" minlength="5" required>
 
@@ -57,6 +62,9 @@
                                 <option value="Blanco">Blanco</option>
                                 <option value="Verde">Verde</option>
                                 <option value="Negro">Negro</option>
+                                <option value="Negro">Azul</option>
+                                <option value="Negro">Rojo</option>
+                                <option value="Negro">Celeste</option>
                             </select>
 
                             <div class="descripcion">
@@ -66,10 +74,11 @@
                             </div>
 
                             <button class="boton-crear" type="submit">Publicar</button>
-                        </form>
-                    </div>
-
+                        </div>
+                    </form>
                 </div>
+
+
             </main>
 
             <!-- footer -->

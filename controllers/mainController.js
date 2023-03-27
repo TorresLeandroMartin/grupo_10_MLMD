@@ -11,7 +11,7 @@ const mainController = {
             if(emailSession){
                 res.render("indexLogueado", {user: emailSession})
             } else {
-                res.redirect ("/usuarios/iniciarsesion", {user: " "})
+                res.redirect ("/usuarios/iniciarsesion")
             }
 
     }

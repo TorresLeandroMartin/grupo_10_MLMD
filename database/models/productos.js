@@ -27,13 +27,13 @@ module.exports = function (sequelize, dataTypes){
         },
 
         talle: {
-            type: dataTypes.STRING,
+            type: dataTypes.STRING(255),
             allowNull: false
 
         },
 
         categoria: {
-            type: dataTypes.STRING,
+            type: dataTypes.STRING(255),
             allowNull: false
         },
 
@@ -41,19 +41,20 @@ module.exports = function (sequelize, dataTypes){
             type: dataTypes.TEXT,
             allowNull: false
         },
+
         color: {
-            type: dataTypes.STRING,
+            type: dataTypes.STRING(255),
             allowNull: false
         },
-        usuario_id: {
-            type: dataTypes.INTEGER,
-            allowNull: false
-        }
 
+        usuario_id: {
+            type: dataTypes.INTEGER(10).UNSIGNED,
+           
+        }
     }
 
     let config = {
-        tableName: "productos",
+        tableName: "Producto",
         timestamps: false
     }
 
@@ -61,8 +62,8 @@ module.exports = function (sequelize, dataTypes){
 
     Producto.associate = function(models) {
         Producto.belongsTo(models.Usuario, {
-            as: "productos",
-            foreignKey: "usuario_id",
+            as: "productosUsuario",
+            foreignKey: "usuario_id"
         })
 
     }

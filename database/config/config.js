@@ -1,18 +1,19 @@
 module.exports = {
     "development": {
       "host": "127.0.0.1",
-      "port": 3306,
+      "port": 8889,
       "user": "root",
-      "password": null,
+      "password": "root",
       "dbType": "MySQL",
       "database": "estructura",
       "name": "House_Cloathing",
       "dialect": "mysql"
+
     },
     
    "test": {
     "host": "127.0.0.1",
-    "port": 3306,
+    "port": 8889,
     "user": "root",
     "password": "root",
     "dbType": "MySQL",
@@ -22,7 +23,7 @@ module.exports = {
     },
     "production": {
       "host": "127.0.0.1",
-      "port": 3306,
+      "port": 8889,
       "user": "root",
       "password": "root",
       "dbType": "MySQL",
