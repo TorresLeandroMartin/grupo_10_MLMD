@@ -68,7 +68,7 @@
 
             <div class="desenrollar-global"> <!-- cont-menu -->
 
-              <% productos.forEach(producto=> { %>
+              <% for(let i = 0; i < productos.length; i++) { %>
 
                 <article>
                   <div class="archivo-img">
@@ -80,37 +80,37 @@
                   <div class="right-options-inventario">
                    
                     <h3>
-                      <%- producto.nombre %>
+                      <%- productos[i].nombre %>
                     </h3>
                     <div class="detalles">
                       <label class="detalle"> Estilo :</label>
                       <p class="sub-detalle">
-                        <%- producto.estilo%>
+                        <%- productos[i].estilo%>
                       </p>
                       <label class="detalle"> Color :</label>
                       <p class="sub-detalle">
-                        <%- producto.color%>
+                        <%- productos[i].color%>
                       </p>
                       <label class="detalle"> Categoría : </label>
                       <p class="sub-detalle">
-                        <%- producto.categoria%>
+                        <%- productos[i].categoria%>
                       </p>
                       <label class="detalle"> Talle : </label>
                       <p class="sub-detalle">
-                        <%- producto.talle%>
+                        <%- productos[i].talle%>
                       </p>
                     </div>
                     <p class="producto-descripcion">
-                      <%- producto.descripcion %>
+                      <%- productos[i].descripcion %>
                     </p>
 
-                    <a href="/productos/descripcion/<%- producto.id %>">
+                    <a href="/productos/descripcion/<%- productos.id %>">
                       <i class="fas fa-chevron-right"></i>
                     </a>
 
                   </div>
                 </article>
-                <% }) %>
+                <% } %>
                   <br />
 
             </div>
@@ -151,7 +151,7 @@
             </div>
 
             <div class="desenrollar-inventario"> <!-- cont-menu -->
-              <% productos.forEach(producto=> { %>
+              <% for(let i = 0; i < productos.length; i++)  { %>
                 <article>
 
                   <div class="archivo-img">
@@ -163,47 +163,47 @@
 
                   <div class="right-options-inventario">
                     <h3>
-                      <%- producto.nombre %>
+                      <%- productos[i].nombre %>
                     </h3>
                     <div class="detalles">
                       <label class="detalle"> Estilo : </label>
                       <p class="sub-detalle">
-                        <%- producto.estilo%>
+                        <%- productos[i].estilo%>
                       </p>
                       <label class="detalle"> Color : </label>
                       <p class="sub-detalle">
-                        <%- producto.color%>
+                        <%- productos[i].color%>
                       </p>
                       <label class="detalle"> Categoría : </label>
                       <p class="sub-detalle">
-                        <%- producto.categoria%>
+                        <%- productos[i].categoria%>
                       </p>
                       <label class="detalle"> Talle : </label>
                       <p class="sub-detalle">
-                        <%- producto.talle%>
+                        <%- productos[i].talle%>
                       </p>
                     </div>
 
                     <p class="producto-descripcion">
-                      <%- producto.descripcion %>
+                      <%- productos[i].descripcion %>
                     </p>
 
-                    <label class="producto-precio"> $ <%- producto.precio %> </label>
+                    <label class="producto-precio"> $ <%- productos[i].precio %> </label>
 
                     <div class="botones-inventario">
 
-                      <a href="/productos/edicion/<%- producto.id %>">
+                      <a href="/productos/edicion/<%- productos.id %>">
                         <button class="boton-edita">Editar</button>
                       </a>
 
-                      <form action='/productos/borrar/<%- producto.id %>?_method=DELETE' method="POST">
+                      <form action='/productos/borrar/<%- productos.id %>?_method=DELETE' method="POST">
                         <button class="boton-borra" type="submit">Borrar</button>
                       </form>
 
                     </div>
                   </div>
                 </article>
-                <% }) %>
+                <% } %>
                   <br />
 
             </div>
