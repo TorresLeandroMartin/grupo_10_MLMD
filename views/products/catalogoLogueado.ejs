@@ -196,16 +196,19 @@
                         <button class="boton-edita">Editar</button>
                       </a>
 
-                      <form action='/productos/borrar/<%- productos.id %>?_method=DELETE' method="POST">
+                      <% productos.forEach(producto=> { %>
+                  
+                      <form action='/productos/borrar/<%= producto.id %>?_method=DELETE' method="POST">
                         <button class="boton-borra" type="submit">Borrar</button>
                       </form>
-
+                      <% }) %>
                     </div>
                   </div>
                 </article>
-                <% } %>
+                
                   <br />
-
+                  <% } %>
+               
             </div>
 
             <label for="cerrar-inventario" class="btn-cerrar-inventario">
