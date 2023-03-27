@@ -81,8 +81,8 @@ const productController = {
   // Crear producto / POST
 
   accionCrear: async (req, res) => {
-   // try {
-      const producto = await Producto.create({
+    try {
+      await Producto.create({
         estilo: req.body.estilo,
         nombre: req.body.nombre,
         precio: req.body.precio,
@@ -93,21 +93,21 @@ const productController = {
         usuario_id: req.body.usuario_id
       })
       res.redirect('/productos/catalogoLogueado');
-    //}// catch (error) {
-      //res.send(error);
-    //}
+    } catch (error) {
+      res.send(error);
+    }
   },
 
   // Editar producto / GET
 
   editar: (req, res) => {
     const emailSession = req.session.userLogged;
-    let pedidoProducto = Producto.findByPk(req.params.id);
 
-    pedidoProducto()
-      .then(function (producto) {
+
+    Producto.findByPk(req.params.id)
+      .then(() => {
         if (emailSession) {
-          res.render("edicion", { productos: producto, user: emailSession })
+          res.render("edicion", { user: emailSession})
         };
       });
 
@@ -115,16 +115,17 @@ const productController = {
 
   // Editar producto / POST
 
-  editarProducto: (req, res) => {
+  editarProducto: async (req, res) => {
 
-    Producto.update({
-      "estilo": req.body.estilo,
-      "nombre": req.body.nombre,
-      "precio": req.body.precio,
-      "talle": req.body.talle,
-      "categoria": req.body.categoria,
-      "descripcion": req.body.descripcion,
-      "color": req.body.color
+    await Producto.update({
+      estilo: req.body.estilo,
+      nombre: req.body.nombre,
+      precio: req.body.precio,
+      talle: req.body.talle,
+      categoria: req.body.categoria,
+      descripcion: req.body.descripcion,
+      color: req.body.color,
+      usuario_id: req.body.usuario_id
     }, {
       where: {
         id: req.params.id,
@@ -139,17 +140,16 @@ const productController = {
 
   eliminarProducto: (req, res) => {
     const emailSession = req.session.userLogged;
-
     Producto.destroy({
       where: {
         id: req.params.id,
-      }
+      },
+      force: true
     }).then(() => {
 
       if (emailSession) {
-        res.render("catalogoLogueado", { user: emailSession })
+        res.render("/catalogoLogueado", { user: emailSession, producto})
       }
-
 
     }).catch((error) => {
       res.send(error);
