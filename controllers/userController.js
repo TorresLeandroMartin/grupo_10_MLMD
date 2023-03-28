@@ -127,6 +127,7 @@ const userController = {
 	},
 
 	edicion: (req, res) => {
+		const emailSession = req.session.userLogged;
 
 		let pedidoUsuario = Usuario.findByPk(req.params.id);
 		Promise.all([pedidoUsuario])
@@ -135,7 +136,7 @@ const userController = {
 				if (emailSession) {
 					res.render("editarUsuario", { user: emailSession })
 				} else {
-					res.redirect("/usuarios/iniciarsesion", { user: " " })
+					res.redirect("/usuarios/iniciarsesion")
 				}
 
 			})
@@ -152,7 +153,7 @@ const userController = {
 				id: req.params.id,
 			}
 		}).then(() => {
-			res.redirect("/usuarios/perfil");
+			res.redirect("/");
 		}).catch(error => res.send(error))
 	},
 
