@@ -20,17 +20,19 @@ const productController = {
   // Detalle de producto 
 
   detalle: (req, res) => {
-
+    const emailSession = req.session.userLogged;
 
     Producto.findByPk(req.params.id)
-      .then(function (busqueda) {
-        if (!busqueda) {
-          res.status(404).send('Producto no encontrado')
+      .then(function (productos) {
+        if (emailSession) {
+          res.render("./descripcion", { user: emailSession, productos})
         } else {
-          res.redirect("/productos/descripcion/" + Producto.findByPk(req.params.id), { producto: busqueda })
+          res.status(404).send('Producto no encontrado')
         }
       })
   },
+
+  
 
   // Carrito 
 
@@ -105,9 +107,9 @@ const productController = {
 
 
     Producto.findByPk(req.params.id)
-      .then(() => {
+      .then((productos) => {
         if (emailSession) {
-          res.render("edicion", { user: emailSession})
+          res.render("edicion", { user: emailSession, productos})
         };
       });
 
@@ -115,9 +117,10 @@ const productController = {
 
   // Editar producto / POST
 
-  editarProducto: async (req, res) => {
+  editarProducto:  (req, res) => {
+    const emailSession = req.session.userLogged;
 
-    await Producto.update({
+     Producto.update({
       estilo: req.body.estilo,
       nombre: req.body.nombre,
       precio: req.body.precio,
@@ -129,9 +132,12 @@ const productController = {
     }, {
       where: {
         id: req.params.id,
-      }
+      },
+      force: true
     }).then(() => {
-      res.redirect("/productos/catalogoLogueado");
+      if (emailSession) {
+        res.redirect("/productos/catalogoLogueado")
+      }
     }).catch(error => res.send(error))
 
   },

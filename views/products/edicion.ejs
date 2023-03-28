@@ -24,37 +24,37 @@
                         <input id="file-input" type="file" accept="image/*" />
                     </div>
                 </div>
+   
                 <div class="edita-archivo">
-                    <% productos.forEach(producto=> { %>
                   
                         <div class="right-options">
 
                         <h2>Estas editando el producto: <i>
-                                <%=producto.nombre%>
+                                <%- productos.nombre%>
                             </i> </h2>
                         <!-- productos.id -->
                        
-                        <form action="/productos/edicion/<%=producto.id%>?_method=PUT" method="POST">
+                        <form action="/productos/edicion/ <%- productos.id%>?_method=PUT" method="POST">
 
                             <label for="estilo">Estilo</label>
-                            <input type="text" name="estilo" id="estilo" value="<%=producto.estilo%>" required>
+                            <input type="text" name="estilo" id="estilo" value="<%- productos.estilo%>" required>
 
                             <label for="nombre">Nombre</label>
-                            <input type="text" name="nombre" id="nombre" value="<%=producto.nombre%>" minlength="3"
+                            <input type="text" name="nombre" id="nombre" value=" <%- productos.nombre%>" minlength="3"
                                 required>
 
                             <label for="nombre">Precio</label>
-                            <input type="number" name="precio" id="precio" value="<%=producto.precio%>">
+                            <input type="number" name="precio" id="precio" value=" <%- productos.precio%>">
 
                             <label for="categoria">Categorías</label>
-                            <select name="categoria" id="categoria" value="<%=producto.categoria%>" required>
+                            <select name="categoria" id="categoria" value=" <%- productos.categoria%>" required>
                                 <option value="Buzo">Buzos</option>
                                 <option value="Calzado">Calzado</option>
                                 <option value="Pantalón">Pantalón</option>
                                 <option value="Remeras">Remeras</option>
                             </select>
                             <label for="talle">Talle</label>
-                            <select name="talle" id="talle" value="<%=producto.talle%>" required>
+                            <select name="talle" id="talle" value=" <%- productos.talle%>" required>
                                 <option value="Small">S</option>
                                 <option value="Medium">M</option>
                                 <option value="Large">L</option>
@@ -62,15 +62,18 @@
                             </select>
 
                             <label for="color">Color</label>
-                            <select name="color" id="color" value="<%=producto.color%>" required>
+                            <select name="color" id="color" value=" <%- productos.color%>" required>
                                 <option value="Rosado">Rosa</option>
                                 <option value="Blanco">Blanco</option>
                                 <option value="Verde">Verde</option>
                                 <option value="Negro">Negro</option>
+                                <option value="Negro">Azul</option>
+                                <option value="Negro">Rojo</option>
+                                <option value="Negro">Celeste</option>
                             </select>
 
                             <label for="descripcion">Descripción</label>
-                            <textarea name="descripcion" id="descripcion"><%=producto.descripcion%> </textarea required>
+                            <textarea name="descripcion" id="descripcion"> <%- productos.descripcion%> </textarea required>
                             <div>
                     
                                 <button type="submit" class="boton-editar">Editar</button>
@@ -78,14 +81,12 @@
                         </div>
                         </form>
                         
-                        <form action='/productos/edicion/<%=producto.id%>?_method=DELETE' method="POST">
+                        <form action='/productos/edicion/<%-productos.id%>?_method=DELETE' method="POST">
                         <div>
-                         
                             <button class="boton-borrar" type="submit">Borrar</button>
-
                         </div>
                         </form>
-                        <% }) %>
+                        <%# } %>
                     </div>
               </div>
           </main>

@@ -3,30 +3,52 @@ const router = express.Router();
 const productController = require("../controllers/productController");
 
 
-// URL /productos
+
+// Catálogos
+
+// URL / GET /productos/catalogo
 router.get("/catalogo", productController.index);
 
+// URL / GET /productos/catalogo
 router.get('/catalogoLogueado', productController.logueado)
 
-// URL /productos/crear
+
+// Crear producto
+
+// URL / GET /productos/crear
 router.get("/crearProducto", productController.crear);
 
-// URL /productos/crear
+// URL / POST /productos/crear
 router.post("/crear", productController.accionCrear);
 
-// URL /productos/descripcion/:id
+
+// Descripción
+
+// URL / GET /productos/descripcion/:id
 router.get("/descripcion/:id", productController.detalle);
 
-// URL /productos/edicion/:id
+
+// Edición
+
+// URL / GET /productos/edicion/:id
 router.get("/edicion/:id", productController.editar);
 
-// URL /productos/edicion/:id
+// URL / PUT /productos/edicion/:id
 router.put("/edicion/:id", productController.editarProducto);
 
-// URL /productos/borrar/:id
+
+// DELETE
+
+// URL / DELETE /productos/borrar/:id
 router.delete("/borrar/:id", productController.eliminarProducto);
 
-// URL /usuarios/carrito
+
+// Carrito
+
+// URL / GET /productos/carrito
 router.get("/carrito", productController.carrito);
+
+
+
 
 module.exports = router;
