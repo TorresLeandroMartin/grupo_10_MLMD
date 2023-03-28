@@ -104,7 +104,7 @@
                       <%- productos[i].descripcion %>
                     </p>
 
-                    <a href="/productos/descripcion/<%- productos.id %>">
+                    <a href="/productos/descripcion/<%- productos[i].id %>">
                       <i class="fas fa-chevron-right"></i>
                     </a>
 
@@ -192,16 +192,16 @@
 
                     <div class="botones-inventario">
 
-                      <a href="/productos/edicion/<%- productos.id %>">
+                      <a href="/productos/edicion/<%- productos[i].id %>">
                         <button class="boton-edita">Editar</button>
                       </a>
 
-                      <% productos.forEach(producto=> { %>
+                     
                   
-                      <form action='/productos/borrar/<%= producto.id %>?_method=DELETE' method="POST">
+                      <form action='/productos/borrar/<%- productos[i].id %>?_method=DELETE' method="POST">
                         <button class="boton-borra" type="submit">Borrar</button>
                       </form>
-                      <% }) %>
+                 
                     </div>
                   </div>
                 </article>

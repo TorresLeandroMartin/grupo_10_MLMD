@@ -148,7 +148,7 @@ const productController = {
     }).then(() => {
 
       if (emailSession) {
-        res.render("/catalogoLogueado", { user: emailSession, producto})
+        res.redirect("/productos/catalogoLogueado")
       }
 
     }).catch((error) => {
