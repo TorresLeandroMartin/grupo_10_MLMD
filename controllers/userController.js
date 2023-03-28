@@ -153,7 +153,7 @@ const userController = {
 				id: req.params.id,
 			}
 		}).then(() => {
-			res.redirect("/");
+			res.redirect("/usuarios/perfil/" + Usuario.findByPk(req.params.id));
 		}).catch(error => res.send(error))
 	},
 

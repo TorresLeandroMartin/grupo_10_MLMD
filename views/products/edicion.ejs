@@ -15,15 +15,7 @@
         <%- include("./partials/header") %>
 
             <main>
-                <div class="left-options">
-                    <h2> Edición de Productos </h2>
-                    <div class="form-group">
-                        <label for="file-input">
-                            <img class="img-prueba" src="/img/ropa/pantalonRunning.jpg" alt="buttonjpg">
-                        </label>
-                        <input id="file-input" type="file" accept="image/*" />
-                    </div>
-                </div>
+                
    
                 <div class="edita-archivo">
                   
@@ -35,6 +27,17 @@
                         <!-- productos.id -->
                        
                         <form action="/productos/edicion/ <%- productos.id%>?_method=PUT" method="POST">
+
+                            <div class="left-options">
+                                <p>Imagen producto</p>
+                                <input 
+                                type="file" 
+                                name="imagenDelProducto"
+                                value="<%- productos.imagenDelProducto%>"
+                                accept="image/*"
+                                >
+                            </div>
+
 
                             <label for="estilo">Estilo</label>
                             <input type="text" name="estilo" id="estilo" value="<%- productos.estilo%>" required>
