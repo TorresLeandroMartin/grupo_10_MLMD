@@ -123,6 +123,10 @@ div .left-options {
     margin: auto;
 }
 
+.left-options img{
+    width: 50px;
+}
+
 .img-prueba {
     border: none;
     width: 80%;

@@ -24,6 +24,7 @@ DROP TABLE IF EXISTS `Producto`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Producto` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `imagenDelProducto` varchar(8000) NOT NULL,
   `estilo` text NOT NULL,
   `nombre` varchar(200) NOT NULL,
   `precio` decimal(10,0) NOT NULL,

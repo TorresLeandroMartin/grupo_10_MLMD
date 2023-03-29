@@ -16,21 +16,19 @@
 
       <main>
 
-        <h4>Productos</h4>
+        <div class="catalogo-subtitulo">
+           <h4 class="subt">Productos</h4>
 
-        <hr>
-
-        <form class="categoria-estilo" action="" method="get">
-          <select name="styles">
-            <option value="all"> Todos </option>
-            <option value="sport"> Deportivo </option>
-            <option value="elegant"> Elegante</option>
-            <option value="accessory"> Accesorios </option>
-            <option value="handbags"> Bolsos </option>
-          </select>
-        </form>
-
-        <hr>
+           <form class="categoria-estilo" action="" method="get">
+             <select name="styles">
+               <option value="all"> Todos </option>
+               <option value="sport"> Deportivo </option>
+               <option value="elegant"> Elegante</option>
+               <option value="accessory"> Accesorios </option>
+               <option value="handbags"> Bolsos </option>
+             </select>
+           </form>
+        </div>
 
 
         <div class="productos"> <!--   -->
@@ -72,11 +70,11 @@
 
                 <article>
                   <div class="archivo-img">
-                    <img src="/img/ropa/jordan-luka-1-neo-turquoise-dn1772-104-9.jpeg" alt="imagen-producto">
+                    <img src="/img/avatars/<%- productos[i].imagenDelProducto %>" alt="imagen-producto">
                   </div>
 
 
-                  <img class="img2" src="/img/ropa/jordan-luka-1-neo-turquoise-dn1772-104-9.jpeg" alt="imagen-producto">
+                  <img class="img2" src="/img/avatars/<%- productos[i].imagenDelProducto %>" alt="imagen-producto">
                   <div class="right-options-inventario">
                    
                     <h3>
@@ -155,10 +153,10 @@
                 <article>
 
                   <div class="archivo-img">
-                    <img src="/img/ropa/jordan-luka-1-neo-turquoise-dn1772-104-9.jpeg" alt="imagen-producto">
+                    <img src="/img/avatars/<%- productos[i].imagenDelProducto %>" >
                   </div>
 
-                  <img class="img2" src="/img/ropa/jordan-luka-1-neo-turquoise-dn1772-104-9.jpeg" alt="imagen-producto">
+                  <img class="img2" src="/img/avatars/<%- productos[i].imagenDelProducto %>" >
 
 
                   <div class="right-options-inventario">

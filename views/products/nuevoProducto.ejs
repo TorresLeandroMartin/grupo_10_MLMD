@@ -18,18 +18,18 @@
         <%- include("./partials/header") %>
 
             <main>
-
-
+                
                 <div class="crea-archivo">
-                    <form action="/productos/crear" method="POST">
-                        <!--<div class="left-options">
-                         <h2> Creación de Productos </h2>
-                            <button class="foto-producto" type="submit">
-                                <input class="subir" type="file" name="imagenDelProducto" accept="image/*">
-                            </button>
-                        </div> -->
+                    
+                    <form action="/productos/crear" method="POST" enctype="multipart/form-data">
 
                         <div class="right-options">
+
+                           <h2> Creación de Productos </h2>
+
+                            <button class="foto-producto" type="submit">
+                              <input class="subir" type="file" name="imagenDelProducto" accept="image/*">
+                            </button>
 
                             <label for="estilo">Estilo</label>
                             <input type="text" name="estilo" id="estilo" required>

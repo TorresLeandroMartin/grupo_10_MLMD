@@ -27,12 +27,13 @@
                         <p>Hola <%=  user.nombre%> </p> 
                         <p> <%=  user.email %> </p> 
                         <div>
-                           <img class="foto-perfil" src="/img/avatars/<%= user.imagen %>">
+                          <img class="foto-perfil" src="/img/avatars/<%= user.imagen %>">
                         </div>
                         
-                        <a href="/usuarios/edicionUsuario/<%- user.id %>">
-                            <button class="boton-edita">Editar</button>
+                          <a href="/usuarios/edicionUsuario/<%- user.id %>">
+                            <button class="boton2">Editar</button>
                           </a>
+                        
                     </article>
                     <%# }) %>
                 </main>

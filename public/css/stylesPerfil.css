@@ -44,7 +44,12 @@ div .seccion-usuario{
     color: #FF715B;
     padding-top: 10px;
 }
-
+.seccion-usuario a{
+    display: block;
+    text-align: center;
+    margin: 7px;
+    padding: 2px
+}
 div img{
     display: flex;
     align-items: center;
@@ -62,6 +67,7 @@ p {
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
 }
+
 /*//////////////////////////FIN PERFIL//////////////////////////////////////////////////////////////////////////////*/
 header {
     background-color: #242F62;
@@ -186,15 +192,11 @@ nav {
     color: white;
     border: solid 1px #FF715B;
     border-radius: 1.2ch;
-    font-size: 14px;
-    padding: 5px 10px;
+    font-size: 16px;
+    padding: 6px 11px;
 }
 
 @media (max-width: 425px) {
-
-    .categoria-pais {
-        display: none;
-    }
 
     main section article h4,
     nav ul {

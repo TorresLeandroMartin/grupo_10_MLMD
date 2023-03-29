@@ -2,11 +2,10 @@
 
 const fs = require("fs");
 const path = require("path");
-
+const { validationResult } = require("express-validator");
 // Operadores de sequelize
 
 const { Association } = require('sequelize');
-const { Op } = require('sequelize');
 
 // Uso de los métodos de modelos
 const db = require("../database/models")
@@ -85,7 +84,7 @@ const productController = {
   accionCrear: async (req, res) => {
     try {
       await Producto.create({
-        //imagenDelProducto: req.file.filename,
+        imagenDelProducto: req.file.filename,
         estilo: req.body.estilo,
         nombre: req.body.nombre,
         precio: req.body.precio,
@@ -122,7 +121,7 @@ const productController = {
     const emailSession = req.session.userLogged;
 
      Producto.update({
-      //imagenDelProducto: req.file.filename,
+      imagenDelProducto: req.file.filename,
       estilo: req.body.estilo,
       nombre: req.body.nombre,
       precio: req.body.precio,

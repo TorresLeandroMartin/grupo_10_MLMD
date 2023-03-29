@@ -146,7 +146,10 @@ const userController = {
 
 		Usuario.update({
 			imagen: req.file.filename,
-			...req.body,
+			nombre: req.body.nombre,
+			email: req.body.email,
+			telefono: req.body.telefono,
+			categoria: req.body.categoria,
 			contrasena: bcryptjs.hashSync(req.body.contrasena, 10),
 		}, {
 			where: {
