@@ -6,7 +6,12 @@
 <%- include("./partials/head") %>
 
     <!-- hoja de estilos -->
+<<<<<<< HEAD
     
+=======
+
+    <link rel="stylesheet" href="css/normalize.css">
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
     <link rel="stylesheet" href="/css/stylesRegister.css">
 
     <body>
@@ -19,12 +24,19 @@
             <main>
 
                 <div class="contenedor-main">
+<<<<<<< HEAD
                     <div class="top">
                         <p>Home > Login > Registro </p>
+=======
+
+
+                    <div class="top">
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
                         <p>CREA TU CUENTA</p>
                     </div>
 
                     <hr class="linea-divisoria2">
+<<<<<<< HEAD
                     
 
                     <form action="/usuarios/crearcuenta" name="file" method="POST" class="bottom" enctype="multipart/form-data">
@@ -65,6 +77,49 @@
                             <p>Email</p>
                             <input  
                             input   
+=======
+
+                    <form method="POST" name="file" action="/usuarios/crearcuenta" class="bottom" enctype="multipart/form-data">
+
+                        <div class="campos-de-relleno">
+                            <p>Imagen de perfil</p>
+                            <input 
+                            type="file" 
+                            name="imagen"
+                            class="letrasTipoArchivo <% locals.errors && errors.imagen ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.imagen : null %>"
+                            >
+                            <% if (locals.errors && errors.imagen) { %>
+                                <div class="texto-error">
+                                    <%= errors.imagen.msg %>
+                                </div>
+                                <% } %>
+                        </div>
+
+                        <div class="campos-de-relleno">
+                            <div>
+                            <p>Nombre y Apellido</p>
+                            <input 
+                            type="text" 
+                            name="nombre" 
+                            class="campo-individual <%=locals.errors && errors.nombre ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.nombre : null %>"
+                            placeholder="Nombre y Apellido"
+                            >
+                            <% if (locals.errors && errors.nombre) { %>
+                                <div class="texto-error">
+                                    <%= errors.nombre.msg %>
+                                </div>
+                                <% } %>
+                        </div>
+                    </div>
+
+                    
+                        <div class="campos-de-relleno">
+                            <div>
+                            <p>Email</p>
+                            <input   
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
                             type="email" 
                             name="email" 
                             class="campo-individual <%=locals.errors && errors.email ? 'is-invalid' : null %>"
@@ -77,6 +132,7 @@
                                 </div>
                                 <% } %>
                         </div>
+<<<<<<< HEAD
 
                         <div class="campos-de-relleno">
                             <p>Telefono</p>
@@ -94,6 +150,30 @@
                                 <% } %>
                         </div>
 
+=======
+                    </div>
+
+                    
+                        <div class="campos-de-relleno">
+                            <div>
+                            <p>Teléfono</p>
+                            <input
+                            type="tel" 
+                            name="telefono" 
+                            class="campo-individual <%=locals.errors && errors.telefono ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.telefono : null %>"
+                            placeholder="num. de teléfono"
+                            >
+                            <% if (locals.errors && errors.telefono) { %>
+                                <div class="texto-error">
+                                    <%= errors.telefono.msg %>
+                                </div>
+                                <% } %>
+                        </div>
+                    </div>
+
+                    
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
                         <div class="campos-de-relleno">
                             <div>
                             <p>Categoría</p>
@@ -117,6 +197,7 @@
                                     <%= errors.categoria.msg %>
                                 </div>
                                 <% } %>
+<<<<<<< HEAD
                            </div>
                         </div>
 
@@ -141,6 +222,32 @@
                               <button type="submit" class="boton2">Creá tu cuenta</button>
                            </div>
 
+=======
+                        </div>
+                    </div>
+
+                    
+                        <div class="campos-de-relleno">
+                            <div>
+                            <p>Contraseña</p>
+                            <input   
+                            type="password" 
+                            name="contrasena" 
+                            placeholder="**********"
+                            class="campo-individual <%=locals.errors && errors.contrasena ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.contrasena : null %>"
+                            >
+                            <% if (locals.errors && errors.contrasena) { %>
+                                <div class="texto-error">
+                                    <%= errors.contrasena.msg %>
+                                </div>
+                                <% } %>
+                        </div>
+                    </div>
+
+                        <div class="campos-de-relleno">
+                                <button type="submit" class="boton2">Creá tu cuenta</button>
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
                         </div>
 
                     </form>
@@ -148,7 +255,11 @@
                 </div>
 
 
+<<<<<<< HEAD
                 </div>
+=======
+
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 
             </main>
 

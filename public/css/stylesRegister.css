@@ -63,7 +63,11 @@ nav {
 }
 
 .contenedor-main {
+<<<<<<< HEAD
     background-color: #5c2792;
+=======
+    background-color: #3f0d71;
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
     margin: 0px 20px 20px 20px;
     padding-bottom: 50px;
 }
@@ -78,10 +82,17 @@ nav {
 
 .top p {
     text-align: center;
+<<<<<<< HEAD
     margin-top: 20px;
     color: white;
     font-family: "Lilita One";
     font-size: 15px;
+=======
+    margin-top: 5%;
+    color: white;
+    font-family: "Lilita One";
+    font-size: 150%;
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 }
 
 .linea-divisoria2 {
@@ -91,6 +102,35 @@ nav {
     margin: 30px 20px;
 }
 
+<<<<<<< HEAD
+=======
+.letrasTipoArchivo{
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 80%;
+}
+
+.campo-individual{
+    display: flex;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 80%;
+    text-align: center;
+}
+
+.texto-error{
+    color: #FF715B;
+    font-family: "Lilita One";
+    padding: 3% 0% 0%;
+    font-size: 80%;
+}
+
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 .bottom {
 
     display: flex;
@@ -98,6 +138,7 @@ nav {
 
 }
 
+<<<<<<< HEAD
 .bottom p {
     color: white;
 
@@ -114,6 +155,27 @@ nav {
 
     margin: 15px 0px;
 
+=======
+.bottom .campos-de-relleno {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0px;
+}
+
+.bottom .campos-de-relleno p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: "Lilita One";
+    font-size: 100%;
+}
+
+.campos-de-relleno img{
+    width: 10%;
+    margin: 5px;
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 }
 
 .boton2 {
@@ -126,8 +188,13 @@ nav {
     margin-top: 80px;
 }
 
+<<<<<<< HEAD
 @media (max-width: 425px) {
 
+=======
+
+@media (max-width: 425px) {
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 
     .categoria-pais {
         display: none;
@@ -1385,7 +1452,11 @@ nav {
 }
 
 
+<<<<<<< HEAD
 @media (min-width: 1700px) {
+=======
+/*@media (min-width: 1700px) {
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 
     .sub-menu {
         position: absolute;
@@ -1397,4 +1468,8 @@ nav {
         background-color: #394476;
         z-index: 1;
     }
+<<<<<<< HEAD
 }
+=======
+}*/
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2

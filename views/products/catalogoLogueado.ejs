@@ -16,6 +16,7 @@
 
       <main>
 
+<<<<<<< HEAD
         <h4>Productos</h4>
 
         <hr>
@@ -31,6 +32,21 @@
         </form>
 
         <hr>
+=======
+        <div class="catalogo-subtitulo">
+           <h4 class="subt">Productos</h4>
+
+           <form class="categoria-estilo" action="" method="get">
+             <select name="styles">
+               <option value="all"> Todos </option>
+               <option value="sport"> Deportivo </option>
+               <option value="elegant"> Elegante</option>
+               <option value="accessory"> Accesorios </option>
+               <option value="handbags"> Bolsos </option>
+             </select>
+           </form>
+        </div>
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 
 
         <div class="productos"> <!--   -->
@@ -68,6 +84,7 @@
 
             <div class="desenrollar-global"> <!-- cont-menu -->
 
+<<<<<<< HEAD
               <% productos.forEach(productoLista=> { %>
 
                 <article>
@@ -115,6 +132,53 @@
 
                 <br />
                 <% }) %>
+=======
+              <% for(let i = 0; i < productos.length; i++) { %>
+
+                <article>
+                  <div class="archivo-img">
+                    <img src="/img/avatars/<%- productos[i].imagenDelProducto %>" alt="imagen-producto">
+                  </div>
+
+
+                  <img class="img2" src="/img/avatars/<%- productos[i].imagenDelProducto %>" alt="imagen-producto">
+                  <div class="right-options-inventario">
+                   
+                    <h3>
+                      <%- productos[i].nombre %>
+                    </h3>
+                    <div class="detalles">
+                      <label class="detalle"> Estilo :</label>
+                      <p class="sub-detalle">
+                        <%- productos[i].estilo%>
+                      </p>
+                      <label class="detalle"> Color :</label>
+                      <p class="sub-detalle">
+                        <%- productos[i].color%>
+                      </p>
+                      <label class="detalle"> Categoría : </label>
+                      <p class="sub-detalle">
+                        <%- productos[i].categoria%>
+                      </p>
+                      <label class="detalle"> Talle : </label>
+                      <p class="sub-detalle">
+                        <%- productos[i].talle%>
+                      </p>
+                    </div>
+                    <p class="producto-descripcion">
+                      <%- productos[i].descripcion %>
+                    </p>
+
+                    <a href="/productos/descripcion/<%- productos[i].id %>">
+                      <i class="fas fa-chevron-right"></i>
+                    </a>
+
+                  </div>
+                </article>
+                <% } %>
+                  <br />
+
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
             </div>
 
             <label for="cerrar-global" class="btn-cerrar-global">
@@ -147,12 +211,17 @@
             <hr class="linea-verde">
 
             <div class="crear">
+<<<<<<< HEAD
               <a class="upload" href="/productos/crear">
+=======
+              <a class="upload" href="/productos/crearProducto">
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
                 <i class="fa-solid fa-plus"></i>
               </a>
             </div>
 
             <div class="desenrollar-inventario"> <!-- cont-menu -->
+<<<<<<< HEAD
               <% productos.forEach((productoInventario)=> { %>
 
                 <article>
@@ -187,10 +256,43 @@
                       <label class="detalle"> Talle : </label>
                       <p class="sub-detalle">
                         <%= productoInventario.talle%>
+=======
+              <% for(let i = 0; i < productos.length; i++)  { %>
+                <article>
+
+                  <div class="archivo-img">
+                    <img src="/img/avatars/<%- productos[i].imagenDelProducto %>" >
+                  </div>
+
+                  <img class="img2" src="/img/avatars/<%- productos[i].imagenDelProducto %>" >
+
+
+                  <div class="right-options-inventario">
+                    <h3>
+                      <%- productos[i].nombre %>
+                    </h3>
+                    <div class="detalles">
+                      <label class="detalle"> Estilo : </label>
+                      <p class="sub-detalle">
+                        <%- productos[i].estilo%>
+                      </p>
+                      <label class="detalle"> Color : </label>
+                      <p class="sub-detalle">
+                        <%- productos[i].color%>
+                      </p>
+                      <label class="detalle"> Categoría : </label>
+                      <p class="sub-detalle">
+                        <%- productos[i].categoria%>
+                      </p>
+                      <label class="detalle"> Talle : </label>
+                      <p class="sub-detalle">
+                        <%- productos[i].talle%>
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
                       </p>
                     </div>
 
                     <p class="producto-descripcion">
+<<<<<<< HEAD
                       <%= productoInventario.descripcion %>
                     </p>
 
@@ -212,6 +314,32 @@
 
                 <br />
                 <% }) %>
+=======
+                      <%- productos[i].descripcion %>
+                    </p>
+
+                    <label class="producto-precio"> $ <%- productos[i].precio %> </label>
+
+                    <div class="botones-inventario">
+
+                      <a href="/productos/edicion/<%- productos[i].id %>">
+                        <button class="boton-edita">Editar</button>
+                      </a>
+
+                     
+                  
+                      <form action='/productos/borrar/<%- productos[i].id %>?_method=DELETE' method="POST">
+                        <button class="boton-borra" type="submit">Borrar</button>
+                      </form>
+                 
+                    </div>
+                  </div>
+                </article>
+                
+                  <br />
+                  <% } %>
+               
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
             </div>
 
             <label for="cerrar-inventario" class="btn-cerrar-inventario">

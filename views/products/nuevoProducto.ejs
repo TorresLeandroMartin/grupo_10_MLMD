@@ -7,6 +7,10 @@
 
     <!-- hoja de estilos -->
 
+<<<<<<< HEAD
+=======
+    <link rel="stylesheet" href="css/normalize.css">
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
     <link href="/css/creacion-styles.css" rel="stylesheet">
 
 
@@ -14,6 +18,7 @@
 
         <!-- header -->
 
+<<<<<<< HEAD
         <%- include("./partials/headerLogin") %>
 
             <main>
@@ -36,6 +41,33 @@
                             <label for="nombre">Precio</label>
                             <input type="number" name="precio" id="precio" required>
                             
+=======
+        <%- include("./partials/header") %>
+
+            <main>
+                
+                <div class="crea-archivo">
+                    
+                    <form action="/productos/crear" method="POST" enctype="multipart/form-data">
+
+                        <div class="right-options">
+
+                           <h2> Creación de Productos </h2>
+
+                            <button class="foto-producto" type="submit">
+                              <input class="subir" type="file" name="imagenDelProducto" accept="image/*">
+                            </button>
+
+                            <label for="estilo">Estilo</label>
+                            <input type="text" name="estilo" id="estilo" required>
+                           
+                            <label for="nombre">Nombre del producto</label>
+                            <input type="text" name="nombre" id="nombre" minlength="5" required>
+
+                            <label for="nombre">Precio</label>
+                            <input type="number" name="precio" id="precio" required>
+
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
                             <label for="categoria">Categorías</label>
                             <select name="categoria" id="Categoría" required>
                                 <option value="Buzo">Buzos</option>
@@ -58,6 +90,7 @@
                                 <option value="Blanco">Blanco</option>
                                 <option value="Verde">Verde</option>
                                 <option value="Negro">Negro</option>
+<<<<<<< HEAD
                             </select>
 
                         <div class="descripcion">
@@ -70,6 +103,25 @@
                         </div>
 
                 </div>
+=======
+                                <option value="Negro">Azul</option>
+                                <option value="Negro">Rojo</option>
+                                <option value="Negro">Celeste</option>
+                            </select>
+
+                            <div class="descripcion">
+                                <label for="Descripción">Descripción</label>
+                                <textarea name="descripcion" id="descripcion"
+                                    placeholder="Inserte la descripción del producto..."></textarea>
+                            </div>
+
+                            <button class="boton-crear" type="submit">Publicar</button>
+                        </div>
+                    </form>
+                </div>
+
+
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
             </main>
 
             <!-- footer -->

@@ -123,6 +123,13 @@ div .left-options {
     margin: auto;
 }
 
+<<<<<<< HEAD
+=======
+.left-options img{
+    width: 50px;
+}
+
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 .img-prueba {
     border: none;
     width: 80%;

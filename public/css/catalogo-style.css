@@ -29,6 +29,7 @@ header {
     width: 35%;
 }
 
+<<<<<<< HEAD
 .carrito i {
     color: #FF715B;
     display: inline;
@@ -40,6 +41,9 @@ header {
 .carrito {
     margin-top: 4.5px;
 }
+=======
+
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 
 a {
     text-decoration: none;
@@ -55,6 +59,20 @@ a {
     justify-content: center;
 }
 
+<<<<<<< HEAD
+=======
+.carrito i {
+    color: #FF715B;
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+}
+
+.carrito {
+    margin-top: 4.5px;
+}
+
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 .global a label:hover{
     color: #bb4230;
 }
@@ -178,6 +196,7 @@ h2 {
         align-items: center;
     }
 
+<<<<<<< HEAD
     .carrito i {
         color: #FF715B;
         display: inline;
@@ -186,6 +205,8 @@ h2 {
         align-items: center;
     }
 
+=======
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
     
     /* Body */
 
@@ -407,6 +428,7 @@ h2 {
         padding: 2px;
     }
 
+<<<<<<< HEAD
     .carrito i {
         color: #FF715B;
         display: inline-flex;
@@ -417,6 +439,9 @@ h2 {
     .carrito {
         margin-top: 4.5px;
     }
+=======
+    
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 
     .user i {
         display: inline-flex;
@@ -689,6 +714,7 @@ h2 {
         align-items: center;
     }
     
+<<<<<<< HEAD
     .carrito i {
         color: #FF715B;
         display: inline-flex;
@@ -696,6 +722,9 @@ h2 {
         text-align: center;
         align-items: center;
     }
+=======
+
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 
     .user i {
         display: inline-flex;
@@ -912,6 +941,17 @@ h2 {
         justify-content: space-around;
         align-items: center;
     }
+<<<<<<< HEAD
+=======
+    .carrito i {
+        color: #FF715B;
+        display: inline-flex;
+        font-size: 28px;
+        margin-left: 10px;
+        text-align: center;
+        align-items: center;
+    }
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 
     .logo {
         display: inline-flex;
@@ -951,6 +991,7 @@ h2 {
         align-items: center;
     }
 
+<<<<<<< HEAD
     .carrito i {
         color: #FF715B;
         display: inline-flex;
@@ -958,6 +999,9 @@ h2 {
         text-align: center;
         align-items: center;
     }
+=======
+
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 
     .user i {
         display: inline-flex;

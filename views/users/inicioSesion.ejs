@@ -7,20 +7,31 @@
 
     <!-- hoja de estilos -->
 
+<<<<<<< HEAD
+=======
+    <link rel="stylesheet" href="css/normalize.css">
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
     <link rel="stylesheet" href="/css/stylesLogin.css">
 
 
     <body>
 
         <!-- header -->
+<<<<<<< HEAD
     
  <%- include("./partials/header") %>
  
+=======
+
+        <%- include("./partials/header") %>
+
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 
             <main>
                 <div class="contenedor-main">
 
                     <div class="top-main">
+<<<<<<< HEAD
                         <h3>Bienvenid@ a HouseClothing!</h3>
                     </div>
                     <form action="/usuarios/iniciarsesion" method="POST" class="bottom-main">
@@ -44,6 +55,42 @@
                                 <a href="/crearcuenta"><button class="boton2">Sign up</button></a> -->
                             </div>
                             <a href="#">Olvidaste la contrasena?</a><a href="/usuarios/crearcuenta">No tenes cuenta?</a>
+=======
+                        <p>Bienvenid@ a HouseClothing!</p>
+
+                        <p>LOG IN</p>
+                    </div>
+
+                    <form action="/usuarios/iniciarsesion" method="POST" class="bottom-main">
+
+                        <div class="campos-de-texto">
+                            <input name="email" type="text" placeholder="Email">
+                            <% if (locals.errors && errors.email) { %>
+                                <div class="text-danger">
+                                    <%= errors.email.msg %>
+                                </div>
+                                <% } %>
+                        </div>
+
+                        <div class="campos-de-texto">
+                            <input name="contrasena" type="password" placeholder="Contraseña">
+                            <% if (locals.errors && errors.contrasena) { %>
+                                <div class="text-danger">
+                                    <%= errors.contrasena.msg %>
+                                </div>
+                                <% } %>
+                        </div>
+
+                        <div class="botonera">
+                            <label>
+                                <input type="checkbox" name="recordar_email"> Recordar mi usuario
+                            </label>
+
+                        <div class="botonera">
+                            <button type="submit" class="boton1" value="Ingreso">Log in</button>
+                        <a href="#">Olvidaste la contraseña?</a><a href="/usuarios/crearcuenta">No tenes cuenta?</a>
+                    </div>
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
                         </div>
                     </form>
 

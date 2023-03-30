@@ -44,7 +44,16 @@ div .seccion-usuario{
     color: #FF715B;
     padding-top: 10px;
 }
+<<<<<<< HEAD
 
+=======
+.seccion-usuario a{
+    display: block;
+    text-align: center;
+    margin: 7px;
+    padding: 2px
+}
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 div img{
     display: flex;
     align-items: center;
@@ -62,6 +71,10 @@ p {
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 /*//////////////////////////FIN PERFIL//////////////////////////////////////////////////////////////////////////////*/
 header {
     background-color: #242F62;
@@ -186,16 +199,24 @@ nav {
     color: white;
     border: solid 1px #FF715B;
     border-radius: 1.2ch;
+<<<<<<< HEAD
     font-size: 14px;
     padding: 5px 10px;
+=======
+    font-size: 16px;
+    padding: 6px 11px;
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 }
 
 @media (max-width: 425px) {
 
+<<<<<<< HEAD
     .categoria-pais {
         display: none;
     }
 
+=======
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
     main section article h4,
     nav ul {
         display: none;

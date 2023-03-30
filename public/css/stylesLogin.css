@@ -79,11 +79,19 @@ nav {
     border-radius: 1ch;
 }
 
+<<<<<<< HEAD
 .top-main h3 {
+=======
+.top-main p {
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
     font-family: "Monserrat", sans-serif;
     margin-top: 10px;
     text-align: center;
     color: #FF715B;
+<<<<<<< HEAD
+=======
+    font-size: 18px;
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
     font-weight: bolder;
 }
 
@@ -1174,6 +1182,7 @@ nav {
         align-items: center;
     }
 
+<<<<<<< HEAD
     .carrito i {
         color: #FF715B;
         display: inline-flex;
@@ -1182,6 +1191,8 @@ nav {
         text-align: center;
         align-items: center;
     }
+=======
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 
     .user i {
         display: inline-flex;

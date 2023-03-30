@@ -1,11 +1,24 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 <!DOCTYPE html>
 <html lang="en">
 
 
+<<<<<<< HEAD
   <%- include("./partials/head") %>
 
   <!-- head -->
 
+=======
+<%- include("./partials/head") %>
+
+  <!-- head -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
    <link rel="stylesheet" href="/css/stylesPerfil.css">
 
 
@@ -16,6 +29,7 @@
 
               
                 <main class="perfil-usuario"> 
+<<<<<<< HEAD
         
                     <article class="seccion-usuario">
                         <h3>Perfil de Usuario</h3> 
@@ -26,11 +40,34 @@
                         </div>
                     </article>
                 
+=======
+                    
+                    <%# usuario.forEach(usuarioLista => { %>
+                    <article class="seccion-usuario">
+                       
+                        <h3>Perfil de Usuario</h3> 
+                        <p>Hola <%=  user.nombre%> </p> 
+                        <p> <%=  user.email %> </p> 
+                        <div>
+                          <img class="foto-perfil" src="/img/avatars/<%= user.imagen %>">
+                        </div>
+                        
+                          <a href="/usuarios/edicionUsuario/<%- user.id %>">
+                            <button class="boton2">Editar</button>
+                          </a>
+                        
+                    </article>
+                    <%# }) %>
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
                 </main>
 
              <!-- footer -->
 
+<<<<<<< HEAD
              <%- include("./partials/footer") %>
+=======
+             <%- include("./partials/footerLogueado") %>
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
     
     </body>
 </html>
