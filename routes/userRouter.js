@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const userController = require("../controllers/userController");
 
 // Middlewares
@@ -29,6 +30,8 @@ router.get("/logout", authMiddleware, userController.logout)
 // URL /usuarios/carrito
 router.get("/carrito", userController.carrito);
 =======
+=======
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 //Controller
 const userController = require("../controllers/userController");
 
@@ -62,6 +65,9 @@ router.get("/perfil/:id/", authMiddleware, userController.profile);
 
 // URL /usuarios/cerrarsesion
 router.get("/cerrarsesion", userController.cerrarsesion);
+<<<<<<< HEAD
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 
 module.exports = router;

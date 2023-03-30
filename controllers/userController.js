@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require("fs");
 const path = require("path");
 const bcrypt = require('bcrypt')
@@ -95,6 +96,8 @@ const userController = {
 
 module.exports = userController;
 =======
+=======
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 
 //Librerías Principales
 const { validationResult } = require("express-validator");
@@ -276,4 +279,7 @@ const userController = {
 module.exports = userController;
 
 
+<<<<<<< HEAD
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2

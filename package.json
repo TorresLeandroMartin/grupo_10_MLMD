@@ -6,10 +6,13 @@
     "start": "nodemon bin/www"
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
   "dependencies": {
     "bcrypt": "^5.1.0",
     "bcryptjs": "^2.4.3",
 =======
+=======
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -17,6 +20,9 @@
     "bcrypt": "^5.1.0",
     "bcryptjs": "^2.4.3",
     "cookie": "^0.5.0",
+<<<<<<< HEAD
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
@@ -26,7 +32,11 @@
     "express-session": "^1.17.3",
     "express-validator": "^6.15.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "generator": "^0.0.4",
+=======
+    "generator": "^1.0.1",
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 =======
     "generator": "^1.0.1",
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
@@ -36,13 +46,19 @@
     "morgan": "~1.9.1",
     "multer": "^1.4.5-lts.1",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "nodemon": "^2.0.21"
 =======
+=======
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
     "mysql2": "^3.2.0",
     "node-modules": "^1.0.1",
     "nodemon": "^2.0.20",
     "sequelize": "5.21",
     "sequelize-cli": "^6.6.0"
+<<<<<<< HEAD
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
   }
 }

@@ -45,14 +45,20 @@ div .seccion-usuario{
     padding-top: 10px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 .seccion-usuario a{
     display: block;
     text-align: center;
     margin: 7px;
     padding: 2px
 }
+<<<<<<< HEAD
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 div img{
     display: flex;
@@ -72,6 +78,10 @@ p {
     font-size: 12px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 =======
 
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
@@ -200,8 +210,13 @@ nav {
     border: solid 1px #FF715B;
     border-radius: 1.2ch;
 <<<<<<< HEAD
+<<<<<<< HEAD
     font-size: 14px;
     padding: 5px 10px;
+=======
+    font-size: 16px;
+    padding: 6px 11px;
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 =======
     font-size: 16px;
     padding: 6px 11px;
@@ -211,10 +226,13 @@ nav {
 @media (max-width: 425px) {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     .categoria-pais {
         display: none;
     }
 
+=======
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 =======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
     main section article h4,

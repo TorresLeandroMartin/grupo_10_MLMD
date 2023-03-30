@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const productController = require("../controllers/productController");
 const authMiddleware = require('../middlewares/authMiddleware');
@@ -30,6 +31,8 @@ router.put("/edicion/:id", productController.editarProducto);
 // URL /productos/edicion/:id
 router.delete("/edicion/:id", productController.eliminarProducto);
 =======
+=======
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 const productController = require("../controllers/productController");
 const uploadFile = require("../middlewares/multerMiddleware");
 
@@ -80,6 +83,9 @@ router.get("/carrito", productController.carrito);
 
 
 
+<<<<<<< HEAD
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 
 module.exports = router;

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const multer = require("multer");
 const path = require("path");
 
@@ -16,6 +17,8 @@ const upload = multer({ storage });
 
 module.exports = upload;
 =======
+=======
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 
 const path = require("path");
 const multer = require("multer");
@@ -34,5 +37,9 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer({ storage });
 
+<<<<<<< HEAD
+module.exports = uploadFile;
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
 module.exports = uploadFile;
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2

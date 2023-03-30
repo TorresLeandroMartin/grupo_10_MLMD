@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require("fs");
 const path = require("path");
 
@@ -7,6 +8,8 @@ let productosJson = (path.join(__dirname, "../data/products.json"));
 let productos = JSON.parse(fs.readFileSync(productosJson, 'utf-8'));
 
 =======
+=======
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 // Librerías Principales
 
 const fs = require("fs");
@@ -20,11 +23,15 @@ const { Association } = require('sequelize');
 const db = require("../database/models")
 
 const Producto = db.Producto;
+<<<<<<< HEAD
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 
 
 const productController = {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   index: (req, res) => {
     res.render("catalogo");
@@ -127,6 +134,8 @@ const productController = {
 
 
 =======
+=======
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 
   // Detalle de producto 
 
@@ -278,5 +287,8 @@ const productController = {
 };
 
 
+<<<<<<< HEAD
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 module.exports = productController;

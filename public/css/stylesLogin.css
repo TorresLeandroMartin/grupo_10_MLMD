@@ -80,7 +80,11 @@ nav {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .top-main h3 {
+=======
+.top-main p {
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 =======
 .top-main p {
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
@@ -89,6 +93,10 @@ nav {
     text-align: center;
     color: #FF715B;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    font-size: 18px;
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 =======
     font-size: 18px;
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
@@ -1183,6 +1191,7 @@ nav {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     .carrito i {
         color: #FF715B;
         display: inline-flex;
@@ -1191,6 +1200,8 @@ nav {
         text-align: center;
         align-items: center;
     }
+=======
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 =======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 

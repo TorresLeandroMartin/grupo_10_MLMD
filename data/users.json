@@ -1,5 +1,6 @@
 [
 <<<<<<< HEAD
+<<<<<<< HEAD
   {
     "username": "prueba",
     "email": "prueba@email.com",
@@ -99,6 +100,8 @@
     "id": 11
   }
 =======
+=======
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
  {
   "id": 1,
   "imagen": "1678571539367_img.jpg",
@@ -117,5 +120,8 @@
   "categoria": "Vendedor",
   "contrasena": "$2a$10$s/.mYuFcBva9.Wy9mvxeW.g4OItjADPpO/yPBl19XU.A4ifpXDZze"
  }
+<<<<<<< HEAD
+>>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 ]
