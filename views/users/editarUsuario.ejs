@@ -61,7 +61,7 @@
                                     <%= errors.nombre.msg %>
                                 </div>
                                 <% } %>
-                            >
+                            
                             
                         </div>
                         <!--
@@ -113,14 +113,14 @@
                             <select   
                             name="categoria" 
                             class="campo-individual <%=locals.errors && errors.categoria ? 'is-invalid' : null %>"
-                            value="<%= locals.oldData ? oldData.categoria : user.categoria %>"
+                            value="<%= locals.oldData ? oldData.categoria : user.name %>"
                             >
                                 <option value=""> </option>
-                                <% let categorias=['Cliente', 'Vendedor' ]; %>
+                                <% let categorias=["Vendedor", "Cliente"]  %>
                                     <% for(const unaCategoria of categorias) { %>
                                         <option value="<%= unaCategoria %>">
                                             <%= locals.oldData && (unaCategoria==oldData.categoria) ? oldData.categoria
-                                                : user.categoria%>
+                                                : null%>
                                                 <%= unaCategoria %>
                                         </option>
                                         <% } %>
@@ -133,7 +133,7 @@
                         </div>
                     </div>
 
-                    
+                   
                         <div class="campos-de-relleno">
                             <div>
                             <p>Escribe tu contraseña</p>
@@ -150,6 +150,7 @@
                                 </div>
                                 <% } %>
                         </div>
+                       
                     </div>
 
                         <div class="campos-de-relleno">

@@ -13,7 +13,6 @@ router.get("/catalogo", productController.index);
 // URL / GET /productos/catalogo
 router.get('/catalogoLogueado', productController.logueado)
 
-
 // Crear producto
 
 // URL / GET /productos/crear
@@ -21,7 +20,6 @@ router.get("/crearProducto", productController.crear);
 
 // URL / POST /productos/crear
 router.post("/crear", uploadFile.single("imagenDelProducto"), productController.accionCrear);
-//router.post("/crear", productController.accionCrear);
 
 // Descripción
 
@@ -36,7 +34,7 @@ router.get("/edicion/:id", productController.editar);
 
 // URL / PUT /productos/edicion/:id
 router.put("/edicion/:id", uploadFile.single("imagenDelProducto"), productController.editarProducto);
-//router.put("/edicion/:id", productController.editarProducto);
+
 
 
 // DELETE

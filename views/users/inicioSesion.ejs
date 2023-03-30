@@ -30,7 +30,7 @@
                     <form action="/usuarios/iniciarsesion" method="POST" class="bottom-main">
 
                         <div class="campos-de-texto">
-                            <input name="email" type="text" placeholder="Nombre de Usuario o mail">
+                            <input name="email" type="text" placeholder="Email">
                             <% if (locals.errors && errors.email) { %>
                                 <div class="text-danger">
                                     <%= errors.email.msg %>
