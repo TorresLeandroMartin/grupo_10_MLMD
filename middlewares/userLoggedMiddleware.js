@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 function userLoggedMiddleware(req, res, next){
     res.locals.isLogged = false;
 
@@ -16,6 +17,8 @@ module.exports = userLoggedMiddleware
 =======
 =======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+>>>>>>> sprint6
 
 
 const db = require("../database/models");
@@ -38,8 +41,12 @@ const userLoggedMiddleware = async (req, res, next) => {
   };
   
 <<<<<<< HEAD
+<<<<<<< HEAD
   module.exports = userLoggedMiddleware;
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 =======
   module.exports = userLoggedMiddleware;
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+  module.exports = userLoggedMiddleware;
+>>>>>>> sprint6

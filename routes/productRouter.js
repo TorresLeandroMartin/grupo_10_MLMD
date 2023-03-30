@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const productController = require("../controllers/productController");
 const authMiddleware = require('../middlewares/authMiddleware');
@@ -33,6 +34,8 @@ router.delete("/edicion/:id", productController.eliminarProducto);
 =======
 =======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+>>>>>>> sprint6
 const productController = require("../controllers/productController");
 const uploadFile = require("../middlewares/multerMiddleware");
 
@@ -84,8 +87,11 @@ router.get("/carrito", productController.carrito);
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 =======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+>>>>>>> sprint6
 
 module.exports = router;

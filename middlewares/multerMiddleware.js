@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const multer = require("multer");
 const path = require("path");
 
@@ -19,6 +20,8 @@ module.exports = upload;
 =======
 =======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+>>>>>>> sprint6
 
 const path = require("path");
 const multer = require("multer");
@@ -38,8 +41,12 @@ const storage = multer.diskStorage({
 const uploadFile = multer({ storage });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = uploadFile;
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 =======
 module.exports = uploadFile;
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+module.exports = uploadFile;
+>>>>>>> sprint6

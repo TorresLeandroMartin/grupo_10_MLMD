@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 function guestMiddleware(req, res, next){
     if (req.session.userLogged){
         return res.redirect('/usuarios/profile');
@@ -11,6 +12,8 @@ module.exports = guestMiddleware
 =======
 =======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+>>>>>>> sprint6
 const db = require("../database/models");
 const Usuario = db.Usuario;
 
@@ -23,8 +26,12 @@ next();
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = guestMiddleware;
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 =======
 module.exports = guestMiddleware;
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+module.exports = guestMiddleware;
+>>>>>>> sprint6

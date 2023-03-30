@@ -7,6 +7,7 @@ const mainController = {
     homeLogin: (req, res) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
        res.render('indexLogueado',{
         user: req.session.userLogged
       });
@@ -14,6 +15,8 @@ const mainController = {
 =======
 =======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+>>>>>>> sprint6
 
         const emailSession = req.session.userLogged;
     
@@ -25,9 +28,12 @@ const mainController = {
 
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 =======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+>>>>>>> sprint6
 }
 
 module.exports = mainController;

@@ -46,10 +46,13 @@ div .seccion-usuario{
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+>>>>>>> sprint6
 .seccion-usuario a{
     display: block;
     text-align: center;
@@ -57,9 +60,12 @@ div .seccion-usuario{
     padding: 2px
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 =======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+>>>>>>> sprint6
 div img{
     display: flex;
     align-items: center;
@@ -79,12 +85,16 @@ p {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 =======
 
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+
+>>>>>>> sprint6
 /*//////////////////////////FIN PERFIL//////////////////////////////////////////////////////////////////////////////*/
 header {
     background-color: #242F62;
@@ -211,6 +221,7 @@ nav {
     border-radius: 1.2ch;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     font-size: 14px;
     padding: 5px 10px;
 =======
@@ -221,10 +232,15 @@ nav {
     font-size: 16px;
     padding: 6px 11px;
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+    font-size: 16px;
+    padding: 6px 11px;
+>>>>>>> sprint6
 }
 
 @media (max-width: 425px) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     .categoria-pais {
@@ -235,6 +251,8 @@ nav {
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 =======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+>>>>>>> sprint6
     main section article h4,
     nav ul {
         display: none;

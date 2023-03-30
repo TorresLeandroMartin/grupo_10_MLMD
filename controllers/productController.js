@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require("fs");
 const path = require("path");
 
@@ -10,6 +11,8 @@ let productos = JSON.parse(fs.readFileSync(productosJson, 'utf-8'));
 =======
 =======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+>>>>>>> sprint6
 // Librerías Principales
 
 const fs = require("fs");
@@ -24,13 +27,17 @@ const db = require("../database/models")
 
 const Producto = db.Producto;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 =======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+>>>>>>> sprint6
 
 
 const productController = {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   index: (req, res) => {
@@ -136,6 +143,8 @@ const productController = {
 =======
 =======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+>>>>>>> sprint6
 
   // Detalle de producto 
 
@@ -288,7 +297,10 @@ const productController = {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 =======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+>>>>>>> sprint6
 module.exports = productController;

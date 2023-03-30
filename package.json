@@ -7,12 +7,15 @@
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "dependencies": {
     "bcrypt": "^5.1.0",
     "bcryptjs": "^2.4.3",
 =======
 =======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+>>>>>>> sprint6
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -21,9 +24,12 @@
     "bcryptjs": "^2.4.3",
     "cookie": "^0.5.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 =======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+>>>>>>> sprint6
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "^3.1.8",
@@ -33,6 +39,7 @@
     "express-validator": "^6.15.0",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "generator": "^0.0.4",
 =======
     "generator": "^1.0.1",
@@ -40,6 +47,9 @@
 =======
     "generator": "^1.0.1",
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+    "generator": "^1.0.1",
+>>>>>>> sprint6
     "http-errors": "~1.6.3",
     "install": "^0.13.0",
     "method-override": "^3.0.0",
@@ -47,18 +57,24 @@
     "multer": "^1.4.5-lts.1",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "nodemon": "^2.0.21"
 =======
 =======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+>>>>>>> sprint6
     "mysql2": "^3.2.0",
     "node-modules": "^1.0.1",
     "nodemon": "^2.0.20",
     "sequelize": "5.21",
     "sequelize-cli": "^6.6.0"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 =======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+>>>>>>> sprint6
   }
 }

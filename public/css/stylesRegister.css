@@ -65,6 +65,7 @@ nav {
 .contenedor-main {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     background-color: #5c2792;
 =======
     background-color: #3f0d71;
@@ -72,6 +73,9 @@ nav {
 =======
     background-color: #3f0d71;
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+    background-color: #3f0d71;
+>>>>>>> sprint6
     margin: 0px 20px 20px 20px;
     padding-bottom: 50px;
 }
@@ -88,6 +92,7 @@ nav {
     text-align: center;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     margin-top: 20px;
     color: white;
     font-family: "Lilita One";
@@ -95,14 +100,19 @@ nav {
 =======
 =======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+>>>>>>> sprint6
     margin-top: 5%;
     color: white;
     font-family: "Lilita One";
     font-size: 150%;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 =======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+>>>>>>> sprint6
 }
 
 .linea-divisoria2 {
@@ -114,9 +124,12 @@ nav {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+>>>>>>> sprint6
 .letrasTipoArchivo{
     display: flex;
     color: white;
@@ -144,9 +157,12 @@ nav {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 =======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+>>>>>>> sprint6
 .bottom {
 
     display: flex;
@@ -154,6 +170,7 @@ nav {
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 .bottom p {
@@ -175,6 +192,8 @@ nav {
 =======
 =======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+>>>>>>> sprint6
 .bottom .campos-de-relleno {
     display: flex;
     flex-direction: column;
@@ -195,9 +214,12 @@ nav {
     width: 10%;
     margin: 5px;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
 =======
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+>>>>>>> sprint6
 }
 
 .boton2 {
@@ -212,6 +234,7 @@ nav {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 @media (max-width: 425px) {
 
 =======
@@ -222,6 +245,10 @@ nav {
 
 @media (max-width: 425px) {
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+
+@media (max-width: 425px) {
+>>>>>>> sprint6
 
     .categoria-pais {
         display: none;
@@ -1481,6 +1508,7 @@ nav {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 @media (min-width: 1700px) {
 =======
 /*@media (min-width: 1700px) {
@@ -1488,6 +1516,9 @@ nav {
 =======
 /*@media (min-width: 1700px) {
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+/*@media (min-width: 1700px) {
+>>>>>>> sprint6
 
     .sub-menu {
         position: absolute;
@@ -1501,6 +1532,7 @@ nav {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }*/
@@ -1508,3 +1540,6 @@ nav {
 =======
 }*/
 >>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
+=======
+}*/
+>>>>>>> sprint6
