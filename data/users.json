@@ -1,0 +1,20 @@
+[
+ {
+  "id": 1,
+  "imagen": "1678571539367_img.jpg",
+  "nombre": "Smartello",
+  "email": "smartv@gmail.com",
+  "telefono": "1132465798",
+  "categoria": "Vendedor",
+  "contrasena": "$2a$10$VaAAL8i43ZuJ4OUrU9tY6eBa.SixixMdtOAKvkI4GpE.8pJRYyE4q"
+ },
+ {
+  "id": 2,
+  "imagen": "1678968221274_img.png",
+  "nombre": "Aymara",
+  "email": "aymaraflaschka@gmail.com",
+  "telefono": "3718576477",
+  "categoria": "Vendedor",
+  "contrasena": "$2a$10$s/.mYuFcBva9.Wy9mvxeW.g4OItjADPpO/yPBl19XU.A4ifpXDZze"
+ }
+]

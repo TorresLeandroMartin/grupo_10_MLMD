@@ -1,0 +1,34 @@
+{
+  "name": "app1",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon bin/www"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "cookie": "^0.5.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-generator": "^4.16.1",
+    "express-session": "^1.17.3",
+    "express-validator": "^6.15.0",
+    "generator": "^1.0.1",
+    "http-errors": "~1.6.3",
+    "install": "^0.13.0",
+    "method-override": "^3.0.0",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.2.0",
+    "node-modules": "^1.0.1",
+    "nodemon": "^2.0.20",
+    "sequelize": "5.21",
+    "sequelize-cli": "^6.6.0"
+  }
+}
