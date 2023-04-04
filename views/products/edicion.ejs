@@ -27,9 +27,16 @@
                                 <input 
                                 type="file" 
                                 name="imagenDelProducto"
-                                >
-                                 <img src="/img/avatars/<%- productos.imagenDelProducto %>">    
-                            </div>
+                                value="<%= locals.oldData ? oldData.imagen : user.imagen %>"
+                                > 
+                                 <% if (locals.errors && errors.imagenDelProducto) { %>
+                                    <div class="texto-error">
+                                        <%= errors.imagenDelProducto.msg %>
+                                    </div>
+                                <% } %>
+                                <img src="/img/avatars/<%- productos.imagenDelProducto %>">
+                            </div>   
+                            
 
                             <div class="right-options">
                                 
@@ -38,44 +45,100 @@
                                   </i> </h2>
      
                                  <label for="estilo">Estilo</label>
-                                 <input type="text" name="estilo" id="estilo" value="<%- productos.estilo%>" required>
+                                 <input 
+                                 type="text" 
+                                 name="estilo" 
+                                 id="estilo" 
+                                 value="<%= locals.oldData ? oldData.estilo : productos.estilo %>" 
+                                 class="campo-individual <%=locals.errors && errors.estilo ? 'is-invalid' : null %>"
+                                 required>
+                                 
+                                 <% if (locals.errors && errors.estilo) { %>
+                                    <div class="texto-error">
+                                        <%=errors.estilo.msg%>
+                                    </div>
+                                    
+                                    <% } %>
+                                 
 
                                  <label for="nombre">Nombre</label>
-                                 <input type="text" name="nombre" id="nombre" value=" <%- productos.nombre%>" minlength="3"
-                                     required>
+                                 <input 
+                                 type="text" 
+                                 name="nombre" 
+                                 id="nombre" 
+                                 value="<%= locals.oldData ? oldData.nombre : productos.nombre %>"  
+                                 minlength="3"
+                                required>
+                            
+                                <% if (locals.errors && errors.nombre) { %>
+                                <div class="texto-error">
+                                    <%= errors.nombre.msg %>
+                                </div>
+                                <% } %>
 
-                                 <label for="nombre">Precio</label>
-                                 <input type="number" name="precio" id="precio" value="<%- productos.precio%>">
+                                 <label for="precio">Precio</label>
+                                 <input 
+                                 type="number" 
+                                 name="precio" 
+                                 id="precio" 
+                                 value="<%= locals.oldData ? oldData.precio : productos.precio %>" 
+                                 class="campo-individual <%=locals.errors && errors.precio ? 'is-invalid' : null %>">
+                                 <% if (locals.errors && errors.precio) { %>
+                                    <div class="texto-error">
+                                        <%= errors.precio.msg %>
+                                    </div>
+                                    <% } %>
 
                                  <label for="categoria">Categorías</label>
-                                 <select name="categoria" id="categoria" value="<%- productos.categoria%>" required>
-                                     <option value="Buzo">Buzos</option>
-                                     <option value="Calzado">Calzado</option>
-                                     <option value="Pantalón">Pantalón</option>
-                                     <option value="Remeras">Remeras</option>
-                                 </select>
+                                 <select name="categoria" id="categoria" value="<%= locals.oldData ? oldData.categoria : productos.categoria %>" required>
+                                    <% let categorias=['Buzos', 'Calzados' , 'Pantalones', 'Remeras' ]; %>
+                                        <% for(const unaCategoria of categorias) { %>
+                                            <option value="<%= unaCategoria %>">
+                                                <%= locals.oldData && (unaCategoria==oldData.categoria) ? oldData.categoria
+                                                    : null%>
+                                                    <%= unaCategoria %>
+                                            </option>
+                                            <% } %>
+                                </select>
+
+
                                  <label for="talle">Talle</label>
-                                 <select name="talle" id="talle" value=" <%- productos.talle%>" required>
-                                     <option value="Small">S</option>
-                                     <option value="Medium">M</option>
-                                     <option value="Large">L</option>
-                                     <option value="ExtraLarge">XL</option>
-                                 </select>
+                                 <select name="talle" id="talle" value="<%= locals.oldData ? oldData.talle : productos.talle %>" required>
+                                   <% let talles=['S', 'M' , 'L', 'XL' ]; %>
+                                    <% for(const unTalle of talles) { %>
+                                        <option value="<%= unTalle %>">
+                                            <%= locals.oldData && (unTalle==oldData.talle) ? oldData.talle
+                                                : null%>
+                                                <%= unTalle %>
+                                        </option>
+                                        <% } %>
+                                </select>
+
 
                                  <label for="color">Color</label>
-                                 <select name="color" id="color" value=" <%- productos.color%>" required>
-                                     <option value="Rosado">Rosa</option>
-                                     <option value="Blanco">Blanco</option>
-                                     <option value="Verde">Verde</option>
-                                     <option value="Negro">Negro</option>
-                                     <option value="Negro">Azul</option>
-                                     <option value="Negro">Rojo</option>
-                                     <option value="Negro">Celeste</option>
+                                 <select name="color" id="color" value="<%= locals.oldData ? oldData.color : productos.color %>" required>
+                                  
+                                    <% let colores=['Rosa', 'Blanco' , 'Verde', 'Negro', 'Azul', 'Rojo' ]; %>
+                                    <% for(const unColor of colores) { %>
+                                        <option value="<%= locals.oldData ? oldData.color : productos.color %>">
+                                            <%= locals.oldData && (unColor==oldData.color) ? oldData.color
+                                                : unColor %>
+                                                <%= unColor %>
+                                        </option>
+                                        <% } %>
+                            
                                  </select>
      
+
                                  <label for="descripcion">Descripción</label>
-                                 <textarea name="descripcion" id="descripcion"> <%- productos.descripcion%> </textarea required>
-                                 <div>
+                                 <textarea name="descripcion" id="descripcion"> <%= locals.oldData ? oldData.descripcion : productos.descripcion %>" </textarea required>
+                                    <% if (locals.errors && errors.descripcion) { %>
+                                        <div class="texto-error">
+                                            <%= errors.descripcion.msg %>
+                                        </div>
+                                        <% } %>
+                                 
+                                <div>
                     
                                      <button type="submit" class="boton-editar">Editar</button>
                      

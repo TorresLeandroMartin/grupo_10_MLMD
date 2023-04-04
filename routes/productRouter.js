@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const productController = require("../controllers/productController");
 const uploadFile = require("../middlewares/multerMiddleware");
+const validateProduct = require("../middlewares/validateProduct");
 
 
 
@@ -20,7 +21,7 @@ router.get('/catalogoLogueado', productController.logueado)
 router.get("/crearProducto", productController.crear);
 
 // URL / POST /productos/crear
-router.post("/crear", uploadFile.single("imagenDelProducto"), productController.accionCrear);
+router.post("/crear", uploadFile.single("imagenDelProducto"), validateProduct, productController.accionCrear);
 //router.post("/crear", productController.accionCrear);
 
 // Descripción
@@ -35,7 +36,7 @@ router.get("/descripcion/:id", productController.detalle);
 router.get("/edicion/:id", productController.editar);
 
 // URL / PUT /productos/edicion/:id
-router.put("/edicion/:id", uploadFile.single("imagenDelProducto"), productController.editarProducto);
+router.put("/edicion/:id", uploadFile.single("imagenDelProducto"), validateProduct, productController.editarProducto);
 //router.put("/edicion/:id", productController.editarProducto);
 
 

@@ -54,14 +54,12 @@
                             name="nombre" 
                             class="campo-individual <%=locals.errors && errors.nombre ? 'is-invalid' : null %>"
                             value="<%= locals.oldData ? oldData.nombre : user.nombre %>"
-                            
                             >
                             <% if (locals.errors && errors.nombre) { %>
                                 <div class="texto-error">
                                     <%= errors.nombre.msg %>
                                 </div>
                                 <% } %>
-                            >
                             
                         </div>
                         <!--
