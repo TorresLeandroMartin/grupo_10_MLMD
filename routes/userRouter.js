@@ -21,7 +21,7 @@ router.post("/crearcuenta", uploadFile.single("imagen"), validations, userContro
 router.get("/edicionUsuario/:id/", userController.edicion);
 
 // URL /usuarios/edicion/:id
-router.put("/edicionUsuario/:id/",uploadFile.single("imagen"), userController.editarUsuario);
+router.put("/edicionUsuario/:id/", uploadFile.single("imagen"), userController.editarUsuario);
 
 // Formulario de login
 router.get("/iniciarsesion", guestMiddleware, userController.iniciarSesion);

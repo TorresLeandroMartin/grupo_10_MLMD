@@ -14,7 +14,6 @@ router.get("/catalogo", productController.index);
 // URL / GET /productos/catalogo
 router.get('/catalogoLogueado', productController.logueado)
 
-
 // Crear producto
 
 // URL / GET /productos/crear

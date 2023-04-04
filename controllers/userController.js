@@ -144,6 +144,7 @@ const userController = {
 
 	editarUsuario: (req, res) => {
 
+
 		Usuario.update({
 			imagen: req.file.filename,
 			nombre: req.body.nombre,
