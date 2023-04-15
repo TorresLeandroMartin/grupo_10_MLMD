@@ -141,23 +141,25 @@ const userController = {
 
 			})
 	},
-
 	editarUsuario: (req, res) => {
 
+		const updatedValues = {};
+	
 
-		Usuario.update({
-			imagen: req.file.filename,
-			nombre: req.body.nombre,
-			email: req.body.email,
-			telefono: req.body.telefono,
-			categoria: req.body.categoria,
-			contrasena: bcryptjs.hashSync(req.body.contrasena, 10),
-		}, {
+		if (req.file) updatedValues.imagen = req.file.filename;
+		if (req.body.nombre) updatedValues.nombre = req.body.nombre;
+		if (req.body.email) updatedValues.email = req.body.email;
+		if (req.body.telefono) updatedValues.telefono = req.body.telefono;
+		if (req.body.categoria) updatedValues.categoria = req.body.categoria;
+		if (req.body.contrasena) updatedValues.contrasena = bcryptjs.hashSync(req.body.contrasena, 10);
+	
+
+		Usuario.update(updatedValues, {
 			where: {
 				id: req.params.id,
 			}
 		}).then(() => {
-			res.redirect("/usuarios/perfil/" + Usuario.findByPk(req.params.id));
+			res.redirect("/usuarios/perfil/" + req.params.id);
 		}).catch(error => res.send(error))
 	},
 

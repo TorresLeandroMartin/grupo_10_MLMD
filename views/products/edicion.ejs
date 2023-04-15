@@ -27,8 +27,9 @@
                                 <input 
                                 type="file" 
                                 name="imagenDelProducto"
-                                value="<%= locals.oldData ? oldData.imagen : user.imagen %>"
+                                value="<%= locals.oldData ? oldData.imagen : productos.imagenDelProducto %>"
                                 > 
+
                                  <% if (locals.errors && errors.imagenDelProducto) { %>
                                     <div class="texto-error">
                                         <%= errors.imagenDelProducto.msg %>
@@ -51,7 +52,7 @@
                                  id="estilo" 
                                  value="<%= locals.oldData ? oldData.estilo : productos.estilo %>" 
                                  class="campo-individual <%=locals.errors && errors.estilo ? 'is-invalid' : null %>"
-                                 required>
+                                 >
                                  
                                  <% if (locals.errors && errors.estilo) { %>
                                     <div class="texto-error">
@@ -83,19 +84,21 @@
                                  id="precio" 
                                  value="<%= locals.oldData ? oldData.precio : productos.precio %>" 
                                  class="campo-individual <%=locals.errors && errors.precio ? 'is-invalid' : null %>">
+
+                                 
                                  <% if (locals.errors && errors.precio) { %>
                                     <div class="texto-error">
                                         <%= errors.precio.msg %>
                                     </div>
                                     <% } %>
-
+                                    
                                  <label for="categoria">Categorías</label>
-                                 <select name="categoria" id="categoria" value="<%= locals.oldData ? oldData.categoria : productos.categoria %>" required>
+                                 <select name="categoria" id="categoria" value="<%= locals.oldData ? oldData.categoria : productos.categoria %>">
                                     <% let categorias=['Buzos', 'Calzados' , 'Pantalones', 'Remeras' ]; %>
                                         <% for(const unaCategoria of categorias) { %>
                                             <option value="<%= unaCategoria %>">
                                                 <%= locals.oldData && (unaCategoria==oldData.categoria) ? oldData.categoria
-                                                    : null%>
+                                                    : productos.categorias%>
                                                     <%= unaCategoria %>
                                             </option>
                                             <% } %>
@@ -103,12 +106,13 @@
 
 
                                  <label for="talle">Talle</label>
-                                 <select name="talle" id="talle" value="<%= locals.oldData ? oldData.talle : productos.talle %>" required>
-                                   <% let talles=['S', 'M' , 'L', 'XL' ]; %>
+                                 <select name="talle" id="talle" value="<%= locals.oldData ? oldData.talle : productos.talle %>">
+                                    
+                                    <option value=""> </option>
+                                    <% let talles=['S', 'M' , 'L', 'XL' ]; %>
                                     <% for(const unTalle of talles) { %>
                                         <option value="<%= unTalle %>">
-                                            <%= locals.oldData && (unTalle==oldData.talle) ? oldData.talle
-                                                : null%>
+                                            <%= locals.oldData && (unTalle==oldData.talle) ? oldData.talle : productos.talle%>
                                                 <%= unTalle %>
                                         </option>
                                         <% } %>
@@ -116,13 +120,14 @@
 
 
                                  <label for="color">Color</label>
-                                 <select name="color" id="color" value="<%= locals.oldData ? oldData.color : productos.color %>" required>
+                                 <select name="color" id="color" value="<%= locals.oldData ? oldData.color : productos.color %>">
                                   
+                                    <option value="<%= locals.oldData ? oldData.color : productos.color %>"> </option>
+                                   
                                     <% let colores=['Rosa', 'Blanco' , 'Verde', 'Negro', 'Azul', 'Rojo' ]; %>
                                     <% for(const unColor of colores) { %>
-                                        <option value="<%= locals.oldData ? oldData.color : productos.color %>">
-                                            <%= locals.oldData && (unColor==oldData.color) ? oldData.color
-                                                : unColor %>
+                                        <option value="<%= unColor %>">
+                                            <%= locals.oldData && (unColor==oldData.color) ? oldData.color : null%>
                                                 <%= unColor %>
                                         </option>
                                         <% } %>

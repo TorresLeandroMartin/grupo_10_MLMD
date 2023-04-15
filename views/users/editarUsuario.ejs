@@ -60,10 +60,6 @@
                                     <%= errors.nombre.msg %>
                                 </div>
                                 <% } %>
-<<<<<<< HEAD
-=======
-                            
->>>>>>> a36b9d1bd71a1c4c2e2ecb02717386b828119aa2
                             
                         </div>
                         <!--
@@ -115,7 +111,7 @@
                             <select   
                             name="categoria" 
                             class="campo-individual <%=locals.errors && errors.categoria ? 'is-invalid' : null %>"
-                            value="<%= locals.oldData ? oldData.categoria : user.name %>"
+                            value="<%= locals.oldData ? oldData.categoria : user.categoria %>"
                             >
                                 <option value=""> </option>
                                 <% let categorias=["Vendedor", "Cliente"]  %>
