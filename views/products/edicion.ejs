@@ -93,50 +93,107 @@
                                     <% } %>
                                     
                                  <label for="categoria">Categorías</label>
-                                 <select name="categoria" id="categoria" value="<%= locals.oldData ? oldData.categoria : productos.categoria %>">
-                                    <% let categorias=['Buzos', 'Calzados' , 'Pantalones', 'Remeras' ]; %>
-                                        <% for(const unaCategoria of categorias) { %>
-                                            <option value="<%= unaCategoria %>">
-                                                <%= locals.oldData && (unaCategoria==oldData.categoria) ? oldData.categoria
-                                                    : productos.categorias%>
-                                                    <%= unaCategoria %>
-                                            </option>
+                                 <select name="categoria" id="categoria">
+                                       <% let categorias=['Buzos', 'Calzados' , 'Pantalones', 'Remeras' ]; %>
+                                       <% for (let i = 0; i < categorias.length; i++) { %>
+                                    
+                                           <% if (categorias[i] == productos.categoria) { %>
+                                               <option value="<%= locals.oldData ? oldData.categoria : categorias[i] %>" selected>
+                                                 <%= locals.oldData && (unaCategoria == oldData.categoria) ? oldData.categoria
+                                                  : null%>
+                                                 <%= categorias[i] %>
+                                               
+                                               </option>
+    
+                                           <% } else { %>
+    
+                                               <option value="<%= locals.oldData ? oldData.categoria : categorias[i] %>">
+                                                   <%= locals.oldData && (unaCategoria == oldData.categoria) ? oldData.categoria
+                                                    : null%>
+                                                   <%= categorias[i] %>
+    
+                                               </option>
                                             <% } %>
-                                </select>
+                                        <% } %>
+            
+                                    </select>
+                                    <% if (locals.errors && errors.categoria) { %>
+                                        <div class="texto-error">
+                                            <%= errors.categoria.msg %>
+                                        </div>
+                                        <% } %>
+                               
 
 
                                  <label for="talle">Talle</label>
-                                 <select name="talle" id="talle" value="<%= locals.oldData ? oldData.talle : productos.talle %>">
+                                 <select name="talle" id="talle">
                                     
-                                    <option value=""> </option>
                                     <% let talles=['S', 'M' , 'L', 'XL' ]; %>
-                                    <% for(const unTalle of talles) { %>
-                                        <option value="<%= unTalle %>">
-                                            <%= locals.oldData && (unTalle==oldData.talle) ? oldData.talle : productos.talle%>
-                                                <%= unTalle %>
-                                        </option>
-                                        <% } %>
-                                </select>
+                                    <% for (let i = 0; i < talles.length; i++) { %>
+                                    
+                                        <% if (talles[i] == productos.talle) { %>
+                                            <option value="<%= locals.oldData ? oldData.talle : talles[i] %>" selected>
+                                              <%= locals.oldData && (untalle == oldData.talle) ? oldData.talle
+                                               : null%>
+                                              <%= talles[i] %>
+                                            
+                                            </option>
+ 
+                                        <% } else { %>
+ 
+                                            <option value="<%= locals.oldData ? oldData.talle : talles[i] %>">
+                                                <%= locals.oldData && (untalle == oldData.talle) ? oldData.talle
+                                                 : null%>
+                                                <%= talles[i] %>
+ 
+                                            </option>
+                                         <% } %>
+                                     <% } %>
+         
+                                 </select>
+                                 <% if (locals.errors && errors.talle) { %>
+                                    <div class="texto-error">
+                                        <%= errors.talle.msg %>
+                                    </div>
+                                    <% } %>
 
 
                                  <label for="color">Color</label>
-                                 <select name="color" id="color" value="<%= locals.oldData ? oldData.color : productos.color %>">
+                                 <select name="color" id="color">
                                   
-                                    <option value="<%= locals.oldData ? oldData.color : productos.color %>"> </option>
-                                   
+                        
                                     <% let colores=['Rosa', 'Blanco' , 'Verde', 'Negro', 'Azul', 'Rojo' ]; %>
-                                    <% for(const unColor of colores) { %>
-                                        <option value="<%= unColor %>">
-                                            <%= locals.oldData && (unColor==oldData.color) ? oldData.color : null%>
-                                                <%= unColor %>
-                                        </option>
-                                        <% } %>
-                            
+                                    <% for (let i = 0; i < colores.length; i++) { %>
+                                    
+                                        <% if (colores[i] == productos.color) { %>
+                                            <option value="<%= locals.oldData ? oldData.color : colores[i] %>" selected>
+                                              <%= locals.oldData && (uncolor == oldData.color) ? oldData.color
+                                               : null%>
+                                              <%= colores[i] %>
+                                            
+                                            </option>
+ 
+                                        <% } else { %>
+ 
+                                            <option value="<%= locals.oldData ? oldData.color : colores[i] %>">
+                                                <%= locals.oldData && (uncolor == oldData.color) ? oldData.color
+                                                 : null%>
+                                                <%= colores[i] %>
+ 
+                                            </option>
+                                         <% } %>
+                                     <% } %>
+         
                                  </select>
+                                 <% if (locals.errors && errors.color) { %>
+                                    <div class="texto-error">
+                                        <%= errors.color.msg %>
+                                    </div>
+                                    <% } %>
      
 
                                  <label for="descripcion">Descripción</label>
-                                 <textarea name="descripcion" id="descripcion"> <%= locals.oldData ? oldData.descripcion : productos.descripcion %>" </textarea required>
+                                 <textarea name="descripcion" id="descripcion"><%= locals.oldData ? oldData.descripcion : productos.descripcion %></textarea>
                                     <% if (locals.errors && errors.descripcion) { %>
                                         <div class="texto-error">
                                             <%= errors.descripcion.msg %>
@@ -145,7 +202,7 @@
                                  
                                 <div>
                     
-                                     <button type="submit" class="boton-editar">Editar</button>
+                                 <button type="submit" class="boton-editar">Editar</button>
                      
                              </div>
                              </form>

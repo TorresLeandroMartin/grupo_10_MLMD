@@ -109,19 +109,33 @@
                             <div>
                             <p>Categoría</p>
                             <select   
-                            name="categoria" 
-                            class="campo-individual <%=locals.errors && errors.categoria ? 'is-invalid' : null %>"
-                            value="<%= locals.oldData ? oldData.categoria : user.categoria %>"
-                            >
-                                <option value=""> </option>
+                              name="categoria" 
+                              class="campo-individual <%=locals.errors && errors.categoria ? 'is-invalid' : null %>"
+                              >
+
                                 <% let categorias=["Vendedor", "Cliente"]  %>
-                                    <% for(const unaCategoria of categorias) { %>
-                                        <option value="<%= unaCategoria %>">
-                                            <%= locals.oldData && (unaCategoria==oldData.categoria) ? oldData.categoria
-                                                : null%>
-                                                <%= unaCategoria %>
+                                <% for (let i = 0; i < categorias.length; i++) { %>
+                                    
+                                    <% if (categorias[i] == user.categoria) { %>
+                                        <option value="<%= locals.oldData ? oldData.categoria : categorias[i] %>" selected>
+                                          <%= locals.oldData && (unaCategoria == oldData.categoria) ? oldData.categoria
+                                           : null%>
+                                          <%= categorias[i] %>
+                                           
                                         </option>
-                                        <% } %>
+
+                                    <% } else { %>
+
+                                        <option value="<%= locals.oldData ? oldData.categoria : categorias[i] %>">
+                                            <%= locals.oldData && (unaCategoria == oldData.categoria) ? oldData.categoria
+                                             : null%>
+                                            <%= categorias[i] %>
+                                             
+                                        </option>
+                                      <% } %>
+                                
+                                   <% } %>
+                                
                             </select>
                             <% if (locals.errors && errors.categoria) { %>
                                 <div class="texto-error">
