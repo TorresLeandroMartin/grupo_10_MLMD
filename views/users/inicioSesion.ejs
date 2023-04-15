@@ -30,23 +30,40 @@
                     <form action="/usuarios/iniciarsesion" method="POST" class="bottom-main">
 
                         <div class="campos-de-texto">
-                            <input name="email" type="text" placeholder="Email">
+                            <input name="email" id="email" type="email" placeholder="Email">
+                            
+                            <p class="emailErrors is-invalid"></p>
                             <% if (locals.errors && errors.email) { %>
                                 <div class="text-danger">
                                     <%= errors.email.msg %>
+                                    
                                 </div>
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                
                                 <% } %>
                         </div>
 
                         <div class="campos-de-texto">
-                            <input name="contrasena" type="password" placeholder="Contraseña">
+                            <input name="contrasena" id="contraseña" type="password" placeholder="Contraseña" 
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+
                             <% if (locals.errors && errors.contrasena) { %>
                                 <div class="text-danger">
                                     <%= errors.contrasena.msg %>
                                 </div>
                                 <% } %>
-                        </div>
 
+                                <div class="mensajeError">
+                                    <p id="minuscula" ></p>
+                                    <p id="mayuscula" ></p>
+                                    <p id="numero" ></p>
+                                    <p id="cantidad"></p>
+                                </div>
+                                
+                        </div>
+                        
+                        
+                        
                         <div class="botonera">
                             <label>
                                 <input type="checkbox" name="recordar_email"> Recordar mi usuario
@@ -65,7 +82,7 @@
             <!-- footer -->
 
             <%- include("./partials/footer") %>
-
+    <script src="/js/loginValidation.js"></script>
     </body>
 
 </html>

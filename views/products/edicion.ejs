@@ -55,10 +55,10 @@
                                  
                                  <% if (locals.errors && errors.estilo) { %>
                                     <div class="texto-error">
-                                        <%=errors.estilo.msg%>
+                                        <%= errors.estilo.msg %>
                                     </div>
                                     
-                                    <% } %>
+                                 <% } %>
                                  
 
                                  <label for="nombre">Nombre</label>
@@ -98,8 +98,13 @@
                                                     : null%>
                                                     <%= unaCategoria %>
                                             </option>
-                                            <% } %>
-                                </select>
+                                            <% } %>  
+                                 </select>
+                                 <% if (locals.errors && errors.categoria) { %>
+                                    <div class="texto-error">
+                                        <%= errors.categoria.msg %>
+                                    </div>
+                                    <% } %>
 
 
                                  <label for="talle">Talle</label>
@@ -113,6 +118,11 @@
                                         </option>
                                         <% } %>
                                 </select>
+                                <% if (locals.errors && errors.talle) { %>
+                                    <div class="texto-error">
+                                        <%= errors.talle.msg %>
+                                    </div>
+                                    <% } %>
 
 
                                  <label for="color">Color</label>
@@ -128,6 +138,11 @@
                                         <% } %>
                             
                                  </select>
+                                 <% if (locals.errors && errors.color) { %>
+                                    <div class="texto-error">
+                                        <%= errors.color.msg %>
+                                    </div>
+                                    <% } %>
      
 
                                  <label for="descripcion">Descripción</label>
