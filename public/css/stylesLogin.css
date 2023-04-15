@@ -90,6 +90,14 @@ nav {
 
 .bottom-main {
     border: 2px dotted white;
+}
+
+.is-valid{
+    color : green;
+}
+
+.is-invalid{
+    color : rgb(173, 30, 30);
 
 }
 
