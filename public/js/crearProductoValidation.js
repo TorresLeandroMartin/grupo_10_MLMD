@@ -1,5 +1,7 @@
 window.addEventListener("load", () => {
 
+    let formulario = document.querySelector("#crearProducto");
+
     /*///////////////////////VALIDACIONES ///////////////////////////*/
 
     let errores = true;
@@ -143,6 +145,12 @@ window.addEventListener("load", () => {
 
             errores = false
         }
-    })
+    });
+
+    formulario.addEventListener("submit", function(e) {
+        if(errores){
+            e.preventDefault()
+        }
+    });
 
 })

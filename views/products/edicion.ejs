@@ -21,7 +21,7 @@
     
                         <!-- productos.id -->
                        
-                        <form action="/productos/edicion/ <%- productos.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+                        <form action="/productos/edicion/ <%- productos.id%>?_method=PUT" id="crearProducto" method="POST" enctype="multipart/form-data">
 
                             <div  class="left-options">
                                 <input 
@@ -53,6 +53,7 @@
                                  value="<%= locals.oldData ? oldData.estilo : productos.estilo %>" 
                                  class="campo-individual <%=locals.errors && errors.estilo ? 'is-invalid' : null %>"
                                  >
+                                 <p class="estiloErrors is-invalid"></p>
                                  
                                  <% if (locals.errors && errors.estilo) { %>
                                     <div class="texto-error">
@@ -69,7 +70,8 @@
                                  id="nombre" 
                                  value="<%= locals.oldData ? oldData.nombre : productos.nombre %>"  
                                  minlength="3"
-                                required>
+                                >
+                                <p class="nombreErrors is-invalid"></p>
                             
                                 <% if (locals.errors && errors.nombre) { %>
                                 <div class="texto-error">
@@ -85,7 +87,8 @@
                                  value="<%= locals.oldData ? oldData.precio : productos.precio %>" 
                                  class="campo-individual <%=locals.errors && errors.precio ? 'is-invalid' : null %>">
 
-                                 
+                                 <p class="precioError is-invalid"></p>
+
                                  <% if (locals.errors && errors.precio) { %>
                                     <div class="texto-error">
                                         <%= errors.precio.msg %>
@@ -94,7 +97,7 @@
                                     
                                  <label for="categoria">Categorías</label>
                                  <select name="categoria" id="categoria">
-                                       <% let categorias=['Buzos', 'Calzados' , 'Pantalones', 'Remeras' ]; %>
+                                       <% let categorias=['Buzos', 'Calzados' , 'Pantalones', 'Remeras']; %>
                                        <% for (let i = 0; i < categorias.length; i++) { %>
                                     
                                            <% if (categorias[i] == productos.categoria) { %>
@@ -117,6 +120,7 @@
                                         <% } %>
             
                                     </select>
+                                    <p class="categoriaErrors is-invalid"></p>
                                     <% if (locals.errors && errors.categoria) { %>
                                         <div class="texto-error">
                                             <%= errors.categoria.msg %>
@@ -151,6 +155,7 @@
                                      <% } %>
          
                                  </select>
+                                 <p class="talleErrors is-invalid"></p>
                                  <% if (locals.errors && errors.talle) { %>
                                     <div class="texto-error">
                                         <%= errors.talle.msg %>
@@ -185,26 +190,31 @@
                                      <% } %>
          
                                  </select>
+                                 <p class="colorErrors is-invalid"></p>
                                  <% if (locals.errors && errors.color) { %>
                                     <div class="texto-error">
                                         <%= errors.color.msg %>
                                     </div>
                                     <% } %>
-     
+                                
+                                
 
                                  <label for="descripcion">Descripción</label>
-                                 <textarea name="descripcion" id="descripcion"><%= locals.oldData ? oldData.descripcion : productos.descripcion %></textarea>
-                                    <% if (locals.errors && errors.descripcion) { %>
+                                 <textarea name="descripcion" id="descripcion">
+                                    <%= locals.oldData ? oldData.descripcion : productos.descripcion %>
+                                 </textarea>
+                            
+                                 <p class="descripcionErrors is-invalid"></p>
+
+                                 <% if (locals.errors && errors.descripcion) { %>
                                         <div class="texto-error">
                                             <%= errors.descripcion.msg %>
                                         </div>
                                         <% } %>
                                  
-                                <div>
-                    
-                                 <button type="submit" class="boton-editar">Editar</button>
-                     
-                             </div>
+                                 <div>
+                                  <button type="submit" class="boton-editar">Editar</button>
+                                 </div>
                              </form>
                         
                              <form action='/productos/edicion/<%-productos.id%>?_method=DELETE' method="POST">
@@ -222,6 +232,7 @@
             <!-- footer -->
 
             <%- include("./partials/footerLogueado") %>
+            <script src="/js/crearProductoValidation.js"></script>
 
     </body>
 

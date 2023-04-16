@@ -1,6 +1,6 @@
 
 window.addEventListener("load", () => {
-    //let formulario = document.querySelector("form.bottom-main")
+    let formulario = document.querySelector("form.bottom-main")
 
     /*///////////////////////VALIDACIONES ///////////////////////////*/
 
@@ -105,6 +105,12 @@ window.addEventListener("load", () => {
             
             errores = true;
         }
-    })
+    });
+    
+    formulario.addEventListener("submit", function(e) {
+        if(errores){
+            e.preventDefault()
+        }
+    });
 
 })

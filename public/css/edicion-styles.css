@@ -193,6 +193,14 @@ label {
     font-size: 20px;
 }
 
+.is-valid{
+    color : green;
+}
+
+.is-invalid{
+    color : rgb(173, 30, 30);
+}
+
 /* Fin de Body */
 
 @media (max-width: 425px) {
