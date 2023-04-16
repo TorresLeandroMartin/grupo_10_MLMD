@@ -6,6 +6,21 @@ window.addEventListener("load", () => {
 
     let errores = true;
 
+    let fileInput = document.getElementById("file");
+    let fileError = document.getElementById("file-error");
+
+    fileInput.addEventListener("change", function() {
+        let file = this.files[0];
+        let fileType = file.type;
+
+        if (!fileType.match(/image/(jpeg|png)/)) {
+        fileError.textContent = "Error: La extension del archivo es invalido. Por favor, seleccionar un archivo con extension JPEG o PNG.";
+        fileInput.value = "";
+        } else {
+        fileError.textContent = "";
+        }
+    });
+
     let estiloProducto = document.querySelector("#estilo");
 
     estiloProducto.addEventListener("blur", function() {
@@ -153,4 +168,4 @@ window.addEventListener("load", () => {
         }
     });
 
-})
+});

@@ -15,8 +15,7 @@
         <%- include("./partials/header") %>
 
             <main>
-                
-   
+
                 <div class="edita-archivo">
     
                         <!-- productos.id -->
@@ -29,6 +28,7 @@
                                 name="imagenDelProducto"
                                 value="<%= locals.oldData ? oldData.imagen : productos.imagenDelProducto %>"
                                 > 
+                                <div id="file-error" class="error is-invalid"></div>
 
                                  <% if (locals.errors && errors.imagenDelProducto) { %>
                                     <div class="texto-error">
