@@ -28,7 +28,7 @@
                                 name="imagenDelProducto"
                                 value="<%= locals.oldData ? oldData.imagen : productos.imagenDelProducto %>"
                                 > 
-                                <div id="file-error" class="error is-invalid"></div>
+                                <p class="imagenErrors is-invalid"></p>
 
                                  <% if (locals.errors && errors.imagenDelProducto) { %>
                                     <div class="texto-error">

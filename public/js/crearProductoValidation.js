@@ -6,20 +6,26 @@ window.addEventListener("load", () => {
 
     let errores = true;
 
-    let fileInput = document.getElementById("file");
-    let fileError = document.getElementById("file-error");
+    let img = document.querySelector("#imagen");
 
-    fileInput.addEventListener("change", function() {
-        let file = this.files[0];
-        let fileType = file.type;
+  img.addEventListener('change', function () {
 
-        if (!fileType.match(/image/(jpeg|png)/)) {
-        fileError.textContent = "Error: La extension del archivo es invalido. Por favor, seleccionar un archivo con extension JPEG o PNG.";
-        fileInput.value = "";
-        } else {
-        fileError.textContent = "";
-        }
-    });
+    let allowedExtensions = /(.jpg|.png|.gif)$/i;
+    if (!allowedExtensions.exec(img.value) && img.value == "") {
+
+      img.classList.add("is-invalid");
+      document.querySelector(".imagenErrors").innerHTML = ('Extensión no permitida. Utiliza: .jpg/.png/.gif.');
+
+      errores = true
+
+    } else {
+      img.classList.remove("is-invalid")
+      img.classList.add("is-valid")
+      document.querySelector(".nombreErrors").innerHTML = "";
+      errores = false
+    }
+
+  })
 
     let estiloProducto = document.querySelector("#estilo");
 

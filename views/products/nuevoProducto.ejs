@@ -29,17 +29,19 @@
                            
                             <button class="foto-producto" type="submit">
                               <input 
-                              class="letrasTipoArchivo <% locals.errors && errors.imagenDelProducto ? 'is-invalid' : null %>"
+                              class="letrasTipoArchivo"
                               type="file" 
                               name="imagenDelProducto" 
                               value="<%= locals.oldData ? oldData.imagen : null %>"
-                              accept="image/*">
+                              id="imagen">
                               <% if (locals.errors && errors.imagenDelProducto) { %>
                                 <div class="texto-error">
                                     <%= errors.imagenDelProducto.msg %>
                                 </div>
                                 <% } %>
                             </button>
+                            <p class="imagenErrors is-invalid"></p>
+
                             <div>
                                 <label for="estilo">Estilo</label>
                                 <input 
