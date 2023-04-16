@@ -8,13 +8,15 @@ window.addEventListener("load", () => {
 
     let correoElectronico = document.querySelector("#email");
 
+    document.getElementById("icono").style.display = "none"
+
     correoElectronico.addEventListener("blur", function() {
         if (correoElectronico.value == "" || correoElectronico.validity.typeMismatch){
-
+            correoElectronico.classList.remove("is-valid")
             correoElectronico.classList.add("is-invalid");
 
-            document.querySelector(".emailErrors").innerHTML = "Debes completar el campo email con un formato válido";
-
+            document.querySelector(".emailErrors #mensaje").innerHTML = "Debes completar el campo email con un formato válido";
+            document.getElementById("icono").style.display = "block"
             errores = true
         
             } else {
@@ -22,31 +24,36 @@ window.addEventListener("load", () => {
     
             correoElectronico.classList.remove("is-invalid")
             correoElectronico.classList.add("is-valid")
-            document.querySelector(".emailErrors").innerHTML = "";
+            document.getElementById("icono").style.display = "none"
+            document.querySelector(".emailErrors #mensaje").innerHTML = "";
 
             errores = false
         }
     })
 
+    
+
     let contraseña = document.querySelector("#contraseña");
+
 
     contraseña.addEventListener("blur", function() {
 
         var minuscula = document.getElementById("minuscula");
         var mayuscula = document.getElementById("mayuscula");
-        var numero = document.getElementById("numero");
+        var numero = document.getElementById("numero")
         var cantidad = document.getElementById("cantidad");
-
-
+    
 
         if (contraseña.value.length <= 8 ) {
             cantidad.classList.add('is-invalid'); 
+            
             document.querySelector(".mensajeError #cantidad").innerHTML = "La contraseña debe contener al menos 8 caracteres";
             
             errores = true;
         } else {
             cantidad.classList.remove('is-invalid');
             cantidad.classList.add('is-valid');
+
             document.querySelector(".mensajeError #cantidad").innerHTML = " ";
             
             errores = false;
@@ -57,6 +64,7 @@ window.addEventListener("load", () => {
         if (contraseña.value.match(minusculas) ) {
             minuscula.classList.add('is-valid');
             document.querySelector(".mensajeError #minuscula").innerHTML = " ";
+            
             
             errores = false;
         } else {
@@ -72,6 +80,7 @@ window.addEventListener("load", () => {
             mayuscula.classList.add('is-valid');
             document.querySelector(".mensajeError #mayuscula").innerHTML = " ";
             
+            
             errores = false;
 
         } else {
@@ -84,12 +93,14 @@ window.addEventListener("load", () => {
 
         if (contraseña.value.match(numeros) ) {
             numero.classList.add('is-valid');
+           
             document.querySelector(".mensajeError #numero").innerHTML = " ";
             
             errores = false;
 
         } else {
             numero.classList.add('is-invalid'); 
+           
             document.querySelector(".mensajeError #numero").innerHTML = "La contraseña debe contener al menos un número";
             
             errores = true;

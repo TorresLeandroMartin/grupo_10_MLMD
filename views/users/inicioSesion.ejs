@@ -30,15 +30,19 @@
                     <form action="/usuarios/iniciarsesion" method="POST" class="bottom-main">
 
                         <div class="campos-de-texto">
-                            <input name="email" id="email" type="email" placeholder="Email">
                             
-                            <p class="emailErrors is-invalid"></p>
+                            <input name="email" id="email" type="email" placeholder="Email">
+                            <i id="icono" class="fa-solid fa-circle-exclamation is-invalid"></i>
+                            
+                            <div class="emailErrors is-invalid">
+                            <p id="mensaje"></p>
+                            </div>
+
                             <% if (locals.errors && errors.email) { %>
                                 <div class="text-danger">
                                     <%= errors.email.msg %>
                                     
                                 </div>
-                                <i class="fa-solid fa-circle-exclamation"></i>
                                 
                                 <% } %>
                         </div>
@@ -46,6 +50,8 @@
                         <div class="campos-de-texto">
                             <input name="contrasena" id="contraseña" type="password" placeholder="Contraseña" 
                             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                            
+                            
 
                             <% if (locals.errors && errors.contrasena) { %>
                                 <div class="text-danger">
@@ -54,6 +60,7 @@
                                 <% } %>
 
                                 <div class="mensajeError">
+                        
                                     <p id="minuscula" ></p>
                                     <p id="mayuscula" ></p>
                                     <p id="numero" ></p>

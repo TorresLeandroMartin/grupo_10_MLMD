@@ -94,6 +94,7 @@ nav {
 
 .is-valid{
     color : green;
+    background-color: greenyellow;
 }
 
 .is-invalid{
