@@ -17,16 +17,27 @@ body {
 
 main {
     display: flex;
-    background-color: var(--light-gray);
     width: 90%;
-    margin: auto
-}
-
-div .seccion-usuario{
+    margin: auto;
+    
     display: flex;
     align-items: center;
-    width: 60%
+    justify-content: center;
 }
+
+main .width {
+    
+    background-color: var(--light-gray);
+    padding: 10px;
+}
+
+.seccion-usuario{
+    
+    /* border: 1px solid red; */
+
+}
+
+
 
 .seccion-usuario p{
     display: block;
@@ -198,7 +209,7 @@ nav {
 
 @media (max-width: 425px) {
 
-    main section article h4,
+    main section div h4,
     nav ul {
         display: none;
     }

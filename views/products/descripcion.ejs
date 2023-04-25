@@ -23,7 +23,7 @@
                 <section class="seccion1">
 
                     <div class="imagen">
-                        <img src="/img/ropa/nikeAir1.jpeg" class='snikers' alt="snikers">
+                        <img src="/img/avatars/<%- productos.imagenDelProducto %>" class='snikers' alt="snikers">
                     </div>
 
                     <div class="bajo-foto">
@@ -33,20 +33,20 @@
                             <a class='home-descriptionPage' href="#"> DescriptionPage</a>
                         </div>
 
-                        <h1>---PRODUCT NAME---</h1>
+                        <h1><%= productos.nombre %></h1>
 
                         <div class="precio-cuotas">
 
-                            <h3 class="precio">$ XXXX,XX</h3>
-                            <p class="cuotas">X Cuotas sin interes de $XXXX,XX</p>
+                            <h3 class="precio">$ <%= productos.precio %></h3>
+                            <!-- <p class="cuotas">X Cuotas sin interes de $XXXX,XX</p> -->
 
                         </div>
 
-                        <button class="myButton">S</button>
+                        <!-- <button class="myButton">S</button>
                         <button class="myButton">M</button>
-                        <button class="myButton">L</button>
+                        <button class="myButton">L</button> -->
 
-                        <div class="accionables-bajo-foto">
+                        <!-- <div class="accionables-bajo-foto">
 
                             <span class="contador">
                                 <p>-</p>
@@ -56,7 +56,7 @@
 
                             <button class="agregar-al-carrito">AGREGAR AL CARRITO</button>
 
-                        </div>
+                        </div> -->
                     </div>
                 </section>
 
@@ -66,21 +66,23 @@
 
                     <div class="descripcion-cuidados">
 
+                        <h5>Descripcion</h5>
                         <span class="descripcion">
-                            <h5>Descripcion</h5>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim dolorem tempora ad,
-                                blanditiis.
-                            </p>
+                            <p><%= productos.descripcion %></p>
+                            <p>Talle: <%= productos.talle %></p>
+                            <p>Categoria: <%= productos.categoria %></p>
+                            <p>Estilo: <%= productos.estilo %></p>
+                            <p>Color: <%= productos.color %></p>
                         </span>
-                        <span class="cuidados">
+                        <!-- <span class="cuidados">
                             <h5>Cuidados</h5>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim dolorem tempora ad,
                                 blanditiis.
                             </p>
-                        </span>
+                        </span> -->
 
                     </div>
-                    <table class="tabla">
+                    <!-- <table class="tabla">
 
                         <thead>
                             <tr>
@@ -122,7 +124,7 @@
                                 <td>&nbsp;54cm</td>
                             </tr>
                         <tbody>
-                    </table>
+                    </table> -->
 
                 </section>
 

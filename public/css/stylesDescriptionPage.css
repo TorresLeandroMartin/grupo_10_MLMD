@@ -183,19 +183,25 @@ h1 {
 }
 
 .informacion-relevante {
+
+    /* border: 1px solid red; */
+
     font-size: 8px;
-    padding: 5%;
+    /* padding: 5%; */
     background-color: #C0C0C0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .descripcion-cuidados {
+
+    /* border: 1px solid black; */
+
     font-size: 12px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
+    justify-content: center;
     inline-size: 200px;
 }
 

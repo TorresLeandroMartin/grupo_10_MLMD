@@ -68,18 +68,18 @@ nav {
 /* Body */
 
 .foto-producto {
-    border: none;
+    /* border: none;
     padding: 50% 40%;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; */
 }
 
 .foto-producto:hover {
-    background-color: #FF715B;
+    /* background-color: #FF715B;
     opacity: 60%;
     font-size: 70%;
     margin: auto;
-    padding: 50% 0%;
+    padding: 50% 0%; */
 }
 
 .subir {
@@ -117,10 +117,24 @@ label{
     box-shadow: inset 0 100px #33007f;
 }
 
-div .crea-archivo {
+.crea-archivo {
+
+    /* border: 1px solid red; */
+
     display: flex;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
+
+}
+
+form {
+
+    /* border: 1px solid blue; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 main h2 {
@@ -131,6 +145,7 @@ main h2 {
 }
 
 div .left-options {
+
     display: block;
     text-align: center;
     width: 90%;
@@ -138,16 +153,26 @@ div .left-options {
     margin: auto;
 }
 
-div .right-options {
-    display: block;
-    text-align: center;
-    margin-left: 10px;
-    padding: 5px 10px;
+.right-options {
+
+    /* border: 1px dotted black; */
+
+    /* text-align: center; */
+    /* margin-left: 10px; */
+    /* padding: 5px 10px; */
     font-family: "Monserrat";
     font-weight: bold;
     font-size: 15px;
     color: var(--gray-violet);
-    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.size {
+    width: fit-content;
 }
 
 .right-options input {
@@ -254,17 +279,17 @@ form select {
     }
 
     .foto-producto {
-        border: none;
+        /* border: none;
         padding:50% 40%;
-        border-radius: 5px;
+        border-radius: 5px; */
     }
     
     .foto-producto:hover {
-        background-color: #FF715B;
+        /* background-color: #FF715B;
         opacity: 60%;
         font-size: 80%;
         margin: auto;
-        padding: 50% 10%;
+        padding: 50% 10%; */
     }
 
 
@@ -569,17 +594,17 @@ form select {
     }
 
     .foto-producto {
-        border: none;
+        /* border: none;
         padding:50% 40%;
-        border-radius: 5px;
+        border-radius: 5px; */
     }
     
     .foto-producto:hover {
-        background-color: #FF715B;
+        /* background-color: #FF715B;
         opacity: 60%;
         font-size: 70%;
         margin: auto;
-        padding: 50% 20%;
+        padding: 50% 20%; */
     }
 
     .subir {
@@ -589,8 +614,8 @@ form select {
     }
 
     div .right-options{
-        width: 60%;
-        margin: auto;
+        /* width: 60%;
+        margin: auto; */
     }
 
     .boton-crear {
@@ -879,9 +904,7 @@ form select {
 
     .crea-archivo {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        margin: 10px;
     }
 
     .left-options {
@@ -892,32 +915,32 @@ form select {
     }
 
     .foto-producto {
-        border: none;
+        /* border: none;
         padding:50% 40%;
-        border-radius: 5px;
+        border-radius: 5px; */
     }
     
     .foto-producto:hover {
-        background-color: #FF715B;
+        /* background-color: #FF715B;
         opacity: 60%;
         font-size: 70%;
         margin: auto;
-        padding: 50% 15%;
+        padding: 50% 15%; */
     }
 
     .right-options {
-        align-items: center;
+        /* align-items: center;
         flex-direction: column;
         font-size: 22px;
         padding: 20px;
-        text-align: left;
+        text-align: left; */
     }
 
     div .right-options{
-        display: inherit;
+        /* display: inherit;
         width: 60%;
         margin: 0% 10% 2% 0%;
-        padding: 20px; 
+        padding: 20px;  */
     }
 
 
@@ -1184,15 +1207,13 @@ form select {
     }
 
     .crea-archivo {
-        width: 70%;
         align-items: center;
-        justify-content: space-between;
         margin: auto;
     }
 
     .right-options {
-        max-width: 530px;
-        text-align: left;
+        /* max-width: 530px;
+        text-align: left; */
     }
 
     footer {

@@ -21,12 +21,15 @@ const productController = {
   detalle: (req, res) => {
     const emailSession = req.session.userLogged;
 
+    let productoElegido = Producto.findByPk(req.params.id)
+    console.log(productoElegido);
+
     Producto.findByPk(req.params.id)
       .then(function (productos) {
         if (emailSession) {
-          res.render("./descripcion", { user: emailSession, productos})
+          res.render("descripcion", { user: emailSession, productos})
         } else {
-          res.status(404).send('Producto no encontrado')
+          res.status(404).send('Producto no encontrado / Usuario no logueado')
         }
       })
   },

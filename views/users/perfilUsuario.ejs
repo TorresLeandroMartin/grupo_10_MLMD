@@ -21,8 +21,8 @@
                 <main class="perfil-usuario"> 
                     
                     <%# usuario.forEach(usuarioLista => { %>
-                    <article class="seccion-usuario">
-                       
+                    <!-- <article class="seccion-usuario"> -->
+                       <div class="seccion-usuario width">
                         <h3>Perfil de Usuario</h3> 
                         <p>Hola <%=  user.nombre%> </p> 
                         <p> <%=  user.email %> </p> 
@@ -30,11 +30,12 @@
                           <img class="foto-perfil" src="/img/avatars/<%= user.imagen %>">
                         </div>
                         
-                          <a href="/usuarios/edicionUsuario/<%- user.id %>">
-                            <button class="boton2">Editar</button>
+                          <a class="boton2" href="/usuarios/edicionUsuario/<%- user.id %>">
+                            Editar
+                            <!-- <button class="boton2">Editar</button> -->
                           </a>
-                        
-                    </article>
+                        </div>
+                    <!-- </article> -->
                     <%# }) %>
                 </main>
 

@@ -1,191 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <!-- head -->
 
 <%- include("./partials/head") %>
 
-    <!-- hoja de estilos -->
+  <!-- hoja de estilos -->
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link href="/css/creacion-styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link href="/css/creacion-styles.css" rel="stylesheet" />
 
+  <body>
+    <!-- header -->
 
-    <body>
+    <%- include("./partials/header") %>
 
-        <!-- header -->
+      <main>
+        <div class="crea-archivo">
+          <form action="/productos/crear" id="crearProducto" method="POST" enctype="multipart/form-data">
+            <div class="right-options">
+              <h2>Creación de Productos</h2>
 
-        <%- include("./partials/header") %>
+              <button class=" size foto-producto" type="submit">
+                <input class="" type="file" name="imagenDelProducto"
+                  value="<%= locals.oldData ? oldData.imagen : null %>" id="imagen" />
+                <% if (locals.errors && errors.imagenDelProducto) { %>
+                  <div class="texto-error">
+                    <%= errors.imagenDelProducto.msg %>
+                  </div>
+                  <% } %>
+              </button>
 
-            <main>
-                
-                <div class="crea-archivo">
-                    
-                    <form action="/productos/crear" id="crearProducto" method="POST" enctype="multipart/form-data">
+              <div class="imagenErrors">
+                <p id="formatoImagen"></p>
+                <p id="tamañoImagen"></p>
+                <p id="archivoImagen"></p>
+              </div>
 
-                        <div class="right-options">
+                <label for="estilo">Estilo</label>
+                <input type="text" name="estilo" id="estilo" required />
+                <p class="estiloErrors is-invalid"></p>
+                <% if (locals.errors && errors.estilo) { %>
+                  <div class="texto-error">
+                    <%= errors.estilo.msg %>
+                  </div>
+                  <% } %>
 
-                           <h2> Creación de Productos </h2>
-                           
-                            <button class="foto-producto" type="submit">
-                              <input 
-                              class="letrasTipoArchivo"
-                              type="file" 
-                              name="imagenDelProducto" 
-                              value="<%= locals.oldData ? oldData.imagen : null %>"
-                              id="imagen">
-                              <% if (locals.errors && errors.imagenDelProducto) { %>
-                                <div class="texto-error">
-                                    <%= errors.imagenDelProducto.msg %>
-                                </div>
+              <label for="nombre">Nombre del producto</label>
+              <input type="text" name="nombre" id="nombre" minlength="5" required />
+              <p class="nombreErrors is-invalid"></p>
+              <% if (locals.errors && errors.nombre) { %>
+                <div class="texto-error">
+                  <%= errors.nombre.msg %>
+                </div>
+                <% } %>
+
+                  <label for="precio">Precio</label>
+                  <input type="number" name="precio" id="precio" required />
+                  <p class="precioError is-invalid"></p>
+                  <% if (locals.errors && errors.precio) { %>
+                    <div class="texto-error">
+                      <%= errors.precio.msg %>
+                    </div>
+                    <% } %>
+
+                      <label for="categoria">Categorías</label>
+                      <select name="categoria" id="categoria" required>
+                        <% let categorias=['', 'Buzos' , 'Calzados' , 'Pantalones' , 'Remeras' ] %>
+                          <% for(const unaCategoria of categorias) { %>
+                            <option value="<%= unaCategoria %>">
+                              <%= locals.oldData && (unaCategoria==oldData.categoria) ? oldData.categoria : null%>
+                                <%= unaCategoria %>
+                            </option>
+
+                            <% } %>
+                      </select>
+                      <p id="categoriaErrors" class="is-invalid"></p>
+
+                      <% if (locals.errors && errors.categoria) { %>
+                        <div class="texto-error">
+                          <%= errors.categoria.msg %>
+                        </div>
+                        <% } %>
+
+                          <label for="talles">Talles</label>
+
+                          <select name="talle" id="talle" required>
+                            <% let talles=['', 'S' , 'M' , 'L' , 'XL' ] %>
+                              <% for(const unTalle of talles) { %>
+                                <option value="<%= unTalle %>">
+                                  <%= locals.oldData && (unTalle==oldData.talle) ? oldData.talle : null%>
+                                    <%= unTalle %>
+                                </option>
                                 <% } %>
-                            </button>
-                            <p class="imagenErrors is-invalid"></p>
-
-                            <div>
-                                <label for="estilo">Estilo</label>
-                                <input 
-                                type="text" 
-                                name="estilo" 
-                                id="estilo"
-                                required
-                                >
-                                <p class="estiloErrors is-invalid"></p>
-                                <% if (locals.errors && errors.estilo) { %>
-                                    <div class="texto-error">
-                                        <%= errors.estilo.msg %>
-                                    </div>
-                                <% } %>
+                          </select>
+                          <p id="talleErrors" class="is-invalid"></p>
+                          <% if (locals.errors && errors.talle) { %>
+                            <div class="texto-error">
+                              <%= errors.talle.msg %>
                             </div>
-                           
-                            <label for="nombre">Nombre del producto</label>
-                            <input 
-                            type="text" 
-                            name="nombre" 
-                            id="nombre" 
-                            minlength="5" 
-                            required>
-                            <p class="nombreErrors is-invalid"></p>
-                            <% if (locals.errors && errors.nombre) { %>
-                                <div class="texto-error">
-                                    <%= errors.nombre.msg %>
-                                </div>
                             <% } %>
-                            
 
-                            <label for="precio">Precio</label>
-                            <input 
-                            type="number" 
-                            name="precio" 
-                            id="precio" 
-                            required>
-                            <p class="precioError is-invalid"></p>
-                            <% if (locals.errors && errors.precio) { %>
+                              <label for="color">Color</label>
+                              <select name="color" id="color" required>
+                                <% let colores=['', 'Rosa' , 'Blanco' , 'Verde' , 'Negro' , 'Azul' , 'Rojo' ] %>
+                                  <% for(const unColor of colores) { %>
+                                    <option value="<%= unColor %>">
+                                      <%= locals.oldData && (unColor==oldData.color) ? oldData.color : null%>
+                                        <%= unColor %>
+                                    </option>
+                                    <% } %>
+                              </select>
+                              <p id="colorErrors" class="is-invalid"></p>
+                              <% if (locals.errors && errors.color) { %>
                                 <div class="texto-error">
-                                    <%= errors.precio.msg %>
+                                  <%= errors.color.msg %>
                                 </div>
                                 <% } %>
 
-
-                            <label for="categoria">Categorías</label>
-                            <select name="categoria" id="categoria"  required>
-    
-                                <% let categorias=['', 'Buzos', 'Calzados' , 'Pantalones', 'Remeras'] %>
-                                    <% for(const unaCategoria of categorias) { %>
-                                        <option value="<%= unaCategoria %>">
-                                            
-                                            <%= locals.oldData && (unaCategoria==oldData.categoria) ? oldData.categoria
-                                                : null%>
-                                                <%= unaCategoria %>
-                                                
-                                        </option>
-                                        
-                                        <% } %>
-                                    
-                            </select>
-                            <p id="categoriaErrors" class="is-invalid"></p>
-                            
-                            <% if (locals.errors && errors.categoria) { %>
-                                <div class="texto-error">
-                                    <%= errors.categoria.msg %>
-                                </div>
-                            <% } %>
-                            
-                            
-                            <label for="talles">Talles</label>
-                            
-                            <select name="talle" id="talle" required>
-                                <% let talles=['', 'S', 'M' , 'L', 'XL' ] %>
-                            
-                                <% for(const unTalle of talles) { %>
-                                    <option value="<%= unTalle %>">
-                                        <%= locals.oldData && (unTalle==oldData.talle) ? oldData.talle
-                                            : null%>
-                                            <%= unTalle %>
-                                    </option>
-                                    <% } %>
-                                
-                            </select>
-                            <p id="talleErrors" class="is-invalid"></p>
-                            <% if (locals.errors && errors.talle) { %>
-                                <div class="texto-error">
-                                    <%= errors.talle.msg %>
-                                </div>
-                            <% } %>
-                            
-                            <label for="color">Color</label>
-                            <select name="color" id="color" required>
-                                <% let colores=['', 'Rosa', 'Blanco' , 'Verde', 'Negro', 'Azul', 'Rojo'] %>
-                                <% for(const unColor of colores) { %>
-                                    <option value="<%= unColor %>">
-                                        <%= locals.oldData && (unColor==oldData.color) ? oldData.color
-                                            : null%>
-                                            <%= unColor %>
-                                    </option>
-                                    <% } %>
-                        
-                            </select>
-                            <p id="colorErrors" class="is-invalid"></p>
-                            <% if (locals.errors && errors.color) { %>
-                                <div class="texto-error">
-                                    <%= errors.color.msg %>
-                                </div>
-                            <% } %>
-
-                            <div >
-                                <label for="descripcion">Descripción</label>
-                                <textarea name="descripcion" id="descripcion" required>
+                                    <label for="descripcion">Descripción</label>
+                                    <textarea name="descripcion" id="descripcion" required>
                                     <% if (locals.errors && errors.descripcion) { %>
                                         <div class="texto-error">
                                             <%= errors.descripcion.msg %>
                                         </div>
                                         <% } %>
                                 </textarea>
-                                <p id="descripcionErrors" class="is-invalid"></p>
-                                <% if (locals.errors && errors.descripcion) { %>
-                                    <div class="texto-error">
+                                    <p id="descripcionErrors" class="is-invalid"></p>
+                                    <% if (locals.errors && errors.descripcion) { %>
+                                      <div class="texto-error">
                                         <%= errors.descripcion.msg %>
-                                    </div>
-                                    <% } %>
-                                
-                            </div>
-                           
-                            
+                                      </div>
+                                      <% } %>
 
-                            <button class="boton-crear" type="submit">Publicar</button>
-                        </div>
-                    </form>
-                    
-                </div>
+                                  <button class="boton-crear" type="submit">Publicar</button>
+            </div>
+          </form>
+        </div>
+      </main>
 
+      <!-- footer -->
 
-            </main>
+      <%- include("./partials/footerLogueado") %>
 
-            <!-- footer -->
-
-            <%- include("./partials/footerLogueado") %>
-            
-            <script src="/js/crearProductoValidation.js"></script>
-    </body>
+        <script src="/js/crearProductoValidation.js"></script>
+  </body>
 
 </html>
