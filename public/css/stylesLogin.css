@@ -24,6 +24,12 @@ header {
     margin-bottom: 5%;
     box-sizing: border-box;
 }
+.header-tres {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+    align-items: center;
+}
 
 .logo {
     width: 15%;
@@ -172,9 +178,10 @@ nav {
         display: none;
     }
 
+
     .header-tres {
-        margin: 0px 20px 5px 0px;
-        padding: 30px 0px;
+        margin: 0px;
+        padding: 5px 30px 0px;
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-around;
@@ -184,6 +191,7 @@ nav {
     
 
     .buscador-bar {
+        width: 200px;
         display: flex;
         position: relative;
         align-items: center;
@@ -216,11 +224,7 @@ nav {
     }
 
     .carrito i {
-        color: #FF715B;
-        display: inline;
         padding-right: 18px;
-        text-align: center;
-        align-items: center;
     }
 
     footer {
@@ -358,7 +362,7 @@ nav {
 
     .header-tres {
         margin: 0px;
-        padding: 5px 100px 0px 100px;
+        padding: 5px 30px 0px;
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-around;
@@ -375,8 +379,8 @@ nav {
         font-family: 'Montserrat', sans-serif;
         margin-right: 10px;
         padding-left: 5px;
-        width: 250px;
-        height: 33px;
+        width: 220px;
+        height: 30px;
         border-radius: 1ch;
     }
 
@@ -398,10 +402,7 @@ nav {
     }
 
     .carrito i {
-        color: #FF715B;
-        display: inline-flex;
-        text-align: center;
-        align-items: center;
+        margin-left: 12px;
     }
 
     .user i {
@@ -426,7 +427,6 @@ nav {
 
     nav {
         background-color: #394476;
-        height: 60px;
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -624,10 +624,10 @@ nav {
 
     .buscador-bar input {
         font-family: 'Montserrat', sans-serif;
-        margin-right: 10px;
+        margin-right: 5px;
         padding-left: 5px;
-        width: 250px;
-        height: 33px;
+        width: 200px;
+        height: 30px;
         border-radius: 1ch;
     }
 
@@ -648,12 +648,9 @@ nav {
         align-items: center;
     }
 
-    .carrito i {
-        color: #FF715B;
-        display: inline-flex;
-        margin-left: 12px;
-        text-align: center;
-        align-items: center;
+    .carrito i { 
+        font-size: 20px;
+        margin-left: 5px;
     }
 
     .user i {
@@ -673,17 +670,6 @@ nav {
         margin-right: 35px;
         display: inline-flex;
         text-align: center;
-        align-items: center;
-    }
-
-    nav {
-        background-color: #394476;
-        height: 50px;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
         align-items: center;
     }
 
@@ -829,47 +815,6 @@ nav {
 @media (min-width: 1200px) {
 
 
-    .buscador-bar {
-        display: flex;
-        position: relative;
-        align-items: center;
-    }
-
-    .buscador-bar input {
-        font-family: 'Montserrat', sans-serif;
-        margin-right: 10px;
-        padding-left: 10px;
-        width: 270px;
-        height: 33px;
-        border-radius: 1ch;
-    }
-
-    .buscador-bar i {
-        position: absolute;
-        font-size: 13px;
-        right: 18px;
-        top: 10px;
-        font-weight: bold;
-        color: #FF715B;
-    }
-
-    .buscador {
-        display: inline;
-        font-family: "Roboto", "sans-serif";
-        font-size: 13px;
-        border: solid 1px #ebebeb;
-        align-items: center;
-    }
-
-    .carrito i {
-        color: #FF715B;
-        display: inline-flex;
-        font-size: 28px;
-        margin-left: 10px;
-        text-align: center;
-        align-items: center;
-    }
-
     .user i {
         display: inline-flex;
         color: #414d86;
@@ -889,19 +834,6 @@ nav {
         text-align: center;
         align-items: center;
     }
-
-    nav {
-        background-color: #394476;
-        height: 50px;
-        width: 100%;
-        margin: auto;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-    }
-
    
 
     .sub-menu {

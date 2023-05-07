@@ -26,7 +26,6 @@ header {
 }
 
 .header-tres {
-    
     display: flex;
     flex-wrap: nowrap;
     justify-content:space-around;
@@ -666,13 +665,6 @@ hr {
     }
 
 
-    .carrito i {
-        color: #FF715B;
-        display: inline-flex;
-        text-align: center;
-        align-items: center;
-    }
-
     .user i {
         display: inline-flex;
         color: #414d86;
@@ -1098,11 +1090,7 @@ hr {
     }
 
     .carrito i {
-        color: #FF715B;
-        display: inline-flex;
         margin-left: 12px;
-        text-align: center;
-        align-items: center;
     }
 
     .user i {
@@ -1344,13 +1332,9 @@ hr {
 
 @media (min-width: 1200px) {
 
-    .carrito i {
-        color: #FF715B;
-        display: inline-flex;
+    .carrito i { 
         font-size: 20px;
         margin-left: 5px;
-        text-align: center;
-        align-items: center;
     }
 
     .user i {

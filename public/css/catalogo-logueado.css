@@ -25,6 +25,13 @@ header {
     box-sizing: border-box;
 }
 
+.header-tres {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+    align-items: center;
+}
+
 .logo {
     width: 15%;
     margin-left: 32px;
@@ -560,6 +567,11 @@ h2 {
 
 @media (max-width: 425px) {
 
+    .logo img {
+        display: inline-flex;
+        width: 10%;
+    }
+
 
     .categoria-pais {
         display: none;
@@ -612,19 +624,17 @@ h2 {
     .buscador {
         display: inline;
         font-family: 'Montserrat', sans-serif;
-        font-size: 10px;
+        font-size: 13px;
         border: solid 1px #ebebeb;
         align-items: center;
     }
 
-    .carrito i {
-        color: #FF715B;
-        display: inline;
-        padding-right: 18px;
-        text-align: center;
-        align-items: center;
-    }
+    
 
+    .carrito i {
+        padding-right: 18px;
+    }
+    
     /* Body */
 
     .categoria-estilo {
@@ -802,8 +812,8 @@ h2 {
         font-family: 'Montserrat', sans-serif;
         margin-right: 10px;
         padding-left: 5px;
-        width: 250px;
-        height: 33px;
+        width: 200px;
+        height: 30px;
         border-radius: 1ch;
     }
 
@@ -837,12 +847,8 @@ h2 {
         padding: 2px;
     }
 
-
     .carrito i {
-        color: #FF715B;
-        display: inline-flex;
-        text-align: center;
-        align-items: center;
+        margin-left: 12px;
     }
 
     .carrito {
@@ -878,7 +884,6 @@ h2 {
         justify-content: center;
         align-items: center;
     }
-
     nav ul {
         padding: 5px;
         margin: auto
@@ -1534,7 +1539,7 @@ h2 {
 
     .header-tres {
         margin: 0px;
-        padding: 5px 100px 0px 100px;
+        padding: 5px 20px 0px;
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-around;
@@ -1550,10 +1555,10 @@ h2 {
 
     .buscador-bar input {
         font-family: 'Montserrat', sans-serif;
-        margin-right: 10px;
+        margin-right: 5px;
         padding-left: 5px;
-        width: 250px;
-        height: 33px;
+        width: 200px;
+        height: 30px;
         border-radius: 1ch;
     }
 
@@ -1574,13 +1579,11 @@ h2 {
         align-items: center;
     }
 
-    .carrito i {
-        color: #FF715B;
-        display: inline-flex;
-        margin-left: 12px;
-        text-align: center;
-        align-items: center;
+    .carrito i { 
+        font-size: 20px;
+        margin-left: 5px;
     }
+
 
     .user i {
         display: inline-flex;
@@ -1602,17 +1605,7 @@ h2 {
         align-items: center;
     }
 
-    nav {
-        background-color: #394476;
-        height: 50px;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-    }
-
+  
     nav ul {
         display: inline-flex;
     }
@@ -2245,46 +2238,6 @@ h2 {
 
 @media(min-width: 1200px) {
 
-    .buscador-bar {
-        display: flex;
-        position: relative;
-        align-items: center;
-    }
-
-    .buscador-bar input {
-        font-family: 'Montserrat', sans-serif;
-        margin-right: 10px;
-        padding-left: 10px;
-        width: 270px;
-        height: 33px;
-        border-radius: 1ch;
-    }
-
-    .buscador-bar i {
-        position: absolute;
-        font-size: 13px;
-        right: 18px;
-        top: 10px;
-        font-weight: bold;
-        color: #FF715B;
-    }
-
-    .buscador {
-        display: inline;
-        font-family: "Roboto", "sans-serif";
-        font-size: 13px;
-        border: solid 1px #ebebeb;
-        align-items: center;
-    }
-
-    .carrito i {
-        color: #FF715B;
-        display: inline-flex;
-        margin-left: 10px;
-        text-align: center;
-        align-items: center;
-    }
-
     .user i {
         display: inline-flex;
         color: #414d86;
@@ -2305,17 +2258,7 @@ h2 {
         align-items: center;
     }
 
-    nav {
-        background-color: #394476;
-        height: 50px;
-        width: 100%;
-        margin: auto;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-    }
+ 
    
 
     /* Body */

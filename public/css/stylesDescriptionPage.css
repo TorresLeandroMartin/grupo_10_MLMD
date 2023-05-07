@@ -23,6 +23,12 @@ header {
     margin-bottom: 5%;
     box-sizing: border-box;
 }
+.header-tres {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+    align-items: center;
+}
 
 .logo {
     width: 15%;
@@ -307,12 +313,9 @@ h1 {
     }
 
     .carrito i {
-        color: #FF715B;
-        display: inline;
         padding-right: 18px;
-        text-align: center;
-        align-items: center;
     }
+    
 
     footer {
         background-color: #242F62;
@@ -487,11 +490,9 @@ h1 {
     }
 
     .carrito i {
-        color: #FF715B;
-        display: inline-flex;
-        text-align: center;
-        align-items: center;
+        margin-left: 12px;
     }
+
 
     .user i {
         display: inline-flex;
@@ -738,12 +739,9 @@ h1 {
         align-items: center;
     }
 
-    .carrito i {
-        color: #FF715B;
-        display: inline-flex;
-        margin-left: 12px;
-        text-align: center;
-        align-items: center;
+    .carrito i { 
+        font-size: 20px;
+        margin-left: 5px;
     }
 
     .user i {
@@ -959,46 +957,6 @@ h1 {
 
 @media (min-width: 1200px) {
 
-    .buscador-bar {
-        display: flex;
-        position: relative;
-        align-items: center;
-    }
-
-    .buscador-bar input {
-        font-family: 'Montserrat', sans-serif;
-        margin-right: 10px;
-        padding-left: 10px;
-        width: 270px;
-        height: 33px;
-        border-radius: 1ch;
-    }
-
-    .buscador-bar i {
-        position: absolute;
-        font-size: 13px;
-        right: 18px;
-        top: 10px;
-        font-weight: bold;
-        color: #FF715B;
-    }
-
-    .buscador {
-        display: inline;
-        font-family: "Roboto", "sans-serif";
-        font-size: 13px;
-        border: solid 1px #ebebeb;
-        align-items: center;
-    }
-
-    .carrito i {
-        color: #FF715B;
-        display: inline-flex;
-        margin-left: 10px;
-        text-align: center;
-        align-items: center;
-    }
-
     .user i {
         display: inline-flex;
         color: #414d86;
@@ -1021,16 +979,13 @@ h1 {
 
     nav {
         background-color: #394476;
-        height: 50px;
         width: 100%;
-        margin: auto;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
     }
-    
 
     .sub-menu {
         position: absolute;

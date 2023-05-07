@@ -24,7 +24,12 @@ header {
     margin-bottom: 5%;
     box-sizing: border-box;
 }
-
+.header-tres {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+    align-items: center;
+}
 
 .logo {
     width: 15%;
@@ -238,10 +243,9 @@ form select {
     }
 
     .logo {
-        display: inline-flex;
-        width: 10%;
+        width: 15%;
+        margin-left: 32px;
     }
-
     .buscador-bar {
         display: flex;
         position: relative;
@@ -275,11 +279,7 @@ form select {
     }
 
     .carrito i {
-        color: #FF715B;
-        display: inline;
         padding-right: 18px;
-        text-align: center;
-        align-items: center;
     }
 
     .foto-producto {
@@ -423,6 +423,10 @@ form select {
 }
 
 @media (min-width: 426px) {
+    .logo {
+        display: inline-flex;
+        width: 10%;
+    }
 
     .burger-menu {
         display: none;
@@ -465,13 +469,6 @@ form select {
         align-items: center;
     }
 
-    .carrito i {
-        color: #FF715B;
-        display: inline-flex;
-        text-align: center;
-        align-items: center;
-    }
-
     .user i {
         display: inline-flex;
         color: #414d86;
@@ -496,7 +493,6 @@ form select {
 
     nav {
         background-color: #394476;
-        height: 60px;
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -504,7 +500,6 @@ form select {
         justify-content: center;
         align-items: center;
     }
-
     nav ul {
         padding: 5px;
         margin: auto
@@ -756,12 +751,13 @@ form select {
 
     .buscador-bar input {
         font-family: 'Montserrat', sans-serif;
-        margin-right: 10px;
+        margin-right: 5px;
         padding-left: 5px;
-        width: 250px;
-        height: 33px;
+        width: 120px;
+        height: 25px;
         border-radius: 1ch;
     }
+
 
     .buscador-bar i {
         position: absolute;
@@ -775,17 +771,13 @@ form select {
     .buscador {
         display: inline;
         font-family: "Roboto", "sans-serif";
-        font-size: 13px;
+        font-size: 12px;
         border: solid 1px #ebebeb;
         align-items: center;
     }
 
     .carrito i {
-        color: #FF715B;
-        display: inline-flex;
         margin-left: 12px;
-        text-align: center;
-        align-items: center;
     }
 
     .user i {
@@ -808,17 +800,7 @@ form select {
         align-items: center;
     }
 
-    nav {
-        background-color: #394476;
-        height: 50px;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-    }
-
+  
     nav ul {
         display: inline-flex;
     }
@@ -1012,48 +994,12 @@ form select {
 }
 
 @media(min-width: 1200px) {
-
-  
-    .buscador-bar {
-        display: flex;
-        position: relative;
-        align-items: center;
+    
+    .carrito i { 
+        font-size: 20px;
+        margin-left: 5px;
     }
 
-    .buscador-bar input {
-        font-family: 'Montserrat', sans-serif;
-        margin-right: 10px;
-        padding-left: 10px;
-        width: 270px;
-        height: 33px;
-        border-radius: 1ch;
-    }
-
-    .buscador-bar i {
-        position: absolute;
-        font-size: 13px;
-        right: 18px;
-        top: 10px;
-        font-weight: bold;
-        color: #FF715B;
-    }
-
-    .buscador {
-        display: inline;
-        font-family: "Roboto", "sans-serif";
-        font-size: 13px;
-        border: solid 1px #ebebeb;
-        align-items: center;
-    }
-
-    .carrito i {
-        color: #FF715B;
-        display: inline-flex;
-        font-size: 28px;
-        margin-left: 10px;
-        text-align: center;
-        align-items: center;
-    }
 
     .user i {
         display: inline-flex;

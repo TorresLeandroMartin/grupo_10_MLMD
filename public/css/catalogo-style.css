@@ -24,7 +24,12 @@ header {
     margin-bottom: 5%;
     box-sizing: border-box;
 }
-
+.header-tres {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+    align-items: center;
+}
 
 
 
@@ -117,11 +122,20 @@ h2 {
 /* Fin de Body */
 
 @media (max-width: 425px) {
+    .logo {
+        width: 15%;
+        margin-left: 32px;
+    }
 
     main section article h4,
     nav ul {
         display: none;
     }
+
+    .carrito i {
+        padding-right: 18px;
+    }
+    
 
     .user {
         display: none;
@@ -136,10 +150,6 @@ h2 {
         align-items: center;
     }
     
-    .logo {
-        width: 15%;
-        margin-left: 32px;
-    }
 
     .buscador-bar {
         display: flex;
@@ -148,7 +158,6 @@ h2 {
         margin-right: 3px;
         padding: 0px 15px;
     }
-
     .buscador-bar input {
         padding: 7px;
         width: 100%;
@@ -168,7 +177,7 @@ h2 {
     .buscador {
         display: inline;
         font-family: 'Montserrat', sans-serif;
-        font-size: 10px;
+        font-size: 11px;
         border: solid 1px #ebebeb;
         align-items: center;
     }
@@ -325,6 +334,10 @@ h2 {
 }
 
 @media (min-width: 426px) {
+    .logo {
+        width: 10%;
+        margin-left: 32px;
+    }
 
     .burger-menu {
         display: none;
@@ -345,8 +358,8 @@ h2 {
         font-family: 'Montserrat', sans-serif;
         margin-right: 10px;
         padding-left: 5px;
-        width: 250px;
-        height: 33px;
+        max-width: 200px;
+        height: 30px;
         border-radius: 1ch;
     }
 
@@ -404,7 +417,6 @@ h2 {
 
     nav {
         background-color: #394476;
-        height: 60px;
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -500,13 +512,13 @@ h2 {
     .top-nav ul {
         display: flex;
         justify-content: space-around;
-        margin: 24px 35px 50px 10px;
+        margin: 7px 35px 3px 10px;
     }
 
     .top-nav li a {
         font-family: 'Lilita One';
         color: #EDF2F4;
-        font-size: 15px;
+        font-size: 115%;
         margin: 1ch;
         padding: 8px 20px;
         border-top: solid 2px #8000FF;
@@ -622,10 +634,10 @@ h2 {
 
     .buscador-bar input {
         font-family: 'Montserrat', sans-serif;
-        margin-right: 10px;
+        margin-right: 5px;
         padding-left: 5px;
-        width: 250px;
-        height: 33px;
+        width: 200px;
+        height: 30px;
         border-radius: 1ch;
     }
 
@@ -646,7 +658,9 @@ h2 {
         align-items: center;
     }
     
-
+    .carrito i {
+        margin-left: 12px;
+    }
 
     .user i {
         display: inline-flex;
@@ -668,16 +682,7 @@ h2 {
         align-items: center;
     }
 
-    nav {
-        background-color: #394476;
-        height: 50px;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-    }
+   
 
     nav ul {
         display: inline-flex;
@@ -826,49 +831,10 @@ h2 {
 }
 
 @media(min-width: 1200px) {
-
-
-    .carrito i {
-        color: #FF715B;
-        display: inline-flex;
-        font-size: 28px;
-        margin-left: 10px;
-        text-align: center;
-        align-items: center;
+    .carrito i { 
+        font-size: 20px;
+        margin-left: 5px;
     }
-
-    .buscador-bar {
-        display: flex;
-        position: relative;
-        align-items: center;
-    }
-
-    .buscador-bar input {
-        font-family: 'Montserrat', sans-serif;
-        margin-right: 10px;
-        padding-left: 10px;
-        width: 270px;
-        height: 33px;
-        border-radius: 1ch;
-    }
-
-    .buscador-bar i {
-        position: absolute;
-        font-size: 13px;
-        right: 18px;
-        top: 10px;
-        font-weight: bold;
-        color: #FF715B;
-    }
-
-    .buscador {
-        display: inline;
-        font-family: "Roboto", "sans-serif";
-        font-size: 13px;
-        border: solid 1px #ebebeb;
-        align-items: center;
-    }
-
 
 
     .user i {
