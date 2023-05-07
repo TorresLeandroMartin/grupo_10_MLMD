@@ -21,12 +21,8 @@ p {
 
 header {
     background-color: #242F62;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     box-sizing: border-box;
-}
-
-.logo {
-    width: 35%;
 }
 
 .carrito i {
@@ -76,13 +72,13 @@ nav {
     width: 60%;
     justify-content: center;
     text-align: center;
-    margin: 10px 0px 80px 0px;
+    margin: 0px 10px;
 }
 
 .linea-divisoria2 {
     border: solid 1px #ff2200;
-    width: 80%;
-    margin: 30% 0%;
+    width: 60%;
+    margin: 20px;
 }
 
 .linea-divisoria3 {
@@ -92,6 +88,7 @@ nav {
     text-align: center;
     margin: 30px 0px;
 }
+
 
 h5 {
     text-align: left;
@@ -122,6 +119,21 @@ h5 {
     background-color: black;
     margin: 0px 20px 30px 20px;
     padding: 60px 0px;
+}
+
+
+
+#inner{
+    width: 100%;
+}
+
+#img{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 40%;
+    padding: 5px 10px;
+    margin: auto;
 }
 
 .separador2 article {
@@ -282,12 +294,12 @@ hr {
         padding: 30px 0px;
         display: flex;
         flex-wrap: nowrap;
-        justify-content: space-around;
+        justify-content:space-around;
         align-items: center;
     }
 
     .logo {
-        width: 20%;
+        width: 15%;
         margin-left: 32px;
     }
 
@@ -324,13 +336,9 @@ hr {
     }
 
     .carrito i {
-        color: #FF715B;
-        display: inline;
         padding-right: 18px;
-        text-align: center;
-        align-items: center;
     }
-
+    
     .separador1 {
         display: flex;
         flex-direction: column;
@@ -346,6 +354,7 @@ hr {
         justify-content: space-evenly;
         align-items: center;
     }
+
 
     .separador3 {
         display: none;
@@ -508,19 +517,9 @@ hr {
         display: none;
     }
 
-    .header-tres {
-        margin: 0px 20px 5px 0px;
-        padding: 30px 0px;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: center;
-    }
-
     .logo {
         display: inline-flex;
-        width: 22%;
-        margin-left: 25px;
+        width: 10%;
     }
 
     .buscador-bar {
@@ -585,7 +584,6 @@ hr {
 
     nav {
         background-color: #394476;
-        height: 60px;
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -595,16 +593,14 @@ hr {
     }
 
     nav ul {
-        margin-top: 10px;
-        padding: 10px 0px;
+        padding: 5px;
+        margin: auto
     }
 
     nav ul li {
         display: inline-flex;
         justify-content: space-around;
-        margin: 0px 30px;
         padding-right: 20px;
-        font-size: 12px;
         align-items: center;
     }
 
@@ -612,11 +608,11 @@ hr {
         color: white;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
+        font-size: 11px;
+        padding: 5px 10px;
+        margin: 1px 7px;
     }
-
-    nav ul li a:hover {
-        color: #FF715B;
-    }
+    
 
     .sub-menu {
         position: absolute;
@@ -658,7 +654,6 @@ hr {
     }
 
     .separador1 {
-        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-evenly;
@@ -846,11 +841,6 @@ hr {
     }
 
     .top-nav ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: center;
         margin: 24px 35px 50px 10px;
     }
 
@@ -958,19 +948,14 @@ hr {
     }
 
     .header-tres {
-        margin: 0px 20px 5px 0px;
-        padding: 30px 0px;
+        margin: 0px;
+        padding: 5px 100px 0px 100px;
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-around;
         align-items: center;
     }
 
-    .logo {
-        display: inline-flex;
-        width: 18%;
-        margin-left: 25px;
-    }
 
     .buscador-bar {
         display: flex;
@@ -980,17 +965,17 @@ hr {
 
     .buscador-bar input {
         font-family: 'Montserrat', sans-serif;
-        margin-right: 10px;
+        margin-right: 5px;
         padding-left: 5px;
-        width: 250px;
-        height: 33px;
+        width: 200px;
+        height: 30px;
         border-radius: 1ch;
     }
 
     .buscador-bar i {
         position: absolute;
         font-size: 13px;
-        right: 20px;
+        right: 10px;
         top: 10px;
         font-weight: bold;
         color: #FF715B;
@@ -1031,36 +1016,19 @@ hr {
         text-align: center;
         align-items: center;
     }
-
-    nav {
-        background-color: #394476;
-        height: 50px;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-    }
+   
 
     nav ul {
         display: inline-flex;
-        margin-bottom: 25px;
     }
 
-    nav ul li {
-        display: inline-flex;
-        justify-content: space-around;
-        margin: 13px 30px 0px 30px;
-        padding-right: 20px;
-        font-size: 12px;
-    }
 
     nav ul li a {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
-        color: white;
+        font-size: 13px;
+        padding: 5px 20px;
+        margin: 1px 10px;
     }
+    
 
     nav ul li a:hover {
         color: #FF715B;
@@ -1077,9 +1045,7 @@ hr {
         z-index: 1;
     }
 
-    nav ul li:hover .sub-menu {
-        display: block;
-    }
+    
 
     .sub-menu li a {
         display: block;
@@ -1182,14 +1148,10 @@ hr {
 
     .cuerpo-de-texto p {
         font-size: 15px;
-        color: #8000FF;
     }
 
     .cuerpo-de-texto h6 {
-        color: grey;
-        margin-top: 10px;
         font-size: 12px;
-
     }
 
     .fa-quote-left {
@@ -1235,24 +1197,11 @@ hr {
         border-bottom: solid 2px #8000FF;
         border-radius: 1.5ch;
     }
-
-
+    
     .bottom-nav {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+        margin: 30px 0px;
     }
 
-    .bottom-nav p {
-        position: relative;
-        display: inline-flex;
-        font-family: 'Lilita One';
-        color: #EDF2F4;
-        font-size: 18px;
-        margin: 0px 20px 2px 20px;
-        align-items: center;
-    }
 
     .bottom-nav input {
         position: relative;
@@ -1310,66 +1259,11 @@ hr {
 
 @media (min-width: 1200px) {
 
-    .burger-menu {
-        display: none;
-    }
-
-    .fa-bars {
-        display: none;
-    }
-
-    .header-tres {
-        margin: 0px 20px 5px 0px;
-        padding: 50px 0px;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    .logo {
-        display: inline-flex;
-        width: 18%;
-        margin-left: 25px;
-    }
-
-    .buscador-bar {
-        display: flex;
-        position: relative;
-        align-items: center;
-    }
-
-    .buscador-bar input {
-        font-family: 'Montserrat', sans-serif;
-        margin-right: 10px;
-        padding-left: 10px;
-        width: 270px;
-        height: 33px;
-        border-radius: 1ch;
-    }
-
-    .buscador-bar i {
-        position: absolute;
-        font-size: 13px;
-        right: 18px;
-        top: 10px;
-        font-weight: bold;
-        color: #FF715B;
-    }
-
-    .buscador {
-        display: inline;
-        font-family: "Roboto", "sans-serif";
-        font-size: 13px;
-        border: solid 1px #ebebeb;
-        align-items: center;
-    }
-
     .carrito i {
         color: #FF715B;
         display: inline-flex;
-        font-size: 28px;
-        margin-left: 10px;
+        font-size: 20px;
+        margin-left: 5px;
         text-align: center;
         align-items: center;
     }
@@ -1377,7 +1271,7 @@ hr {
     .user i {
         display: inline-flex;
         color: #414d86;
-        font-size: 30px;
+        font-size: 25px;
         margin-right: 30px;
         display: inline-flex;
         text-align: center;
@@ -1394,40 +1288,6 @@ hr {
         align-items: center;
     }
 
-    nav {
-        background-color: #394476;
-        height: 50px;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-    }
-
-    nav ul {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px 0px;
-    }
-
-    nav ul li {
-        justify-content: space-around;
-        padding-right: 22px;
-        font-size: 11px;
-    }
-
-    nav ul li a {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
-        color: white;
-    }
-
-    nav ul li a:hover {
-        color: #FF715B;
-    }
-
     .sub-menu {
         position: absolute;
         display: none;
@@ -1439,10 +1299,7 @@ hr {
         z-index: 1;
     }
 
-    nav ul li:hover .sub-menu {
-        display: block;
-    }
-
+ 
     .sub-menu li a {
         display: block;
         font-family: 'Montserrat', sans-serif;
@@ -1539,11 +1396,6 @@ hr {
         justify-content: center;
         text-align: center;
 
-    }
-
-    .cuerpo-de-texto p {
-        font-size: 15px;
-        color: #8000FF;
     }
 
     .cuerpo-de-texto h6 {
@@ -1659,361 +1511,3 @@ hr {
     }
 }
 
-@media (min-width: 1440px) {
-
-    .burger-menu {
-        display: none;
-    }
-
-    .fa-bars {
-        display: none;
-    }
-
-    .header-tres {
-        margin: 0px 20px 5px 0px;
-        padding: 50px 0px;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    .logo {
-        display: inline-flex;
-        width: 18%;
-        margin-left: 25px;
-    }
-
-    .buscador-bar {
-        display: flex;
-        position: relative;
-        align-items: center;
-    }
-
-    .buscador-bar input {
-        font-family: 'Montserrat', sans-serif;
-        margin-right: 10px;
-        padding-left: 10px;
-        width: 270px;
-        height: 33px;
-        border-radius: 1ch;
-    }
-
-    .buscador-bar i {
-        position: absolute;
-        font-size: 13px;
-        right: 18px;
-        top: 10px;
-        font-weight: bold;
-        color: #FF715B;
-    }
-
-    .buscador {
-        display: inline;
-        font-family: "Roboto", "sans-serif";
-        font-size: 13px;
-        border: solid 1px #ebebeb;
-        align-items: center;
-    }
-
-    .carrito i {
-        color: #FF715B;
-        display: inline-flex;
-        font-size: 28px;
-        margin-left: 10px;
-        text-align: center;
-        align-items: center;
-    }
-
-
-    .user i {
-        display: inline-flex;
-        color: #414d86;
-        font-size: 30px;
-        margin-right: 30px;
-        display: inline-flex;
-        text-align: center;
-        align-items: center;
-    }
-
-    .fa-user i {
-        display: inline-flex;
-        color: #414d86;
-        font-size: 30px;
-        margin-right: 30px;
-        display: inline-flex;
-        text-align: center;
-        align-items: center;
-    }
-
-    nav {
-        background-color: #394476;
-        height: 50px;
-        width: 100%;
-        margin: auto;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-    }
-
-    nav ul {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    nav ul li {
-        justify-content: space-around;
-        padding-right: 22px;
-        font-size: 11px;
-    }
-
-    nav ul li a {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
-        color: white;
-    }
-
-    nav ul li a:hover {
-        color: #FF715B;
-    }
-
-    .sub-menu {
-        position: absolute;
-        display: none;
-        list-style: none;
-        width: 140px;
-        top: 28.5%;
-        padding: 0px;
-        background-color: #394476;
-        z-index: 1;
-    }
-
-    nav ul li:hover .sub-menu {
-        display: block;
-    }
-
-    .sub-menu li a {
-        display: block;
-        font-family: 'Montserrat', sans-serif;
-        color: white;
-        padding: 15px 20px 15px 0px;
-        font-weight: normal;
-        text-decoration: none;
-    }
-
-    .sub-menu li:hover {
-        background-color: #242F62;
-        width: inherit;
-        margin: auto;
-    }
-
-    .sub-menu li:hover a {
-        color: #FF715B;
-        margin: 10px;
-    }
-
-    .cuadrado1 label {
-        color: black;
-        font-family: "Lilita One";
-        font-size: 120%;
-        position: absolute;
-        top: 18%;
-        right: 32%;
-    }
-
-
-    .cuadrado2 label {
-        font-size: 120%;
-        color: black;
-        font-family: "Lilita One";
-        position: absolute;
-        right: 77%;
-        bottom: 57%;
-    }
-
-
-    .cuadrado3 label {
-        color: black;
-        font-family: "Lilita One";
-        position: absolute;
-        font-size: 120%;
-        bottom: 45%;
-        right: 38%;
-    }
-
-
-    .cuadrado4 label {
-        color: black;
-        font-family: "Lilita One";
-        font-size: 120%;
-        position: absolute;
-        bottom: 77%;
-        right: 75%;
-    }
-
-    .todos {
-        display: block;
-        background-color: black;
-        border: solid 0.8px #8000FF;
-        border-radius: 0.8ch;
-        box-sizing: border-box;
-        margin: 0px;
-    }
-
-    .todos a {
-        font-size: 1em;
-    }
-
-    footer {
-        background-color: #242F62;
-    }
-
-    .contenedor-footer {
-        margin: 0px 20px;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .top-nav li a {
-        font-family: 'Lilita One';
-        color: #EDF2F4;
-        padding: 8px 15px;
-        border-top: solid 2px #8000FF;
-        border-bottom: solid 2px #8000FF;
-        border-radius: 1.5ch;
-    }
-
-
-    .bottom-nav {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .bottom-nav p {
-        position: relative;
-        display: inline-flex;
-        font-family: 'Lilita One';
-        color: #EDF2F4;
-        font-size: 18px;
-        margin: 0px;
-        align-items: center;
-    }
-
-    .bottom-nav input {
-        position: relative;
-        width: 320px;
-        background-color: black;
-        color: #EDF2F4;
-        border: solid 1px black;
-        border-radius: 2ch;
-        left: 22px;
-        z-index: 5;
-        padding: 5px 0px 5px 5px;
-        font-size: 15px;
-    }
-
-    .bottom-nav button {
-        position: relative;
-        width: 100px;
-        background-color: #8000FF;
-        color: #EDF2F4;
-        border-radius: 2ch;
-        border: solid 1px #8000FF;
-        z-index: 10;
-        font-size: 15px;
-        padding: 5px 0px;
-    }
-
-    .linea-divisoria4 {
-        border: 0;
-        height: 12px;
-        margin: 25px 0px;
-        box-shadow: inset 0 12px 12px -12px #EDF2F4;
-    }
-
-
-    .social-network ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 20px 26px 20px 0px;
-    }
-
-    .social-network ul li {
-        margin: 0px 30px;
-        padding-right: 10px;
-    }
-
-    .inicio {
-        padding-right: 3px;
-    }
-
-    .social-network ul li i {
-        color: #FF715B;
-    }
-}
-
-@media (min-width: 1700px) {
-
-
-    .sub-menu {
-        position: absolute;
-        display: none;
-        list-style: none;
-        width: 140px;
-        top: 29.5%;
-        padding: 0px;
-        background-color: #394476;
-        z-index: 1;
-    }
-
-    .cuadrado1 label {
-        color: black;
-        font-family: "Lilita One";
-        font-size: 30px;
-        position: absolute;
-        top: 18%;
-        right: 32%;
-    }
-
-
-    .cuadrado2 label {
-        font-size: 30px;
-        color: black;
-        font-family: "Lilita One";
-        position: absolute;
-        right: 77%;
-        bottom: 57%;
-    }
-
-
-    .cuadrado3 label {
-        color: black;
-        font-family: "Lilita One";
-        position: absolute;
-        font-size: 30px;
-        bottom: 45%;
-        right: 38%;
-    }
-
-
-    .cuadrado4 label {
-        color: black;
-        font-family: "Lilita One";
-        font-size: 30px;
-        position: absolute;
-        bottom: 77%;
-        right: 75%;
-    }
-
-    .todos a {
-        font-size: 1.2em;
-    }
-}

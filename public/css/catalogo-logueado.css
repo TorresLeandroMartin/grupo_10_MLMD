@@ -26,7 +26,8 @@ header {
 }
 
 .logo {
-    width: 35%;
+    width: 15%;
+    margin-left: 32px;
 }
 
 .carrito i {
@@ -582,10 +583,7 @@ h2 {
         align-items: center;
     }
 
-    .logo {
-        width: 20%;
-        margin-left: 32px;
-    }
+    
 
     .buscador-bar {
         display: flex;
@@ -781,6 +779,10 @@ h2 {
 }
 
 @media (min-width: 426px) {
+    .logo {
+        display: inline-flex;
+        width: 10%;
+    }
 
     .burger-menu {
         display: none;
@@ -788,21 +790,6 @@ h2 {
 
     .fa-bars {
         display: none;
-    }
-
-    .header-tres {
-        margin: 0px 20px 5px 0px;
-        padding: 30px 0px;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    .logo {
-        display: inline-flex;
-        width: 22%;
-        margin-left: 25px;
     }
 
     .buscador-bar {
@@ -884,7 +871,6 @@ h2 {
 
     nav {
         background-color: #394476;
-        height: 60px;
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -894,24 +880,30 @@ h2 {
     }
 
     nav ul {
-        margin-top: 10px;
-        padding: 10px 0px;
+        padding: 5px;
+        margin: auto
     }
 
     nav ul li {
         display: inline-flex;
         justify-content: space-around;
-        margin: 0px 30px;
         padding-right: 20px;
-        font-size: 12px;
         align-items: center;
     }
 
-    nav ul li a {
+    ul li a {
         color: white;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
+        font-size: 11px;
+        padding: 5px 10px;
+        margin: 1px 7px;
     }
+
+    nav ul li:hover .sub-menu {
+        display: block;
+    }
+
 
     nav ul li a:hover {
         color: #FF715B;
@@ -1430,12 +1422,7 @@ h2 {
     }
 
     .top-nav ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: center;
-        margin: 24px 35px 30px 10px;
+        margin: 24px 35px 50px 10px;
     }
 
     .top-nav li a {
@@ -1544,19 +1531,14 @@ h2 {
     }
 
     .header-tres {
-        margin: 0px 20px 5px 0px;
-        padding: 30px 0px;
+        margin: 0px;
+        padding: 5px 100px 0px 100px;
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-around;
         align-items: center;
     }
 
-    .logo {
-        display: inline-flex;
-        width: 18%;
-        margin-left: 25px;
-    }
 
     .buscador-bar {
         display: flex;
@@ -1631,7 +1613,6 @@ h2 {
 
     nav ul {
         display: inline-flex;
-        margin-bottom: 25px;
     }
 
     nav ul li {
@@ -1648,7 +1629,7 @@ h2 {
         color: white;
     }
 
-    nav ul li a:hover {
+     li a:hover {
         color: #FF715B;
     }
 
@@ -2177,15 +2158,6 @@ h2 {
         justify-content: center;
     }
 
-    .top-nav ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: center;
-        margin: 24px 35px 30px 10px;
-    }
-
     .top-nav li a {
         font-family: 'Lilita One';
         color: #EDF2F4;
@@ -2271,29 +2243,6 @@ h2 {
 
 @media(min-width: 1200px) {
 
-    .burger-menu {
-        display: none;
-    }
-
-    .fa-bars {
-        display: none;
-    }
-
-    .header-tres {
-        margin: 0px 20px 5px 0px;
-        padding: 50px 0px;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    .logo {
-        display: inline-flex;
-        width: 18%;
-        margin-left: 25px;
-    }
-
     .buscador-bar {
         display: flex;
         position: relative;
@@ -2365,29 +2314,7 @@ h2 {
         justify-content: center;
         align-items: center;
     }
-
-    nav ul {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px 0px;
-    }
-
-    nav ul li {
-        justify-content: space-around;
-        padding-right: 22px;
-        font-size: 11px;
-    }
-
-    nav ul li a {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
-        color: white;
-    }
-
-    nav ul li a:hover {
-        color: #FF715B;
-    }
+   
 
     /* Body */
 
@@ -2916,14 +2843,6 @@ h2 {
         justify-content: center;
     }
 
-    .top-nav ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: center;
-        margin: 24px 35px 30px 10px;
-    }
 
     .top-nav li a {
         font-family: 'Lilita One';
@@ -3009,484 +2928,3 @@ h2 {
 }
 
 
-@media (min-width: 1440px) {
-
-    .burger-menu {
-        display: none;
-    }
-
-    .fa-bars {
-        display: none;
-    }
-
-    .header-tres {
-        margin: 0px 20px 5px 0px;
-        padding: 50px 0px;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    .logo {
-        display: inline-flex;
-        width: 18%;
-        margin-left: 25px;
-    }
-
-    .buscador-bar {
-        display: flex;
-        position: relative;
-        align-items: center;
-    }
-
-    .buscador-bar input {
-        font-family: 'Montserrat', sans-serif;
-        margin-right: 10px;
-        padding-left: 10px;
-        width: 270px;
-        height: 33px;
-        border-radius: 1ch;
-    }
-
-    .buscador-bar i {
-        position: absolute;
-        font-size: 13px;
-        right: 18px;
-        top: 10px;
-        font-weight: bold;
-        color: #FF715B;
-    }
-
-    .buscador {
-        display: inline;
-        font-family: "Roboto", "sans-serif";
-        font-size: 13px;
-        border: solid 1px #ebebeb;
-        align-items: center;
-    }
-
-    .carrito i {
-        color: #FF715B;
-        display: inline-flex;
-        margin-left: 10px;
-        text-align: center;
-        align-items: center;
-    }
-
-    .user i {
-        display: inline-flex;
-        color: #414d86;
-        font-size: 30px;
-        margin-right: 30px;
-        display: inline-flex;
-        text-align: center;
-        align-items: center;
-    }
-
-    .fa-user i {
-        display: inline-flex;
-        color: #414d86;
-        font-size: 30px;
-        margin-right: 30px;
-        display: inline-flex;
-        text-align: center;
-        align-items: center;
-    }
-
-    nav {
-        background-color: #394476;
-        height: 50px;
-        width: 100%;
-        margin: auto;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-    }
-
-    nav ul {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    nav ul li {
-        justify-content: space-around;
-        padding-right: 22px;
-        font-size: 11px;
-    }
-
-    nav ul li a {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
-        color: white;
-    }
-
-    nav ul li a:hover {
-        color: #FF715B;
-    }
-
-    /* Body */
-
-    main {
-        width: 100%;
-        margin: 0% 0% 35% 0%;
-    }
-
-    .categoria-estilo {
-        font-size: 24px;
-    }
-
-    .productos {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        background-color: #f1f1f1;
-        border: 1px solid #000000;
-        margin: 20% 2%;
-    }
-
-    h4 {
-        text-align: center;
-        font-family: 'Lilita One';
-        font-size: 50px;
-        margin-top: 10%;
-        margin-bottom: 3%;
-    }
-
-    h2 {
-        text-align: center;
-        font-family: 'Lilita One';
-        font-size: 201%;
-        border-bottom: 2px solid #65069c;
-        margin-top: 40%;
-    }
-
-    #enrollado-inventario:checked~.global {
-        display: block;
-        padding: 481.3% 2%;
-    }
-
-
-    #enrollado-global:checked~.inventario {
-        /* input checkbox */
-        display: block;
-        margin: 0%;
-        padding: 418.3% 2%;
-    }
-
-    #enrollado-global:checked~.principal-global {
-        display: block;
-        padding: 0% 3% 644% 2%;
-    }
-
-    #enrollado-inventario:checked~.principal-inventario {
-        display: block;
-        padding: 0% 3% 749%;
-    }
-
-    .fa-plus {
-        top: 6.8%;
-        font-size: 256%;
-        padding: 5px 6px;
-    }
-
-    .desenrollar-global article h3 {
-        font-size: 180%;
-        margin-top: 4%;
-    }
-
-    .principal-inventario h2 {
-        font-size: 280%;
-    }
-
-    .principal-global h2 {
-        font-size: 280%;
-    }
-
-    .principal-inventario .btn-cerrar-inventario,
-    .principal-global .btn-cerrar-global {
-        font-size: 180%;
-    }
-
-    /* Fin de body */
-
-    footer {
-        background-color: #242F62;
-    }
-
-    .contenedor-footer {
-        margin: 0px 20px;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .top-nav ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: center;
-        margin: 24px 35px 30px 10px;
-    }
-
-    .top-nav li a {
-        font-family: 'Lilita One';
-        color: #EDF2F4;
-        font-size: 15px;
-        margin: 1ch;
-        padding: 8px 20px;
-        border-top: solid 2px #8000FF;
-        border-bottom: solid 2px #8000FF;
-        border-radius: 1.5ch;
-    }
-
-    .bottom-nav {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .bottom-nav p {
-        position: relative;
-        display: inline-flex;
-        font-family: 'Lilita One';
-        color: #EDF2F4;
-        font-size: 18px;
-        margin: 0px;
-        align-items: center;
-    }
-
-    .bottom-nav input {
-        position: relative;
-        width: 320px;
-        background-color: black;
-        color: #EDF2F4;
-        border: solid 1px black;
-        border-radius: 2ch;
-        left: 22px;
-        z-index: 5;
-        padding: 5px 0px 5px 5px;
-        font-size: 15px;
-    }
-
-    .bottom-nav button {
-        position: relative;
-        width: 100px;
-        background-color: #8000FF;
-        color: #EDF2F4;
-        border-radius: 2ch;
-        border: solid 1px #8000FF;
-        z-index: 10;
-        font-size: 15px;
-        padding: 5px 0px;
-    }
-
-    .linea-divisoria4 {
-        border: 0;
-        height: 12px;
-        margin: 25px 0px;
-        box-shadow: inset 0 12px 12px -12px #EDF2F4;
-    }
-
-    .social-network ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 20px 26px 20px 0px;
-    }
-
-    .social-network ul li {
-        margin: 0px 30px;
-        padding-right: 10px;
-    }
-
-    .inicio {
-        padding-right: 3px;
-    }
-
-    .social-network ul li i {
-        color: #FF715B;
-    }
-}
-
-@media (min-width: 1700px) {
-
-
-    /* Body */
-
-    main {
-        width: 100%;
-        margin: 0% 0% 35% 0%;
-    }
-
-    .categoria-estilo {
-        font-size: 24px;
-    }
-
-    .productos {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        background-color: #f1f1f1;
-        border: 1px solid #000000;
-        margin: 10% 2%;
-    }
-
-    h4 {
-        text-align: center;
-        font-family: 'Lilita One';
-        font-size: 50px;
-        margin-top: 10%;
-        margin-bottom: 3%;
-    }
-
-    h2 {
-        text-align: center;
-        font-family: 'Lilita One';
-        font-size: 201%;
-        border-bottom: 2px solid #65069c;
-        margin-top: 40%;
-    }
-
-    .global {
-        padding: 8% 22% 120% 22%;
-    }
-
-    .inventario {
-        padding: 6.5% 21% 120% 21.5%;
-    }
-
-    .global .enrollado-global .btn-global {
-        font-size: 250%;
-        margin-left: 8.4%;
-    }
-
-    .inventario .enrollado-inventario .btn-inventario {
-        font-size: 250%;
-        margin-right: 8.4%;
-    }
-
-    .global:hover h2 {
-        visibility: visible;
-        border-bottom: 2px solid #f1f1f1;
-        color: #f1f1f1;
-        font-size: 400%;
-    }
-
-    .inventario:hover h2 {
-        visibility: visible;
-        border-bottom: 2px solid #f1f1f1;
-        color: #f1f1f1;
-        font-size: 400%;
-    }
-
-    #enrollado-inventario:checked~.global {
-        display: block;
-        padding: 476% 2%;
-    }
-
-
-    #enrollado-global:checked~.inventario {
-        /* input checkbox */
-        display: block;
-        margin: 0%;
-        padding: 415.6% 2%;
-    }
-
-    #enrollado-global:checked~.principal-global {
-        display: block;
-        padding: 0% 3% 643% 2%;
-    }
-
-    #enrollado-inventario:checked~.principal-inventario {
-        display: block;
-        padding: 0% 3% 734.5%;
-    }
-
-    #enrollado-inventario:checked~.global .enrollado-global .btn-global i {
-        font-size: 280%;
-        visibility: visible;
-    }
-
-    #enrollado-global:checked~.inventario .enrollado-inventario .btn-inventario i {
-        font-size: 280%;
-        visibility: visible;
-    }
-
-    .fa-plus {
-        top: 6.8%;
-        font-size: 350%;
-        padding: 5px 8px;
-    }
-
-    .detalles {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: 2% 7% 4% 12%;
-        font-size: 154%;
-    }
-
-    .desenrollar-global article h3 {
-        font-size: 283%;
-        margin-top: 4%;
-    }
-
-    .desenrollar-inventario article h3 {
-        font-size: 283%;
-        margin-top: 2%;
-    }
-
-    .principal-inventario h2 {
-        font-size: 330%;
-    }
-
-    .principal-global h2 {
-        font-size: 330%;
-    }
-
-    .principal-inventario .btn-cerrar-inventario,
-    .principal-global .btn-cerrar-global {
-        font-size: 250%;
-    }
-
-    .producto-descripcion {
-        font-family: "Montserrat", sans-serif;
-        color: white;
-        height: 0%;
-        width: 80%;
-        font-size: 138%;
-        margin: 2% 11.5%;
-        text-align: justify;
-    }
-
-    .producto-precio {
-        margin-top: 7%;
-        font-size: 200%;
-    }
-
-    .producto-precio:hover {
-        text-decoration: 2px underline;
-        font-weight: bold;
-        font-size: 250%;
-    }
-
-    .desenrollar-global article .fa-chevron-right {
-        font-size: 190%;
-    }
-
-    .botones-inventario {
-        font-size: 180%;
-    }
-
-    /* Fin de body */
-
-}
