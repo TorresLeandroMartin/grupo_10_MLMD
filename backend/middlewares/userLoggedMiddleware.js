@@ -1,5 +1,4 @@
 
-
 const db = require("../database/models");
 
 const userLoggedMiddleware = async (req, res, next) => {

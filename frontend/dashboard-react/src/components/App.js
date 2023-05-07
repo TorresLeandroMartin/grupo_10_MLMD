@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "./NavBar";
-import Bienvenidos from "./Bienvenidos"
+// import { BrowserRouter as Router, Route } from "react-router-dom";
+// import ProductosCartas from "./ProductosCartas";
 function App() {
   return (
     // Tambien es posible solamente hacerlo asi
@@ -11,9 +12,6 @@ function App() {
     <React.Fragment>
       <>
         <NavBar />
-        <br />
-        <br />
-        <Bienvenidos />
       </>
     </React.Fragment>
   );
