@@ -1422,6 +1422,8 @@ h2 {
     }
 
     .top-nav ul {
+        display: flex;
+        justify-content: space-around;
         margin: 24px 35px 50px 10px;
     }
 

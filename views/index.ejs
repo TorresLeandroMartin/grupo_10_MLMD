@@ -18,70 +18,43 @@
       <main>
         <h3 class="titulares"> Productos Destacados</h3>
 
-        <section class="separador1">
-          <hr class="linea-divisoria1">
-          <div id="carouselExampleCaptions" class="carousel slide">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-            </div>
-
-            <div  class="carousel-inner">
-              <div class="carousel-item active">
-                <a href="/usuarios/iniciarsesion">
-                  <img src="/img/ropa/nikeAir1.jpeg" id="img" class="img-carousel" alt="fondo1">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h5>Producto 1</h5>
-                    <p>Lorem ipsum del lorem impsum, pero lorem ipsum, ojo con lorem del impsum, pero lorem.</p>
-                  </div>
-                </a>
+        <div class="slide">
+          <div class="slide-inner">
+              <input class="slide-open" type="radio" id="slide-1" 
+                    name="slide" aria-hidden="true" hidden="" checked="checked">
+              <div class="slide-item">
+                  <img src="/img/ropa/camisetaDeCampeones.jpeg" style="max-width: 400px">
               </div>
-
-             
-
-              <div class="carousel-item">
-                <a href="/usuarios/iniciarsesion">
-                  <img src="/img/ropa/CamisetaDeCampeones.jpeg" id="img"
-                    class="img-carousel" alt="fondo2">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h5>Producto 2</h5>
-                    <p>Lorem ipsum del lorem impsum, pero lorem ipsum, ojo con lorem del impsum, pero lorem.</p>
-                  </div>
-                </a>
+              <input class="slide-open" type="radio" id="slide-2" 
+                    name="slide" aria-hidden="true" hidden="">
+              <div class="slide-item">
+                  <img src="/img/ropa/jordanLuka.jpeg" style="max-width: 400px">
               </div>
-              
-
-              <div class="carousel-item">
-                <a href="/usuarios/iniciarsesion">
-                  <img src="/img/resto/textura-negra1.jpg" id="img"
-                    class="img-carousel" alt="fondo3">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h5>Producto 3</h5>
-                    <p>Lorem ipsum del lorem impsum, pero lorem ipsum, ojo con lorem del impsum, pero lorem.</p>
-                  </div>
-                </a>
+              <input class="slide-open" type="radio" id="slide-3" 
+                    name="slide" aria-hidden="true" hidden="">
+              <div class="slide-item">
+                  <img src="/img/ropa/nikeAir1.jpeg" style="max-width: 400px">
               </div>
-            </div>
-
-            <button class="carousel-control-prev"  type="button" data-bs-target="#carouselExampleCaptions"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+              <label for="slide-3" class="slide-control prev control-1">‹</label>
+              <label for="slide-2" class="slide-control next control-1">›</label>
+              <label for="slide-1" class="slide-control prev control-2">‹</label>
+              <label for="slide-3" class="slide-control next control-2">›</label>
+              <label for="slide-2" class="slide-control prev control-3">‹</label>
+              <label for="slide-1" class="slide-control next control-3">›</label>
+              <ol class="slide-indicador">
+                  <li>
+                      <label for="slide-1" class="slide-circulo">•</label>
+                  </li>
+                  <li>
+                      <label for="slide-2" class="slide-circulo">•</label>
+                  </li>
+                  <li>
+                      <label for="slide-3" class="slide-circulo">•</label>
+                  </li>
+              </ol>
           </div>
-          <hr class="linea-divisoria2">
-        </section>
-
-
+      </div>
+        
         <section class="separador2">
           <article class="cuadrado-gris"> <a href="/productos/catalogo"><i class="fa-solid fa-arrow-left"></i> <label>Productos</label></a>
           </article>
@@ -105,7 +78,6 @@
                 class="fa-solid fa-arrow-right"></i></a></article>
           <div class="todos"><a href="">Ver todos</a></div>
         </section>
-        <hr>
 
         <div class="conocenos-mas" id="nosotros">
           <div class="cuerpo-de-texto">
@@ -118,8 +90,7 @@
           </div>
         </div>
 
-      </main>
-      <hr>
+      </main> 
 
       <!-- footer -->
 
