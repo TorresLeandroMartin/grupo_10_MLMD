@@ -33,11 +33,16 @@
                         <div class="campos-de-relleno">
                             <p>Imagen de perfil</p>
                             <input 
-                            type="file" 
-                            name="imagen"
-                            class="letrasTipoArchivo <% locals.errors && errors.imagen ? 'is-invalid' : null %>"
-                            value="<%= locals.oldData ? oldData.imagen : user.imagen %>"
-                            >
+                            type="file" name="imagen"id="imagen" class="letrasTipoArchivo" 
+                            
+                            value="<%- locals.oldData ? oldData.imagen : user.imagen %>">
+
+                            <div class="imagenErrors">
+                                <p id="formatoImagen"></p>
+                                <p id="tamañoImagen"></p>
+                                <p id="archivoImagen"></p>
+                            </div>
+
                             <% if (locals.errors && errors.imagen) { %>
                                 <div class="texto-error">
                                     <%= errors.imagen.msg %>
@@ -50,11 +55,11 @@
                             <div>
                             <p>Nombre y Apellido</p>
                             <input 
-                            type="text" 
-                            name="nombre" 
-                            class="campo-individual <%=locals.errors && errors.nombre ? 'is-invalid' : null %>"
-                            value="<%= locals.oldData ? oldData.nombre : user.nombre %>"
-                            >
+                            type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido"
+                            class="campo-individual" value="<%- locals.oldData ? oldData.nombre : user.nombre %>">
+
+                            <div class="nombreErrors is-invalid"></div>
+
                             <% if (locals.errors && errors.nombre) { %>
                                 <div class="texto-error">
                                     <%= errors.nombre.msg %>
@@ -62,9 +67,7 @@
                                 <% } %>
                             
                         </div>
-                        <!--
-                            
-                         -->
+
                     </div>
 
                     
@@ -74,16 +77,25 @@
                             <input   
                             type="email" 
                             name="email" 
-                            class="campo-individual <%=locals.errors && errors.email ? 'is-invalid' : null %>"
+                            id="email"
+                            class="campo-individual"
                             value="<%= locals.oldData ? oldData.email : user.email %>"
-                            >
+                            placeholder="email@dirección.com">
+
+
+                            <div class="emailErrors">
+                                <p id="mensaje"></p>
+                                <p id="mensaje2"></p>
+                            </div>
+
+
                             <% if (locals.errors && errors.email) { %>
                                 <div class="texto-error">
                                     <%= errors.email.msg %>
                                 </div>
                                 <% } %>
                         </div>
-                        <!-- -->
+                       
                     </div>
 
                     
@@ -93,9 +105,17 @@
                             <input
                             type="tel" 
                             name="telefono" 
-                            class="campo-individual <%=locals.errors && errors.telefono ? 'is-invalid' : null %>"
-                            value="<%= locals.oldData ? oldData.telefono : user.telefono %>"
+                            id="telefono"
+                            placeholder="num. de teléfono"
+                            class="campo-individual"
+                            value="<%- locals.oldData ? oldData.telefono : user.telefono %>"
                             >
+
+                            <div class="telefonoErrors is-invalid">
+                                <p id="mensaje"></p>
+                                <p id="numeric"></p>
+                            </div>
+
                             <% if (locals.errors && errors.telefono) { %>
                                 <div class="texto-error">
                                     <%= errors.telefono.msg %>
@@ -107,36 +127,26 @@
                     
                         <div class="campos-de-relleno">
                             <div>
+              
                             <p>Categoría</p>
-                            <select   
-                              name="categoria" 
-                              class="campo-individual <%=locals.errors && errors.categoria ? 'is-invalid' : null %>"
-                              >
+                            <select name="categoria" id="categoria" class="campo-individual"
+                               value =" <%- locals.oldData ? oldData.categoria : user.categoria %>">
 
-                                <% let categorias=["Vendedor", "Cliente"]  %>
-                                <% for (let i = 0; i < categorias.length; i++) { %>
-                                    
-                                    <% if (categorias[i] == user.categoria) { %>
-                                        <option value="<%= locals.oldData ? oldData.categoria : categorias[i] %>" selected>
-                                          <%= locals.oldData && (unaCategoria == oldData.categoria) ? oldData.categoria
-                                           : null%>
-                                          <%= categorias[i] %>
-                                           
+
+                                <% let categorias=["", "Cliente", "Vendedor" ]; %>
+                                    <% for(const unaCategoria of categorias) { %>
+                                        <option value="<%= unaCategoria %>">
+                                            <%= locals.oldData && (unaCategoria==oldData.categoria) ?
+                                                oldData.categoria : null%>
+                                                <%= unaCategoria %>
                                         </option>
-
-                                    <% } else { %>
-
-                                        <option value="<%= locals.oldData ? oldData.categoria : categorias[i] %>">
-                                            <%= locals.oldData && (unaCategoria == oldData.categoria) ? oldData.categoria
-                                             : null%>
-                                            <%= categorias[i] %>
-                                             
-                                        </option>
-                                      <% } %>
-                                
-                                   <% } %>
-                                
+                                        <% } %>
                             </select>
+
+                            <div class="categoriaErrors is-invalid">
+                                <p id="archivoCategoria"></p>
+                            </div>
+
                             <% if (locals.errors && errors.categoria) { %>
                                 <div class="texto-error">
                                     <%= errors.categoria.msg %>
@@ -148,19 +158,29 @@
                    
                         <div class="campos-de-relleno">
                             <div>
-                            <p>Escribe tu contraseña</p>
+                            <p>Contraseña</p>
                             <input   
                             type="password" 
                             name="contrasena" 
+                            id="contraseña" 
                             placeholder="**********"
-                            class="campo-individual <%=locals.errors && errors.contrasena ? 'is-invalid' : null %>"
-                            value="<%= locals.oldData ? oldData.contrasena : null %>"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                            class="campo-individual"
+                            value="<%- locals.oldData ? oldData.contrasena : user.contraseña %>"
                             >
                             <% if (locals.errors && errors.contrasena) { %>
                                 <div class="texto-error">
                                     <%= errors.contrasena.msg %>
                                 </div>
                                 <% } %>
+
+
+                                <div class="contrasenaError">
+                                    <p id="minuscula"></p>
+                                    <p id="mayuscula"></p>
+                                    <p id="numero"></p>
+                                    <p id="cantidad"></p>
+                                </div>
                         </div>
                        
                     </div>
@@ -181,6 +201,8 @@
             <!-- footer -->
 
             <%- include("./partials/footer") %>
+
+            <script src="/js/validacionesEdicionUsuarioFront.js"></script>
 
     </body>
 
