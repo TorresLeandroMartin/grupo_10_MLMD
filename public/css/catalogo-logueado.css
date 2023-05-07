@@ -675,11 +675,10 @@ h2 {
 
     footer {
         background-color: #242F62;
-        margin-top: 3%;
     }
 
     .contenedor-footer {
-        margin: 0px 20px;
+        margin: 5px 20px;
         padding: 20px;
         display: flex;
         flex-direction: column;
@@ -896,7 +895,7 @@ h2 {
         align-items: center;
     }
 
-    ul li a {
+    nav ul li a{
         color: white;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
@@ -907,8 +906,7 @@ h2 {
 
     nav ul li:hover .sub-menu {
         display: block;
-    }
-
+    } 
 
     nav ul li a:hover {
         color: #FF715B;
@@ -1414,12 +1412,13 @@ h2 {
 
 
     footer {
-        background-color: #242F62;
-        margin-top: 3%;
+        margin: auto;
     }
 
+
     .contenedor-footer {
-        margin: 0px 20px;
+        background-color: #242F62;
+        margin: auto;
         padding: 20px;
         display: flex;
         flex-direction: column;
@@ -1429,15 +1428,13 @@ h2 {
     .top-nav ul {
         display: flex;
         justify-content: space-around;
-        margin: 24px 35px 50px 10px;
+        margin: 7px 35px 3px 10px;
     }
 
     .top-nav li a {
         font-family: 'Lilita One';
         color: #EDF2F4;
-        font-size: 15px;
-        margin: 1ch;
-        padding: 8px 20px;
+        padding: 8px 30px;
         border-top: solid 2px #8000FF;
         border-bottom: solid 2px #8000FF;
         border-radius: 1.5ch;
@@ -1610,21 +1607,14 @@ h2 {
         display: inline-flex;
     }
 
-    nav ul li {
-        display: inline-flex;
-        justify-content: space-around;
-        margin: 13px 30px 0px 30px;
-        padding-right: 20px;
-        font-size: 12px;
-    }
 
     nav ul li a {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
-        color: white;
+        font-size: 13px;
+        padding: 5px 20px;
+        margin: 1px 10px;
     }
 
-     li a:hover {
+    li a:hover {
         color: #FF715B;
     }
 
@@ -2141,24 +2131,11 @@ h2 {
 
     /* Fin de Body */
 
-    footer {
-        background-color: #242F62;
-    }
-
-    .contenedor-footer {
-        margin: 0px 20px;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
 
     .top-nav li a {
         font-family: 'Lilita One';
         color: #EDF2F4;
-        font-size: 15px;
-        margin: 0.5ch;
-        padding: 8px 20px;
+        padding: 8px 30px;
         border-top: solid 2px #8000FF;
         border-bottom: solid 2px #8000FF;
         border-radius: 1.5ch;
@@ -2776,25 +2753,10 @@ h2 {
 
     /* Fin de Body */
 
-    footer {
-        background-color: #242F62;
-    }
-
-    .contenedor-footer {
-        margin: 0px 20px;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-
     .top-nav li a {
         font-family: 'Lilita One';
         color: #EDF2F4;
-        font-size: 20px;
-        margin: 1ch;
-        padding: 8px 20px;
+        padding: 5px 50px;
         border-top: solid 2px #8000FF;
         border-bottom: solid 2px #8000FF;
         border-radius: 1.5ch;
@@ -2848,15 +2810,12 @@ h2 {
         margin: 25px 0px;
         box-shadow: inset 0 12px 12px -12px #EDF2F4;
     }
-
-
     .social-network ul {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 20px 26px 20px 0px;
+        margin: 0px 26px 0px 0px;
     }
-
     .social-network ul li {
         margin: 0px 30px;
         padding-right: 10px;

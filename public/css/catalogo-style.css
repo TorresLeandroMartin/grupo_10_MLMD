@@ -220,7 +220,6 @@ h2 {
 
     footer {
         background-color: #242F62;
-        margin-top: 3%;
     }
 
     .contenedor-footer {
@@ -497,12 +496,12 @@ h2 {
 
 
     footer {
-        background-color: #242F62;
-        margin-top: 3%;
+        margin: auto;
     }
 
     .contenedor-footer {
-        margin: 0px 20px;
+        background-color: #242F62;
+        margin: auto;
         padding: 20px;
         display: flex;
         flex-direction: column;
@@ -518,7 +517,7 @@ h2 {
     .top-nav li a {
         font-family: 'Lilita One';
         color: #EDF2F4;
-        font-size: 115%;
+        font-size: 15px;
         margin: 1ch;
         padding: 8px 20px;
         border-top: solid 2px #8000FF;
@@ -734,31 +733,16 @@ h2 {
 
     /*Fin de body*/
 
-    footer {
-        background-color: #242F62;
-    }
-
-    .contenedor-footer {
-        margin: 0px 20px;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-
 
     .top-nav li a {
         font-family: 'Lilita One';
         color: #EDF2F4;
-        font-size: 15px;
-        margin: 0.5ch;
-        padding: 8px 20px;
+        padding: 8px 30px;
         border-top: solid 2px #8000FF;
         border-bottom: solid 2px #8000FF;
         border-radius: 1.5ch;
     }
-
+    
     .bottom-nav {
         display: flex;
         flex-direction: row;
@@ -900,25 +884,12 @@ h2 {
 
     /* Fin de body */
 
-    footer {
-        background-color: #242F62;
-    }
-
-    .contenedor-footer {
-        margin: 0px 20px;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
 
 
     .top-nav li a {
         font-family: 'Lilita One';
         color: #EDF2F4;
-        font-size: 20px;
-        margin: 1ch;
-        padding: 8px 20px;
+        padding: 5px 50px;
         border-top: solid 2px #8000FF;
         border-bottom: solid 2px #8000FF;
         border-radius: 1.5ch;
@@ -978,7 +949,7 @@ h2 {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 20px 26px 20px 0px;
+        margin: 0px 26px 0px 0px;
     }
 
     .social-network ul li {

@@ -72,10 +72,13 @@ nav {
 .social-network ul {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin: 20px 26px 20px 0px;
 }
 
 .social-network ul li {
     margin: 0px 30px;
+    padding-right: 10px;
 }
 
 /* inicio de estilos del main */
@@ -257,8 +260,7 @@ main h5{
     }
 
     footer {
-        background-color: #242F62;
-        margin-top: 3%;
+        margin: auto;
     }
 
     .contenedor-footer {
@@ -548,8 +550,9 @@ main h5{
     .top-nav ul {
         display: flex;
         justify-content: space-around;
-        margin: 24px 35px 50px 10px;
+        margin: 7px 35px 3px 10px;
     }
+
 
     .top-nav li a {
         font-family: 'Lilita One';
@@ -803,8 +806,6 @@ main h5{
     .top-nav li a {
         font-family: 'Lilita One';
         color: #EDF2F4;
-        font-size: 15px;
-        margin: 0.5ch;
         padding: 8px 30px;
         border-top: solid 2px #8000FF;
         border-bottom: solid 2px #8000FF;
@@ -812,11 +813,10 @@ main h5{
     }
 
     .bottom-nav {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+        margin: 15px 0px;
     }
+
+
 
     .bottom-nav p {
         position: relative;
@@ -1067,7 +1067,7 @@ main h5{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 20px 26px 20px 0px;
+        margin: 0px 26px 0px 0px;
     }
 
     .social-network ul li {

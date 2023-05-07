@@ -229,11 +229,10 @@ nav {
 
     footer {
         background-color: #242F62;
-        margin-top: 3%;
     }
 
     .contenedor-footer {
-        margin: 0px 20px;
+        margin: 5px 20px;
         padding: 20px;
         display: flex;
         flex-direction: column;
@@ -301,15 +300,15 @@ nav {
 
     .bottom-nav button {
         position: relative;
-        width: 35%;
+        width: 100px;
         background-color: #8000FF;
         color: #EDF2F4;
         border-radius: 2ch;
         border: solid 1px #8000FF;
         z-index: 10;
         font-size: 14px;
-        right: 20px;
-    }
+        padding: 5px 0px;
+    } 
 
     .bottom-nav button:hover {
         box-shadow: inset 0 12px 12px -12px #394476;
@@ -498,15 +497,15 @@ nav {
     main {
         width: 100%;
     }
-
+   
     footer {
-        background-color: #242F62;
-        margin-top: 3%;
+        margin: auto;
     }
 
     .contenedor-footer {
-        margin: 0px 20px;
-        padding: 20px;
+        background-color: #242F62;
+        margin: auto;
+        padding: 5px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -515,7 +514,7 @@ nav {
     .top-nav ul {
         display: flex;
         justify-content: space-around;
-        margin: 24px 35px 50px 10px;
+        margin: 7px 35px 3px 10px;
     }
 
 
@@ -530,7 +529,6 @@ nav {
         font-family: 'Lilita One';
         color: #EDF2F4;
         font-size: 15px;
-        margin: 1ch;
         padding: 8px 20px;
         border-top: solid 2px #8000FF;
         border-bottom: solid 2px #8000FF;
@@ -720,26 +718,15 @@ nav {
         background-color: #242F62;
     }
 
-    .contenedor-footer {
-        margin: 0px 20px;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
    
     .top-nav li a {
         font-family: 'Lilita One';
         color: #EDF2F4;
-        font-size: 15px;
-        margin: 0.5ch;
         padding: 8px 30px;
         border-top: solid 2px #8000FF;
         border-bottom: solid 2px #8000FF;
         border-radius: 1.5ch;
     }
-
 
     .bottom-nav {
         display: flex;
@@ -753,8 +740,8 @@ nav {
         display: inline-flex;
         font-family: 'Lilita One';
         color: #EDF2F4;
-        font-size: 18px;
-        margin: 0px 20px 2px 20px;
+        font-size: 20px;
+        margin: 0px;
         align-items: center;
     }
 
@@ -869,65 +856,55 @@ nav {
         margin: 10px;
     }
 
-    footer {
-        background-color: #242F62;
-    }
-
-    .contenedor-footer {
-        margin: 0px 20px;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-   
 
     .top-nav li a {
         font-family: 'Lilita One';
         color: #EDF2F4;
-        font-size: 15px;
-        margin: 1ch;
-        padding: 8px 15px;
+        padding: 5px 50px;
         border-top: solid 2px #8000FF;
         border-bottom: solid 2px #8000FF;
         border-radius: 1.5ch;
     }
 
+    .bottom-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
 
     .bottom-nav p {
         position: relative;
         display: inline-flex;
         font-family: 'Lilita One';
         color: #EDF2F4;
-        font-size: 18px;
+        font-size: 20px;
         margin: 0px;
         align-items: center;
     }
 
     .bottom-nav input {
         position: relative;
-        width: 320px;
+        width: 220px;
         background-color: black;
         color: #EDF2F4;
         border: solid 1px black;
         border-radius: 2ch;
         left: 22px;
         z-index: 5;
-        padding: 5px 0px 5px 5px;
-        font-size: 15px;
+        padding: 5px 0px 5px 8px;
+        font-size: 13px;
     }
 
     .bottom-nav button {
         position: relative;
-        width: 100px;
+        width: 140px;
         background-color: #8000FF;
         color: #EDF2F4;
         border-radius: 2ch;
         border: solid 1px #8000FF;
         z-index: 10;
-        font-size: 15px;
-        padding: 5px 0px;
+        font-size: 14px;
     }
 
     .linea-divisoria4 {
@@ -941,7 +918,7 @@ nav {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 20px 26px 20px 0px;
+        margin: 0px 26px 0px 0px;
     }
 
     .social-network ul li {

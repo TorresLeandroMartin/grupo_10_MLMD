@@ -236,11 +236,10 @@ nav {
 
     footer {
         background-color: #242F62;
-        margin-top: 3%;
     }
 
     .contenedor-footer {
-        margin: 0px 20px;
+        margin: 5px 20px;
         padding: 20px;
         display: flex;
         flex-direction: column;
@@ -494,22 +493,23 @@ nav {
     }
 
     footer {
-        background-color: #242F62;
-        margin-top: 3%;
+        margin: auto;
     }
 
     .contenedor-footer {
-        margin: 0px 20px;
+        background-color: #242F62;
+        margin: auto;
         padding: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
+    
     .top-nav ul {
         display: flex;
         justify-content: space-around;
-        margin: 24px 35px 50px 10px;
+        margin: 7px 35px 3px 10px;
     }
 
 
@@ -732,31 +732,14 @@ nav {
     .main-nav-bottom ul li {
         margin: 0px 20px;
     }
-
-    footer {
-        background-color: #242F62;
-    }
-
-    .contenedor-footer {
-        margin: 0px 20px;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-
     .top-nav li a {
         font-family: 'Lilita One';
         color: #EDF2F4;
-        font-size: 15px;
-        margin: 0.5ch;
         padding: 8px 30px;
         border-top: solid 2px #8000FF;
         border-bottom: solid 2px #8000FF;
         border-radius: 1.5ch;
     }
-
 
     .bottom-nav {
         display: flex;
@@ -912,26 +895,14 @@ nav {
         background-color: #242F62;
     }
 
-    .contenedor-footer {
-        margin: 0px 20px;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-
     .top-nav li a {
         font-family: 'Lilita One';
         color: #EDF2F4;
-        font-size: 15px;
-        margin: 1ch;
-        padding: 8px 15px;
+        padding: 5px 50px;
         border-top: solid 2px #8000FF;
         border-bottom: solid 2px #8000FF;
         border-radius: 1.5ch;
     }
-
 
     .bottom-nav {
         display: flex;
@@ -986,7 +957,7 @@ nav {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 20px 26px 20px 0px;
+        margin: 0px 26px 0px 0px;
     }
 
     .social-network ul li {
