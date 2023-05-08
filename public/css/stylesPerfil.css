@@ -18,8 +18,7 @@ body {
 main {
     display: flex;
     width: 90%;
-    margin: auto;
-    
+    padding: 10%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,12 +28,6 @@ main .width {
     
     background-color: var(--light-gray);
     padding: 10px;
-}
-
-.seccion-usuario{
-    
-    /* border: 1px solid red; */
-
 }
 
 

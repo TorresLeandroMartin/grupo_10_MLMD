@@ -17,17 +17,17 @@
       <main>
 
         <div class="catalogo-subtitulo">
-           <h4 class="subt">Productos</h4>
+          <h4 class="subt">Productos</h4>
 
-           <form class="categoria-estilo" action="" method="get">
-             <select name="styles">
-               <option value="all"> Todos </option>
-               <option value="sport"> Deportivo </option>
-               <option value="elegant"> Elegante</option>
-               <option value="accessory"> Accesorios </option>
-               <option value="handbags"> Bolsos </option>
-             </select>
-           </form>
+          <form class="categoria-estilo" action="" method="get">
+            <select name="styles">
+              <option value="all"> Todos </option>
+              <option value="sport"> Deportivo </option>
+              <option value="elegant"> Elegante</option>
+              <option value="accessory"> Accesorios </option>
+              <option value="handbags"> Bolsos </option>
+            </select>
+          </form>
         </div>
 
 
@@ -51,8 +51,9 @@
               <h2>Global</h2>
 
               <label for="enrollado-global" class="btn-global">
-                ¡Click Aquí!
-                <i class="fas fa-chevron-right"></i>
+                <i class="fas fa-chevron-right">
+                </i>
+                <p>¡Click HNUBCVGYCBVFGBFYGYGYTYT!</p>
               </label> <!-- container > btn-menu > label -->
 
             </div>
@@ -64,53 +65,56 @@
 
             <h2>Global</h2>
 
-            <div class="desenrollar-global"> <!-- cont-menu -->
+            <div class="scrollbar-container">
+              <div class="desenrollar-global"> <!-- cont-menu -->
 
-              <% for(let i = 0; i < productos.length; i++) { %>
+                <% for(let i=0; i < productos.length; i++) { %>
 
-                <article>
-                  <div class="archivo-img">
-                    <img src="/img/avatars/<%- productos[i].imagenDelProducto %>" alt="imagen-producto">
-                  </div>
+                  <article>
 
-
-                  <img class="img2" src="/img/avatars/<%- productos[i].imagenDelProducto %>" alt="imagen-producto">
-                  <div class="right-options-inventario">
-                   
-                    <h3>
-                      <%- productos[i].nombre %>
-                    </h3>
-                    <div class="detalles">
-                      <label class="detalle"> Estilo :</label>
-                      <p class="sub-detalle">
-                        <%- productos[i].estilo%>
-                      </p>
-                      <label class="detalle"> Color :</label>
-                      <p class="sub-detalle">
-                        <%- productos[i].color%>
-                      </p>
-                      <label class="detalle"> Categoría : </label>
-                      <p class="sub-detalle">
-                        <%- productos[i].categoria%>
-                      </p>
-                      <label class="detalle"> Talle : </label>
-                      <p class="sub-detalle">
-                        <%- productos[i].talle%>
-                      </p>
+                    <div class="archivo-img">
+                      <img src="/img/avatars/<%- productos[i].imagenDelProducto %>" alt="imagen-producto">
                     </div>
-                    <p class="producto-descripcion">
-                      <%- productos[i].descripcion %>
-                    </p>
 
-                    <a href="/productos/descripcion/<%- productos[i].id %>">
-                      <i class="fas fa-chevron-right"></i>
-                    </a>
 
-                  </div>
-                </article>
-                <% } %>
-                  <br />
+                    <img class="img2" src="/img/avatars/<%- productos[i].imagenDelProducto %>" alt="imagen-producto">
+                    <div class="right-options-inventario">
 
+                      <h3>
+                        <%- productos[i].nombre %>
+                      </h3>
+                      <div class="detalles">
+                        <label class="detalle"> Estilo :</label>
+                        <p class="sub-detalle">
+                          <%- productos[i].estilo%>
+                        </p>
+                        <label class="detalle"> Color :</label>
+                        <p class="sub-detalle">
+                          <%- productos[i].color%>
+                        </p>
+                        <label class="detalle"> Categoría : </label>
+                        <p class="sub-detalle">
+                          <%- productos[i].categoria%>
+                        </p>
+                        <label class="detalle"> Talle : </label>
+                        <p class="sub-detalle">
+                          <%- productos[i].talle%>
+                        </p>
+                      </div>
+                      <p class="producto-descripcion">
+                        <%- productos[i].descripcion %>
+                      </p>
+
+                      <a href="/productos/descripcion/<%- productos[i].id %>">
+                        <i class="fas fa-chevron-right"></i>
+                      </a>
+
+                    </div>
+                  </article>
+                  <% } %>
+                    <br />
+
+              </div>
             </div>
 
             <label for="cerrar-global" class="btn-cerrar-global">
@@ -128,8 +132,9 @@
               <h2>Inventario</h2>
 
               <label for="enrollado-inventario" class="btn-inventario">
-                <i class="fas fa-chevron-left"></i>
-                ¡Click Aquí!
+                <i class="fas fa-chevron-left">
+                </i>
+                <p>¡Click Aquívbvbbvbjrkek!</p>
               </label> <!-- container > btn-menu > label -->
 
             </div>
@@ -140,82 +145,95 @@
 
             <h2>Inventario</h2>
 
-            <hr class="linea-verde">
-
             <div class="crear">
               <a class="upload" href="/productos/crearProducto">
                 <i class="fa-solid fa-plus"></i>
+                <hr class="linea-verde">
               </a>
             </div>
 
-            <div class="desenrollar-inventario"> <!-- cont-menu -->
-              <% for(let i = 0; i < productos.length; i++)  { %>
-                <article>
+            <div class="scrollbar-container">
+              <div class="desenrollar-inventario">
 
-                  <div class="archivo-img">
-                    <img src="/img/avatars/<%- productos[i].imagenDelProducto %>" >
-                  </div>
+                <% for(let i=0; i < productos.length; i++) { %>
 
-                  <img class="img2" src="/img/avatars/<%- productos[i].imagenDelProducto %>" >
+                  <article>
+
+                    <div class="scrollbar-content">
+
+                      <div class="archivo-img">
+                        <img src="/img/avatars/<%- productos[i].imagenDelProducto %>">
+                      </div>
+
+                      <img class="img2" src="/img/avatars/<%- productos[i].imagenDelProducto %>">
 
 
-                  <div class="right-options-inventario">
-                    <h3>
-                      <%- productos[i].nombre %>
-                    </h3>
-                    <div class="detalles">
-                      <label class="detalle"> Estilo : </label>
-                      <p class="sub-detalle">
-                        <%- productos[i].estilo%>
-                      </p>
-                      <label class="detalle"> Color : </label>
-                      <p class="sub-detalle">
-                        <%- productos[i].color%>
-                      </p>
-                      <label class="detalle"> Categoría : </label>
-                      <p class="sub-detalle">
-                        <%- productos[i].categoria%>
-                      </p>
-                      <label class="detalle"> Talle : </label>
-                      <p class="sub-detalle">
-                        <%- productos[i].talle%>
-                      </p>
+                      <div class="right-options-inventario">
+                        <h3>
+                          <%- productos[i].nombre %>
+                        </h3>
+                        <div class="detalles">
+                          <label class="detalle"> Estilo : </label>
+                          <p class="sub-detalle">
+                            <%- productos[i].estilo%>
+                          </p>
+                          <label class="detalle"> Color : </label>
+                          <p class="sub-detalle">
+                            <%- productos[i].color%>
+                          </p>
+                          <label class="detalle"> Categoría : </label>
+                          <p class="sub-detalle">
+                            <%- productos[i].categoria%>
+                          </p>
+                          <label class="detalle"> Talle : </label>
+                          <p class="sub-detalle">
+                            <%- productos[i].talle%>
+                          </p>
+                        </div>
+
+                        <p class="producto-descripcion">
+                          <%- productos[i].descripcion %>
+                        </p>
+
+                        <label class="producto-precio"> $ <%- productos[i].precio %> </label>
+
+                        <div class="botones-inventario">
+
+                          <a href="/productos/edicion/<%- productos[i].id %>">
+                            <button class="boton-edita">Editar</button>
+                          </a>
+
+
+
+                          <form action='/productos/borrar/<%- productos[i].id %>?_method=DELETE' method="POST">
+                            <button class="boton-borra" type="submit">Borrar</button>
+                          </form>
+                        </div>
+                      </div>
                     </div>
 
-                    <p class="producto-descripcion">
-                      <%- productos[i].descripcion %>
-                    </p>
 
-                    <label class="producto-precio"> $ <%- productos[i].precio %> </label>
 
-                    <div class="botones-inventario">
+                  </article>
 
-                      <a href="/productos/edicion/<%- productos[i].id %>">
-                        <button class="boton-edita">Editar</button>
-                      </a>
 
-                     
-                  
-                      <form action='/productos/borrar/<%- productos[i].id %>?_method=DELETE' method="POST">
-                        <button class="boton-borra" type="submit">Borrar</button>
-                      </form>
-                 
-                    </div>
-                  </div>
-                </article>
-                
+
+
                   <br />
                   <% } %>
-               
-            </div>
 
-            <label for="cerrar-inventario" class="btn-cerrar-inventario">
-              Cerrar
-              <i class="fas fa-chevron-right"></i>
-            </label> <!-- container > btn-menu > label -->
+
+
+
+                    <label for="cerrar-inventario" class="btn-cerrar-inventario">
+                      Cerrar
+                      <i class="fas fa-chevron-right"></i>
+                    </label> <!-- container > btn-menu > label -->
+              </div>
+            </div>
           </div>
 
-        </div>
+
 
       </main>
 

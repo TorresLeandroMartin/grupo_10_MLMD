@@ -92,8 +92,8 @@ main {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #f1f1f1;
-    border: 1px solid #000000;
+    background-color: transparent;
+    border: transparent;
     margin: 15% 5% 0% 5%;
 }
 
@@ -186,16 +186,7 @@ h2 {
     /* Body */
 
     .categoria-estilo {
-        font-family: 'Montserrat', sans-serif;
-        text-align: center;
-        font-weight: bold;
-        font-size: 16px;
-        border: var(--light-violet);
-    }
-
-    .categoria-estilo select{
-        border-radius: 5px;
-        padding: 2px;
+        display: none;
     }
 
     .productos {
@@ -203,8 +194,8 @@ h2 {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        background-color: #f1f1f1;
-        border: 1px solid #000000;
+        background-color: transparent;
+        border: transparent;
         margin: 15% 5% 0% 5%;
     }
 
@@ -380,16 +371,12 @@ h2 {
     }
 
     .categoria-estilo {
+        display: none;
         font-family: 'Montserrat', sans-serif;
         text-align: center;
         font-weight: bold;
         font-size: 16px;
         border: var(--light-violet)
-    }
-
-    .categoria-estilo select{
-        border-radius: 5px;
-        padding: 2px;
     }
 
     
@@ -457,7 +444,7 @@ h2 {
 
     main {
         width: 100%;
-        margin: 0% 0% 35% 0%;
+        margin: 0% 0% 15% 0%;
     }
     
     .productos {
@@ -465,8 +452,8 @@ h2 {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        background-color: #f1f1f1;
-        border: 1px solid #000000;
+        background-color: transparent;
+        border: transparent;
         margin: 15% 5% 0% 5%;
     }
     
@@ -697,7 +684,7 @@ h2 {
 
     main {
         width: 100%;
-        margin: 0% 0% 35% 0%;
+        margin: 0% 0% 15% 0%;
     }
     
     .productos {
@@ -705,8 +692,8 @@ h2 {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        background-color: #f1f1f1;
-        border: 1px solid #000000;
+        background-color: transparent;
+        border: transparent;
         margin: 15% 5% 0% 5%;
     }
     
@@ -847,7 +834,7 @@ h2 {
 
     main {
         width: 100%;
-        margin: 0% 0% 35% 0%;
+        margin: 0% 0% 15% 0%;
     }
     
     .productos {
@@ -855,8 +842,8 @@ h2 {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        background-color: #f1f1f1;
-        border: 1px solid #000000;
+        background-color: transparent;
+        border: 1px solid transparent;
         margin: 12% 5% 0% 5%;
     }
     

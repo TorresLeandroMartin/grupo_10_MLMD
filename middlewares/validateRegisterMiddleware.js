@@ -11,7 +11,7 @@ const validations = [
     body("contrasena").isLength({ min: 8 }).withMessage("Escribi tu contraseña"),
     body("imagen").custom((value, { req }) => {
         let file = req.file;
-        let extensionesPermitidas = ['.jpeg', '.png', '.gif'];
+        let extensionesPermitidas = ['.jpeg', '.png', '.jpg'];
 
         if (!file) {
             throw new Error("Tenés que subir una imagen");

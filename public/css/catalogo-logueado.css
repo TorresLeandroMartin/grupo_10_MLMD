@@ -28,7 +28,7 @@ header {
 .header-tres {
     display: flex;
     flex-wrap: nowrap;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -75,7 +75,7 @@ nav {
 
 main {
     width: 100%;
-    margin: 0% 0% 80% 0%;
+    margin: 0% 0% 10% 0%;
 }
 
 .productos {
@@ -83,16 +83,16 @@ main {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #f1f1f1;
-    border: 1px solid #000000;
-    margin: 15% 3% 0% 3%;
+    background-color: transparent;
+    border: transparent;
+    margin: 7% 0% 0% 0%;
 }
 
 h4 {
     text-align: center;
     font-family: 'Lilita One';
-    font-size: 30px;
-    margin-top: 20%;
+    font-size: 150%;
+    margin: 15% 0% 20%;
 }
 
 h2 {
@@ -118,7 +118,7 @@ h2 {
 .global {
     display: block;
     position: relative;
-    padding: 8% 19% 120% 17%;
+    padding: 64% 18.5%;
     border: 1px solid #65069c;
     background-color: #FF715B;
     transition: padding 450ms ease;
@@ -149,6 +149,7 @@ h2 {
     color: #f1f1f1;
 }
 
+
 .global:hover .btn-global {
     visibility: visible;
 }
@@ -156,7 +157,7 @@ h2 {
 .global .enrollado-global .btn-global {
     font-family: "Montserrat", sans-serif;
     font-size: 80%;
-    color: white;
+    color: transparent;
     text-align: center;
     margin: auto;
 }
@@ -182,13 +183,15 @@ h2 {
 #enrollado-global:checked~.principal-global {
     /* input checkbox */
     display: block;
-    padding: 2% 3% 292% 2%;
+    padding: 0% 2.5% 40%;
+    margin-left: 5%;
 }
 
 #enrollado-global:checked~.inventario {
     /* input checkbox */
     display: block;
-    padding: 415.8% 2%;
+    padding: 127.7% 2%;
+    margin-right: 2%;
 }
 
 #enrollado-global:checked~.inventario h2 {
@@ -196,12 +199,12 @@ h2 {
     display: none;
 }
 
-#enrollado-global:checked~.inventario .enrollado-inventario .btn-inventario {
+#enrollado-global:checked~.inventario .enrollado-inventario .btn-inventario i {
     /* input checkbox */
-    visibility: hidden;
+    color: white;
     font-size: 120%;
-    right: 0%;
-    left: 13%;
+    position: absolute;
+    right: -3%;
 }
 
 #enrollado-global:checked~.inventario .enrollado-inventario .btn-inventario i {
@@ -226,7 +229,7 @@ h2 {
     border-bottom: 1px solid #65069c;
     color: #FF715B;
     visibility: visible;
-    margin-bottom: 20%;
+    margin-bottom: 30%;
 }
 
 .desenrollar-global {
@@ -240,7 +243,7 @@ h2 {
     display: block;
     background-color: rgb(250, 89, 30);
     margin-bottom: 5%;
-    padding: 5% 2% 20% 2%;
+    padding: 10% 0% 50%;
     border-left: 5px solid transparent;
     border-bottom-right-radius: 1ch;
     border-top-left-radius: 1ch;
@@ -267,21 +270,14 @@ h2 {
     position: absolute;
     right: 48.5%;
     bottom: 3%;
-    opacity: 100%;
-    transition: all 400ms;
 }
 
 .desenrollar-global article .fa-chevron-right:hover {
     color: var(--light-violet);
-    font-size: 230%;
+    font-size: 200%;
 }
 
-.desenrollar-global article .fa-chevron-right:active {
-    color: var(--light-violet);
-    bottom: 200%;
-    opacity: 50%;
-    font-size: 430%;
-}
+
 
 /* Inventario */
 
@@ -297,7 +293,7 @@ h2 {
 .inventario {
     display: block;
     position: relative;
-    padding: 4.5% 14% 121.5% 14%;
+    padding: 63.1% 14%;
     background-color: #65069c;
     border: 1px solid #65069c;
     transition: padding 450ms ease;
@@ -334,7 +330,7 @@ h2 {
 .inventario .enrollado-inventario .btn-inventario {
     font-family: "Montserrat", sans-serif;
     font-size: 80%;
-    color: white;
+    color: transparent;
     text-align: center;
     margin: auto;
 }
@@ -360,13 +356,16 @@ h2 {
 #enrollado-inventario:checked~.principal-inventario {
     /* input checkbox */
     display: block;
-    padding: 2% 3% 182.5% 2%;
+    padding: 0% 2.5% 40%;
+    margin-right: 5%;
 }
 
 #enrollado-inventario:checked~.global {
     /* input checkbox */
     display: block;
-    padding: 423.8% 2%;
+    padding: 140% 2%;
+    margin-left: 2%;
+    border: 1px solid #e6533d;
 }
 
 #enrollado-inventario:checked~.global .enrollado-global h2 {
@@ -374,17 +373,25 @@ h2 {
     display: none;
 }
 
-#enrollado-inventario:checked~.global .enrollado-global .btn-global {
+#enrollado-inventario:checked~.global .enrollado-global .btn-global i {
     /* input checkbox */
-    visibility: hidden;
+    visibility: visible;
     font-size: 120%;
-    right: 13%;
-    left: 0%;
+    position: absolute;
+    left: -1%;
 }
 
 #enrollado-inventario:checked~.global .enrollado-global .btn-global i {
     /* input checkbox */
     visibility: visible;
+    color: white;
+
+}
+
+#enrollado-inventario:checked~.global .enrollado-global .btn-global p {
+    /* input checkbox */
+    visibility: visible;
+    color: transparent;
 }
 
 #enrollado-inventario:checked~.inventario {
@@ -404,55 +411,85 @@ h2 {
     border-bottom: 1px solid #65069c;
     color: #8000FF;
     visibility: visible;
-    margin-bottom: 40%;
+    margin-bottom: 21%;
+    font-size: 130%;
 }
+
+
+.scrollbar-container {
+    width: 100%;
+    height: 712px;
+    /* Ajusta la altura deseada */
+    overflow-y: auto;
+}
+
 
 .desenrollar-inventario {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: all 450ms ease;
 }
 
+
+
 .desenrollar-inventario article {
-    display: block;
     background-color: #65069c;
-    margin-bottom: 10px;
-    padding: 10px 5px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5%;
+    padding: 12.5% 0%;
     border-right: 5px solid transparent;
     border-bottom-left-radius: 1ch;
     border-top-right-radius: 1ch;
-    transition: all 400ms ease;
 }
+
+
+/* Estilos adicionales para la apariencia del scrollbar */
+.scrollbar-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollbar-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+.scrollbar-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+
+.scrollbar-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
 
 .desenrollar-inventario article:hover {
     border-right: 5px solid black;
     background-color: #8c25f2;
 }
 
+
 .linea-verde {
     border-bottom: 2px solid rgb(20, 183, 20);
-    margin: 20% 20%;
+    margin: 10% 20% 20%;
 }
 
 .fa-plus {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 6%;
-    right: 47%;
-    font-size: 140%;
-    padding: 0.5px 2px;
+    font-size: 87%;
+    margin: 0% 46%;
+    padding: 2% 0.5%;
     color: white;
     background-color: rgb(20, 183, 20);
-    border-radius: 1.5ch;
+    border-radius: 1.8ch;
 }
 
 .fa-plus:hover {
     background-color: rgb(25, 151, 25);
 }
+
 
 /* Contenido article */
 
@@ -595,8 +632,6 @@ h2 {
         align-items: center;
     }
 
-    
-
     .buscador-bar {
         display: flex;
         position: relative;
@@ -629,12 +664,10 @@ h2 {
         align-items: center;
     }
 
-    
-
     .carrito i {
         padding-right: 18px;
     }
-    
+
     /* Body */
 
     .categoria-estilo {
@@ -646,6 +679,7 @@ h2 {
     }
 
     .categoria-estilo select {
+        display: none;
         border-radius: 5px;
         padding: 2px;
     }
@@ -655,16 +689,16 @@ h2 {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        background-color: #f1f1f1;
-        border: 1px solid #000000;
-        margin: 15% 3% 0% 3%;
+        background-color: transparent;
+        border: transparent;
+        margin: 7% 0% 0% 0%;
     }
 
     h4 {
         text-align: center;
         font-family: 'Lilita One';
-        font-size: 30px;
-        margin-top: 20%;
+        font-size: 150%;
+        margin-top: 10% 0% 20%;
     }
 
     .img2 {
@@ -675,10 +709,11 @@ h2 {
 
     footer {
         background-color: #242F62;
+        margin-top: 3%;
     }
 
     .contenedor-footer {
-        margin: 5px 20px;
+        margin: 0px 20px;
         padding: 20px;
         display: flex;
         flex-direction: column;
@@ -788,10 +823,6 @@ h2 {
 }
 
 @media (min-width: 426px) {
-    .logo {
-        display: inline-flex;
-        width: 10%;
-    }
 
     .burger-menu {
         display: none;
@@ -799,6 +830,20 @@ h2 {
 
     .fa-bars {
         display: none;
+    }
+
+    .header-tres {
+        margin: 0px 20px 5px 0px;
+        padding: 30px 0px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .logo {
+        display: inline-flex;
+        width: 10%;
     }
 
     .buscador-bar {
@@ -842,9 +887,11 @@ h2 {
     }
 
     .categoria-estilo select {
+        display: none;
         border-radius: 5px;
         padding: 2px;
     }
+
 
     .carrito i {
         margin-left: 12px;
@@ -883,9 +930,10 @@ h2 {
         justify-content: center;
         align-items: center;
     }
+
     nav ul {
-        padding: 5px;
-        margin: auto
+        margin: auto;
+        padding-bottom: 10px;
     }
 
     nav ul li {
@@ -895,7 +943,7 @@ h2 {
         align-items: center;
     }
 
-    nav ul li a{
+    nav ul li a {
         color: white;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
@@ -903,10 +951,6 @@ h2 {
         padding: 5px 10px;
         margin: 1px 7px;
     }
-
-    nav ul li:hover .sub-menu {
-        display: block;
-    } 
 
     nav ul li a:hover {
         color: #FF715B;
@@ -916,7 +960,7 @@ h2 {
 
     main {
         width: 100%;
-        margin: 0% 0% 35% 0%;
+        margin: 0% 0% 15% 0%;
     }
 
     .productos {
@@ -924,9 +968,9 @@ h2 {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        background-color: #f1f1f1;
-        border: 1px solid #000000;
-        margin: 15% 2% 0% 2%;
+        background-color: transparent;
+        border: 1px solid transparent;
+        margin: 11.5% 0% 0%;
     }
 
     h4 {
@@ -934,6 +978,7 @@ h2 {
         font-family: 'Lilita One';
         font-size: 30px;
         margin-top: 10%;
+        margin-bottom: 0%;
     }
 
     h2 {
@@ -958,12 +1003,11 @@ h2 {
     .global {
         display: block;
         position: relative;
-        padding: 8% 19% 120% 17%;
+        padding: 49% 18.5%;
         border: 1px solid #65069c;
         background-color: #FF715B;
         transition: padding 450ms ease;
     }
-
 
     .enrollado-global .btn-global {
         cursor: pointer;
@@ -972,6 +1016,7 @@ h2 {
         left: 30%;
     }
 
+
     .btn-cerrar-global {
         cursor: pointer;
         position: absolute;
@@ -979,9 +1024,7 @@ h2 {
         left: 10%;
     }
 
-    .btn-global {
-        visibility: hidden;
-    }
+
 
     .global:hover h2 {
         visibility: visible;
@@ -989,14 +1032,14 @@ h2 {
         color: #f1f1f1;
     }
 
-    .global:hover .btn-global {
-        visibility: visible;
+    .global:hover .btn-global i {
+        visibility: hidden;
     }
 
     .global .enrollado-global .btn-global {
         font-family: "Montserrat", sans-serif;
         font-size: 80%;
-        color: white;
+        color: transparent;
         text-align: center;
         margin: auto;
     }
@@ -1022,13 +1065,13 @@ h2 {
     #enrollado-global:checked~.principal-global {
         /* input checkbox */
         display: block;
-        padding: 2% 3% 292% 2%;
+        padding: 0% 3% 40.8%;
     }
 
     #enrollado-global:checked~.inventario {
         /* input checkbox */
         display: block;
-        padding: 368.6% 2%;
+        padding: 107.4% 2%;
     }
 
     #enrollado-global:checked~.inventario h2 {
@@ -1047,6 +1090,13 @@ h2 {
     #enrollado-global:checked~.inventario .enrollado-inventario .btn-inventario i {
         /* input checkbox */
         visibility: visible;
+        display: block;
+        padding-right: 5px;
+    }
+
+    #enrollado-global:checked~.inventario .enrollado-inventario .btn-inventario i p {
+        /* input checkbox */
+        visibility: hidden;
     }
 
     #enrollado-global:checked~.global {
@@ -1066,7 +1116,8 @@ h2 {
         border-bottom: 1px solid #65069c;
         color: #FF715B;
         visibility: visible;
-        margin-bottom: 20%;
+        margin-top: 25%;
+        margin-bottom: 68%;
     }
 
     .desenrollar-global {
@@ -1100,33 +1151,20 @@ h2 {
         text-align: center;
     }
 
-    .desenrollar-global article .fa-chevron-right {
+    .desenrollar-global .fa-chevron-right {
         color: white;
         font-size: 105%;
-        transform: rotateZ(-90deg);
-        position: absolute;
-        right: 48.5%;
-        bottom: 3%;
-        opacity: 100%;
-        transition: all 400ms;
+        opacity: 1;
     }
 
-    .desenrollar-global article .fa-chevron-right:hover {
+    .desenrollar-global .fa-chevron-right:hover {
         color: var(--light-violet);
         font-size: 200%;
-    }
-
-    .desenrollar-global article .fa-chevron-right:active {
-        color: var(--light-violet);
-        bottom: 200%;
-        opacity: 50%;
-        font-size: 400%;
     }
 
     /* Inventario */
 
     #enrollado-inventario {
-        /* input checkbox */
         display: none;
     }
 
@@ -1137,7 +1175,7 @@ h2 {
     .inventario {
         display: block;
         position: relative;
-        padding: 4.5% 14% 121.5% 14%;
+        padding: 48% 15%;
         background-color: #65069c;
         border: 1px solid #65069c;
         transition: padding 450ms ease;
@@ -1157,24 +1195,20 @@ h2 {
         right: 10%;
     }
 
-    .btn-inventario {
-        visibility: hidden;
-    }
-
     .inventario:hover h2 {
         visibility: visible;
         border-bottom: 2px solid #f1f1f1;
         color: #f1f1f1;
     }
 
-    .inventario:hover .btn-inventario {
+    .inventario:hover .btn-inventario i {
         visibility: visible;
     }
 
     .inventario .enrollado-inventario .btn-inventario {
         font-family: "Montserrat", sans-serif;
         font-size: 80%;
-        color: white;
+        color: transparent;
         text-align: center;
         margin: auto;
     }
@@ -1198,24 +1232,20 @@ h2 {
     }
 
     #enrollado-inventario:checked~.principal-inventario {
-        /* input checkbox */
         display: block;
-        padding: 0% 3% 338%;
+        padding: 0% 3% 40.8%;
     }
 
     #enrollado-inventario:checked~.global {
-        /* input checkbox */
         display: block;
-        padding: 438.7% 2%;
+        padding: 107.4% 2%;
     }
 
     #enrollado-inventario:checked~.global .enrollado-global h2 {
-        /* input checkbox */
         display: none;
     }
 
     #enrollado-inventario:checked~.global .enrollado-global .btn-global {
-        /* input checkbox */
         visibility: hidden;
         font-size: 120%;
         right: 13%;
@@ -1223,12 +1253,16 @@ h2 {
     }
 
     #enrollado-inventario:checked~.global .enrollado-global .btn-global i {
-        /* input checkbox */
         visibility: visible;
+        display: block;
+        padding-left: 5px;
+    }
+
+    #enrollado-inventario:checked~.global .enrollado-global .btn-global p {
+        visibility: hidden;
     }
 
     #enrollado-inventario:checked~.inventario {
-        /* input checkbox */
         display: none;
     }
 
@@ -1244,8 +1278,9 @@ h2 {
         border-bottom: 1px solid #65069c;
         color: #8000FF;
         visibility: visible;
-        font-size: 200%;
-        margin-bottom: 40%;
+        font-size: 160%;
+        margin-top: 25%;
+        margin-bottom: 30%;
     }
 
     .desenrollar-inventario {
@@ -1274,21 +1309,18 @@ h2 {
 
     .linea-verde {
         border-bottom: 2px solid rgb(20, 183, 20);
-        margin: 20% 20%;
+        margin: 10% 20% 20%;
     }
 
     .fa-plus {
         display: flex;
         justify-content: center;
         align-items: center;
-        position: absolute;
-        top: 6%;
-        right: 48.5%;
-        font-size: 170%;
-        padding: 5px;
+        font-size: 70%;
+        padding: 3%;
         color: white;
         background-color: rgb(20, 183, 20);
-        border-radius: 1.5ch;
+        border-radius: 5ch;
     }
 
     .fa-plus:hover {
@@ -1412,13 +1444,12 @@ h2 {
 
 
     footer {
-        margin: auto;
+        background-color: #242F62;
+        margin-top: 3%;
     }
 
-
     .contenedor-footer {
-        background-color: #242F62;
-        margin: auto;
+        margin: 0px 20px;
         padding: 20px;
         display: flex;
         flex-direction: column;
@@ -1427,14 +1458,19 @@ h2 {
 
     .top-nav ul {
         display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
         justify-content: space-around;
-        margin: 7px 35px 3px 10px;
+        align-items: center;
+        margin: 24px 35px 30px 10px;
     }
 
     .top-nav li a {
         font-family: 'Lilita One';
         color: #EDF2F4;
-        padding: 8px 30px;
+        font-size: 15px;
+        margin: 1ch;
+        padding: 8px 20px;
         border-top: solid 2px #8000FF;
         border-bottom: solid 2px #8000FF;
         border-radius: 1.5ch;
@@ -1543,7 +1579,6 @@ h2 {
         align-items: center;
     }
 
-
     .buscador-bar {
         display: flex;
         position: relative;
@@ -1576,11 +1611,10 @@ h2 {
         align-items: center;
     }
 
-    .carrito i { 
+    .carrito i {
         font-size: 20px;
         margin-left: 5px;
     }
-
 
     .user i {
         display: inline-flex;
@@ -1602,11 +1636,17 @@ h2 {
         align-items: center;
     }
 
-  
     nav ul {
         display: inline-flex;
     }
 
+    nav ul li {
+        display: inline-flex;
+        justify-content: space-around;
+        margin: 13px 30px 0px 30px;
+        padding-right: 20px;
+        font-size: 12px;
+    }
 
     nav ul li a {
         font-size: 13px;
@@ -1614,7 +1654,7 @@ h2 {
         margin: 1px 10px;
     }
 
-    li a:hover {
+    nav ul li a:hover {
         color: #FF715B;
     }
 
@@ -1623,7 +1663,7 @@ h2 {
 
     main {
         width: 100%;
-        margin: 0% 0% 35% 0%;
+        margin: 0% 0% 5% 0%;
     }
 
     .productos {
@@ -1631,15 +1671,15 @@ h2 {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        background-color: #f1f1f1;
-        border: 1px solid #000000;
-        margin: 20% 2%;
+        background-color: transparent;
+        border: 1px solid transparent;
+        margin: 11% 0%;
     }
 
     h4 {
         text-align: center;
         font-family: 'Lilita One';
-        font-size: 40px;
+        font-size: 30px;
         margin-top: 10%;
     }
 
@@ -1677,7 +1717,7 @@ h2 {
     .global {
         display: block;
         position: relative;
-        padding: 8% 19% 120% 17%;
+        padding: 40.75% 18%;
         border: 1px solid #65069c;
         background-color: #FF715B;
         transition: padding 450ms ease;
@@ -1698,9 +1738,7 @@ h2 {
         left: 10%;
     }
 
-    .btn-global {
-        visibility: hidden;
-    }
+
 
     .global:hover h2 {
         visibility: visible;
@@ -1715,7 +1753,7 @@ h2 {
     .global .enrollado-global .btn-global {
         font-family: "Montserrat", sans-serif;
         font-size: 80%;
-        color: white;
+        color: transparent;
         text-align: center;
         margin: auto;
     }
@@ -1741,13 +1779,13 @@ h2 {
     #enrollado-global:checked~.principal-global {
         /* input checkbox */
         display: block;
-        padding: 0% 3% 407% 2%;
+        padding: 0% 3% 52.2%;
     }
 
     #enrollado-global:checked~.inventario {
         /* input checkbox */
         display: block;
-        padding: 415.8% 2%;
+        padding: 89.62% 2%;
     }
 
     #enrollado-global:checked~.inventario h2 {
@@ -1785,7 +1823,7 @@ h2 {
         border-bottom: 1px solid #65069c;
         color: #FF715B;
         visibility: visible;
-        font-size: 220%;
+        font-size: 190%;
         margin-bottom: 40%;
     }
 
@@ -1827,20 +1865,11 @@ h2 {
         position: absolute;
         right: 48.5%;
         bottom: 3%;
-        opacity: 100%;
-        transition: all 400ms;
     }
 
     .desenrollar-global article .fa-chevron-right:hover {
         color: var(--light-violet);
         font-size: 200%;
-    }
-
-    .desenrollar-global article .fa-chevron-right:active {
-        color: var(--light-violet);
-        bottom: 200%;
-        opacity: 50%;
-        font-size: 400%;
     }
 
     /* Inventario */
@@ -1857,8 +1886,8 @@ h2 {
     .inventario {
         display: block;
         position: relative;
-        padding: 4.5% 14% 121.5% 14%;
         background-color: #65069c;
+        padding: 40% 15.5%;
         border: 1px solid #65069c;
         transition: padding 450ms ease;
     }
@@ -1877,9 +1906,6 @@ h2 {
         right: 10%;
     }
 
-    .btn-inventario {
-        visibility: hidden;
-    }
 
     .inventario:hover h2 {
         visibility: visible;
@@ -1887,14 +1913,14 @@ h2 {
         color: #f1f1f1;
     }
 
-    .inventario:hover .btn-inventario {
+    .inventario:hover .btn-inventario i {
         visibility: visible;
     }
 
     .inventario .enrollado-inventario .btn-inventario {
         font-family: "Montserrat", sans-serif;
         font-size: 80%;
-        color: white;
+        color: transparent;
         text-align: center;
         margin: auto;
     }
@@ -1920,13 +1946,13 @@ h2 {
     #enrollado-inventario:checked~.principal-inventario {
         /* input checkbox */
         display: block;
-        padding: 0% 3% 378.58%;
+        padding: 0% 3% 40%;
     }
 
     #enrollado-inventario:checked~.global {
         /* input checkbox */
         display: block;
-        padding: 438.7% 2%;
+        padding: 95.81% 2%;
     }
 
     #enrollado-inventario:checked~.global .enrollado-global h2 {
@@ -1945,6 +1971,7 @@ h2 {
     #enrollado-inventario:checked~.global .enrollado-global .btn-global i {
         /* input checkbox */
         visibility: visible;
+        padding-left: 27%;
     }
 
     #enrollado-inventario:checked~.inventario {
@@ -1964,8 +1991,9 @@ h2 {
         border-bottom: 1px solid #65069c;
         color: #8000FF;
         visibility: visible;
-        font-size: 220%;
-        margin-bottom: 40%;
+        font-size: 150%;
+        margin-top: 20%;
+        margin-bottom: 30%;
     }
 
     .desenrollar-inventario {
@@ -2001,14 +2029,10 @@ h2 {
         display: flex;
         justify-content: center;
         align-items: center;
-        position: absolute;
-        top: 6.5%;
-        right: 48.5%;
-        font-size: 170%;
-        padding: 5px 6px;
+        padding: 2%;
         color: white;
         background-color: rgb(20, 183, 20);
-        border-radius: 1.5ch;
+        border-radius: 5ch;
     }
 
     .fa-plus:hover {
@@ -2131,11 +2155,33 @@ h2 {
 
     /* Fin de Body */
 
+    footer {
+        background-color: #242F62;
+    }
+
+    .contenedor-footer {
+        margin: 0px 20px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .top-nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        margin: 24px 35px 30px 10px;
+    }
 
     .top-nav li a {
         font-family: 'Lilita One';
         color: #EDF2F4;
-        padding: 8px 30px;
+        font-size: 15px;
+        margin: 0.5ch;
+        padding: 8px 20px;
         border-top: solid 2px #8000FF;
         border-bottom: solid 2px #8000FF;
         border-radius: 1.5ch;
@@ -2235,600 +2281,76 @@ h2 {
         align-items: center;
     }
 
- 
-   
+    #enrollado-inventario:checked~.global {
+        display: block;
+        padding: 72.7% 2%;
+    }
 
-    /* Body */
+    #enrollado-global:checked~.inventario {
+        display: block;
+        padding: 73.25% 2%;
+    }
 
-    main {
+    #enrollado-inventario:checked~.principal-inventario {
+        display: block;
+        padding: 0% 3% 24%;
+    }
+
+    #enrollado-global:checked~.principal-global {
+        display: block;
+        padding: 0% 3% 32%;
+    }
+
+    .scrollbar-container {
         width: 100%;
-        margin: 0% 0% 35% 0%;
+        height: 1000px;
+        overflow-y: auto;
     }
 
-    .productos {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        background-color: #f1f1f1;
-        border: 1px solid #000000;
-        margin: 20% 2%;
-    }
-
-    h4 {
-        text-align: center;
-        font-family: 'Lilita One';
-        margin-top: 10%;
-        margin-bottom: 3%;
-    }
-
-    /* Global */
-
-    #enrollado-global {
-        /* input checkbox */
-        display: none;
-    }
-
-    #cerrar-global {
-        display: none;
+    .linea-verde {
+        border-bottom: 2px solid rgb(20, 183, 20);
+        margin: 10% 20%;
     }
 
     .global {
         display: block;
         position: relative;
-        padding: 8% 19% 120% 17%;
+        padding: 40.53% 18%;
         border: 1px solid #65069c;
         background-color: #FF715B;
         transition: padding 450ms ease;
-    }
-
-
-    .enrollado-global .btn-global {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        left: 30%;
-    }
-
-    .btn-cerrar-global {
-        cursor: pointer;
-        position: absolute;
-        bottom: 4%;
-        left: 10%;
-    }
-
-    .btn-global {
-        visibility: hidden;
-    }
-
-    .global:hover h2 {
-        visibility: visible;
-        border-bottom: 2px solid #f1f1f1;
-        color: #f1f1f1;
-    }
-
-    .global:hover .btn-global {
-        visibility: visible;
-    }
-
-    .global .enrollado-global .btn-global {
-        font-family: "Montserrat", sans-serif;
-        font-size: 80%;
-        color: white;
-        text-align: center;
-        margin: auto;
-    }
-
-    .principal-global .btn-cerrar-global {
-        font-family: "Montserrat", sans-serif;
-        font-size: 150%;
-        font-weight: bold;
-        color: #FF715B;
-        text-align: center;
-        margin: auto;
-    }
-
-    .principal-global {
-        display: none;
-        position: relative;
-        padding: 8% 19% 120% 17%;
-        border: 1px solid #65069c;
-        background-color: #f1f1f1;
-        transition: padding 450ms ease;
-    }
-
-    #enrollado-global:checked~.principal-global {
-        /* input checkbox */
-        display: block;
-        padding: 0% 3% 645% 2%;
-    }
-
-    #enrollado-global:checked~.inventario {
-        /* input checkbox */
-        display: block;
-        padding: 415.91% 2%;
-    }
-
-    #enrollado-global:checked~.inventario h2 {
-        /* input checkbox */
-        display: none;
-    }
-
-    #enrollado-global:checked~.inventario .enrollado-inventario .btn-inventario {
-        /* input checkbox */
-        visibility: hidden;
-        font-size: 120%;
-        right: 0%;
-        left: 13%;
     }
 
     #enrollado-global:checked~.inventario .enrollado-inventario .btn-inventario i {
-        /* input checkbox */
-        font-size: 150%;
         visibility: visible;
-    }
-
-    #enrollado-global:checked~.global {
-        /* input checkbox */
-        display: none;
-    }
-
-    #cerrar-global:checked~.global {
         display: block;
-    }
-
-    #cerrar-global:checked~.principal-global {
-        display: none;
-    }
-
-    .principal-global h2 {
-        border-bottom: 1px solid #65069c;
-        color: #FF715B;
-        visibility: visible;
-        margin-bottom: 40%;
-    }
-
-    .desenrollar-global {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        transition: all 450ms ease;
-    }
-
-    .desenrollar-global article {
-        display: flex;
-        background-color: rgb(250, 89, 30);
-        margin-bottom: 10px;
-        padding: 0px 5px;
-        border-left: 5px solid transparent;
-        border-radius: 2ch;
-        border-top-left-radius: 1ch;
-        transition: all 400ms ease;
-        position: relative;
-    }
-
-    .desenrollar-global article:hover {
-        border-left: 5px solid black;
-        background-color: hsl(8, 100%, 72%);
-    }
-
-    .desenrollar-global article h3 {
-        font-family: "Lilita One";
-        color: white;
-        font-size: 205%;
-        text-align: center;
-    }
-
-    .desenrollar-global article .fa-chevron-right {
-        color: white;
-        font-size: 150%;
-        transform: rotateZ(-90deg);
-        position: absolute;
-        right: 31%;
-        bottom: 5%;
-        opacity: 100%;
-        transition: all 400ms;
-    }
-
-    .desenrollar-global article .fa-chevron-right:hover {
-        color: var(--light-violet);
-        font-size: 200%;
-    }
-
-    .desenrollar-global article .fa-chevron-right:active {
-        color: var(--light-violet);
-        bottom: 200%;
-        opacity: 50%;
-        font-size: 400%;
-    }
-
-    /* Inventario */
-
-    #enrollado-inventario {
-        /* input checkbox */
-        display: none;
-    }
-
-    #cerrar-inventario {
-        display: none;
-    }
-
-    .inventario {
-        display: block;
-        position: relative;
-        padding: 4.5% 14% 121.5% 14%;
-        background-color: #65069c;
-        border: 1px solid #65069c;
-        transition: padding 450ms ease;
-    }
-
-    .enrollado-inventario .btn-inventario {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        right: 31%;
-    }
-
-    .btn-cerrar-inventario {
-        cursor: pointer;
-        position: absolute;
-        bottom: 4%;
-        right: 10%;
-    }
-
-    .btn-inventario {
-        visibility: hidden;
-    }
-
-    .inventario:hover h2 {
-        visibility: visible;
-        border-bottom: 2px solid #f1f1f1;
-        color: #f1f1f1;
-    }
-
-    .inventario:hover .btn-inventario {
-        visibility: visible;
-    }
-
-    .inventario .enrollado-inventario .btn-inventario {
-        font-family: "Montserrat", sans-serif;
-        font-size: 80%;
-        color: white;
-        text-align: center;
-        margin: auto;
-    }
-
-    .principal-inventario .btn-cerrar-inventario {
-        font-family: "Montserrat", sans-serif;
-        font-size: 150%;
-        font-weight: bold;
-        color: #8000FF;
-        text-align: center;
-        margin: auto;
-    }
-
-    .principal-inventario {
-        display: none;
-        position: relative;
-        padding: 4.5% 14% 120% 14%;
-        border: 1px solid #65069c;
-        background-color: #f1f1f1;
-        transition: padding 450ms ease;
-    }
-
-    #enrollado-inventario:checked~.principal-inventario {
-        /* input checkbox */
-        display: block;
-        padding: 0% 3% 749%;
-    }
-
-    #enrollado-inventario:checked~.global {
-        /* input checkbox */
-        display: block;
-        padding: 481% 2%;
-    }
-
-    #enrollado-inventario:checked~.global .enrollado-global h2 {
-        /* input checkbox */
-        display: none;
-    }
-
-    #enrollado-inventario:checked~.global .enrollado-global .btn-global {
-        /* input checkbox */
-        visibility: hidden;
-        font-size: 120%;
-        right: 13%;
-        left: 0%;
+        padding-right: 25px;
     }
 
     #enrollado-inventario:checked~.global .enrollado-global .btn-global i {
-        /* input checkbox */
-        font-size: 150%;
         visibility: visible;
-    }
-
-    #enrollado-inventario:checked~.inventario {
-        /* input checkbox */
-        display: none;
-    }
-
-    #cerrar-inventario:checked~.inventario {
-        display: block;
-    }
-
-    #cerrar-inventario:checked~.principal-inventario {
-        display: none;
-    }
-
-    .principal-inventario h2 {
-        border-bottom: 1px solid #65069c;
-        color: #8000FF;
-        visibility: visible;
-        margin-bottom: 40%;
-    }
-
-    .desenrollar-inventario {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        transition: all 450ms ease;
-    }
-
-    .desenrollar-inventario article {
-        display: flex;
-        background-color: #65069c;
-        margin-bottom: 10px;
-        padding: 0px 5px;
-        border-right: 5px solid transparent;
-        border-radius: 2ch;
-        transition: all 400ms ease;
-    }
-
-    .desenrollar-inventario article:hover {
-        border-right: 5px solid black;
-        background-color: #8c25f2;
-    }
-
-    .linea-verde {
-        border-bottom: 2px solid rgb(20, 183, 20);
-        margin: 20%;
-    }
-
-    .fa-plus {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 6%;
-        right: 48.5%;
-        font-size: 180%;
-        padding: 5px 6px;
-        color: white;
-        background-color: rgb(20, 183, 20);
-        border-radius: 1.5ch;
-    }
-
-    .fa-plus:hover {
-        background-color: rgb(25, 151, 25);
-    }
-
-    /* Contenido article */
-
-    .archivo-img img {
-        display: none;
-    }
-
-
-    .img2 {
-        display: flex;
-        border: 2px solid #8000FF;
-        outline: 1px solid #FF715B;
-        border-radius: 1.8ch;
-        width: 36%;
-        height: 50%;
-        margin: 22px 0px 33px 20px;
-    }
-
-    .desenrollar-inventario article h3 {
-        font-family: "Lilita One";
-        color: white;
-        font-size: 180%;
-        text-align: center;
-    }
-
-    .detalles {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: 2% 7% 4% 12%;
-        font-size: 100%;
-    }
-
-    .detalle {
-        font-family: "Montserrat", sans-serif;
-        text-decoration: underline;
-        color: rgb(247, 247, 247);
-        margin: 0% 1%;
-        font-size: 100%;
-    }
-
-    .sub-detalle {
-        font-family: "Montserrat", sans-serif;
-        margin: 0% 1%;
-        font-size: 100%;
-        font-weight: bold;
-        color: #fafafa;
-        text-decoration: none;
-    }
-
-    .producto-descripcion {
-        font-family: "Montserrat", sans-serif;
-        color: white;
-        height: 0%;
-        width: 80%;
-        font-size: 88%;
-        margin: 2% 11.5%;
-        text-align: justify;
-    }
-
-    .producto-precio {
-        font-family: "Montserrat", sans-serif;
-        color: white;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: baseline;
-        height: 3px;
-        width: 20%;
-        margin-left: 8.5%;
-        margin-top: 5%;
-        font-size: 135%;
-    }
-
-    .producto-precio:hover {
-        text-decoration: 2px underline;
-        font-weight: bold;
-        font-size: 140%;
-    }
-
-    .botones-inventario {
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: row;
-        justify-content: flex-end;
-        font-size: 122%;
-        align-items: center;
-        padding: 1% 0%;
-        height: 0%;
-        width: 83%;
-    }
-
-    .boton-edita {
-        color: #FF715B;
-        background-color: white;
-        border: 2px solid #e6533d;
-        border-radius: 1ch;
-        font-size: 120%;
-        margin-right: 22px;
-    }
-
-    .boton-edita:hover {
-        color: white;
-        background-color: #FF715B;
-    }
-
-    .boton-edita:focus {
-        background-color: #e85842;
-    }
-
-    .boton-borra {
-        color: #65069c;
-        background-color: white;
-        border: 2px solid rgb(72, 10, 219);
-        border-radius: 1ch;
-        font-size: 120%;
-        margin-right: 22px;
-    }
-
-    .boton-borra:hover {
-        color: white;
-        background-color: #5528de;
-    }
-
-    .boton-borra:focus {
-        background-color: #65069c;
-    }
-
-    .right-options-inventario {
-        padding: 20px 0px 0px 0px;
-    }
-
-    div .right-options-inventario {
-        display: block;
-        height: 0%;
-        width: 100%;
-    }
-
-    /* Fin de Body */
-
-    .top-nav li a {
-        font-family: 'Lilita One';
-        color: #EDF2F4;
-        padding: 5px 50px;
-        border-top: solid 2px #8000FF;
-        border-bottom: solid 2px #8000FF;
-        border-radius: 1.5ch;
-    }
-
-
-    .bottom-nav {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .bottom-nav p {
-        position: relative;
-        display: inline-flex;
-        font-family: 'Lilita One';
-        color: #EDF2F4;
-        font-size: 20px;
-        margin: 0px;
-        align-items: center;
-    }
-
-    .bottom-nav input {
-        position: relative;
-        width: 220px;
-        background-color: black;
-        color: #EDF2F4;
-        border: solid 1px black;
-        border-radius: 2ch;
-        left: 22px;
-        z-index: 5;
-        padding: 5px 0px 5px 8px;
-        font-size: 13px;
-    }
-
-    .bottom-nav button {
-        position: relative;
-        width: 140px;
-        background-color: #8000FF;
-        color: #EDF2F4;
-        border-radius: 2ch;
-        border: solid 1px #8000FF;
-        z-index: 10;
-        font-size: 14px;
-    }
-
-    .linea-divisoria4 {
-        border: 0;
-        height: 12px;
-        margin: 25px 0px;
-        box-shadow: inset 0 12px 12px -12px #EDF2F4;
-    }
-    .social-network ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0px 26px 0px 0px;
-    }
-    .social-network ul li {
-        margin: 0px 30px;
-        padding-right: 10px;
-    }
-
-    .inicio {
-        padding-right: 3px;
-    }
-
-    .social-network ul li i {
-        color: #FF715B;
+        padding-left: 40%;
     }
 
 }
 
+@media(min-width: 1700px) {
 
+    #enrollado-global:checked~.inventario {
+        display: block;
+        padding: 59.3% 2%;
+    }
+
+    #enrollado-inventario:checked~.global {
+        display: block;
+        padding: 57.9% 2%;
+    }
+
+    .inventario {
+        padding: 40.1% 15.5%;
+    }
+
+    .productos {
+        margin: 8% 0%;
+    }
+}
